@@ -1,17 +1,18 @@
 /* Deck: one slide per screen. Reuses styles.css tokens and case.css components. */
-html{scroll-snap-type:y proximity;scroll-behavior:smooth}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
 .deck-body{background:var(--paper);color:var(--ink);margin:0}
 
-.deck-bar{position:fixed;top:0;left:0;right:0;height:56px;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 24px;font-size:13px;color:#8d939a;pointer-events:none}
+.deck-bar{position:fixed;top:0;left:0;right:0;height:36px;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 20px;font-size:12px;color:#8d939a;pointer-events:none}
 .deck-bar>*{pointer-events:auto}
 .deck-home{color:inherit;text-decoration:none;font-weight:600}
 .deck-bar span{font-variant-numeric:tabular-nums}
 .deck-bar>div{justify-self:end;display:flex;gap:8px}
-.deck-bar button{font:inherit;font-size:13px;padding:8px 14px;border-radius:30px;border:1px solid #8d939a66;background:transparent;color:inherit;min-height:36px}
+.deck-bar button{font:inherit;font-size:12px;padding:4px 10px;border-radius:20px;border:1px solid #8d939a55;background:transparent;color:inherit;min-height:26px;line-height:1}
 .deck-bar button:hover{border-color:var(--orange)}
 .dark-bar .deck-bar{color:#aeb6bd}
 
-.slide{min-height:100svh;scroll-snap-align:start;display:flex;align-items:center;padding:64px 0 40px;box-sizing:border-box;background:var(--paper)}
+.slide{height:100svh;scroll-snap-align:start;display:flex;align-items:center;padding:52px 0 36px;box-sizing:border-box;background:var(--paper);overflow:hidden}
+.slide-in{transform-origin:top center}
 .slide.dark{background:var(--ink);color:#fff}
 .slide-in{width:min(1200px,calc(100% - 96px));margin:auto}
 .slide .eyebrow{margin-bottom:22px;color:#1e7a45}
@@ -89,7 +90,8 @@ html{scroll-snap-type:y proximity;scroll-behavior:smooth}
 .slide.final h2{font-size:clamp(40px,5.5vw,84px);max-width:16ch}
 
 @media(max-width:900px){
-  .slide{padding:80px 0 48px;min-height:auto;align-items:start}
+  .slide{padding:60px 0 40px;height:auto;min-height:100svh;align-items:start;overflow:visible}
+  .slide-in{transform:none!important}
   .slide-in{width:calc(100% - 40px)}
   .cols.two,.cols.three,.figs.row{grid-template-columns:1fr;gap:24px}
   .deck .bar-row{grid-template-columns:1fr}
@@ -98,3 +100,8 @@ html{scroll-snap-type:y proximity;scroll-behavior:smooth}
   .deck-bar>div{display:none}
   .deck .gates{grid-template-columns:1fr}
 }
+
+.deck .deep{margin-top:24px;padding-top:16px}
+.slide.dark .deep{border-color:#ffffff22}
+.slide.dark .deep button{border-color:#ffffff30;color:#fff}
+.deck .deep button{font-size:12.5px;padding:7px 13px}

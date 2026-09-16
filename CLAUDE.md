@@ -25,6 +25,7 @@ recommendation) is a starting shape, not a commitment.
 No build step, no dependencies. Static files only:
 
 - `deck.html` + `deck.css` + `deck.js` — slide-deck version of the case, one slide per screen, arrow-key navigation. Static figures; links back to the interactive site.
+- `deepdives.html` — all `<template id="dd-…">` deep-dive sheets, fetched at load by both app.js and deck.js (needs http, not file://).
 - `index.html` — the whole page. Sections are `<main>>section[data-title]`; the
   header nav, progress bar, present mode and deep-dive sheet all key off that.
 - `styles.css` — the design system, copied VERBATIM from tarnoc-funding.com
