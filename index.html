@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Techleap case — [Working title]</title>
-<meta name="description" content="Interactive case presentation.">
+<title>Clean weeding, bankable demand · Techleap case</title>
+<meta name="description" content="Interactive case: creating conditional, credible demand for cleaner weed control so Dutch agricultural robotics can finance the step from field trials to sales.">
 <meta name="theme-color" content="#17181c">
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="styles.css">
@@ -16,15 +16,18 @@
 <div class="progress" aria-hidden="true"></div>
 
 <header>
-  <a class="brand" href="#thesis"><b>[Case title]</b></a>
+  <a class="brand" href="#thesis"><b>Clean weeding, bankable demand</b></a>
   <nav id="main-nav" aria-label="Main navigation">
-    <a href="#problem">Problem</a>
-    <a href="#evidence">Evidence</a>
-    <a href="#solution">Solution</a>
-    <a href="#scenarios">Scenarios</a>
-    <a href="#market">Market</a>
-    <a href="#plan">Plan</a>
-    <a href="#ask">Recommendation</a>
+    <a href="#conflict">Conflict</a>
+    <a href="#water">Water</a>
+    <a href="#grower">Grower</a>
+    <a href="#signals">Signals</a>
+    <a href="#routes">Routes</a>
+    <a href="#gap">Gap</a>
+    <a href="#mechanism">Mechanism</a>
+    <a href="#explorer">Explorer</a>
+    <a href="#gates">Gates</a>
+    <a href="#ask">Ask</a>
     <div class="mobile-nav-actions"></div>
   </nav>
   <div class="header-tools">
@@ -41,256 +44,562 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <p class="eyebrow reveal">[Company / role · case presentation · 2026]</p>
-        <h1 class="reveal">[The one-sentence <em>thesis</em> of the case.]</h1>
-        <p class="lede reveal">[Two sentences framing the market problem and the shape of the answer. This is what the interviewer reads before anything else.]</p>
+        <p class="eyebrow reveal">Techleap · case presentation · September 2026</p>
+        <h1 class="reveal">Make future demand for cleaner weed control concrete enough that Dutch robot makers can <em>finance the step from trials to sales.</em></h1>
+        <p class="lede reveal">Dutch water authorities need fewer crop-protection chemicals in their ditches. Growers still need weeds controlled on time, at a margin. Dutch companies are building alternatives but cannot finance a fleet on demonstrations alone. The proposal: a water board as anchor environmental payer, growers signing conditional orders, and Techleap structuring the commitment so investors can underwrite it. No robots bought, no balance sheet used.</p>
       </div>
       <div class="hero-art reveal">
         <div class="heat-halo"></div>
         <div class="orbit"></div>
-        <p class="render-label">[hero visual placeholder]</p>
+        <div class="actors" aria-label="The four parties in the proposed transaction">
+          <span class="actor a1">Water board<small>anchor environmental payer</small></span>
+          <span class="actor a2">Growers<small>conditional orders</small></span>
+          <span class="actor a3">Robot makers<small>qualified suppliers</small></span>
+          <span class="actor a4">Investors<small>underwrite production</small></span>
+        </div>
+        <p class="render-label">Working draft. Crop, catchment, buyer and supplier are not yet selected. Every commitment described here is a proposal.</p>
       </div>
     </div>
     <div class="hero-strip reveal">
-      <div><strong data-count="42" data-suffix="%">0</strong><span>[headline stat one]</span></div>
-      <div><strong data-count="3.5" data-prefix="€" data-suffix="B" data-dec="1">0</strong><span>[headline stat two]</span></div>
-      <div><strong data-count="12" data-suffix="x">0</strong><span>[headline stat three]</span></div>
+      <div><strong data-count="80" data-suffix="%">0</strong><span><i class="lab lab-obs">Observed</i>of national monitoring sites had at least one crop-protection chemical above an ecological standard in 2024. All products, not herbicides alone.</span></div>
+      <div><strong data-count="57.8" data-dec="1">0</strong><span><i class="lab lab-obs">Observed</i>extra labour hours per hectare of carrots in Wageningen's four-year lower-input system trial. One system trial, not a robot result.</span></div>
+      <div><strong data-count="142" data-prefix="€" data-suffix="m">0</strong><span><i class="lab lab-obs">Estimated</i>already invested by drinking-water companies in extra treatment at studied groundwater intakes, for pesticides broadly. Stated range ±40%.</span></div>
     </div>
   </div>
 </section>
 
-<!-- 02 · Problem -->
-<section id="problem" data-title="The problem">
+<!-- 02 · The conflict -->
+<section id="conflict" data-title="The conflict">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <p class="eyebrow reveal">The problem</p>
-        <h2 class="reveal">[What is broken in the market, in one line.]</h2>
+        <p class="eyebrow reveal">The conflict</p>
+        <h2 class="reveal">Clean water and effective weed control have to coexist.</h2>
       </div>
-      <p class="intro reveal">[Why this problem matters now, who feels it, and what it costs. Two to three sentences.]</p>
+      <p class="intro reveal">The Netherlands has an awkward agricultural bargain. Herbicides make weed control workable and relatively cheap, yet some of the same chemicals turn up above environmental limits in nearby water. Telling farmers to stop spraying does not make the weeds disappear.</p>
     </div>
-    <div class="channels reveal">
-      <article>
-        <span class="channel-n">1</span>
-        <h3>[Symptom one]</h3>
-        <p>[Evidence-backed description of the first symptom of the problem.]</p>
-      </article>
-      <article>
-        <span class="channel-n">2</span>
-        <h3>[Symptom two]</h3>
-        <p>[Second symptom.]</p>
-      </article>
-      <article>
-        <span class="channel-n">3</span>
-        <h3>[Symptom three]</h3>
-        <p>[Third symptom.]</p>
-      </article>
-    </div>
-    <div class="deep reveal">
-      <span class="deep-label">Deep dives</span>
-      <button data-dd="problem-detail">The data behind this ↗</button>
-      <button data-dd="sources">Sources &amp; method ↗</button>
+    <div class="persp reveal">
+      <div class="segmented" data-switch="persp" role="group" aria-label="Choose a perspective">
+        <button data-val="water" aria-pressed="true">Water authority</button>
+        <button data-val="grower" aria-pressed="false">Grower</button>
+      </div>
+      <div class="persp-grid">
+        <div data-panel="persp" data-val="water">
+          <span class="pill">Same facts, seen from the ditch</span>
+          <h3>A small number of substances keep a monitoring site above its standard.</h3>
+          <p>The water board has a legal duty to protect surface-water quality and to report ecological standard exceedances. It measures named herbicides in named areas, advises growers, and already co-funds on-farm measures. Its downward trend is too slow for the 2027 objectives. The farm makes the purchase decision; the ditch carries the consequence.</p>
+        </div>
+        <div data-panel="persp" data-val="grower" hidden>
+          <span class="pill">Same facts, seen from the field</span>
+          <h3>A farmer does not buy environmental impact. A farmer buys a clean field.</h3>
+          <p>On time, without crop damage, at a price that leaves a margin. Herbicides cover a field without the hours of hand-weeding and repeated passes that alternatives may need. If a replacement misses weeds close to the crop, the grower faces lost yield, a larger weed seedbank and extra work in later seasons.</p>
+        </div>
+        <div class="persp-side">
+          <p class="eyebrow">Two linked market failures</p>
+          <ol class="mini-steps">
+            <li><b>Split incentive.</b> The environmental cost of chemical use is borne by waterways and society; the grower decides under immediate cost and yield constraints.</li>
+            <li><b>Financing gap.</b> The technology company needs production capital to serve buyers who will not commit until the technology is proven at scale.</li>
+          </ol>
+          <p class="footnote">The intervention should bring those two decisions into one staged transaction. It is about substituting a specific, problematic herbicide use where an alternative meets a farmer's actual requirements, not a generic call to ban herbicides.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 03 · Evidence -->
-<section id="evidence" class="dark" data-title="The evidence">
+<!-- 03 · The water problem -->
+<section id="water" class="dark" data-title="The water problem">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <p class="eyebrow reveal">The evidence</p>
-        <h2 class="reveal">[The numbers that prove it.]</h2>
+        <p class="eyebrow reveal">Angle one · water quality</p>
+        <h2 class="reveal">National exceedances are common. Particular herbicides are local targets.</h2>
       </div>
-      <p class="intro reveal">[Where the data comes from and what it shows.]</p>
+      <p class="intro reveal">This is a current problem, not a theoretical concern. The trend has improved since the early 2010s, but progress has slowed and the intended reduction has not been achieved.</p>
     </div>
     <div class="market-grid reveal">
       <div>
         <div class="proof-numbers" style="justify-content:flex-start">
-          <div><b data-count="87" data-suffix="%">0</b><span>[metric one]</span></div>
-          <div><b data-count="240" data-prefix="€">0</b><span>[metric two]</span></div>
+          <div><b data-count="80" data-suffix="%">0</b><span><i class="lab lab-obs">Observed · CLO 2024</i>of sites in the national crop-protection monitoring network had at least one chemical above an ecological water-quality standard.</span></div>
         </div>
-        <p class="intro">[Interpretation of the metrics: what the honest reading of the data is.]</p>
+        <p class="intro">That headline covers <b>all</b> crop-protection products. It cannot be attributed to herbicides or used as a forecast of what weed robots alone would fix. It establishes the background problem, nothing more.</p>
+        <div class="deep">
+          <span class="deep-label">Deep dives</span>
+          <button data-dd="water-data">National data and its limits ↗</button>
+          <button data-dd="bill">The downstream bill ↗</button>
+        </div>
       </div>
-      <div class="europe-card">
-        <p class="eyebrow">[Geographic view]</p>
-        <div class="eu-map">
-          <img src="assets/europe.svg" alt="Map of western Europe, placeholder pins" loading="lazy">
-          <span class="eu-pin w1 up" style="--x:53.5%;--y:32.9%"><i></i><span><b>[Pin A]</b></span></span>
-          <span class="eu-pin w2 rt" style="--x:71.4%;--y:31.3%"><i></i><span><b>[Pin B]</b></span></span>
-          <span class="eu-pin w3 lt" style="--x:47.3%;--y:50.8%"><i></i><span><b>[Pin C]</b></span></span>
+      <div class="europe-card local-card">
+        <p class="eyebrow">Zoom in · Rijnland water board, corrected 2025 monitoring</p>
+        <div class="substances">
+          <div><i class="lab lab-obs">Observed</i><b>Pendimethalin</b><span>Soil herbicide. Repeated cause of exceedances in bulb-growing and arable areas. Reaches surface water through spray drift and runoff. Rijnland advises growers to avoid it where possible.</span></div>
+          <div><i class="lab lab-obs">Observed</i><b>Metazachlor</b><span>Persistent problem in tree nurseries.</span></div>
         </div>
+        <p>A named herbicide in a named catchment is a credible intervention target, provided a field solution replaces that use rather than switching growers to another problematic product. Rijnland's report also notes substitution toward lenacil.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- 04 · Solution -->
-<section id="solution" data-title="The solution">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <p class="eyebrow reveal">The solution</p>
-        <h2 class="reveal">[What should be done.]</h2>
-      </div>
-      <p class="intro reveal">[The proposed intervention in plain words.]</p>
-    </div>
-    <div class="product-grid reveal">
-      <div class="product-photo" id="solution-visual">
-        <p class="photo-tag">[solution visual placeholder]</p>
-      </div>
-      <div class="product-copy" id="solution-info">
-        <span class="pill">[Angle label]</span>
-        <h3>[The core of the proposal.]</h3>
-        <p>[Two or three sentences describing the mechanism: what changes, for whom, and why it works.]</p>
-        <div class="spec-row">
-          <div><b>[X]</b><small>[key figure]</small></div>
-          <div><b>[Y]</b><small>[key figure]</small></div>
-          <div><b>[Z]</b><small>[key figure]</small></div>
+    <div class="bill reveal">
+      <div class="bill-head">
+        <div>
+          <p class="eyebrow">Who bears the bill</p>
+          <h3>The farm chooses the method. The water board manages surface water. Drinking-water companies pay to monitor and treat some groundwater sources.</h3>
+        </div>
+        <div class="segmented" data-switch="bill" role="group" aria-label="Choose cost view">
+          <button data-val="now" aria-pressed="true">Observed and estimated existing cost</button>
+          <button data-val="future" aria-pressed="false">Conditional future scenario</button>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- 05 · Scenario explorer -->
-<section id="scenarios" data-title="Scenario explorer">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <p class="eyebrow reveal">Scenario explorer</p>
-        <h2 class="reveal">[Test the assumptions live.]</h2>
-      </div>
-      <p class="intro reveal">[Interactive panel: the interviewer can move the assumptions and watch the outcome change. Placeholder model until the case numbers land.]</p>
-    </div>
-    <div class="economics-grid reveal" id="scenario-panel">
-      <div class="controls">
-        <label for="driverA">[Driver A] <output id="driverAV">50</output></label>
-        <input type="range" id="driverA" min="10" max="100" value="50">
-        <div class="range-ends"><span>10</span><span>100</span></div>
-        <label for="driverB">[Driver B, % improvement] <output id="driverBV">30</output></label>
-        <input type="range" id="driverB" min="0" max="60" value="30">
-        <div class="range-ends"><span>0</span><span>60</span></div>
-      </div>
-      <div>
-        <p class="result-head" id="scenario-head">…</p>
-        <div class="cost-row" data-k="base">
-          <div><span>[Base case]</span><strong>0</strong></div>
-          <div class="bar"><i></i></div>
-        </div>
-        <div class="cost-row accent" data-k="ours">
-          <div><span>[With the intervention]</span><strong>0</strong></div>
-          <div class="bar"><i></i></div>
-        </div>
-        <p class="fineprint">[Assumptions and sources for the model go here.]</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 06 · Market -->
-<section class="market-section" id="market" data-title="The market">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <p class="eyebrow reveal">The market</p>
-        <h2 class="reveal">[How big this is.]</h2>
-      </div>
-      <p class="intro reveal">[Sizing method in one sentence.]</p>
-    </div>
-    <div class="market-grid reveal">
-      <div class="market-number">
-        <div class="segmented" id="scopeToggle">
-          <button data-scope="a" aria-pressed="true">[Scope A]</button>
-          <button data-scope="b" aria-pressed="false">[Scope B]</button>
-        </div>
-        <b><span data-a="€1.2B" data-b="€14B">€1.2B</span></b>
-        <p><span data-a="[what scope A covers]" data-b="[what scope B covers]">[what scope A covers]</span></p>
-      </div>
-      <div class="go-to-market">
+      <div class="channels">
         <article>
-          <span>[Segment one]</span>
-          <h3>[Segment one headline]</h3>
-          <p>[Who they are and what they are worth.]</p>
+          <span class="channel-n">1</span>
+          <h3>Grower</h3>
+          <p>Pays for effective weed control now: herbicide, machinery, labour, and the yield risk of getting it wrong. Decides under margin pressure, season by season.</p>
+          <p class="channel-proof">No public figure quantifies this per hectare for the case crop yet. Gate 2 collects grower invoices.</p>
         </article>
         <article>
-          <span>[Segment two]</span>
-          <h3>[Segment two headline]</h3>
-          <p>[Who they are and what they are worth.]</p>
+          <span class="channel-n">2</span>
+          <h3>Water board</h3>
+          <p>Must meet surface-water objectives under the Water Framework Directive by 2027. Monitors named substances, coaches growers and co-funds listed on-farm measures.</p>
+          <p class="channel-proof">Rijnland: more than 30 eligible measures, generally at 40%, sometimes 60%. Current scheme ends 1 January 2027.</p>
         </article>
+        <article>
+          <span class="channel-n">3</span>
+          <h3>Drinking-water company</h3>
+          <div data-panel="bill" data-val="now">
+            <div class="bill-figs">
+              <div><b>€142m</b><span>estimated investment already made in extra treatment at studied groundwater intakes</span></div>
+              <div><b>€14m</b><span>a year in estimated operating cost for that treatment</span></div>
+              <div><b>€10m</b><span>a year in pesticide-related source monitoring across the sector</span></div>
+            </div>
+          </div>
+          <div data-panel="bill" data-val="future" hidden>
+            <div class="bill-figs">
+              <div><b>€993m</b><span>additional investment if ongoing pesticide pressure eventually requires active-carbon treatment at every studied site</span></div>
+              <div><b>€96m</b><span>a year in additional operation in that scenario</span></div>
+              <div><b>±40%</b><span>stated cost-estimate range. No implementation date. No attribution to herbicides.</span></div>
+            </div>
+          </div>
+          <p class="channel-proof"><i class="lab lab-obs">Estimated</i>Haskoning, February 2026, for the Ministry of Infrastructure and Water Management. Pesticides broadly, selected groundwater sites. Not a project's savings, not a water-board budget.</p>
+        </article>
+      </div>
+      <p class="footnote">The divided bill is the reason to test whether a properly funded buyer coalition could purchase effective, lower-pollution weed control upstream. It does not establish who can legally pay, what they will pay, or whether a particular robot reduces their bill. A water board's surface-water target can justify a catchment intervention without claiming it saves a drinking-water company money.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · The grower's decision -->
+<section id="grower" data-title="The grower's decision">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">Angle two · the farm</p>
+        <h2 class="reveal">Would you risk yield and labour for an unproven alternative?</h2>
+      </div>
+      <p class="intro reveal">There is measured evidence of the trade-off. In a four-year crop-system trial on sandy soil at Vredepeel, Wageningen researchers compared a conventional reference with an integrated system using fewer crop-protection products.</p>
+    </div>
+    <div class="economics-grid reveal">
+      <div>
+        <p class="eyebrow">What the lower-input system cost the grower <i class="lab lab-obs">Observed · one system trial</i></p>
+        <div class="bars">
+          <div class="bar-row">
+            <div class="bar-lab"><b>Extra labour, carrots</b><span>hours per hectare per year, four-year average</span></div>
+            <div class="bar-track"><div class="bar-fill combi" style="--p:1"><span>+57.8 h/ha</span></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-lab"><b>Extra labour, seed onions</b><span>hours per hectare per year</span></div>
+            <div class="bar-track"><div class="bar-fill ttk" style="--p:.505"><span>+29.2 h/ha</span></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-lab"><b>Sales revenue, carrots</b><span>versus the conventional reference</span></div>
+            <div class="bar-track"><div class="bar-fill combi" style="--p:.205"><span>−8%</span></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-lab"><b>Sales revenue, seed onions</b><span>largely because of high weed pressure</span></div>
+            <div class="bar-track"><div class="bar-fill ttk" style="--p:.385"><span>−15%</span></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-lab"><b>Contribution margin, carrots</b><span>per hectare, hand-weeding charged to the crop</span></div>
+            <div class="bar-track"><div class="bar-fill combi" style="--p:.69"><span>−27%</span></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-lab"><b>Contribution margin, seed onions</b><span>per hectare, hand-weeding charged to the crop</span></div>
+            <div class="bar-track"><div class="bar-fill ttk" style="--p:1"><span>−39%</span></div></div>
+          </div>
+        </div>
+        <p class="verdict">Weighted across the rotation, the integrated system's per-hectare contribution margin after hand-weeding was <b>16% lower</b> than the reference. The trial tested a whole farming system: these numbers are not the impact of laser robots, of every herbicide-free method, or of all Dutch farms. They establish why growers need credible efficacy and economics before changing practice.</p>
+        <div class="deep">
+          <span class="deep-label">Deep dive</span>
+          <button data-dd="wur">The Vredepeel trial in detail ↗</button>
+        </div>
+      </div>
+      <div class="choice">
+        <p class="eyebrow">Make the choice</p>
+        <div class="segmented three" data-switch="choice" role="group" aria-label="Choose a weed-control approach">
+          <button data-val="spray" aria-pressed="true">Keep spraying</button>
+          <button data-val="manual" aria-pressed="false">Mechanical + hands</button>
+          <button data-val="robot" aria-pressed="false">Unproven robot</button>
+        </div>
+        <div class="choice-panel" data-panel="choice" data-val="spray">
+          <h3>Reliable, cheap, and part of the problem.</h3>
+          <p>Covers the field without extra crews or machinery. But the substance may be the one the water board measures above its standard, approvals keep narrowing, and rescue options shrink with every withdrawal. Sectors report early weed control in inulin chicory became difficult after benfluralin was lost.</p>
+        </div>
+        <div class="choice-panel" data-panel="choice" data-val="manual" hidden>
+          <h3>Clean, and expensive in the hours you do not have.</h3>
+          <p>Mechanical control depends on soil and weather and does not yet fully replace chemicals in every situation, especially weeds close to the crop plant. Early mechanical work is limited in herbs and witlof. Labour is scarce. Growers keep a chemical rescue treatment for when it falls short.</p>
+        </div>
+        <div class="choice-panel" data-panel="choice" data-val="robot" hidden>
+          <h3>Promising, and you carry the proof risk.</h3>
+          <p>Throughput per hectare, repeat passes, uptime in a narrow weather window, crop damage and cost per treated hectare are vendor claims until measured in your crop. If it misses, you lose yield this year and fight a bigger seedbank next year. Who pays for the rescue spray?</p>
+        </div>
+        <div class="criteria">
+          <p class="eyebrow">The grower's actual buying criteria</p>
+          <ul>
+            <li>Weeds controlled at the required stage</li>
+            <li>No unacceptable yield or crop damage</li>
+            <li>Enough machine capacity in the treatment window</li>
+            <li>Predictable cost per treated hectare</li>
+            <li>Clear responsibility for breakdowns, missed treatments and rescue spraying</li>
+          </ul>
+          <p class="footnote">All five must be set with growers before a technology supplier is chosen. The honest formulation: replace or materially reduce a particular herbicide while maintaining viable weed control and grower economics. Zero chemistry across a whole farm is not the requirement.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 07 · Plan -->
-<section id="plan" data-title="The plan">
+<!-- 05 · Signals -->
+<section id="signals" class="market-section" data-title="Signals of demand">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <p class="eyebrow reveal">The plan</p>
-        <h2 class="reveal">[How to execute it.]</h2>
+        <p class="eyebrow reveal">Proof of appetite</p>
+        <h2 class="reveal">Authorities are already paying to reduce pollution. Growers are already searching for options.</h2>
       </div>
-      <p class="intro reveal">[Phasing logic in one sentence.]</p>
+      <p class="intro reveal">Policy priority, a water board's concrete funding role and growers' own reported bottlenecks. None of it is a purchase commitment yet.</p>
     </div>
     <div class="channels reveal">
       <article>
-        <span class="channel-n">1</span>
-        <h3>[Phase one]</h3>
-        <p>[What happens, and the milestone that ends the phase.]</p>
+        <span class="phase">National policy</span>
+        <h3>2030 vision, 2027 deadline</h3>
+        <p>The government's Future Vision for Crop Protection 2030 calls for resilient growing systems that avoid crop-protection products where possible and emit almost nothing when products are needed. Water Framework Directive objectives add a near-term deadline in 2027.</p>
+        <p class="channel-proof"><i class="lab lab-obs">Observed</i>Rijksoverheid, 2019; CLO on the water objectives. Policy does not equal willingness or legal power to sign a purchase contract.</p>
       </article>
       <article>
-        <span class="channel-n">2</span>
-        <h3>[Phase two]</h3>
-        <p>[What happens next.]</p>
+        <span class="phase">Water board</span>
+        <h3>A funder already, on its own terms</h3>
+        <p>Rijnland measures particular herbicides and advises growers. Its agricultural programme co-funds more than 30 listed measures on runoff, pesticide emissions, soil, banks and freshwater, generally at 40%. Mechanical weed-control equipment is one listed measure, capped at €10,000 per measure and per applicant under the crop-protection theme.</p>
+        <p class="channel-proof"><i class="lab lab-obs">Observed</i>Regulation CVDR698620, Articles 2, 6, 12 and Annex 1. An approved list, one application at a time. Not a multi-year order book. Ends 1 January 2027; successor undecided.</p>
       </article>
       <article>
-        <span class="channel-n">3</span>
-        <h3>[Phase three]</h3>
-        <p>[The end state.]</p>
+        <span class="phase">Growers</span>
+        <h3>Reported need, active search</h3>
+        <p>In a 2025 bottleneck annex published by the government, the agricultural sectors themselves report that losing benfluralin made early weed control in inulin chicory difficult enough to threaten the crop's economics, and describe too few approved products, high hand-weeding costs and labour shortages in herbs and witlof. Public trials compare electric, mechanical and spot-spray machines.</p>
+        <p class="channel-proof"><i class="lab lab-obs">Observed</i>Sector-reported problems, not independent government measurement. Nationale Proeftuin Precisielandbouw 2025 comparison. No purchase commitment for any robot.</p>
       </article>
+    </div>
+    <div class="deep reveal">
+      <span class="deep-label">Deep dive</span>
+      <button data-dd="subsidy">What Rijnland's programme does and does not prove ↗</button>
     </div>
   </div>
 </section>
 
-<!-- 08 · Recommendation -->
-<section class="dark round-section" id="ask" data-title="The recommendation">
+<!-- 06 · Three routes -->
+<section id="routes" class="dark" data-title="Three routes">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <p class="eyebrow reveal">The recommendation</p>
-        <h2 class="reveal">[The call, stated plainly.]</h2>
+        <p class="eyebrow reveal">Three responses to the same problem</p>
+        <h2 class="reveal">There is more than one way to reduce chemical dependence.</h2>
       </div>
-      <div class="raise reveal">
-        <b>[Key figure]</b>
-        <span>[what it buys]</span>
+      <p class="intro reveal">All three are real approaches with Dutch examples. None is a universal winner. The named companies are illustrations, not programme participants or endorsements.</p>
+    </div>
+    <div class="routes-grid reveal">
+      <div class="technology-steps" data-switch="route" role="group" aria-label="Choose a route">
+        <button data-val="laser" aria-pressed="true"><span>01</span><b>Robotic light or laser weeding</b><p>Cameras identify crop and weed; a targeted laser damages the weed without herbicide at that spot.</p></button>
+        <button data-val="mech" aria-pressed="false"><span>02</span><b>Robotic mechanical removal</b><p>Vision-guided arms or tools physically remove weeds, potentially inside the crop row.</p></button>
+        <button data-val="spot" aria-pressed="false"><span>03</span><b>Precision spot spraying</b><p>Sensors find weeds and apply herbicide only where needed instead of treating the whole area.</p></button>
+      </div>
+      <div class="route-detail">
+        <div data-panel="route" data-val="laser">
+          <span class="pill">Dutch example · Cropr Weedr</span>
+          <h3>Could remove some herbicide applications and reach weeds near the crop plant.</h3>
+          <dl>
+            <dt>What remains hard</dt><dd>Weed recognition, speed per hectare, repeated passes, price, uptime and manufacture at scale.</dd>
+            <dt>Watch the claims</dt><dd><i class="lab lab-claim">Claimed by supplier</i>Under €100 per driven hectare, and crop fit for onions, carrots, chicory, witlof and lilies. Field deployments from 2026. The machine specifies a diesel generator, so no zero-emission claim and no validated water improvement.</dd>
+          </dl>
+        </div>
+        <div data-panel="route" data-val="mech" hidden>
+          <span class="pill">Dutch example · Odd.Bot Maverick</span>
+          <h3>Chemical-free treatment and potentially fewer hand-weeding hours where the system works.</h3>
+          <dl>
+            <dt>What remains hard</dt><dd>Soil conditions, crop damage, speed, timing and whether the farm still needs a chemical rescue treatment.</dd>
+            <dt>Watch the claims</dt><dd><i class="lab lab-claim">Claimed by supplier</i>Customer stories on the vendor site are anecdotal, not general yield estimates. Testing and selling for crops such as carrots and onions.</dd>
+          </dl>
+        </div>
+        <div data-panel="route" data-val="spot" hidden>
+          <span class="pill">Dutch example · Rometron WEED-IT</span>
+          <h3>Lower input cost and chemical use while keeping an established method.</h3>
+          <dl>
+            <dt>What remains hard</dt><dd>It still applies herbicide. Its effect on a particular water pollutant depends on which chemical and crop are involved.</dd>
+            <dt>Watch the claims</dt><dd><i class="lab lab-claim">Claimed by supplier</i>"Up to" savings figures cannot be treated as a guaranteed environmental outcome. Sold through dealers, developed in the Netherlands.</dd>
+          </dl>
+        </div>
       </div>
     </div>
-    <div class="milestones reveal">
-      <div><b>[Milestone one]</b><p>[What success looks like at this point.]</p></div>
-      <div><b>[Milestone two]</b><p>[Next proof point.]</p></div>
-      <div><b>[Milestone three]</b><p>[The end state that validates the call.]</p></div>
+    <div class="direct-band pivot reveal">
+      <p><b>The deliberate pivot.</b> For this case, follow the light-weeding robot. It poses the clearest capital question: suppose the engineering works in a field, but the company still needs money to build reliable machines and customers hesitate to order until those machines are proven in their own crop. Can we change the order in which capital and customer commitments arrive? The mechanism itself stays outcome-based and open to every route in a real selection.</p>
+    </div>
+    <div class="deep reveal">
+      <span class="deep-label">Deep dive</span>
+      <button data-dd="routes">Full comparison and the crop-location gate ↗</button>
     </div>
   </div>
 </section>
 
-<!-- 09 · Close -->
+<!-- 07 · The funding gap -->
+<section id="gap" data-title="The funding gap">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">The funding gap</p>
+        <h2 class="reveal">How do you finance the first commercial fleet?</h2>
+      </div>
+      <p class="intro reveal">A working field robot is not the same as a scalable business. The manufacturer needs capital for engineering, inventory, manufacturing partners, servicing and several seasons of deployment. The grower wants proof in their own crop before ordering. Investors see technical progress and non-binding interest, and wait.</p>
+    </div>
+    <div class="seq reveal" aria-label="The startup's sequence">
+      <div><span>1</span><b>Functioning machine</b><small>engineering works in a field</small></div>
+      <div><span>2</span><b>Field proof</b><small>in the customer's own crop</small></div>
+      <div class="hi"><span>3</span><b>Conditional customer order</b><small>the missing step</small></div>
+      <div><span>4</span><b>Manufacturing capital</b><small>investors underwrite production</small></div>
+      <div><span>5</span><b>Deployment</b><small>machines in fields, revenue</small></div>
+    </div>
+    <div class="evidence reveal">
+      <div class="evidence-head">
+        <p class="eyebrow">What does the investor actually hold?</p>
+        <div class="segmented" data-switch="ev" role="group" aria-label="Choose the demand evidence">
+          <button data-val="loi" aria-pressed="true">Expressions of interest</button>
+          <button data-val="signed" aria-pressed="false">Signed conditional purchase</button>
+        </div>
+      </div>
+      <div class="ev-grid">
+        <div data-panel="ev" data-val="loi">
+          <ul class="ticks off">
+            <li>Named growers who say they would buy</li>
+            <li>No price, volume or delivery window</li>
+            <li>No acceptance tests defined</li>
+            <li>Nothing enforceable if the grower walks</li>
+            <li>Production plan rests on demonstrations</li>
+          </ul>
+          <p class="verdict">Investors see technical progress but hesitate to finance a production plan on non-binding memoranda of interest. This is the status quo.</p>
+        </div>
+        <div data-panel="ev" data-val="signed" hidden>
+          <ul class="ticks on">
+            <li>Identified buyer with a contractual purchase obligation</li>
+            <li>Crop, region, volume, price, delivery window and capacity limits stated</li>
+            <li>Acceptance tests and rescue-spray rules agreed before supplier selection</li>
+            <li>Customer creditworthiness and independent field results attached</li>
+            <li>Approved public contribution reserved separately</li>
+          </ul>
+          <p class="verdict"><i class="lab lab-prop">Proposed</i>Investors still underwrite production and execution risk, but demand is no longer speculative. A signed conditional contract is not guaranteed revenue. The obligations and remedies need legal design.</p>
+        </div>
+        <div class="evidence-side">
+          <p class="eyebrow">Why Techleap</p>
+          <p>Techleap's 2026 deep-tech capital report says early public support and later private-investor decisions exchange too little market feedback, and argues for procurement that creates a route to market. A Dutch advance-demand experiment tests that recommendation in one product category.</p>
+          <p class="footnote">This is a hypothesis about one financing bottleneck, not evidence that every Dutch weeding company lacks customers. Roboltics already rents and contracts laser weeding; Homburg leases robots. The programme must create commitment beyond those channels. The report is an ecosystem diagnosis, not proof that one contract closes a round.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 · The mechanism -->
+<section id="mechanism" data-title="The mechanism">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">The intervention <i class="lab lab-prop">Proposed · working name</i></p>
+        <h2 class="reveal">A Clean Weeding Purchase Commitment.</h2>
+      </div>
+      <p class="intro reveal">Take the water board's existing public water-quality objective and pair a reserved budget with growers' binding conditional orders. Pay for a real validation, then activate the larger purchase when pre-agreed tests pass. Bring investors the transaction, not the pitch.</p>
+    </div>
+    <ol class="steps reveal">
+      <li><b>Select the narrow problem</b><p>A crop, catchment and weed-control use where farmers face measurable difficulty and the water authority has evidence of a relevant herbicide. Identify the actual application to be displaced.</p></li>
+      <li><b>Assemble buyers and an anchor payer</b><p>Growers, grower groups or food-chain buyers commit to a minimum quantity at a defined price and standard, conditional on acceptance tests. The water board makes a separate, approved conditional commitment toward the environmental price gap.</p></li>
+      <li><b>Pay for a real validation</b><p>Qualified suppliers compete for paid work on a smaller area with independent weed-control, yield, uptime, cost and chemical-use data. Test conditions and rescue rules agreed before selection.</p></li>
+      <li><b>Activate the larger purchase</b><p>Once tests pass, the buyer has a contractual obligation within the stated crop, region, volume, price, window and capacity limits. Materially stronger than a memorandum of interest.</p></li>
+      <li><b>Bring investors the transaction</b><p>Signed terms, customer creditworthiness, field results, manufacturer cost and realistic utilisation. Investors still carry production and execution risk.</p></li>
+    </ol>
+    <div class="routes-table reveal">
+      <p class="eyebrow">Two routes for the public contribution</p>
+      <div class="compare">
+        <div class="preferred">
+          <span class="tag">Preferred first design</span>
+          <h3>Purchase commitment per verified hectare</h3>
+          <dl>
+            <dt>Water board funds</dt><dd>The environmental price difference per eligible hectare actually treated and independently verified. Growers pay an agreed baseline share.</dd>
+            <dt>What makes it investable</dt><dd>Conditional minimum-volume purchase agreements with qualified suppliers, plus a separately reserved public contribution. A passing supplier sees who buys, how much, at what price.</dd>
+            <dt>The hard test</dt><dd>Can the board lawfully make a forward, multi-season commitment, and will buyers sign meaningful volumes under objective terms?</dd>
+          </dl>
+        </div>
+        <div>
+          <span class="tag">Alternative</span>
+          <h3>Conditional farmer adoption facility</h3>
+          <dl>
+            <dt>Water board funds</dt><dd>A budget of grants or rebates for eligible low-pesticide equipment or services that pass stated tests.</dd>
+            <dt>What makes it investable</dt><dd>A published budget alone gives a supplier possible customers, not orders. Growers must additionally sign purchase reservations that activate when equipment qualifies and support is awarded.</dd>
+            <dt>The hard test</dt><dd>Can support be committed on a useful timetable, compatible with subsidy rules, while preserving farmer choice and credible purchase obligations?</dd>
+          </dl>
+        </div>
+      </div>
+      <p class="footnote">Both routes can be technology-neutral even when the presentation follows a light robot. Neither requires Techleap to hold public money: the authorised water board or programme operator administers its contribution. Whoever operates the machines, startup, farmer, dealer, contractor, is a commercial choice, not the intervention. The precedent is Frontier's advance market commitment for carbon removal, adapted for a job that is far harder to standardise than a verified tonne.</p>
+    </div>
+    <div class="deep reveal">
+      <span class="deep-label">Deep dives</span>
+      <button data-dd="precedent">The Frontier precedent and what transfers ↗</button>
+      <button data-dd="fit">Strategic fit and the climate question ↗</button>
+    </div>
+  </div>
+</section>
+
+<!-- 09 · Scenario explorer -->
+<section id="explorer" class="market-section" data-title="Scenario explorer">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">Scenario explorer <i class="lab lab-prop">Hypothetical</i></p>
+        <h2 class="reveal">What would a conditional order book look like?</h2>
+      </div>
+      <p class="intro reveal">A demonstration of the shape of the deal, not a forecast. Start from the draft's illustration: a cluster of growers reserves 300 hectares of one crop and suppliers compete for a paid 30-hectare validation slot. Move the assumptions and watch what the investor would be shown.</p>
+    </div>
+    <div class="economics-grid reveal" id="scenario-panel">
+      <div class="controls">
+        <label for="haRes">Hectares under conditional reservation <output id="haResV">300</output></label>
+        <input type="range" id="haRes" min="30" max="1500" step="10" value="300">
+        <div class="range-ends"><span>30 ha</span><span>1,500 ha</span></div>
+        <label for="signRate">Share converting to signed conditional orders <output id="signRateV">60%</output></label>
+        <input type="range" id="signRate" min="10" max="100" step="5" value="60">
+        <div class="range-ends"><span>10%</span><span>100%</span></div>
+        <label for="passes">Treatments per season <output id="passesV">2</output></label>
+        <input type="range" id="passes" min="1" max="4" step="1" value="2">
+        <div class="range-ends"><span>1 pass</span><span>4 passes</span></div>
+        <label for="price">Price per driven hectare <output id="priceV">€100</output></label>
+        <input type="range" id="price" min="40" max="250" step="5" value="100">
+        <div class="range-ends"><span>€40</span><span>€250</span></div>
+        <label for="pubShare">Public contribution to that price <output id="pubShareV">40%</output></label>
+        <input type="range" id="pubShare" min="0" max="60" step="5" value="40">
+        <div class="range-ends"><span>0%</span><span>60%</span></div>
+        <label for="seasons">Seasons committed <output id="seasonsV">3</output></label>
+        <input type="range" id="seasons" min="1" max="5" step="1" value="3">
+        <div class="range-ends"><span>1</span><span>5</span></div>
+        <label for="valHa">Paid validation slot <output id="valHaV">30 ha</output></label>
+        <input type="range" id="valHa" min="5" max="100" step="5" value="30">
+        <div class="range-ends"><span>5 ha</span><span>100 ha</span></div>
+      </div>
+      <div>
+        <p class="result-head" id="scenario-head">…</p>
+        <div class="cost-row" data-k="grower">
+          <div><span>Growers' share of the order book</span><strong>0</strong></div>
+          <div class="bar"><i></i></div>
+        </div>
+        <div class="cost-row" data-k="public">
+          <div><span>Proposed public contribution</span><strong>0</strong></div>
+          <div class="bar"><i></i></div>
+        </div>
+        <div class="cost-row accent" data-k="total">
+          <div><span>Total conditional order value, all seasons</span><strong>0</strong></div>
+          <div class="bar"><i></i></div>
+        </div>
+        <div class="kpis explorer-kpis">
+          <div class="kpi"><div class="v" id="kSigned">0</div><div class="k">hectares under signed conditional order</div></div>
+          <div class="kpi"><div class="v" id="kDriven">0</div><div class="k">driven hectares per season</div></div>
+          <div class="kpi"><div class="v" id="kSeason">0</div><div class="k">order value per season</div></div>
+          <div class="kpi"><div class="v" id="kVal">0</div><div class="k">paid validation work, one season</div></div>
+        </div>
+        <p class="fineprint" id="scenario-note"></p>
+        <div class="deep">
+          <span class="deep-label">Deep dive</span>
+          <button data-dd="model">Model assumptions and what is missing ↗</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · Gates -->
+<section id="gates" data-title="Gates before it is executable">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">Research and decision gates</p>
+        <h2 class="reveal">Seven things to establish before this is pitched as executable.</h2>
+      </div>
+      <p class="intro reveal">Each gate has a concrete owner and a concrete output. Several can run in parallel. None can be skipped by citing a national figure.</p>
+    </div>
+    <ol class="gates reveal">
+      <li><b>Crop × substance × catchment</b><p>A crop using a named herbicide found above the water-quality limit in its catchment, and a robot that can plausibly displace that application. The Vredepeel pain and the Rijnland exceedances are different pieces of evidence; the overlap has to be shown.</p></li>
+      <li><b>Real farmer economics</b><p>Grower invoices or interviews on current weed-control spend, yield exposure, manual hours, rescue treatments, and willingness to sign a conditional purchase at a specific price.</p></li>
+      <li><b>Technology readiness</b><p>Supplier field records: efficacy, repeat passes, hours per hectare, uptime, weather limits, crop damage, fuel or power use, manufacturing cost. Not marketing claims.</p></li>
+      <li><b>Contract strength</b><p>Buyer, enforceable minimum volume, price, conditions, cancellation rights, credit risk. Ask two relevant investors whether this changes their actual underwriting, and on what terms.</p></li>
+      <li><b>Water-board anchor and additionality</b><p>A specified conditional budget for a target catchment. Verify with the board and counsel which funding route, how long, how material, and how it interacts with existing subsidies and state-aid limits. If no public contribution is secured, the order must work on private economics alone.</p></li>
+      <li><b>Novelty</b><p>Check what Roboltics, Cropr, Odd.Bot, current growers, lessors and agricultural water programmes already offer. The mechanism must create commitments or financing outcomes those channels do not.</p></li>
+      <li><b>Scope fit</b><p>Lead with Techleap's deep-tech commercialisation and capital-activation remit. Ask whether water quality, nature and agricultural robotics fit the Climate Tech or deep-tech mandate. No emissions promise without lifecycle analysis.</p></li>
+    </ol>
+    <div class="direct-band reveal">
+      <p><b>Decision rule.</b> If no buyer will contract for meaningful future volume at a usable price, even with technical conditions clearly written, this is not yet a demand-creation mechanism. If buyers sign and investors still do not find the orders meaningful, the binding constraint is machine economics, production reliability or market size, and the case changes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · The ask -->
+<section class="dark round-section" id="ask" data-title="Techleap's role">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">Techleap's role</p>
+        <h2 class="reveal">Assemble the buyers, structure the commitment, bring in investors when it is underwritable.</h2>
+      </div>
+      <div class="raise reveal">
+        <b>€0</b>
+        <span>of Techleap balance sheet</span>
+        <small>No robots bought. Public money administered by the authorised water board. Techleap's contribution is convening, contract design and investor access.</small>
+      </div>
+    </div>
+    <div class="milestones reveal">
+      <div><b>Buyers sign</b><p>A grower cluster and an anchor payer commit conditional volume, price and acceptance tests for one crop in one catchment.</p></div>
+      <div><b>Validation passes</b><p>Independent field data on weed control, yield, uptime, cost and displaced chemical use in the paid slot.</p></div>
+      <div><b>Investors underwrite</b><p>At least two investors confirm the signed order book changes their production-round terms.</p></div>
+    </div>
+    <div class="prompt reveal">
+      <p class="eyebrow">Discussion prompt</p>
+      <h3>If you were the investor, what minimum evidence would turn a prototype and farmer interest into an investable production plan?</h3>
+      <p>Challenge the price, the farm risk, the water outcome, the volume, the authority to pay and the timing. These are the live design questions of the case.</p>
+    </div>
+    <div class="deep reveal">
+      <span class="deep-label">Deep dive</span>
+      <button data-dd="sources">Every source on this page ↗</button>
+    </div>
+  </div>
+</section>
+
+<!-- 12 · Close -->
 <section id="close" class="dark final-slide" data-title="Closing">
   <div class="wrap">
-    <p class="eyebrow reveal">[Closing eyebrow]</p>
-    <h2 class="reveal">[The closing line of the case.]</h2>
-    <p class="intro reveal">[One sentence to end the discussion on.]</p>
+    <p class="eyebrow reveal">Clean weeding, bankable demand</p>
+    <h2 class="reveal">Change the order in which capital and customers arrive.</h2>
+    <p class="intro reveal">Make the demand real first. Then ask investors to fund the machines.</p>
   </div>
 </section>
 
 </main>
 
 <footer>
-  <div class="wrap">[Case presentation · Simon de Marmels · 2026]</div>
+  <div class="wrap">Case presentation · Simon de Marmels · September 2026 · Working draft: crop, catchment, buyer, price and supplier not yet selected. Labels on this page: <i class="lab lab-obs">Observed</i> measured data, trial results, published goals and terms · <i class="lab lab-claim">Claimed by supplier</i> vendor statements · <i class="lab lab-prop">Proposed</i> future commitments and example figures.</div>
 </footer>
 
 <div class="deck-controls" aria-label="Presentation controls" hidden>
-  <span id="slide-count">01 / 09</span>
+  <span id="slide-count">01 / 12</span>
   <div class="slide-navigation">
     <button id="prev-slide" aria-label="Previous section">←</button>
     <span id="slide-title">The thesis</span>
@@ -309,14 +618,146 @@
 </dialog>
 
 <!-- Deep-dive content: one <template id="dd-…"> per popout. -->
-<template id="dd-problem-detail" data-k="Deep dive" data-h="[The data behind the problem]">
+<template id="dd-water-data" data-k="Deep dive · water" data-h="National data and its limits">
   <div class="detail-body">
-    <p>[Longer-form backing for the problem section: tables, charts, the full argument. Opens in the side sheet when the button is clicked.]</p>
+    <p>The Compendium voor de Leefomgeving (CLO) reports that in 2024, at nearly 80% of sites in the national crop-protection monitoring network, at least one crop-protection chemical exceeded an ecological water-quality standard. The series has improved since the early 2010s, but progress has slowed and the intended reduction has not been achieved. The national series also remains above its target.</p>
+    <div class="warn">The 80% figure covers all crop-protection products: herbicides, fungicides, insecticides and their metabolites. Never label it "herbicide contamination", and never imply that any map or figure shows emissions attributable to a robot.</div>
+    <p>The weed-control connection becomes concrete at water-board level. Rijnland's corrected 2025 monitoring results identify pendimethalin, a soil herbicide, as a repeated cause of exceedances in bulb-growing and arable areas, and metazachlor as a persistent problem in tree nurseries. Rijnland explains that pendimethalin reaches surface water through spray drift and runoff, and advises careful use or avoidance. The report also notes substitution toward lenacil, which is why the intervention must displace a use rather than shift it to another problematic product. Use the corrected report; the earlier version was amended.</p>
+    <p><b>How to demonstrate an environmental result.</b> Pick a catchment and crop where the water authority has identified an offending herbicide and can link its use to the growers being recruited. Record baseline applications, independently verify which applications the technology actually displaces, and monitor the target compound in nearby ditches or field drains against comparable untreated fields with rainfall data. Count substitute products and rescue sprays. Do not use "litres of pesticide avoided" as a stand-alone measure of ecological benefit.</p>
+    <table class="spec-table">
+      <tr><th>Actor</th><th>Concrete problem</th><th>Evidence and limits</th></tr>
+      <tr><td>Water board</td><td>Protect local surface-water quality; a few problem substances keep a site above its standard.</td><td>Rijnland: continued exceedances, trend too slow for 2027. CLO: national series above target.</td></tr>
+      <tr><td>Aquatic ecosystems, downstream users</td><td>Standards protect aquatic organisms. Removing a herbicide from one field removes that field's emissions from that application.</td><td>A plausible causal pathway, not proof that catchment concentration falls by a given percentage. Other fields, practices, weather and chemicals still matter.</td></tr>
+      <tr><td>Policymakers</td><td>Environmental goals require improvement while agriculture stays viable.</td><td>Future Vision for Crop Protection 2030: prevent use where possible, near-zero emissions, economic future for growers.</td></tr>
+      <tr><td>Drinking-water company</td><td>Monitor source water; run extra treatment at some groundwater intakes when pesticides or metabolites appear.</td><td>Haskoning 2026 for the ministry. Pesticides broadly, selected groundwater sites, not the case herbicide. A different role from the water board.</td></tr>
+    </table>
+    <p class="src">Sources: CLO indicator nl0547, crop-protection products in surface water 2013 to 2024. Rijnland, correction to news item of 24 March 2026. Landbouwportaal Rijnland on pendimethalin pathways. Unie van Waterschappen on crop-protection chemicals. Links in "Every source on this page".</p>
   </div>
 </template>
-<template id="dd-sources" data-k="Deep dive" data-h="[Sources &amp; method]">
+
+<template id="dd-bill" data-k="Deep dive · water" data-h="The downstream bill, and how far the numbers travel">
   <div class="detail-body">
-    <p>[Every number on this page, with its source and how it was derived.]</p>
+    <p>A February 2026 Haskoning study for the Ministry of Infrastructure and Water Management estimates the cost of additional treatment at selected groundwater drinking-water abstraction sites in protection zones, caused by pesticides and their metabolites.</p>
+    <table class="spec-table">
+      <tr><th>Figure</th><th>What it is</th><th>Status</th></tr>
+      <tr><td>€142.2m</td><td>Investment already made in additional treatment at the studied groundwater intakes</td><td>Estimated, historical, ±40%</td></tr>
+      <tr><td>€14.2m / year</td><td>Operating cost of that existing treatment</td><td>Estimated, ±40%</td></tr>
+      <tr><td>€10m / year</td><td>Pesticide-related drinking-water source monitoring across the sector</td><td>Estimated</td></tr>
+      <tr class="hl"><td>€993m</td><td>Additional investment if ongoing pesticide pressure eventually requires extra active-carbon treatment at every site in the study</td><td>Conditional scenario, no date, ±40%</td></tr>
+      <tr class="hl"><td>€95.6m / year</td><td>Additional operation in that scenario</td><td>Conditional scenario, ±40%</td></tr>
+    </table>
+    <div class="warn">These figures concern all pesticides and metabolites at selected groundwater drinking-water sites. The proposed intervention concerns a specified herbicide use in a chosen crop and catchment, measured first against surface-water problems. Different geographies, waters, substances and institutions. Do not label any of them "savings from laser weeding", count them toward the first buyer's budget, or add one-time investment to annual cost. Existing treatment cost would not vanish when one farm changes method.</div>
+    <p><b>The economic hypothesis to test</b> is narrower: where a named herbicide contributes to a water-quality failure, compare the marginal cost of buying a cleaner replacement upstream with the locally attributable environmental or treatment benefit downstream. A water board's surface-water target can justify a catchment intervention on its own. If the site also protects a groundwater abstraction, ask the drinking-water company directly whether it has a procurement or co-funding interest. Do not infer it from national costs.</p>
+    <p class="src">Source: Haskoning, study commissioned by the Ministry of Infrastructure and Water Management, February 2026, sections 2, 4 and 5, Table 4. Listed on open.overheid.nl. Water boards' role: Unie van Waterschappen.</p>
+  </div>
+</template>
+
+<template id="dd-wur" data-k="Deep dive · the farm" data-h="The Vredepeel trial in detail">
+  <div class="detail-body">
+    <p>Wageningen Research ran a four-year crop-system experiment (2020 to 2023) on sandy soil at Vredepeel, comparing a conventional reference system with an integrated crop-management system that used fewer crop-protection products. The economic analysis is in the original field report, section 8.1.5 and Table 19, published by BO Akkerbouw.</p>
+    <table class="spec-table">
+      <tr><th>Measure</th><th>Carrots</th><th>Seed onions</th><th>Note</th></tr>
+      <tr><td>Extra labour, integrated vs reference</td><td>+57.8 h/ha</td><td>+29.2 h/ha</td><td>Four-year average, section 8.1.5</td></tr>
+      <tr><td>Sales revenue</td><td>−8%</td><td>−15%</td><td>Largely high weed pressure</td></tr>
+      <tr><td>Contribution margin per ha, hand-weeding charged to the crop</td><td>−27%</td><td>−39%</td><td>Illustrative, Table 19</td></tr>
+      <tr><td>Weighted contribution margin per ha after hand-weeding</td><td colspan="2">−16% across the rotation</td><td>Whole-system result</td></tr>
+      <tr><td>Chemicals vs energy</td><td colspan="2">Less spent on chemicals, more on energy</td><td>Mechanical passes replaced sprays</td></tr>
+    </table>
+    <div class="warn">These are outcomes of one multi-practice field experiment and its economic assumptions. They are not the cost of abandoning all herbicides, a Dutch national average, or a forecast for a robot. For a slide, the extra hours per hectare are the clearest way to show the grower's operational pain.</div>
+    <p><b>What we chose not to use.</b> Supplier pitch material in circulation quotes figures such as 30 to 70% yield loss from uncontrolled weeds, 5% loss when weeds are removed in the critical period, 10 people per hectare for manual weeding, and a 20 to 25% fall in spraying days from climate change. None could be traced to a checkable source or transferred to Dutch carrots or onions. The 5% is a chosen tolerance used to define the critical weed-control window, not a measured outcome. The defensible visual is the WUR trade-off above.</p>
+    <p class="src">Sources: Wageningen Research, Integrale aanpak voor de akkerbouw op zand, Rapportage 2020-2023, sections 8.1.5 and Table 19; BO Akkerbouw summary. UMass Extension on the critical period of weed control.</p>
+  </div>
+</template>
+
+<template id="dd-subsidy" data-k="Deep dive · signals" data-h="What Rijnland's programme does and does not prove">
+  <div class="detail-body">
+    <p>Rijnland's 2026 announcement describes coaching and subsidies for agricultural entrepreneurs across more than 30 eligible measures, generally at 40% and sometimes 60% of cost. The official regulation (CVDR698620) covers water and soil quality, water scarcity and flooding, and measures involving crop-protection products, farmyard runoff, soil, banks and freshwater.</p>
+    <table class="spec-table">
+      <tr><th>Provision</th><th>What it says</th></tr>
+      <tr><td>Articles 2 and 6</td><td>Water-quality objective; listed eligible measures. An approved list, not a subsidy for anything that might help water.</td></tr>
+      <tr><td>Annex 1</td><td>Mechanical weed-control equipment is one eligible productive measure: 40% of purchase cost, €10,000 cap per measure.</td></tr>
+      <tr><td>Article 12</td><td>€10,000 cap per applicant under the crop-protection theme. This cap does not apply across the whole programme.</td></tr>
+      <tr><td>Duration</td><td>The present scheme ends 1 January 2027; its successor is undecided.</td></tr>
+    </table>
+    <p><b>What this proves:</b> policy priority and a water board's concrete funding role across several agricultural water problems. A water board already helps pay for alternatives on farms, one application at a time.</p>
+    <p><b>What this suggests:</b> a separate advance-purchase mechanism could take the same public objective and pair a reserved budget with growers' binding conditional orders. A design inference, not a claim that the current scheme can be repurposed without a new approval.</p>
+    <div class="warn">What this does not prove: that Rijnland has agreed to participate, that a laser robot qualifies under the current measure list, that the existing cap could cover such a machine, or that a water board can make a new multi-year outcome-payment commitment under this regulation. Vehicle, funding authority, approved budget, state-aid treatment and overlap with existing subsidies all need separate checks.</div>
+    <p class="src">Sources: Rijnland, 2026 laatste jaar coaching en subsidies; Landbouwportaal Rijnland subsidy update; regulation CVDR698620 on lokaleregelgeving.overheid.nl.</p>
+  </div>
+</template>
+
+<template id="dd-routes" data-k="Deep dive · routes" data-h="Three routes, and the crop-location gate">
+  <div class="detail-body">
+    <table class="spec-table tech">
+      <tr><th>Route</th><th>What it does</th><th>Dutch example</th><th>What it might solve</th><th>What remains hard</th></tr>
+      <tr><td>Robotic light or laser weeding</td><td>Cameras identify crop and weed; a targeted laser damages the weed at that spot.</td><td>Cropr Weedr, field deployments from 2026; onions, carrots, chicory, witlof, lilies named.</td><td>Remove some herbicide applications; reach weeds near crop plants, subject to crop-specific proof.</td><td>Recognition, speed per hectare, repeated passes, price, uptime, manufacture at scale. Diesel generator specified. Under-€100 per driven hectare is a vendor claim.</td></tr>
+      <tr><td>Robotic mechanical removal</td><td>Vision-guided arms or tools physically remove weeds, potentially in the row.</td><td>Odd.Bot Maverick; testing and selling for carrots and onions.</td><td>Chemical-free treatment; potentially fewer hand-weeding hours where it works.</td><td>Soil, crop damage, speed, timing, whether a rescue treatment is still needed. Customer stories are anecdotal.</td></tr>
+      <tr><td>Precision spot spraying</td><td>Sensors identify weeds and apply herbicide only where needed.</td><td>Rometron WEED-IT, developed in the Netherlands, sold through dealers.</td><td>Lower input cost and chemical use while keeping an established method.</td><td>Still applies herbicide. Effect on a given pollutant depends on chemical and crop. "Up to" savings are not guaranteed outcomes.</td></tr>
+    </table>
+    <p><b>Why follow the light robot for discussion.</b> It makes the product-development-to-manufacture gap vivid and gives the audience a concrete investment decision. The intervention itself must remain outcome-based and open to other methods in a real selection. Choosing a robot for a case study must not become a hidden commitment to a supplier or a subsidy for one machine.</p>
+    <div class="warn">Crop and location gate. The Vredepeel trial establishes grower pain for carrots and onions. Rijnland identifies pendimethalin exceedances in bulbs and arable areas. Cropr lists witlof; the sectors report a bottleneck in witlof and inulin chicory. These are different pieces of evidence. They do not establish that a particular grower in a particular catchment is using pendimethalin, or that a given robot can replace that exact application. Establish the overlap before naming the launch crop and place. Bulbs and lilies are another possible match, with the same proof needed.</div>
+    <p class="src">Sources: Cropr, Odd.Bot, Rometron WEED-IT (vendor sites; performance and cost are vendor claims). Nationale Proeftuin Precisielandbouw 2025 comparison. Deltaplan Agrarisch Waterbeheer and Landbouwportaal Rijnland on mechanical limits.</p>
+  </div>
+</template>
+
+<template id="dd-precedent" data-k="Deep dive · mechanism" data-h="The Frontier precedent, and what transfers">
+  <div class="detail-body">
+    <p>Frontier pools buyer spending on future carbon removal. It uses smaller prepurchases for early suppliers and larger offtake contracts for technologies ready to scale. The transferable idea is a buyer commitment made before full supply exists, conditional on later delivery.</p>
+    <div class="warn">A verified tonne of carbon removal is easier to standardise than a crop-specific weeding job. The agricultural contract therefore needs much tighter definitions of crop, field conditions, treatment window and success, plus explicit rules for rescue treatments and missed passes. This is an adaptation, not an already proven Dutch farming model.</div>
+    <p><b>Hypothetical demonstration, not a forecast.</b> A cluster of growers signs conditional reservations for 300 hectares of one crop; suppliers receive a paid 30-hectare validation slot; the winning supplier's right to supply the remaining eligible hectares activates only if agreed agronomic, price and timing conditions are met. Before presenting 30 or 300 as a real target, establish actual robot capacity, passes, weather window, cost per hectare and whether the buyers can make those commitments. If these cannot be contracted, present the arrangement as a market test rather than an investment-grade order book.</p>
+    <p><b>Who operates the machines?</b> Whoever makes the contract work: the startup, a farmer, a dealer, a specialist service company or an agricultural contractor. An intermediary is an optional commercial choice, not the intervention. The core is an enforceable path from technical validation to paid demand and, if the economics justify it, private capital.</p>
+    <p class="src">Source: Frontier, frontierclimate.com. Roboltics and Homburg for existing rental and leasing channels the mechanism must add to.</p>
+  </div>
+</template>
+
+<template id="dd-fit" data-k="Deep dive · mechanism" data-h="Strategic fit and the climate question">
+  <div class="detail-body">
+    <p>The water problem is large enough to impose real downstream cost, and Techleap's own 2026 deep-tech capital report calls for procurement that builds a route to market. It diagnoses too little market feedback between early public support and later private-investor decisions, and a first-€500k problem. Conditional demand for Dutch agricultural robotics is a concrete test of that scale-up and capital-activation thesis.</p>
+    <p>Techleap names Climate Tech as a critical sector. That label alone does not establish that this water-quality intervention meets its sector criteria. The case is primarily about water quality, nature and agricultural technology. Pesticide reduction is not a quantified greenhouse-gas reduction.</p>
+    <div class="warn">Any climate claim for a robot needs a comparison of power source, diesel, manufacture, field passes and displaced practices. The Cropr machine specifies a diesel generator; the Wageningen trial recorded higher energy costs as chemical treatments were replaced by mechanical passes. If the audience requires a strict emissions definition of Climate Tech, this case needs a lifecycle assessment or a different sector rationale. Confirm the fit with Techleap while presenting the economic burden and the financing mechanism on their own merits.</div>
+    <p class="src">Sources: Techleap deep-tech capital report 2026; techleap.nl sector description; BO Akkerbouw trial summary; Cropr specification.</p>
+  </div>
+</template>
+
+<template id="dd-model" data-k="Deep dive · explorer" data-h="Model assumptions, and what is missing">
+  <div class="detail-body">
+    <p>The explorer is arithmetic on stated assumptions. Nothing in it is a measured Dutch farm cost or a supplier quote.</p>
+    <table class="spec-table">
+      <tr><th>Input</th><th>Default</th><th>Where it comes from</th></tr>
+      <tr><td>Hectares under conditional reservation</td><td>300 ha</td><td>The draft's illustrative cluster. Hypothetical.</td></tr>
+      <tr><td>Share converting to signed orders</td><td>60%</td><td>Assumption. Real value comes from grower interviews (gate 2).</td></tr>
+      <tr><td>Treatments per season</td><td>2</td><td>Assumption. Real value comes from supplier field records and crop agronomy (gate 3).</td></tr>
+      <tr><td>Price per driven hectare</td><td>€100</td><td>Anchored on a supplier's under-€100 claim. Vendor claim, not an established farm cost.</td></tr>
+      <tr><td>Public contribution to price</td><td>40%</td><td>Mirrors the rate Rijnland applies to listed measures today. An analogy only: the current scheme is capped at €10,000 per applicant under its crop-protection theme and cannot carry a multi-season order book. A new instrument would need its own approval.</td></tr>
+      <tr><td>Seasons committed</td><td>3</td><td>Assumption about what a board could lawfully commit. Gate 5.</td></tr>
+      <tr><td>Paid validation slot</td><td>30 ha</td><td>The draft's illustration.</td></tr>
+    </table>
+    <p><b>Outputs.</b> Signed hectares = reserved × conversion. Driven hectares per season = signed × passes. Order value per season = driven × price. The public share and the growers' share split that value by the contribution slider. Total = per-season value × seasons. Validation work = validation slot × passes × price, one season.</p>
+    <div class="warn">Missing from the model, deliberately: machine capacity and fleet size, manufacturing cost and margin, grower savings against current practice, and any water outcome. Those need gates 1 to 3. Do not read the total as revenue for a named company or as a water-board budget.</div>
+  </div>
+</template>
+
+<template id="dd-sources" data-k="Deep dive" data-h="Every source on this page">
+  <div class="detail-body">
+    <p>All links point to the original organisation or a directly involved project. Vendor sites are labelled as such; their performance and cost claims are vendor claims unless independently verified.</p>
+    <ol class="refs">
+      <li><b>National context and its limits.</b> <a href="https://www.clo.nl/indicatoren/nl054712-gewasbeschermingsmiddelen-in-oppervlaktewater-2013-2024" target="_blank" rel="noopener">Compendium voor de Leefomgeving, crop-protection products in surface water, 2013 to 2024</a>. The nearly 80% figure, trend and standards. All crop-protection products.</li>
+      <li><b>Specific problematic herbicides.</b> <a href="https://www.rijnland.net/actueel/nieuwsoverzicht/correctie-op-nieuwsbericht-24-maart-2026/" target="_blank" rel="noopener">Rijnland, corrected 2025 agrarian monitoring report</a>. Pendimethalin, metazachlor, substitution to lenacil. Use the corrected version.</li>
+      <li><b>Herbicide transport and mitigation.</b> <a href="https://www.landbouwportaalrijnland.nl/nieuws/zorgvuldig-gebruik-pendimethalin-cruciaal-voor-waterkwaliteit/" target="_blank" rel="noopener">Landbouwportaal Rijnland on pendimethalin</a>.</li>
+      <li><b>National policy.</b> <a href="https://www.rijksoverheid.nl/documenten/2019/04/16/toekomstvisie-gewasbescherming-2030-naar-weerbare-planten-en-teeltsystemen" target="_blank" rel="noopener">Future Vision for Crop Protection 2030</a>.</li>
+      <li><b>Existing local spending and expiry.</b> <a href="https://www.landbouwportaalrijnland.nl/nieuws/2026-laatste-jaar-coaching-en-subsidies-via-het-landbouwportaal/" target="_blank" rel="noopener">Landbouwportaal Rijnland 2026 subsidy update</a>.</li>
+      <li><b>Concrete farmer trade-off.</b> <a href="https://www.bo-akkerbouw.nl/files/Pdfs-Kennis-en-Innovatie/Integrale-aanpak-voor-de-akkerbouw-op-zand-Rapportage-2020-2023.pdf" target="_blank" rel="noopener">Wageningen Research, Vredepeel report 2020-2023, section 8.1.5 and Table 19</a>; <a href="https://www.bo-akkerbouw.nl/nieuws/icm-zet-stap-richting-duurzamere-teelt-maar-economisch-perspectief-blijft-uitdaging" target="_blank" rel="noopener">BO Akkerbouw summary</a>.</li>
+      <li><b>Growers' own named bottlenecks.</b> <a href="https://open.overheid.nl/documenten/a5f9310a-06b8-40a9-a6c6-94095bde1c88/file" target="_blank" rel="noopener">Government-published 2025 sector annex, pages 1 and 2</a>. Sector-reported; inulin chicory and witlof kept distinct.</li>
+      <li><b>Practical limits of alternatives.</b> <a href="https://www.landbouwportaalrijnland.nl/nieuws/tip-van-een-coach-mechanische-onkruidbestrijding/" target="_blank" rel="noopener">Landbouwportaal Rijnland mechanical weeding coach</a>; <a href="https://agrarischwaterbeheer.nl/maatregel/mechanische-onkruidbestrijding/" target="_blank" rel="noopener">Deltaplan Agrarisch Waterbeheer guide</a>.</li>
+      <li><b>Multiple technologies under test.</b> <a href="https://www.proeftuinprecisielandbouw.nl/innovatieve-machines-verlagen-herbicidengebruik-en-arbeidskosten/" target="_blank" rel="noopener">Nationale Proeftuin Precisielandbouw 2025 comparison</a>.</li>
+      <li><b>Dutch technology examples (vendor sites).</b> <a href="https://cropr.ai/" target="_blank" rel="noopener">Cropr</a>, <a href="https://odd.bot/" target="_blank" rel="noopener">Odd.Bot</a>, <a href="https://weed-it.com/about-weed-it/history-rometron/" target="_blank" rel="noopener">Rometron WEED-IT</a>.</li>
+      <li><b>Existing commercial alternatives.</b> <a href="https://roboltics.nl/" target="_blank" rel="noopener">Roboltics</a> rental and contract laser weeding; <a href="https://www.homburg-belgium.com/nl/ekobot/" target="_blank" rel="noopener">Homburg</a> robot leasing.</li>
+      <li><b>Why Techleap might work on the gap.</b> <a href="https://framerusercontent.com/assets/ljE28nwjqlL4Nz6KOqCpQehuN4U.pdf" target="_blank" rel="noopener">Techleap 2026 deep-tech capital report</a>; <a href="https://techleap.nl/" target="_blank" rel="noopener">techleap.nl</a>.</li>
+      <li><b>Advance-demand precedent.</b> <a href="https://frontierclimate.com/" target="_blank" rel="noopener">Frontier</a>.</li>
+      <li><b>Treatment burden and conditional scenario.</b> <a href="https://berthub.eu/tkconv/getrawoo/ead8f98d-73ca-465b-8e5c-7c85527b4e23" target="_blank" rel="noopener">Haskoning study for the Ministry of Infrastructure and Water Management, February 2026</a>, also <a href="https://open.overheid.nl/details/ead8f98d-73ca-465b-8e5c-7c85527b4e23" target="_blank" rel="noopener">listed on open.overheid.nl</a>. Sections 2, 4, 5 and Table 4. ±40% range.</li>
+      <li><b>Water boards' role.</b> <a href="https://unievanwaterschappen.nl/waterkwaliteit/gewasbeschermingsmiddelen/" target="_blank" rel="noopener">Unie van Waterschappen on crop-protection chemicals</a>.</li>
+      <li><b>Broad water-board support, with limits.</b> <a href="https://www.rijnland.net/actueel/nieuwsoverzicht/2026-laatste-jaar-coaching-en-subsidies-voor-agrarische-ondernemers-via-landbouwportaal-rijnland/" target="_blank" rel="noopener">Rijnland 2026 announcement</a>; <a href="https://lokaleregelgeving.overheid.nl/CVDR698620" target="_blank" rel="noopener">regulation CVDR698620</a>, Articles 2, 5, 6, 12 and Annex 1.</li>
+    </ol>
   </div>
 </template>
 

@@ -4,10 +4,188 @@
 /* Text brand instead of a logo image. */
 .brand{text-decoration:none;font-size:17px;font-weight:600;letter-spacing:-.02em;color:#fff;white-space:nowrap}
 .brand b{font-weight:600}
+@media(max-width:1300px){.brand{font-size:15px}}
 
-/* Hero placeholder art: no product image yet. */
-.hero-art .render-label{position:static;color:#62676e;z-index:2}
+/* ── Evidence labels: Observed / Claimed by supplier / Proposed ───────── */
+.lab{display:inline-block;font-style:normal;font-size:10px;line-height:1;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:4px 7px;border-radius:3px;margin-right:8px;vertical-align:middle;white-space:nowrap}
+.lab-obs{background:#17181c;color:#fff}
+.dark .lab-obs{background:#ffffff1f;color:#e6e9ec}
+.lab-claim{background:#ffe6dc;color:#a63310}
+.dark .lab-claim{background:#ff5a2426;color:#ff9b75}
+.lab-prop{background:#ff5a24;color:#17181c}
+.eyebrow .lab,h2 .lab{margin-left:10px;margin-right:0;vertical-align:1px}
+.hero-strip span .lab,.proof-numbers span .lab,.channel-proof .lab,.verdict .lab{display:block;width:max-content;margin:0 0 8px}
+footer .lab{margin:0 4px 0 6px}
 
-/* Placeholder highlighting while content is drafted: anything in [brackets]
-   is placeholder copy. Remove this block before the interview. */
-/* .wrap :is(h1,h2,h3,p,span,b,strong,small,button):not(:empty){} */
+/* ── Hero: four actors instead of a product render ───────────────────── */
+.hero-art .render-label{position:absolute;bottom:0;left:0;right:0;text-align:center;color:#8d939a;font-size:12px;line-height:1.5;z-index:2;max-width:46ch;margin:auto}
+.actors{position:relative;z-index:2;width:min(100%,460px);display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:64px}
+.actor{display:flex;flex-direction:column;justify-content:center;gap:6px;padding:20px 20px;min-height:104px;border-radius:10px;background:#1e2024e6;border:1px solid #ffffff1c;font-size:15px;font-weight:500;letter-spacing:-.01em;backdrop-filter:blur(6px)}
+.actor small{font-size:11.5px;color:#aeb6bd;font-weight:400;line-height:1.35}
+.actor.a1{border-color:#ff5a2480;box-shadow:0 0 0 1px #ff5a2422}
+.actor.a1::before{content:'Proposed anchor';display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:600}
+@media(max-width:800px){.actors{width:100%;margin-bottom:48px}.actor{padding:14px;font-size:14px;min-height:0}}
+
+/* ── Conflict: perspective switch ────────────────────────────────────── */
+.persp .segmented{max-width:380px}
+.persp-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:start}
+.persp-grid h3{font-size:clamp(26px,2.6vw,36px);line-height:1.12;margin:0 0 20px}
+.persp-grid>div>p:not(.eyebrow):not(.footnote){color:var(--muted);font-size:17px;line-height:1.6;max-width:56ch}
+.persp-side{border-left:1px solid var(--line);padding-left:40px}
+.mini-steps{margin:0;padding:0;list-style:none;display:grid;gap:18px;counter-reset:ms}
+.mini-steps li{position:relative;padding-left:38px;font-size:15px;line-height:1.55;color:var(--muted);counter-increment:ms}
+.mini-steps li::before{content:counter(ms);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--orange);color:var(--ink);font-size:12px;font-weight:600;display:grid;place-items:center}
+.mini-steps b{color:var(--ink);font-weight:600}
+@media(max-width:1000px){.persp-grid{grid-template-columns:1fr;gap:36px}.persp-side{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:28px}}
+
+/* ── Water: local card and the three-party bill ──────────────────────── */
+.dark .europe-card.local-card{background:#1e2024;border-color:#ffffff1c;color:#fff}
+.dark .local-card .eyebrow{color:#ff9b75}
+.substances{display:grid;gap:18px}
+.substances>div{border-left:2px solid var(--orange);padding-left:16px}
+.substances b{display:block;font-size:24px;font-weight:500;letter-spacing:-.03em;margin:6px 0}
+.substances span{display:block;font-size:13.5px;color:#b7bec4;line-height:1.55}
+.dark .local-card>p{color:#aeb6bd;border-top:1px solid #ffffff1c;padding-top:14px}
+.bill{margin-top:80px;padding-top:40px;border-top:1px solid #ffffff22}
+.bill-head{display:grid;grid-template-columns:1.3fr auto;gap:40px;align-items:end;margin-bottom:40px}
+.bill-head h3{font-size:clamp(22px,2vw,30px);line-height:1.2;max-width:34ch}
+.bill-head .segmented{margin:0;max-width:none;background:#ffffff14}
+.bill-head .segmented button{color:#c9ced3;white-space:nowrap}
+.bill-head .segmented button[aria-pressed=true]{color:var(--ink)}
+.dark .channels article{border-color:#ffffff22}
+.dark .channels p{color:#b7bec4}
+.dark .channel-proof{border-color:#ffffff22;color:#9aa2a9}
+.bill-figs{display:grid;gap:14px;margin-top:6px}
+.bill-figs b{display:block;font-size:34px;font-weight:400;letter-spacing:-.05em;color:var(--orange);line-height:1.1;font-variant-numeric:tabular-nums}
+.bill-figs span{display:block;font-size:13.5px;color:#b7bec4;line-height:1.5;margin-top:4px}
+.dark .footnote{color:#9aa2a9}
+@media(max-width:1000px){.bill-head{grid-template-columns:1fr}.bill{margin-top:56px}}
+
+/* ── Grower: bars, choice, criteria ──────────────────────────────────── */
+#grower .bars{margin-top:8px}
+#grower .bar-row{grid-template-columns:250px 1fr}
+#grower .verdict{max-width:none}
+.choice .segmented.three{max-width:none}
+.choice-panel h3{font-size:clamp(22px,2vw,28px);line-height:1.2;margin-bottom:14px}
+.choice-panel p{color:var(--muted);font-size:15.5px;line-height:1.6}
+.criteria{margin-top:36px;padding-top:28px;border-top:1px solid var(--line)}
+.criteria ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.criteria li{position:relative;padding-left:22px;font-size:15px;line-height:1.45}
+.criteria li::before{content:'';position:absolute;left:0;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--orange)}
+@media(max-width:800px){#grower .bar-row{grid-template-columns:1fr}}
+
+/* ── Signals: phase label reuse ───────────────────────────────────────── */
+#signals .channels article{border-color:#c4ccd2}
+#signals .channel-proof{border-color:#c4ccd2}
+
+/* ── Routes: selector + detail ────────────────────────────────────────── */
+.routes-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.route-detail{border-left:1px solid #ffffff22;padding-left:48px;min-height:320px}
+.route-detail .pill{color:#ff9b75}
+.route-detail h3{font-size:clamp(26px,2.6vw,38px);line-height:1.12;margin-bottom:26px}
+.route-detail dl{margin:0;display:grid;gap:18px}
+.route-detail dt{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#9aa2a9;font-weight:600;margin-bottom:6px}
+.route-detail dd{margin:0;font-size:15.5px;line-height:1.6;color:#c9ced3}
+.route-detail dd .lab{display:block;width:max-content;margin:0 0 8px}
+.pivot{margin-top:48px;background:#1e2024;border-color:#ffffff1c}
+.pivot p{color:#c9ced3}
+.pivot b{color:#fff}
+@media(max-width:1000px){.routes-grid{grid-template-columns:1fr;gap:32px}.route-detail{border-left:0;padding-left:0;min-height:0;border-top:1px solid #ffffff22;padding-top:28px}}
+
+/* ── Gap: the sequence and the evidence switch ────────────────────────── */
+.seq{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:56px}
+.seq>div{position:relative;border:1px solid var(--line);border-radius:10px;padding:20px 18px 18px;background:#fff}
+.seq>div span{display:block;font-size:12px;color:var(--muted);margin-bottom:12px;font-variant-numeric:tabular-nums}
+.seq>div b{display:block;font-size:18px;font-weight:500;letter-spacing:-.02em;line-height:1.2}
+.seq>div small{display:block;font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.4}
+.seq>div:not(:last-child)::after{content:'';position:absolute;right:-10px;top:50%;width:8px;height:8px;border-top:1px solid #9aa2a9;border-right:1px solid #9aa2a9;transform:translateY(-50%) rotate(45deg);z-index:1}
+.seq>div.hi{border-color:var(--orange);background:#fff5f0;box-shadow:0 0 0 1px #ff5a2433}
+.seq>div.hi span{color:#ba3610;font-weight:600}
+.seq>div.hi small{color:#ba3610}
+.evidence-head{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;margin-bottom:32px}
+.evidence-head .eyebrow{margin:0}
+.evidence-head .segmented{margin:0;max-width:none}
+.evidence-head .segmented button{white-space:nowrap;padding:12px 18px}
+.ev-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start}
+.ticks{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.ticks li{position:relative;padding-left:32px;font-size:16px;line-height:1.5}
+.ticks li::before{position:absolute;left:0;top:.05em;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700}
+.ticks.off li::before{content:'×';background:#e6e9eb;color:#62676e}
+.ticks.on li::before{content:'✓';background:var(--orange);color:var(--ink)}
+.ev-grid .verdict .lab{display:block;width:max-content;margin:0 0 8px}
+.evidence-side{border-left:1px solid var(--line);padding-left:40px}
+.evidence-side>p:not(.eyebrow):not(.footnote){font-size:16px;line-height:1.6;color:#3c4247}
+@media(max-width:1000px){.seq{grid-template-columns:1fr 1fr}.seq>div::after{display:none}.evidence-head{grid-template-columns:1fr}.ev-grid{grid-template-columns:1fr;gap:32px}.evidence-side{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:28px}}
+@media(max-width:600px){.seq{grid-template-columns:1fr}}
+
+/* ── Mechanism: five steps and the two-route comparison ──────────────── */
+.steps{margin:0 0 64px;padding:0;list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:0 28px;counter-reset:st;border-top:1px solid var(--line)}
+.steps li{counter-increment:st;padding-top:22px;position:relative}
+.steps li::before{content:counter(st,decimal-leading-zero);display:block;font-size:12px;color:#ba3610;font-weight:600;letter-spacing:.08em;margin-bottom:12px;font-variant-numeric:tabular-nums}
+.steps b{display:block;font-size:19px;font-weight:500;letter-spacing:-.02em;line-height:1.2;margin-bottom:12px}
+.steps p{font-size:14px;line-height:1.55;color:var(--muted)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.compare>div{border:1px solid var(--line);border-radius:12px;padding:28px 30px;background:#fff}
+.compare>div.preferred{border-color:var(--orange);box-shadow:0 0 0 1px #ff5a2433}
+.compare .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#ba3b13;font-weight:600;margin-bottom:10px}
+.compare h3{font-size:clamp(22px,2vw,28px);line-height:1.15;margin-bottom:22px}
+.compare dl{margin:0;display:grid;gap:16px}
+.compare dt{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:4px}
+.compare dd{margin:0;font-size:15px;line-height:1.55}
+@media(max-width:1100px){.steps{grid-template-columns:repeat(3,1fr);gap:0 24px}.steps li{padding-bottom:24px}}
+@media(max-width:800px){.steps{grid-template-columns:1fr}.compare{grid-template-columns:1fr}}
+
+/* ── Explorer: kpis as a row ─────────────────────────────────────────── */
+.explorer-kpis{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 18px;border-left:0;padding-left:0;margin-top:26px;border-top:1px solid var(--line);align-content:start}
+.explorer-kpis .kpi{min-width:0}
+.explorer-kpis .kpi .k{overflow-wrap:anywhere}
+.explorer-kpis .kpi{text-align:left;padding:16px 0 0}
+.explorer-kpis .kpi+.kpi{border-top:0}
+.explorer-kpis .kpi .v{font-size:clamp(22px,2.2vw,30px)}
+.explorer-kpis .kpi .k{margin-left:0;max-width:none}
+#explorer .controls label{margin-top:22px}
+#explorer .controls label:first-child{margin-top:0}
+#explorer .result-head{max-width:32ch;min-height:0}
+#explorer .fineprint{font-size:12.5px}
+@media(max-width:800px){.explorer-kpis{grid-template-columns:1fr 1fr}}
+
+/* ── Gates ───────────────────────────────────────────────────────────── */
+.gates{margin:0 0 40px;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 56px;counter-reset:gt}
+.gates li{counter-increment:gt;display:grid;grid-template-columns:44px 1fr;gap:6px 16px;padding:22px 0;border-top:1px solid var(--line)}
+.gates li::before{content:counter(gt);grid-row:span 2;width:36px;height:36px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;font-size:14px;font-weight:600}
+.gates b{font-size:19px;font-weight:500;letter-spacing:-.02em;line-height:1.25;align-self:center}
+.gates p{grid-column:2;font-size:14.5px;line-height:1.55;color:var(--muted)}
+@media(max-width:900px){.gates{grid-template-columns:1fr}}
+
+/* ── Ask ─────────────────────────────────────────────────────────────── */
+.raise small{max-width:30ch;line-height:1.5;margin-top:14px}
+.prompt{margin-top:56px;padding:32px 36px;border:1px solid #ffffff1c;border-radius:12px;background:#1e2024}
+.prompt .eyebrow{color:#ff9b75;margin-bottom:14px}
+.prompt h3{font-size:clamp(24px,2.4vw,34px);line-height:1.15;max-width:30ch;margin-bottom:16px}
+.prompt p:not(.eyebrow){color:#b7bec4;font-size:16px;line-height:1.6;max-width:60ch}
+@media(max-width:800px){.prompt{padding:24px}}
+
+/* ── Shared ──────────────────────────────────────────────────────────── */
+.footnote{max-width:none}
+h2{max-width:24ch}
+footer .wrap{line-height:1.8}
+#sheetB .refs{padding-left:20px;display:grid;gap:12px;margin:18px 0 0}
+#sheetB .refs b{color:#e6e9ec;font-weight:600}
+#sheetB .refs a{display:inline;margin:0}
+#sheetB .spec-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13px}
+#sheetB .spec-table td,#sheetB .spec-table th{padding:10px 12px;border-bottom:1px solid #ffffff18}
+#sheetB .detail-body>p b{color:#e6e9ec;font-weight:600}
+
+/* ── Present mode: tighten dense sections ────────────────────────────── */
+.presenting .bill{margin-top:36px;padding-top:24px}
+.presenting .bill-head{margin-bottom:24px}
+.presenting .seq{margin-bottom:28px}
+.presenting .steps{margin-bottom:32px}
+.presenting .prompt{margin-top:28px;padding:22px 26px}
+.presenting .criteria{margin-top:22px;padding-top:18px}
+.presenting .gates{margin-bottom:24px}
+.presenting .gates li{padding:14px 0}
+.presenting .hero-art{height:clamp(300px,42svh,460px)}
+
+/* Present mode: the footer is not a slide. */
+.presenting footer{display:none!important}

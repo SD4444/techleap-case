@@ -1,4 +1,4 @@
-/* Techleap case — generic page machinery.
+/* Techleap case: generic page machinery.
    Ported from the Tarnoc funding site framework (script.js + enhancements.js),
    stripped of Tarnoc content and null-guarded so sections can be added or
    removed freely. Content-specific wiring (scenario models, calculators)
@@ -137,7 +137,7 @@
     sheetOpener = src || null;
     K.textContent = t.dataset.k || ''; H.textContent = t.dataset.h || '';
     B.replaceChildren(t.content.cloneNode(true));
-    B.querySelectorAll('table').forEach(table => { const sc = document.createElement('div'); sc.className = 'table-scroll'; sc.tabIndex = 0; sc.setAttribute('role', 'region'); sc.setAttribute('aria-label', H.textContent + ' — scrollable table'); table.before(sc); sc.append(table); });
+    B.querySelectorAll('table').forEach(table => { const sc = document.createElement('div'); sc.className = 'table-scroll'; sc.tabIndex = 0; sc.setAttribute('role', 'region'); sc.setAttribute('aria-label', H.textContent + ', scrollable table'); table.before(sc); sc.append(table); });
     sheet.showModal();
     const sin = $('.sheet-in'); sin.scrollTop = 0; sheet.scrollTop = 0; sin.focus({ preventScroll: true });
     requestAnimationFrame(() => { sin.scrollTop = 0; sheet.scrollTop = 0; });
@@ -174,27 +174,54 @@
     $$('#scopeToggle button').forEach(b => b.addEventListener('click', () => apply(b.dataset.scope)));
   }
 
-  /* ════════════════ CASE WIRING (placeholder) ════════════════════
-     The scenario panel below is a working demo of the slider+bars
-     pattern. Replace the model with the real case numbers. */
+  /* ════════════════ CASE WIRING ════════════════════════════════
+     Generic switchers plus the conditional order-book model for the
+     scenario explorer. All figures in the model are hypothetical. */
+
+  /* Switchers: [data-switch="x"] button[data-val] shows [data-panel="x"][data-val] */
+  $$('[data-switch]').forEach(group => {
+    const name = group.dataset.switch, buttons = [...group.querySelectorAll('button[data-val]')];
+    const apply = val => {
+      buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.val === val)));
+      $$(`[data-panel="${name}"]`).forEach(p => { const show = p.dataset.val === val; if (show && p.hidden) pulse(p); p.hidden = !show; });
+    };
+    buttons.forEach(b => b.addEventListener('click', () => apply(b.dataset.val)));
+  });
+
+  /* Scenario explorer: conditional order book */
   const panel = $('#scenario-panel');
   if (panel) {
     const inputs = $$('#scenario-panel input[type=range]');
-    function renderScenario() {
+    const eur = n => '€' + (n >= 1e6 ? (n / 1e6).toFixed(n >= 1e7 ? 1 : 2) + 'm' : n >= 1e3 ? Math.round(n / 1e3).toLocaleString('en-GB') + 'k' : Math.round(n).toLocaleString('en-GB'));
+    const num = n => Math.round(n).toLocaleString('en-GB');
+    const fmt = { haRes: v => num(v), signRate: v => v + '%', passes: v => v, price: v => '€' + v, pubShare: v => v + '%', seasons: v => v, valHa: v => num(v) + ' ha' };
+    function render() {
       const v = Object.fromEntries(inputs.map(i => [i.id, +i.value]));
-      inputs.forEach(i => { const out = $('#' + i.id + 'V'); if (out) out.textContent = i.value; });
-      // Placeholder model: two illustrative outcomes from the sliders.
-      const base = v.driverA * 10, ours = v.driverA * 10 * (1 - v.driverB / 100);
-      const peak = Math.max(base, ours, 1);
-      const rows = { base, ours };
+      inputs.forEach(i => { const out = $('#' + i.id + 'V'); if (out) out.textContent = (fmt[i.id] || String)(v[i.id]); });
+      const signed = v.haRes * v.signRate / 100;
+      const driven = signed * v.passes;
+      const season = driven * v.price;
+      const total = season * v.seasons;
+      const pub = total * v.pubShare / 100, grower = total - pub;
+      const val = v.valHa * v.passes * v.price;
+      const rows = { grower, public: pub, total };
       Object.entries(rows).forEach(([k, val]) => {
         const row = panel.querySelector(`.cost-row[data-k="${k}"]`); if (!row) return;
-        row.querySelector('.bar i').style.width = (val / peak * 100) + '%';
-        row.querySelector('strong').textContent = Math.round(val).toLocaleString('en-GB');
+        row.querySelector('.bar i').style.width = (total ? val / total * 100 : 0) + '%';
+        row.querySelector('strong').textContent = eur(val);
       });
-      const head = $('#scenario-head'); if (head) head.textContent = ours < base ? 'The intervention wins this scenario.' : 'Base case wins this scenario.';
+      $('#kSigned').textContent = num(signed) + ' ha';
+      $('#kDriven').textContent = num(driven) + ' ha';
+      $('#kSeason').textContent = eur(season);
+      $('#kVal').textContent = eur(val);
+      const head = $('#scenario-head');
+      if (head) head.textContent = v.pubShare
+        ? `A ${eur(total)} conditional order book over ${v.seasons} season${v.seasons > 1 ? 's' : ''}, of which ${eur(pub)} would be a proposed public contribution.`
+        : `A ${eur(total)} conditional order book over ${v.seasons} season${v.seasons > 1 ? 's' : ''}, carried by growers alone. It has to work on private economics.`;
+      const note = $('#scenario-note');
+      if (note) note.textContent = `Hypothetical. ${num(v.haRes)} ha reserved × ${v.signRate}% signing = ${num(signed)} ha under conditional order; × ${v.passes} pass${v.passes > 1 ? 'es' : ''} × €${v.price} per driven hectare = ${eur(season)} per season. The €${v.price} anchors on a supplier's under-€100 claim, not a measured farm cost. The ${v.pubShare}% mirrors the rate Rijnland applies to listed measures today; its current scheme is capped at €10,000 per applicant under the crop-protection theme, so a commitment of this shape would need a new, approved instrument. The validation slot is what the winning supplier is paid before the larger purchase activates.`;
     }
-    inputs.forEach(i => i.addEventListener('input', renderScenario));
-    renderScenario();
+    inputs.forEach(i => i.addEventListener('input', render));
+    render();
   }
 })();
