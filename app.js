@@ -217,9 +217,9 @@
       const head = $('#scenario-head');
       if (head) head.textContent = v.pubShare
         ? `A ${eur(total)} conditional order book over ${v.seasons} season${v.seasons > 1 ? 's' : ''}, of which ${eur(pub)} would be a proposed public contribution.`
-        : `A ${eur(total)} conditional order book over ${v.seasons} season${v.seasons > 1 ? 's' : ''}, carried by growers alone. It has to work on private economics.`;
+        : `A ${eur(total)} conditional order book over ${v.seasons} season${v.seasons > 1 ? 's' : ''}, paid by growers alone. It must work on private economics.`;
       const note = $('#scenario-note');
-      if (note) note.textContent = `Hypothetical. ${num(v.haRes)} ha reserved × ${v.signRate}% signing = ${num(signed)} ha under conditional order; × ${v.passes} pass${v.passes > 1 ? 'es' : ''} × €${v.price} per driven hectare = ${eur(season)} per season. The €${v.price} anchors on a supplier's under-€100 claim, not a measured farm cost. The ${v.pubShare}% mirrors the rate Rijnland applies to listed measures today; its current scheme is capped at €10,000 per applicant under the crop-protection theme, so a commitment of this shape would need a new, approved instrument. The validation slot is what the winning supplier is paid before the larger purchase activates.`;
+      if (note) note.textContent = `Hypothetical. ${num(v.haRes)} ha reserved × ${v.signRate}% signing = ${num(signed)} ha under conditional order; × ${v.passes} pass${v.passes > 1 ? 'es' : ''} × €${v.price} per driven hectare = ${eur(season)} per season. The €${v.price} is based on a supplier's under-€100 claim, not a measured farm cost. The ${v.pubShare}% equals the rate Rijnland pays on listed measures today. Its current scheme is capped at €10,000 per applicant under the crop-protection theme, so a multi-season payment would need a new, approved instrument. The validation slot is what the winning supplier is paid before the larger purchase activates.`;
     }
     inputs.forEach(i => i.addEventListener('input', render));
     render();

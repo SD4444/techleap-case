@@ -61,6 +61,32 @@ No build step, no dependencies. Static files only:
 
 ## Rules
 
+### Communicating with Simon
+
+Short. Literal. No metaphor, no idiom, no figurative verbs. If a word could be
+replaced by a plainer one with the same meaning, replace it. No jargon from
+writing, design or AI ("beats", "narrative arc", "surface", "carry"). Every
+sentence must survive the question "what exactly does that mean?" Say what was
+done, what was not done, and what needs a decision. Lead with the result. No
+summaries of the process, no closing offers.
+Wrong: "the page follows the draft's beats". Right: "the page has one section
+per chapter of the draft". Wrong: "the €10k cap could not carry it". Right:
+"the €10k cap is smaller than the proposed payment".
+
+### Content on the site
+
+Write as an economist, a scientist and an investor would to a professional
+non-specialist. Every claim is measured data, a supplier claim, or a proposal,
+and is labelled as such. Literal language only: no metaphor, no idiom, no
+figurative verbs. Rhetorical questions only where the question is the actual
+discussion prompt. Short sentences. Use the common word when it is as precise
+as the technical one; define a technical term the first time it appears. State
+a number's scope and limits in the same sentence as the number. Never present
+a national figure as a local result or a vendor claim as an outcome. No em
+dashes.
+
+### Other
+
 - Never use em dashes in anything user-facing (Simon's standing rule).
 - The repo is public: no confidential Techleap material, no personal data beyond
   what Simon approves, and keep `meta name="robots" content="noindex"`.
