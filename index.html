@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Techleap case — [Working title]</title>
+<meta name="description" content="Interactive case presentation.">
+<meta name="theme-color" content="#17181c">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="case.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#thesis">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header>
+  <a class="brand" href="#thesis"><b>[Case title]</b></a>
+  <nav id="main-nav" aria-label="Main navigation">
+    <a href="#problem">Problem</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#solution">Solution</a>
+    <a href="#scenarios">Scenarios</a>
+    <a href="#market">Market</a>
+    <a href="#plan">Plan</a>
+    <a href="#ask">Recommendation</a>
+    <div class="mobile-nav-actions"></div>
+  </nav>
+  <div class="header-tools">
+    <button class="quiet menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span></button>
+    <span class="temperature" aria-label="Reading progress">0%</span>
+    <button class="quiet icon-action" id="present" aria-pressed="false" aria-label="Present" title="Present"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="4.5" width="17" height="12" rx="2"/><path d="M12 16.5v3m-3 0h6m-4.5-12 4 3-4 3z"/></svg></button>
+  </div>
+</header>
+
+<main>
+
+<!-- 01 · Thesis -->
+<section class="hero dark" id="thesis" data-title="The thesis">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow reveal">[Company / role · case presentation · 2026]</p>
+        <h1 class="reveal">[The one-sentence <em>thesis</em> of the case.]</h1>
+        <p class="lede reveal">[Two sentences framing the market problem and the shape of the answer. This is what the interviewer reads before anything else.]</p>
+      </div>
+      <div class="hero-art reveal">
+        <div class="heat-halo"></div>
+        <div class="orbit"></div>
+        <p class="render-label">[hero visual placeholder]</p>
+      </div>
+    </div>
+    <div class="hero-strip reveal">
+      <div><strong data-count="42" data-suffix="%">0</strong><span>[headline stat one]</span></div>
+      <div><strong data-count="3.5" data-prefix="€" data-suffix="B" data-dec="1">0</strong><span>[headline stat two]</span></div>
+      <div><strong data-count="12" data-suffix="x">0</strong><span>[headline stat three]</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 · Problem -->
+<section id="problem" data-title="The problem">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">The problem</p>
+        <h2 class="reveal">[What is broken in the market, in one line.]</h2>
+      </div>
+      <p class="intro reveal">[Why this problem matters now, who feels it, and what it costs. Two to three sentences.]</p>
+    </div>
+    <div class="channels reveal">
+      <article>
+        <span class="channel-n">1</span>
+        <h3>[Symptom one]</h3>
+        <p>[Evidence-backed description of the first symptom of the problem.]</p>
+      </article>
+      <article>
+        <span class="channel-n">2</span>
+        <h3>[Symptom two]</h3>
+        <p>[Second symptom.]</p>
+      </article>
+      <article>
+        <span class="channel-n">3</span>
+        <h3>[Symptom three]</h3>
+        <p>[Third symptom.]</p>
+      </article>
+    </div>
+    <div class="deep reveal">
+      <span class="deep-label">Deep dives</span>
+      <button data-dd="problem-detail">The data behind this ↗</button>
+      <button data-dd="sources">Sources &amp; method ↗</button>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · Evidence -->
+<section id="evidence" class="dark" data-title="The evidence">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">The evidence</p>
+        <h2 class="reveal">[The numbers that prove it.]</h2>
+      </div>
+      <p class="intro reveal">[Where the data comes from and what it shows.]</p>
+    </div>
+    <div class="market-grid reveal">
+      <div>
+        <div class="proof-numbers" style="justify-content:flex-start">
+          <div><b data-count="87" data-suffix="%">0</b><span>[metric one]</span></div>
+          <div><b data-count="240" data-prefix="€">0</b><span>[metric two]</span></div>
+        </div>
+        <p class="intro">[Interpretation of the metrics: what the honest reading of the data is.]</p>
+      </div>
+      <div class="europe-card">
+        <p class="eyebrow">[Geographic view]</p>
+        <div class="eu-map">
+          <img src="assets/europe.svg" alt="Map of western Europe, placeholder pins" loading="lazy">
+          <span class="eu-pin w1 up" style="--x:53.5%;--y:32.9%"><i></i><span><b>[Pin A]</b></span></span>
+          <span class="eu-pin w2 rt" style="--x:71.4%;--y:31.3%"><i></i><span><b>[Pin B]</b></span></span>
+          <span class="eu-pin w3 lt" style="--x:47.3%;--y:50.8%"><i></i><span><b>[Pin C]</b></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · Solution -->
+<section id="solution" data-title="The solution">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">The solution</p>
+        <h2 class="reveal">[What should be done.]</h2>
+      </div>
+      <p class="intro reveal">[The proposed intervention in plain words.]</p>
+    </div>
+    <div class="product-grid reveal">
+      <div class="product-photo" id="solution-visual">
+        <p class="photo-tag">[solution visual placeholder]</p>
+      </div>
+      <div class="product-copy" id="solution-info">
+        <span class="pill">[Angle label]</span>
+        <h3>[The core of the proposal.]</h3>
+        <p>[Two or three sentences describing the mechanism: what changes, for whom, and why it works.]</p>
+        <div class="spec-row">
+          <div><b>[X]</b><small>[key figure]</small></div>
+          <div><b>[Y]</b><small>[key figure]</small></div>
+          <div><b>[Z]</b><small>[key figure]</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 · Scenario explorer -->
+<section id="scenarios" data-title="Scenario explorer">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">Scenario explorer</p>
+        <h2 class="reveal">[Test the assumptions live.]</h2>
+      </div>
+      <p class="intro reveal">[Interactive panel: the interviewer can move the assumptions and watch the outcome change. Placeholder model until the case numbers land.]</p>
+    </div>
+    <div class="economics-grid reveal" id="scenario-panel">
+      <div class="controls">
+        <label for="driverA">[Driver A] <output id="driverAV">50</output></label>
+        <input type="range" id="driverA" min="10" max="100" value="50">
+        <div class="range-ends"><span>10</span><span>100</span></div>
+        <label for="driverB">[Driver B, % improvement] <output id="driverBV">30</output></label>
+        <input type="range" id="driverB" min="0" max="60" value="30">
+        <div class="range-ends"><span>0</span><span>60</span></div>
+      </div>
+      <div>
+        <p class="result-head" id="scenario-head">…</p>
+        <div class="cost-row" data-k="base">
+          <div><span>[Base case]</span><strong>0</strong></div>
+          <div class="bar"><i></i></div>
+        </div>
+        <div class="cost-row accent" data-k="ours">
+          <div><span>[With the intervention]</span><strong>0</strong></div>
+          <div class="bar"><i></i></div>
+        </div>
+        <p class="fineprint">[Assumptions and sources for the model go here.]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 · Market -->
+<section class="market-section" id="market" data-title="The market">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">The market</p>
+        <h2 class="reveal">[How big this is.]</h2>
+      </div>
+      <p class="intro reveal">[Sizing method in one sentence.]</p>
+    </div>
+    <div class="market-grid reveal">
+      <div class="market-number">
+        <div class="segmented" id="scopeToggle">
+          <button data-scope="a" aria-pressed="true">[Scope A]</button>
+          <button data-scope="b" aria-pressed="false">[Scope B]</button>
+        </div>
+        <b><span data-a="€1.2B" data-b="€14B">€1.2B</span></b>
+        <p><span data-a="[what scope A covers]" data-b="[what scope B covers]">[what scope A covers]</span></p>
+      </div>
+      <div class="go-to-market">
+        <article>
+          <span>[Segment one]</span>
+          <h3>[Segment one headline]</h3>
+          <p>[Who they are and what they are worth.]</p>
+        </article>
+        <article>
+          <span>[Segment two]</span>
+          <h3>[Segment two headline]</h3>
+          <p>[Who they are and what they are worth.]</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 · Plan -->
+<section id="plan" data-title="The plan">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">The plan</p>
+        <h2 class="reveal">[How to execute it.]</h2>
+      </div>
+      <p class="intro reveal">[Phasing logic in one sentence.]</p>
+    </div>
+    <div class="channels reveal">
+      <article>
+        <span class="channel-n">1</span>
+        <h3>[Phase one]</h3>
+        <p>[What happens, and the milestone that ends the phase.]</p>
+      </article>
+      <article>
+        <span class="channel-n">2</span>
+        <h3>[Phase two]</h3>
+        <p>[What happens next.]</p>
+      </article>
+      <article>
+        <span class="channel-n">3</span>
+        <h3>[Phase three]</h3>
+        <p>[The end state.]</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 08 · Recommendation -->
+<section class="dark round-section" id="ask" data-title="The recommendation">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">The recommendation</p>
+        <h2 class="reveal">[The call, stated plainly.]</h2>
+      </div>
+      <div class="raise reveal">
+        <b>[Key figure]</b>
+        <span>[what it buys]</span>
+      </div>
+    </div>
+    <div class="milestones reveal">
+      <div><b>[Milestone one]</b><p>[What success looks like at this point.]</p></div>
+      <div><b>[Milestone two]</b><p>[Next proof point.]</p></div>
+      <div><b>[Milestone three]</b><p>[The end state that validates the call.]</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 · Close -->
+<section id="close" class="dark final-slide" data-title="Closing">
+  <div class="wrap">
+    <p class="eyebrow reveal">[Closing eyebrow]</p>
+    <h2 class="reveal">[The closing line of the case.]</h2>
+    <p class="intro reveal">[One sentence to end the discussion on.]</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">[Case presentation · Simon de Marmels · 2026]</div>
+</footer>
+
+<div class="deck-controls" aria-label="Presentation controls" hidden>
+  <span id="slide-count">01 / 09</span>
+  <div class="slide-navigation">
+    <button id="prev-slide" aria-label="Previous section">←</button>
+    <span id="slide-title">The thesis</span>
+    <button id="next-slide" aria-label="Next section">→</button>
+  </div>
+  <button id="exit-present">Exit</button>
+</div>
+
+<dialog id="sheet" aria-labelledby="sheetH">
+  <div class="sheet-in" tabindex="-1">
+    <button class="sheet-x" id="sheetX" aria-label="Close">×</button>
+    <p class="eyebrow" id="sheetK"></p>
+    <h3 id="sheetH"></h3>
+    <div id="sheetB"></div>
+  </div>
+</dialog>
+
+<!-- Deep-dive content: one <template id="dd-…"> per popout. -->
+<template id="dd-problem-detail" data-k="Deep dive" data-h="[The data behind the problem]">
+  <div class="detail-body">
+    <p>[Longer-form backing for the problem section: tables, charts, the full argument. Opens in the side sheet when the button is clicked.]</p>
+  </div>
+</template>
+<template id="dd-sources" data-k="Deep dive" data-h="[Sources &amp; method]">
+  <div class="detail-body">
+    <p>[Every number on this page, with its source and how it was derived.]</p>
+  </div>
+</template>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* Case-specific overrides on top of styles.css (the Tarnoc design system).
+   Retheme here: change the accent by overriding tokens, never edit styles.css. */
+
+/* Text brand instead of a logo image. */
+.brand{text-decoration:none;font-size:17px;font-weight:600;letter-spacing:-.02em;color:#fff;white-space:nowrap}
+.brand b{font-weight:600}
+
+/* Hero placeholder art: no product image yet. */
+.hero-art .render-label{position:static;color:#62676e;z-index:2}
+
+/* Placeholder highlighting while content is drafted: anything in [brackets]
+   is placeholder copy. Remove this block before the interview. */
+/* .wrap :is(h1,h2,h3,p,span,b,strong,small,button):not(:empty){} */
