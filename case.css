@@ -13,17 +13,18 @@
 .lab-claim{background:#dff5e7;color:#1c6f40}
 .dark .lab-claim{background:#3ec26f26;color:#8fe3ad}
 .lab-prop{background:#3ec26f;color:#13191b}
-.eyebrow .lab,h2 .lab{margin-left:10px;margin-right:0;vertical-align:1px}
+.eyebrow .lab,h2 .lab{display:block;width:max-content;margin:10px 0 0}
 .hero-strip span .lab,.proof-numbers span .lab,.channel-proof .lab,.verdict .lab{display:block;width:max-content;margin:0 0 8px}
 footer .lab{margin:0 4px 0 6px}
 
 /* ── Hero: four actors instead of a product render ───────────────────── */
 .hero-art .render-label{position:absolute;bottom:0;left:0;right:0;text-align:center;color:#8d939a;font-size:12px;line-height:1.5;z-index:2;max-width:46ch;margin:auto}
 .actors{position:relative;z-index:2;width:min(100%,460px);display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:64px}
-.actor{display:flex;flex-direction:column;justify-content:center;gap:6px;padding:20px 20px;min-height:104px;border-radius:10px;background:#1a2326e6;border:1px solid #ffffff1c;font-size:15px;font-weight:500;letter-spacing:-.01em;backdrop-filter:blur(6px)}
+.actor{display:grid;grid-template-rows:auto auto auto;align-content:start;gap:8px;padding:20px 20px;min-height:132px;border-radius:10px;background:#1a2326e6;border:1px solid #ffffff1c;font-size:15px;font-weight:500;letter-spacing:-.01em;backdrop-filter:blur(6px)}
 .actor small{font-size:11.5px;color:#aeb6bd;font-weight:400;line-height:1.35}
 .actor.a1{border-color:#3ec26f80;box-shadow:0 0 0 1px #3ec26f22}
-.actor.a1::before{content:'Proposed anchor';display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:600}
+.actor em{font-style:normal;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8fe3ad;font-weight:600;line-height:1.3}
+.actor.a1 em{color:var(--orange)}
 @media(max-width:800px){.actors{width:100%;margin-bottom:48px}.actor{padding:14px;font-size:14px;min-height:0}}
 
 /* ── Conflict: perspective switch ────────────────────────────────────── */
@@ -42,10 +43,10 @@ footer .lab{margin:0 4px 0 6px}
 .dark .europe-card.local-card{background:#1a2326;border-color:#ffffff1c;color:#fff}
 .dark .local-card .eyebrow{color:#8fe3ad}
 .substances{display:grid;gap:18px}
-.substances>div{border-left:2px solid var(--orange);padding-left:16px}
-.substances b{display:block;font-size:24px;font-weight:500;letter-spacing:-.03em;margin:6px 0}
+.substances>div{border-left:2px solid var(--orange);padding:6px 0 10px 16px}
+.substances b{display:block;font-size:24px;font-weight:500;letter-spacing:-.03em;margin:10px 0 8px}
 .substances span{display:block;font-size:13.5px;color:#b7bec4;line-height:1.55}
-.dark .local-card>p{color:#aeb6bd;border-top:1px solid #ffffff1c;padding-top:14px}
+.dark .local-card>p{color:#aeb6bd;border-top:1px solid #ffffff1c;padding-top:16px;margin-top:16px}
 .bill{margin-top:80px;padding-top:40px;border-top:1px solid #ffffff22}
 .bill-head{display:grid;grid-template-columns:1.3fr auto;gap:40px;align-items:end;margin-bottom:40px}
 .bill-head h3{font-size:clamp(22px,2vw,30px);line-height:1.2;max-width:34ch}
@@ -93,12 +94,12 @@ footer .lab{margin:0 4px 0 6px}
 @media(max-width:1000px){.routes-grid{grid-template-columns:1fr;gap:32px}.route-detail{border-left:0;padding-left:0;min-height:0;border-top:1px solid #ffffff22;padding-top:28px}}
 
 /* ── Gap: the sequence and the evidence switch ────────────────────────── */
-.seq{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:56px}
+.seq{display:grid;grid-template-columns:repeat(5,1fr);gap:32px;margin-bottom:56px}
 .seq>div{position:relative;border:1px solid var(--line);border-radius:10px;padding:20px 18px 18px;background:#fff}
 .seq>div span{display:block;font-size:12px;color:var(--muted);margin-bottom:12px;font-variant-numeric:tabular-nums}
 .seq>div b{display:block;font-size:18px;font-weight:500;letter-spacing:-.02em;line-height:1.2}
 .seq>div small{display:block;font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.4}
-.seq>div:not(:last-child)::after{content:'';position:absolute;right:-10px;top:50%;width:8px;height:8px;border-top:1px solid #9aa2a9;border-right:1px solid #9aa2a9;transform:translateY(-50%) rotate(45deg);z-index:1}
+.seq>div:not(:last-child)::after{content:'';position:absolute;right:-21px;top:50%;width:8px;height:8px;border-top:1px solid #9aa2a9;border-right:1px solid #9aa2a9;transform:translateY(-50%) rotate(45deg);z-index:1}
 .seq>div.hi{border-color:var(--orange);background:#eef9f2;box-shadow:0 0 0 1px #3ec26f33}
 .seq>div.hi span{color:#1e7a45;font-weight:600}
 .seq>div.hi small{color:#1e7a45}
@@ -115,7 +116,7 @@ footer .lab{margin:0 4px 0 6px}
 .ev-grid .verdict .lab{display:block;width:max-content;margin:0 0 8px}
 .evidence-side{border-left:1px solid var(--line);padding-left:40px}
 .evidence-side>p:not(.eyebrow):not(.footnote){font-size:16px;line-height:1.6;color:#3c4247}
-@media(max-width:1000px){.seq{grid-template-columns:1fr 1fr}.seq>div::after{display:none}.evidence-head{grid-template-columns:1fr}.ev-grid{grid-template-columns:1fr;gap:32px}.evidence-side{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:28px}}
+@media(max-width:1000px){.seq{grid-template-columns:1fr 1fr;gap:16px}.seq>div::after{display:none}.evidence-head{grid-template-columns:1fr}.ev-grid{grid-template-columns:1fr;gap:32px}.evidence-side{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:28px}}
 @media(max-width:600px){.seq{grid-template-columns:1fr}}
 
 /* ── Mechanism: five steps and the two-route comparison ──────────────── */
@@ -189,3 +190,22 @@ footer .wrap{line-height:1.8}
 
 /* Present mode: the footer is not a slide. */
 .presenting footer{display:none!important}
+
+/* Hero headline: one colour. */
+.hero h1 em{color:inherit;font-style:normal}
+
+/* Grower payback calculator */
+.pbk{margin-top:64px;padding-top:48px;border-top:1px solid var(--line)}
+.pbk-head{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:end;margin-bottom:36px}
+.pbk-head h3{font-size:clamp(24px,2.4vw,34px);line-height:1.15;max-width:26ch}
+.pbk-intro{font-size:16px;line-height:1.6;color:var(--muted);margin:0 0 4px}
+#payback-panel .controls .eyebrow{margin-bottom:14px}
+#payback-panel .controls .segmented{margin-bottom:8px;max-width:none}
+#payback-panel .controls label{margin-top:22px}
+#payback-panel .result-head{max-width:32ch;min-height:0}
+@media(max-width:1000px){.pbk-head{grid-template-columns:1fr;gap:16px}}
+
+/* Sentence case on short descriptors */
+.seq small,.bill-figs span,.kpi .k,.bar-lab>span,.actor small,.substances span,.raise>span{display:block}
+.seq small::first-letter,.bill-figs span::first-letter,.kpi .k::first-letter,.bar-lab>span::first-letter,.raise>span::first-letter{text-transform:uppercase}
+header nav .nav-deck{opacity:.7}

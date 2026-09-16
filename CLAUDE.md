@@ -24,6 +24,7 @@ recommendation) is a starting shape, not a commitment.
 
 No build step, no dependencies. Static files only:
 
+- `deck.html` + `deck.css` + `deck.js` — slide-deck version of the case, one slide per screen, arrow-key navigation. Static figures; links back to the interactive site.
 - `index.html` — the whole page. Sections are `<main>>section[data-title]`; the
   header nav, progress bar, present mode and deep-dive sheet all key off that.
 - `styles.css` — the design system, copied VERBATIM from tarnoc-funding.com
@@ -84,6 +85,22 @@ as the technical one; define a technical term the first time it appears. State
 a number's scope and limits in the same sentence as the number. Never present
 a national figure as a local result or a vendor claim as an outcome. No em
 dashes.
+
+### Design
+
+- Alignment: items in one row share the same top edge, the same internal
+  structure and the same height. If one card has a label row, every card in
+  that row has a label row.
+- Capitalisation: sentence case everywhere. Eyebrow labels and badges are the
+  only uppercase text. No fragment starts lowercase.
+- Spacing: at least 16px between text and any border, rule or box edge. Badges
+  sit on their own line, left-aligned with the text above, 10px below it.
+  Connectors (arrows, chevrons) have at least 12px clear space on both sides.
+- Colour: one colour per heading. Accent green is for numbers, controls,
+  active states and badges, not for part of a sentence.
+- Length: headings at most 12 words. Trim text before adding space.
+- No overflow, no overlap, no clipped text at any width from 400px up.
+- Check every change against these rules in the browser before pushing.
 
 ### Other
 
