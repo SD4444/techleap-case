@@ -29,7 +29,7 @@ No build step, no dependencies. Static files only:
 - `styles.css` — the design system, copied VERBATIM from tarnoc-funding.com
   (Simon's own Evolute × Tarnoc project, repo SMDevolute/tarnoc-pitch-website was
   empty; assets were pulled from the live Netlify site 2026-09-16). Do not edit it;
-  put all overrides in `case.css`. Accent is Tarnoc orange `#ff5a24` — hardcoded in
+  put all overrides in `case.css`. Accent was Tarnoc orange `#ff5a24`, rethemed to green `#3ec26f` on 2026-09-16 with a sed over styles.css (the one permitted edit to that file) — hardcoded in
   many places (incl. 8-digit alpha variants), so a retheme is a sed over the whole
   orange family (#ff5a24 #ff7548 #ff9b75 #ff9d7b #ba3610 #bf3710 #c13a12 #944023
   #995030 #ffb296 #ff2e0f), not a token change.
