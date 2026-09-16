@@ -1,2 +1,4 @@
 reference/
 .DS_Store
+.venv-test/
+shots-*.png
