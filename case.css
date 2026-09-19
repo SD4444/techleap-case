@@ -19,7 +19,7 @@ footer .lab{margin:0 4px 0 6px}
 
 /* ── Hero: four actors instead of a product render ───────────────────── */
 .hero-art .render-label{position:absolute;bottom:0;left:0;right:0;text-align:center;color:#8d939a;font-size:12px;line-height:1.5;z-index:2;max-width:46ch;margin:auto}
-.actors{position:relative;z-index:2;width:min(100%,460px);display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:64px}
+.actors{position:relative;z-index:2;width:min(100%,460px);display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .actor{display:grid;grid-template-rows:auto auto auto;align-content:start;gap:8px;padding:20px 20px;min-height:132px;border-radius:10px;background:#1a2326e6;border:1px solid #ffffff1c;font-size:15px;font-weight:500;letter-spacing:-.01em;backdrop-filter:blur(6px)}
 .actor small{font-size:11.5px;color:#aeb6bd;font-weight:400;line-height:1.35}
 .actor.a1{border-color:#3ec26f80;box-shadow:0 0 0 1px #3ec26f22}
