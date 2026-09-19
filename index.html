@@ -51,11 +51,20 @@
       <div class="hero-art reveal">
         <div class="heat-halo"></div>
         <div class="orbit"></div>
-        <div class="actors" aria-label="The four parties in the proposed transaction">
-          <span class="actor a1"><em>Anchor payer · proposed</em>Water board<small>Pays the price difference</small></span>
-          <span class="actor a2"><em>Buyers</em>Growers<small>Sign conditional orders</small></span>
-          <span class="actor a3"><em>Suppliers</em>Robot makers<small>Qualify by field validation</small></span>
-          <span class="actor a4"><em>Financiers</em>Investors<small>Underwrite production</small></span>
+        <div class="tri" aria-label="Farmers, water board and tech provider around one intervention">
+          <svg viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+            <path id="tri-a" class="tri-line" d="M200 52 L200 200"/>
+            <path id="tri-b" class="tri-line" d="M340 290 L200 200"/>
+            <path id="tri-c" class="tri-line" d="M60 290 L200 200"/>
+            <circle class="tri-dot" r="3.5"><animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#tri-a"/></animateMotion></circle>
+            <circle class="tri-dot" r="3.5"><animateMotion dur="3.2s" begin="1.05s" repeatCount="indefinite"><mpath href="#tri-b"/></animateMotion></circle>
+            <circle class="tri-dot" r="3.5"><animateMotion dur="3.2s" begin="2.1s" repeatCount="indefinite"><mpath href="#tri-c"/></animateMotion></circle>
+            <circle class="tri-ring" cx="200" cy="200" r="62"/>
+          </svg>
+          <span class="tri-node n1" style="--x:50%;--y:13%">Farmers</span>
+          <span class="tri-node n2" style="--x:85%;--y:72.5%">Water board</span>
+          <span class="tri-node n3" style="--x:15%;--y:72.5%">Tech provider</span>
+          <span class="tri-core">Intervention</span>
         </div>
       </div>
       <dl class="hero-meta reveal">

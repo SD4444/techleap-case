@@ -226,3 +226,16 @@ body:not(.presenting) .hero-grid{flex:1 0 auto;align-items:center;padding:40px 0
 .hero-meta dd{margin:0;font-size:15px;color:#e6e9ec}
 body:not(.presenting) .hero-grid{grid-template-rows:1fr auto;row-gap:40px}
 @media(max-width:800px){.hero-meta{gap:28px}}
+
+/* Hero diagram: three parties around one intervention */
+.tri{position:relative;z-index:2;width:min(100cqw,100cqh);aspect-ratio:1}
+.tri svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.tri-line{fill:none;stroke:#8fe3ad;stroke-opacity:.55;stroke-width:1.2;stroke-dasharray:6 6;animation:tri-dash 1.6s linear infinite}
+.tri-dot{fill:var(--orange);filter:drop-shadow(0 0 6px #3ec26f)}
+.tri-ring{fill:#13191b;stroke:var(--orange);stroke-width:1.5;animation:tri-pulse 3.2s ease-in-out infinite}
+.tri-node,.tri-core{position:absolute;left:var(--x,50%);top:var(--y,50%);transform:translate(-50%,-50%);white-space:nowrap;color:#fff;font-weight:500;letter-spacing:-.02em;font-size:clamp(15px,1.4vw,21px);padding:8px 14px;border-radius:30px;background:#13191b;border:1px solid #ffffff2a}
+.tri-core{--x:50%;--y:50%;background:transparent;border:0;color:var(--orange);font-size:clamp(11px,.95vw,14px);font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:0}
+@keyframes tri-dash{to{stroke-dashoffset:-12}}
+@keyframes tri-pulse{0%,100%{stroke-opacity:.5;r:62}50%{stroke-opacity:1;r:66}}
+@media(prefers-reduced-motion:reduce){.tri-line,.tri-ring{animation:none}.tri-dot{display:none}}
+@media(max-width:800px){.tri{width:min(100%,360px)}}
