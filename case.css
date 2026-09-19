@@ -234,8 +234,12 @@ body:not(.presenting) .hero-grid{grid-template-rows:1fr auto;row-gap:40px}
 .tri-dot{fill:var(--orange);filter:drop-shadow(0 0 6px #3ec26f)}
 .tri-ring{fill:#13191b;stroke:var(--orange);stroke-width:1.5;animation:tri-pulse 3.2s ease-in-out infinite}
 .tri-node,.tri-core{position:absolute;left:var(--x,50%);top:var(--y,50%);transform:translate(-50%,-50%);white-space:nowrap;color:#fff;font-weight:500;letter-spacing:-.02em;font-size:clamp(15px,1.4vw,21px);padding:8px 14px;border-radius:30px;background:#13191b;border:1px solid #ffffff2a}
-.tri-core{--x:50%;--y:50%;background:transparent;border:0;color:var(--orange);font-size:clamp(11px,.95vw,14px);font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:0}
+.tri-core{--x:50%;--y:50%;background:transparent;border:0;color:var(--orange);cursor:pointer;font:inherit;transition:color .2s;font-size:clamp(11px,.95vw,14px);font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:0}
 @keyframes tri-dash{to{stroke-dashoffset:-12}}
 @keyframes tri-pulse{0%,100%{stroke-opacity:.5;r:62}50%{stroke-opacity:1;r:66}}
 @media(prefers-reduced-motion:reduce){.tri-line,.tri-ring{animation:none}.tri-dot{display:none}}
 @media(max-width:800px){.tri{width:min(100%,360px)}}
+
+.tri-core:hover{color:#8fe3ad}
+.tri-core:focus-visible{outline:2px solid var(--orange);outline-offset:6px;border-radius:30px}
+.tri:has(.tri-core:hover) .tri-ring{stroke:#8fe3ad}
