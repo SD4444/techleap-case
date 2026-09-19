@@ -218,3 +218,11 @@ header nav .nav-deck{opacity:.7}
 body:not(.presenting) .hero{min-height:calc(100svh - 82px);display:flex;flex-direction:column;justify-content:center;padding:0}
 body:not(.presenting) .hero-grid{flex:1 0 auto;align-items:center;padding:40px 0}
 @media(max-width:800px){body:not(.presenting) .hero{min-height:calc(100svh - 70px)}}
+
+/* Hero meta: pillar and vertical, bottom left */
+.hero-meta{grid-column:1/-1;display:flex;gap:48px;margin:0;padding:0;align-self:end}
+.hero-meta div{display:grid;gap:6px}
+.hero-meta dt{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#8fe3ad;font-weight:600}
+.hero-meta dd{margin:0;font-size:15px;color:#e6e9ec}
+body:not(.presenting) .hero-grid{grid-template-rows:1fr auto;row-gap:40px}
+@media(max-width:800px){.hero-meta{gap:28px}}
