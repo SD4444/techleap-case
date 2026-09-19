@@ -59,5 +59,5 @@
   document.getElementById('sheetX').addEventListener('click', () => sheet.close());
   sheet.addEventListener('click', e => { if (e.target === sheet) sheet.close(); });
   sheet.addEventListener('close', () => opener?.focus());
-  fetch('deepdives.html').then(r => r.text()).then(html => { const t = document.createElement('template'); t.innerHTML = html; document.body.append(t.content); }).catch(() => {});
+  fetch('deepdives.html', { cache: 'no-cache' }).then(r => r.text()).then(html => { const t = document.createElement('template'); t.innerHTML = html; document.body.append(t.content); }).catch(() => {});
 })();

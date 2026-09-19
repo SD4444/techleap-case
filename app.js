@@ -148,7 +148,7 @@
     $('#sheetX').addEventListener('click', () => sheet.close());
     sheet.addEventListener('click', e => { if (e.target === sheet) sheet.close(); });
     sheet.addEventListener('close', () => { history.replaceState(null, '', location.pathname + location.search); sheetOpener?.focus(); });
-    fetch('deepdives.html').then(r => r.text()).then(html => {
+    fetch('deepdives.html', { cache: 'no-cache' }).then(r => r.text()).then(html => {
       const t = document.createElement('template'); t.innerHTML = html; document.body.append(t.content);
       const deep = location.hash.slice(1);
       if (deep && document.getElementById('dd-' + deep)) openSheet(deep);
