@@ -27,17 +27,6 @@ footer .lab{margin:0 4px 0 6px}
 .actor.a1 em{color:var(--orange)}
 @media(max-width:800px){.actors{width:100%;margin-bottom:48px}.actor{padding:14px;font-size:14px;min-height:0}}
 
-/* ── Conflict: perspective switch ────────────────────────────────────── */
-.persp .segmented{max-width:380px}
-.persp-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:start}
-.persp-grid h3{font-size:clamp(26px,2.6vw,36px);line-height:1.12;margin:0 0 20px}
-.persp-grid>div>p:not(.eyebrow):not(.footnote){color:var(--muted);font-size:17px;line-height:1.6;max-width:56ch}
-.persp-side{border-left:1px solid var(--line);padding-left:40px}
-.mini-steps{margin:0;padding:0;list-style:none;display:grid;gap:18px;counter-reset:ms}
-.mini-steps li{position:relative;padding-left:38px;font-size:15px;line-height:1.55;color:var(--muted);counter-increment:ms}
-.mini-steps li::before{content:counter(ms);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--orange);color:var(--ink);font-size:12px;font-weight:600;display:grid;place-items:center}
-.mini-steps b{color:var(--ink);font-weight:600}
-@media(max-width:1000px){.persp-grid{grid-template-columns:1fr;gap:36px}.facts{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:8px}}
 
 /* ── Water: local card and the three-party bill ──────────────────────── */
 .dark .europe-card.local-card{background:#1a2326;border-color:#ffffff1c;color:#fff}
@@ -244,15 +233,22 @@ body:not(.presenting) .hero-grid{grid-template-rows:1fr auto;row-gap:40px}
 .tri-core:focus-visible{outline:2px solid var(--orange);outline-offset:6px;border-radius:30px}
 .tri:has(.tri-core:hover) .tri-ring{stroke:#8fe3ad}
 
-/* Challenge: three facts per party, entering top to bottom */
-.facts{margin:0;padding:0 0 0 40px;list-style:none;border-left:1px solid var(--line);display:grid;gap:0}
-.facts li{padding:20px 0;border-bottom:1px solid var(--line);animation:fact-in .55s var(--ease) both}
-.facts li:last-child{border-bottom:0}
+/* ── Challenge: two columns, facts span the full height ─────────────── */
+.challenge{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:stretch}
+.challenge-left .segmented{max-width:380px;margin:40px 0 36px}
+.persp-text h3{font-size:clamp(26px,2.6vw,36px);line-height:1.12;margin:0 0 20px}
+.persp-text p{color:var(--muted);font-size:17px;line-height:1.6;max-width:56ch}
+.challenge-right{border-left:1px solid var(--line);padding-left:48px;display:flex}
+.facts{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;justify-content:space-between;flex:1;gap:8px}
+.facts[hidden]{display:none}
+.facts li{padding:0 0 22px;border-bottom:1px solid var(--line);animation:fact-in .55s var(--ease) both}
+.facts li:last-child{border-bottom:0;padding-bottom:0}
 .facts li:nth-child(2){animation-delay:.18s}
 .facts li:nth-child(3){animation-delay:.36s}
-.facts b{display:block;font-size:clamp(28px,2.6vw,38px);font-weight:400;letter-spacing:-.04em;line-height:1.1;color:#1e7a45;margin-bottom:10px;font-variant-numeric:tabular-nums}
+.facts b{display:block;font-size:clamp(30px,2.8vw,42px);font-weight:400;letter-spacing:-.04em;line-height:1.1;color:#1e7a45;margin-bottom:10px;font-variant-numeric:tabular-nums}
 .facts p{font-size:15px;line-height:1.55;color:var(--muted);max-width:44ch}
 .facts small{display:block;margin-top:12px;font-size:12px;color:#7a8087}
 .facts small .lab{margin-right:8px}
 @keyframes fact-in{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.facts li{animation:none}}
+@media(max-width:1000px){.challenge{grid-template-columns:1fr;gap:36px}.challenge-right{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:28px}.facts{gap:0}.facts li{padding:20px 0}}
