@@ -213,3 +213,8 @@ header nav .nav-deck{opacity:.7}
 /* Hero subtitle under the title */
 .subtitle{font-size:clamp(20px,1.9vw,28px);line-height:1.3;letter-spacing:-.02em;color:#c9ced3;margin:18px 0 0;max-width:34ch;font-weight:400}
 .hero .lede{margin-top:22px}
+
+/* Hero fills the first screen: title left, four actors right, both centred. */
+body:not(.presenting) .hero{min-height:calc(100svh - 82px);display:flex;flex-direction:column;justify-content:center;padding:0}
+body:not(.presenting) .hero-grid{flex:1 0 auto;align-items:center;padding:40px 0}
+@media(max-width:800px){body:not(.presenting) .hero{min-height:calc(100svh - 70px)}}
