@@ -37,7 +37,7 @@ footer .lab{margin:0 4px 0 6px}
 .mini-steps li{position:relative;padding-left:38px;font-size:15px;line-height:1.55;color:var(--muted);counter-increment:ms}
 .mini-steps li::before{content:counter(ms);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--orange);color:var(--ink);font-size:12px;font-weight:600;display:grid;place-items:center}
 .mini-steps b{color:var(--ink);font-weight:600}
-@media(max-width:1000px){.persp-grid{grid-template-columns:1fr;gap:36px}.persp-side{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:28px}}
+@media(max-width:1000px){.persp-grid{grid-template-columns:1fr;gap:36px}.facts{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:8px}}
 
 /* ── Water: local card and the three-party bill ──────────────────────── */
 .dark .europe-card.local-card{background:#1a2326;border-color:#ffffff1c;color:#fff}
@@ -243,3 +243,16 @@ body:not(.presenting) .hero-grid{grid-template-rows:1fr auto;row-gap:40px}
 .tri-core:hover{color:#8fe3ad}
 .tri-core:focus-visible{outline:2px solid var(--orange);outline-offset:6px;border-radius:30px}
 .tri:has(.tri-core:hover) .tri-ring{stroke:#8fe3ad}
+
+/* Challenge: three facts per party, entering top to bottom */
+.facts{margin:0;padding:0 0 0 40px;list-style:none;border-left:1px solid var(--line);display:grid;gap:0}
+.facts li{padding:20px 0;border-bottom:1px solid var(--line);animation:fact-in .55s var(--ease) both}
+.facts li:last-child{border-bottom:0}
+.facts li:nth-child(2){animation-delay:.18s}
+.facts li:nth-child(3){animation-delay:.36s}
+.facts b{display:block;font-size:clamp(28px,2.6vw,38px);font-weight:400;letter-spacing:-.04em;line-height:1.1;color:#1e7a45;margin-bottom:10px;font-variant-numeric:tabular-nums}
+.facts p{font-size:15px;line-height:1.55;color:var(--muted);max-width:44ch}
+.facts small{display:block;margin-top:12px;font-size:12px;color:#7a8087}
+.facts small .lab{margin-right:8px}
+@keyframes fact-in{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.facts li{animation:none}}
