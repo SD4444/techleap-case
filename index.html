@@ -19,7 +19,6 @@
   <a class="brand" href="#thesis"><b>Clean weeding, bankable demand</b></a>
   <nav id="main-nav" aria-label="Main navigation">
     <a href="#conflict">Challenge</a>
-    <a href="#water">Water</a>
     <a href="#grower">Grower</a>
     <a href="#signals">Signals</a>
     <a href="#routes">Routes</a>
@@ -91,6 +90,11 @@
             <span class="pill">The water authority's view</span>
             <h3>Herbicides reach surface water through spray drift and runoff from treated fields.</h3>
             <p>Water authorities are responsible for regional water quality, but they do not decide how weeds are controlled on farms. They can monitor, advise and co-fund cleaner practices; the purchasing decision still sits with the grower. The authority carries the water-quality obligation without controlling the switch.</p>
+            <div class="deep">
+              <span class="deep-label">Deep dives</span>
+              <button data-dd="water-data">National data and its limits ↗</button>
+              <button data-dd="bill">The downstream cost ↗</button>
+            </div>
           </div>
           <div data-panel="persp" data-val="grower" hidden>
             <span class="pill">The grower's view</span>
@@ -111,87 +115,6 @@
           <li><b>Fewer products</b><p>Sectors report that losing benfluralin made early weed control in inulin chicory uneconomic. Herbs and witlof lack approved products and labour. Mechanical control does not yet replace chemicals close to the crop plant.</p><small>Source: <a href="https://open.overheid.nl/documenten/a5f9310a-06b8-40a9-a6c6-94095bde1c88/file" target="_blank" rel="noopener">Government-published 2025 sector annex ↗</a></small></li>
         </ol>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- 03 · The water problem -->
-<section id="water" class="dark" data-title="The water problem">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <p class="eyebrow reveal">Angle one · water quality</p>
-        <h2 class="reveal">National exceedances are common. Particular herbicides are local targets.</h2>
-      </div>
-      <p class="intro reveal">The problem is measured, not theoretical. Exceedances have fallen since the early 2010s, but the decline has slowed and the target has not been reached.</p>
-    </div>
-    <div class="market-grid reveal">
-      <div>
-        <div class="proof-numbers" style="justify-content:flex-start">
-          <div><b data-count="80" data-suffix="%">0</b><span><i class="lab lab-obs">Observed · CLO 2024</i>Share of sites in the national crop-protection monitoring network with at least one chemical above an ecological water-quality standard.</span></div>
-        </div>
-        <p class="intro">That figure covers <b>all</b> crop-protection products. It cannot be attributed to herbicides or used as a forecast of what weed robots alone would fix. It establishes the background problem, nothing more.</p>
-        <div class="deep">
-          <span class="deep-label">Deep dives</span>
-          <button data-dd="water-data">National data and its limits ↗</button>
-          <button data-dd="bill">The downstream bill ↗</button>
-        </div>
-      </div>
-      <div class="europe-card local-card">
-        <p class="eyebrow">Local example · Rijnland water board, corrected 2025 monitoring</p>
-        <div class="substances">
-          <div><i class="lab lab-obs">Observed</i><b>Pendimethalin</b><span>Soil herbicide. Repeated cause of exceedances in bulb-growing and arable areas. Reaches surface water through spray drift and runoff. Rijnland advises growers to avoid it where possible.</span></div>
-          <div><i class="lab lab-obs">Observed</i><b>Metazachlor</b><span>Persistent problem in tree nurseries.</span></div>
-        </div>
-        <p>A named herbicide in a named catchment is a credible intervention target, provided a field solution replaces that use rather than switching growers to another problematic product. Rijnland's report also notes substitution toward lenacil.</p>
-      </div>
-    </div>
-
-    <div class="bill reveal">
-      <div class="bill-head">
-        <div>
-          <p class="eyebrow">Who pays</p>
-          <h3>The farm chooses the method. Water boards and drinking-water companies pay for the water.</h3>
-        </div>
-        <div class="segmented" data-switch="bill" role="group" aria-label="Choose cost view">
-          <button data-val="now" aria-pressed="true">Observed and estimated existing cost</button>
-          <button data-val="future" aria-pressed="false">Conditional future scenario</button>
-        </div>
-      </div>
-      <div class="channels">
-        <article>
-          <span class="channel-n">1</span>
-          <h3>Grower</h3>
-          <p>Pays for effective weed control now: herbicide, machinery, labour, and the yield risk of getting it wrong. Decides under margin pressure, season by season.</p>
-          <p class="channel-proof">No public figure quantifies this per hectare for the case crop yet. Gate 2 collects grower invoices.</p>
-        </article>
-        <article>
-          <span class="channel-n">2</span>
-          <h3>Water board</h3>
-          <p>Must meet surface-water objectives under the Water Framework Directive by 2027. Monitors named substances, coaches growers and co-funds listed on-farm measures.</p>
-          <p class="channel-proof">Rijnland: more than 30 eligible measures, generally at 40%, sometimes 60%. Current scheme ends 1 January 2027.</p>
-        </article>
-        <article>
-          <span class="channel-n">3</span>
-          <h3>Drinking-water company</h3>
-          <div data-panel="bill" data-val="now">
-            <div class="bill-figs">
-              <div><b>€142m</b><span>estimated investment already made in extra treatment at studied groundwater intakes</span></div>
-              <div><b>€14m</b><span>a year in estimated operating cost for that treatment</span></div>
-              <div><b>€10m</b><span>a year in pesticide-related source monitoring across the sector</span></div>
-            </div>
-          </div>
-          <div data-panel="bill" data-val="future" hidden>
-            <div class="bill-figs">
-              <div><b>€993m</b><span>additional investment if ongoing pesticide pressure eventually requires active-carbon treatment at every studied site</span></div>
-              <div><b>€96m</b><span>a year in additional operation in that scenario</span></div>
-              <div><b>±40%</b><span>stated cost-estimate range. No implementation date. No attribution to herbicides.</span></div>
-            </div>
-          </div>
-          <p class="channel-proof"><i class="lab lab-obs">Estimated</i>Haskoning, February 2026, for the Ministry of Infrastructure and Water Management. Pesticides broadly, selected groundwater sites. Not a project's savings, not a water-board budget.</p>
-        </article>
-      </div>
-      <p class="footnote">Because the costs fall on three parties, it is worth testing whether a funded group of buyers could purchase effective, lower-pollution weed control at the farm. It does not establish who can legally pay, what they will pay, or whether a particular robot reduces their bill. A water board's surface-water target can justify a catchment intervention without claiming it saves a drinking-water company money.</p>
     </div>
   </div>
 </section>
@@ -656,7 +579,7 @@
 </footer>
 
 <div class="deck-controls" aria-label="Presentation controls" hidden>
-  <span id="slide-count">01 / 12</span>
+  <span id="slide-count">01 / 11</span>
   <div class="slide-navigation">
     <button id="prev-slide" aria-label="Previous section">←</button>
     <span id="slide-title">The thesis</span>
