@@ -278,3 +278,16 @@ body:not(.presenting) .hero-grid{grid-template-rows:1fr auto;row-gap:40px}
 #bigsheet .eyebrow{color:#8fe3ad}
 #bigsheet .cost-row .bar{background:#ffffff14}
 @media(max-width:800px){#bigsheet{width:100vw;height:100vh;border-radius:0}#bigsheet .wrap{width:calc(100% - 40px)}#bigsheet .big-in{padding:64px 0 40px}#bigsheet .economics-grid{padding:20px}}
+
+/* ── Deep-dive sheet: centred, near full screen, same as the grower pop-out ── */
+dialog#sheet{margin:auto;width:min(1440px,94vw);max-width:none;height:92vh;max-height:none;border-radius:14px;overflow:hidden;background:var(--ink)}
+dialog#sheet::backdrop{background:#0008;backdrop-filter:blur(4px)}
+dialog#sheet .sheet-in{background:var(--ink);border-left:0;box-shadow:none;padding:56px clamp(24px,5vw,96px) 64px;animation:none!important}
+dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
+#sheetH{max-width:28ch;padding-top:0}
+#sheetK{padding-top:0}
+#sheetB{max-width:100ch}
+#sheetB .detail-body{max-width:none}
+#sheetB p,#sheetB li{font-size:15.5px}
+#sheetB table{font-size:14px}
+@media(max-width:800px){dialog#sheet{width:100vw;height:100vh;border-radius:0}dialog#sheet .sheet-in{padding:64px 20px 40px}}
