@@ -253,7 +253,7 @@
       $('#pbkYears').textContent = years === null ? 'None' : years >= 100 ? '>100' : years.toFixed(1);
       $('#pbkMachines').textContent = String(machines);
       $('#pbkHead').textContent = years === null
-        ? `No payback. The robot saves ${eur(savingHa)} per hectare, ${eur(savingHa * v.pbkHa)} a year on ${v.pbkHa} hectares, which is below the ${eur(v.pbkService * machines)} annual service cost.`
+        ? `No payback at any machine price. The robot saves ${eur(savingHa)} per hectare, ${eur(savingHa * v.pbkHa)} a year on ${v.pbkHa} hectares, which is below the ${eur(v.pbkService * machines)} annual service cost. Raise the hectares or lower the service cost.`
         : years > 10
           ? `Payback in ${years >= 100 ? 'more than 100' : years.toFixed(1)} years. At this saving the machine does not pay for itself within its likely life.`
           : `Payback in ${years.toFixed(1)} years. The robot saves ${eur(savingHa)} per hectare, ${eur(net)} a year on ${v.pbkHa} hectares after service.`;
