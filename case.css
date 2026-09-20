@@ -295,3 +295,7 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #sheetB .src a{display:inline;margin:0}
 #sheetB .warn b{color:#fff}
 #sheetK:empty{display:none}
+
+.channel-proof a{color:inherit;text-underline-offset:3px}
+.channel-proof a:hover{color:#1e7a45}
+.channel-proof br{display:block;content:"";margin-top:6px}
