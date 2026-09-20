@@ -37,13 +37,14 @@
   function fit() {
     fitFrame = 0; if (innerWidth <= 900) return;
     slides.forEach(s => {
-      const c = s.querySelector('.slide-in'); c.style.transform = '';
+      const c = s.querySelector('.slide-in'); c.style.transform = ''; c.style.marginBottom = '';
       const cs = getComputedStyle(s), avail = s.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
-      const h = c.offsetHeight; if (h > avail) c.style.transform = `scale(${avail / h})`;
+      const h = c.offsetHeight; if (h > avail) { const k = avail / h; c.style.transform = `scale(${k})`; c.style.marginBottom = -(h - avail) + 'px'; }
     });
   }
   const queueFit = () => { if (!fitFrame) fitFrame = requestAnimationFrame(fit); };
-  addEventListener('resize', queueFit); document.fonts.ready.then(queueFit); queueFit();
+  addEventListener('resize', queueFit); addEventListener('load', queueFit); document.fonts.ready.then(queueFit); queueFit(); setTimeout(queueFit, 600);
+  new ResizeObserver(queueFit).observe(document.documentElement); slides.forEach(s => new ResizeObserver(queueFit).observe(s.querySelector('.slide-in')));
 
   /* Deep-dive sheet: [data-dd] opens <template id="dd-…"> loaded from deepdives.html */
   const sheet = document.getElementById('sheet'), K = document.getElementById('sheetK'), H = document.getElementById('sheetH'), B = document.getElementById('sheetB');
