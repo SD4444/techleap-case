@@ -252,3 +252,6 @@ body:not(.presenting) .hero-grid{grid-template-rows:1fr auto;row-gap:40px}
 @keyframes fact-in{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.facts li{animation:none}}
 @media(max-width:1000px){.challenge{grid-template-columns:1fr;gap:36px}.challenge-right{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:28px}.facts{gap:0}.facts li{padding:20px 0}}
+
+.facts small a{color:inherit;text-underline-offset:3px}
+.facts small a:hover{color:#1e7a45}
