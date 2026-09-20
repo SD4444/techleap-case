@@ -291,3 +291,7 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #sheetB p,#sheetB li{font-size:15.5px}
 #sheetB table{font-size:14px}
 @media(max-width:800px){dialog#sheet{width:100vw;height:100vh;border-radius:0}dialog#sheet .sheet-in{padding:64px 20px 40px}}
+
+#sheetB .src a{display:inline;margin:0}
+#sheetB .warn b{color:#fff}
+#sheetK:empty{display:none}
