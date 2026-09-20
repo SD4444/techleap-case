@@ -318,3 +318,7 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #payback-panel .controls .eyebrow.ctl-group{margin:32px 0 0;padding-top:18px;border-top:1px solid var(--line)}
 #bigsheet #payback-panel .controls .eyebrow.ctl-group{border-color:#ffffff22}
 #payback-panel .controls label{margin-top:18px}
+/* Results stay in view while the sliders scroll */
+#payback-panel>div:last-child,#scenario-panel>div:last-child{position:sticky;top:16px;align-self:start}
+#payback-panel{align-items:start}
+@media(max-width:800px){#payback-panel>div:last-child,#scenario-panel>div:last-child{position:static}}
