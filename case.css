@@ -322,3 +322,7 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #payback-panel>div:last-child,#scenario-panel>div:last-child{position:sticky;top:16px;align-self:start}
 #payback-panel{align-items:start}
 @media(max-width:800px){#payback-panel>div:last-child,#scenario-panel>div:last-child{position:static}}
+
+#payback-panel .controls .source{margin-top:8px}
+#bigsheet .source{color:#9aa2a9}
+#bigsheet .source a:hover{color:#8fe3ad}
