@@ -20,7 +20,7 @@
   <nav id="main-nav" aria-label="Main navigation">
     <a href="#conflict">Challenge</a>
     <a href="#signals">Signals</a>
-    <a href="#routes">Routes</a>
+    <a href="#routes">Technology</a>
     <a href="#gap">Gap</a>
     <a href="#mechanism">Mechanism</a>
     <a href="#explorer">Explorer</a>
@@ -162,55 +162,51 @@
   </div>
 </section>
 
-<!-- 06 · Three routes -->
-<section id="routes" class="dark" data-title="Three routes">
+<!-- 06 · Technology landscape -->
+<section id="routes" class="dark" data-title="Technology landscape">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <p class="eyebrow reveal">Three responses to the same problem</p>
-        <h2 class="reveal">Three methods reduce herbicide use.</h2>
+        <p class="eyebrow reveal">Technology landscape</p>
+        <h2 class="reveal">Two robotic approaches can reduce reliance on herbicides.</h2>
       </div>
-      <p class="intro reveal">All three are real approaches with Dutch examples. None is a universal winner. The named companies are illustrations, not programme participants or endorsements.</p>
+      <p class="intro reveal">Robotic weeders use cameras and machine vision to distinguish crops from weeds, then treat individual plants. The main technical difference is how they kill the weed: physical removal or targeted optical energy.</p>
     </div>
     <div class="routes-grid reveal">
-      <div class="technology-steps" data-switch="route" role="group" aria-label="Choose a route">
-        <button data-val="laser" aria-pressed="true"><span>01</span><b>Robotic light or laser weeding</b><p>Cameras identify crop and weed; a targeted laser damages the weed without herbicide at that spot.</p></button>
-        <button data-val="mech" aria-pressed="false"><span>02</span><b>Robotic mechanical removal</b><p>Vision-guided arms or tools physically remove weeds, potentially inside the crop row.</p></button>
-        <button data-val="spot" aria-pressed="false"><span>03</span><b>Precision spot spraying</b><p>Sensors find weeds and apply herbicide only where needed instead of treating the whole area.</p></button>
+      <div class="technology-steps" data-switch="route" role="group" aria-label="Choose a method">
+        <button data-val="mech" aria-pressed="true"><span>01</span><b>Robotic mechanical weeding</b><p>Camera- or GPS-guided hoes, blades and robotic arms cut, uproot or bury weeds. Machines may be autonomous or tractor-mounted and can work between crop rows or around individual plants.</p></button>
+        <button data-val="laser" aria-pressed="false"><span>02</span><b>Robotic light or laser weeding</b><p>Machine vision identifies the weed and locates its growing point. Concentrated light or laser energy is directed at the plant to damage the meristem without physical contact.</p></button>
       </div>
       <div class="route-detail">
-        <div data-panel="route" data-val="laser">
-          <span class="pill">Dutch example · Cropr Weedr</span>
-          <h3>Could remove some herbicide applications and reach weeds near the crop plant.</h3>
-          <dl>
-            <dt>What remains hard</dt><dd>Weed recognition, speed per hectare, repeated passes, price, uptime and manufacturing at volume.</dd>
-            <dt>Supplier claims</dt><dd><i class="lab lab-claim">Claimed by supplier</i>Under €100 per driven hectare, and crop fit for onions, carrots, chicory, witlof and lilies. Field deployments from 2026. The machine specifies a diesel generator, so no zero-emission claim and no validated water improvement.</dd>
-          </dl>
+        <div data-panel="route" data-val="mech">
+          <h3>Physical removal</h3>
+          <div class="pros-cons">
+            <div><dt>Principal advantages</dt><ul><li>No herbicide at the point of treatment</li><li>Immediate and observable weed removal</li><li>Based on established mechanical principles</li></ul></div>
+            <div><dt>Principal constraints</dt><ul><li>Performance varies with soil and moisture conditions</li><li>Tools can disturb soil or damage crop roots</li><li>Wear, maintenance and repeated passes affect cost</li></ul></div>
+          </div>
         </div>
-        <div data-panel="route" data-val="mech" hidden>
-          <span class="pill">Dutch example · Odd.Bot Maverick</span>
-          <h3>Chemical-free treatment and potentially fewer hand-weeding hours where the system works.</h3>
-          <dl>
-            <dt>What remains hard</dt><dd>Soil conditions, crop damage, speed, timing and whether the farm still needs a chemical rescue treatment.</dd>
-            <dt>Supplier claims</dt><dd><i class="lab lab-claim">Claimed by supplier</i>Customer stories on the vendor site are anecdotal, not general yield estimates. Testing and selling for crops such as carrots and onions.</dd>
-          </dl>
-        </div>
-        <div data-panel="route" data-val="spot" hidden>
-          <span class="pill">Dutch example · Rometron WEED-IT</span>
-          <h3>Lower input cost and chemical use while keeping an established method.</h3>
-          <dl>
-            <dt>What remains hard</dt><dd>It still applies herbicide. Its effect on a particular water pollutant depends on which chemical and crop are involved.</dd>
-            <dt>Supplier claims</dt><dd><i class="lab lab-claim">Claimed by supplier</i>"Up to" savings figures cannot be treated as a guaranteed environmental outcome. Sold through dealers, developed in the Netherlands.</dd>
-          </dl>
+        <div data-panel="route" data-val="laser" hidden>
+          <h3>Targeted optical energy</h3>
+          <div class="pros-cons">
+            <div><dt>Principal advantages</dt><ul><li>No herbicide at the point of treatment</li><li>Can target weeds close to the crop</li><li>Does not disturb soil or crop roots</li></ul></div>
+            <div><dt>Principal constraints</dt><ul><li>Requires reliable identification and precise targeting</li><li>Treatment speed and energy use determine field capacity</li><li>Dust, rain, plant cover and weed size can affect performance</li></ul></div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="direct-band pivot reveal">
-      <p><b>Case selection.</b> This case follows the light-weeding robot because it raises the clearest financing question: the engineering works in a field, the company still needs money to build reliable machines, and customers will not order until the machines are proven in their own crop. The question is whether customer commitments can come before production capital. The mechanism itself is outcome-based and open to every method in a real selection.</p>
-    </div>
-    <div class="deep reveal">
-      <span class="deep-label">Deep dive</span>
-      <button data-dd="routes">Full comparison and the crop-location gate ↗</button>
+    <div class="commercial reveal">
+      <div>
+        <p class="eyebrow">From technical capability to commercial alternative</p>
+        <h3>The ability to identify and kill a weed is only the starting point.</h3>
+        <p>To become a credible alternative to herbicide-based weed control, a robotic system must demonstrate all five. Performance against these measures determines whether growers can order with confidence, manufacturers can plan production and investors can finance commercial scale-up.</p>
+      </div>
+      <ol class="criteria-list">
+        <li>Consistent efficacy in the target crop and against the relevant weeds</li>
+        <li>No material increase in crop damage or yield loss</li>
+        <li>Sufficient field capacity within the available operating window</li>
+        <li>A competitive total cost per hectare, including repeat passes</li>
+        <li>Reliable operation, maintenance and technical support throughout the season</li>
+      </ol>
     </div>
   </div>
 </section>

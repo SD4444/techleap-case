@@ -70,7 +70,7 @@ footer .lab{margin:0 4px 0 6px}
 
 /* ── Routes: selector + detail ────────────────────────────────────────── */
 .routes-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
-.route-detail{border-left:1px solid #ffffff22;padding-left:48px;min-height:320px}
+.route-detail{border-left:1px solid #ffffff22;padding-left:48px;min-height:0;align-self:stretch}
 .route-detail .pill{color:#8fe3ad}
 .route-detail h3{font-size:clamp(26px,2.6vw,38px);line-height:1.12;margin-bottom:26px}
 .route-detail dl{margin:0;display:grid;gap:18px}
@@ -296,3 +296,21 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 .source a{color:inherit;text-underline-offset:3px}
 .source a:hover{color:#1e7a45}
 .channels article .source{margin-top:10px}
+
+/* Technology landscape: advantages and constraints, then the five criteria */
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:8px}
+.pros-cons dt{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#9aa2a9;font-weight:600;margin-bottom:14px}
+.pros-cons ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.pros-cons li{position:relative;padding-left:20px;font-size:15.5px;line-height:1.5;color:#c9ced3}
+.pros-cons li::before{content:'';position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--orange)}
+.pros-cons>div:last-child li::before{background:transparent;border:1px solid #9aa2a9;width:6px;height:6px}
+.commercial{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:64px;padding-top:40px;border-top:1px solid #ffffff22;align-items:start}
+.commercial .eyebrow{color:#8fe3ad}
+.commercial h3{font-size:clamp(24px,2.4vw,34px);line-height:1.15;margin-bottom:18px}
+.commercial p:not(.eyebrow){color:#b7bec4;font-size:16px;line-height:1.6;max-width:52ch}
+.criteria-list{margin:0;padding:0;list-style:none;counter-reset:cr;display:grid;gap:0}
+.criteria-list li{counter-increment:cr;display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid #ffffff22;font-size:16px;line-height:1.45}
+.criteria-list li:first-child{padding-top:0}
+.criteria-list li:last-child{border-bottom:0}
+.criteria-list li::before{content:counter(cr,decimal-leading-zero);font-size:12px;color:#8fe3ad;font-weight:600;letter-spacing:.08em;font-variant-numeric:tabular-nums}
+@media(max-width:1000px){.pros-cons{grid-template-columns:1fr;gap:24px}.commercial{grid-template-columns:1fr;gap:28px;margin-top:40px}}
