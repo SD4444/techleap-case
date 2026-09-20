@@ -247,14 +247,9 @@ body:not(.presenting) .hero-grid{grid-template-rows:1fr auto;row-gap:40px}
 .facts li:nth-child(3){animation-delay:.36s}
 .facts b{display:block;font-size:clamp(30px,2.8vw,42px);font-weight:400;letter-spacing:-.04em;line-height:1.1;color:#1e7a45;margin-bottom:10px;font-variant-numeric:tabular-nums}
 .facts p{font-size:15px;line-height:1.55;color:var(--muted);max-width:44ch}
-.facts small{display:block;margin-top:12px;font-size:12px;color:#7a8087}
-.facts small .lab{margin-right:8px}
 @keyframes fact-in{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.facts li{animation:none}}
 @media(max-width:1000px){.challenge{grid-template-columns:1fr;gap:36px}.challenge-right{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:28px}.facts{gap:0}.facts li{padding:20px 0}}
-
-.facts small a{color:inherit;text-underline-offset:3px}
-.facts small a:hover{color:#1e7a45}
 
 /* ── Big pop-out (the grower's decision) ─────────────────────────────── */
 #bigsheet{width:min(1440px,94vw);max-width:none;height:92vh;max-height:none;margin:auto;border:0;border-radius:14px;padding:0;background:var(--ink);color:#fff;overflow:hidden}
@@ -296,6 +291,8 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #sheetB .warn b{color:#fff}
 #sheetK:empty{display:none}
 
-.channel-proof a{color:inherit;text-underline-offset:3px}
-.channel-proof a:hover{color:#1e7a45}
-.channel-proof br{display:block;content:"";margin-top:6px}
+/* One source line style, used everywhere */
+.source{display:block;margin-top:12px;font-size:12px;line-height:1.5;color:#7a8087}
+.source a{color:inherit;text-underline-offset:3px}
+.source a:hover{color:#1e7a45}
+.channels article .source{margin-top:10px}
