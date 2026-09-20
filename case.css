@@ -255,3 +255,26 @@ body:not(.presenting) .hero-grid{grid-template-rows:1fr auto;row-gap:40px}
 
 .facts small a{color:inherit;text-underline-offset:3px}
 .facts small a:hover{color:#1e7a45}
+
+/* ── Big pop-out (the grower's decision) ─────────────────────────────── */
+#bigsheet{width:min(1440px,94vw);max-width:none;height:92vh;max-height:none;margin:auto;border:0;border-radius:14px;padding:0;background:var(--ink);color:#fff;overflow:hidden}
+#bigsheet::backdrop{background:#0008;backdrop-filter:blur(4px)}
+#bigsheet .big-in{height:100%;overflow-y:auto;overscroll-behavior:contain;padding:56px 0 64px;outline:none}
+#bigsheet .sheet-x{position:absolute;top:18px;right:18px;z-index:2}
+#bigsheet .wrap{width:min(1280px,calc(100% - 104px))}
+#bigsheet .reveal{opacity:1;transform:none}
+#bigsheet .intro,#bigsheet .fineprint,#bigsheet .footnote,#bigsheet .range-ends,#bigsheet .bar-lab>span,#bigsheet .choice-panel p,#bigsheet .kpi .k,#bigsheet .pbk-intro{color:#b7bec4}
+#bigsheet .economics-grid{background:#1a2326;border:1px solid #ffffff1c;border-radius:12px;padding:32px}
+#bigsheet .verdict{border-color:#ffffff22;color:#c9ced3}
+#bigsheet .verdict b,#bigsheet .bar-lab b,#bigsheet .criteria li,#bigsheet .controls label{color:#fff}
+#bigsheet .bar-track{background:#ffffff14}
+#bigsheet .bar-fill span{background:#13191bd9;color:#fff}
+#bigsheet .segmented{background:#ffffff14}
+#bigsheet .segmented button{color:#c9ced3}
+#bigsheet .segmented button[aria-pressed=true]{color:var(--ink)}
+#bigsheet .criteria,#bigsheet .pbk,#bigsheet .explorer-kpis,#bigsheet .deep{border-color:#ffffff22}
+#bigsheet .deep button{border-color:#ffffff30;color:#fff}
+#bigsheet .kpi .v{color:var(--orange)}
+#bigsheet .eyebrow{color:#8fe3ad}
+#bigsheet .cost-row .bar{background:#ffffff14}
+@media(max-width:800px){#bigsheet{width:100vw;height:100vh;border-radius:0}#bigsheet .wrap{width:calc(100% - 40px)}#bigsheet .big-in{padding:64px 0 40px}#bigsheet .economics-grid{padding:20px}}

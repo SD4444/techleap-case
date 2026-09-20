@@ -258,4 +258,16 @@
     $$('#pbkPreset button').forEach(b => b.addEventListener('click', () => { $('#pbkCost').value = b.dataset.cost; render(); }));
     render();
   }
+
+  /* Big pop-out: [data-big="id"] opens <dialog id> nearly full screen */
+  $$('[data-big]').forEach(b => b.addEventListener('click', () => {
+    const dlg = document.getElementById(b.dataset.big); if (!dlg) return;
+    dlg.querySelectorAll('.reveal').forEach(e => e.classList.add('visible'));
+    dlg.showModal(); const inn = dlg.querySelector('.big-in'); inn.scrollTop = 0; inn.focus({ preventScroll: true });
+    dlg.addEventListener('close', () => b.focus(), { once: true });
+  }));
+  $$('dialog.dark').forEach(dlg => {
+    dlg.querySelector('.sheet-x')?.addEventListener('click', () => dlg.close());
+    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+  });
 })();
