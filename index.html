@@ -546,39 +546,68 @@
           <p class="eyebrow">Grower payback calculator <i class="lab lab-claim">Based on one supplier's model</i></p>
           <h3>A light-weeding robot pays back against hand-weeding costs, not against herbicide costs.</h3>
         </div>
-        <p class="pbk-intro">The calculator divides the machine price by the annual saving after service cost. It shows how many years a grower needs to recover the purchase. Move the sliders or pick a current practice.</p>
+        <p class="pbk-intro">Weeding cost today minus weeding cost with the robot gives the saving per hectare. The machine price divided by the yearly saving after service gives the payback in years. Pick a current practice, then move the sliders.</p>
       </div>
       <div class="economics-grid" id="payback-panel">
         <div class="controls">
           <p class="eyebrow">Current practice</p>
           <div class="segmented three" id="pbkPreset" role="group" aria-label="Choose current weeding practice">
-            <button data-cost="200" aria-pressed="true">Herbicide programme</button>
-            <button data-cost="400" aria-pressed="false">Organic, transplanted</button>
-            <button data-cost="1700" aria-pressed="false">Organic, fine-seeded</button>
+            <button data-passes="3" data-hours="0" aria-pressed="true">Herbicide programme</button>
+            <button data-passes="0" data-hours="20" aria-pressed="false">Organic, transplanted</button>
+            <button data-passes="0" data-hours="85" aria-pressed="false">Organic, fine-seeded</button>
           </div>
-          <label for="pbkCost">Current weeding cost per hectare per year <output id="pbkCostV">€200</output></label>
-          <input type="range" id="pbkCost" min="50" max="2500" step="50" value="200">
-          <div class="range-ends"><span>€50</span><span>€2,500</span></div>
+          <p class="eyebrow ctl-group">Today, per hectare per year</p>
+          <label for="pbkPasses">Herbicide passes <output id="pbkPassesV">3</output></label>
+          <input type="range" id="pbkPasses" min="0" max="6" step="1" value="3">
+          <div class="range-ends"><span>0</span><span>6</span></div>
+          <label for="pbkPassCost">Cost per herbicide pass <output id="pbkPassCostV">€70</output></label>
+          <input type="range" id="pbkPassCost" min="20" max="150" step="5" value="70">
+          <div class="range-ends"><span>€20</span><span>€150</span></div>
+          <label for="pbkHours">Hand-weeding hours <output id="pbkHoursV">0 h</output></label>
+          <input type="range" id="pbkHours" min="0" max="150" step="5" value="0">
+          <div class="range-ends"><span>0 h</span><span>150 h</span></div>
+          <label for="pbkWage">Hourly wage <output id="pbkWageV">€20</output></label>
+          <input type="range" id="pbkWage" min="12" max="35" step="1" value="20">
+          <div class="range-ends"><span>€12</span><span>€35</span></div>
+          <p class="eyebrow ctl-group">After the robot, per hectare per year</p>
+          <label for="pbkPassesAfter">Herbicide passes still needed <output id="pbkPassesAfterV">0</output></label>
+          <input type="range" id="pbkPassesAfter" min="0" max="3" step="1" value="0">
+          <div class="range-ends"><span>0</span><span>3</span></div>
+          <label for="pbkHoursAfter">Hand-weeding hours still needed <output id="pbkHoursAfterV">0 h</output></label>
+          <input type="range" id="pbkHoursAfter" min="0" max="40" step="1" value="0">
+          <div class="range-ends"><span>0 h</span><span>40 h</span></div>
+          <label for="pbkRun">Robot running cost: energy and operator <output id="pbkRunV">€0</output></label>
+          <input type="range" id="pbkRun" min="0" max="150" step="5" value="0">
+          <div class="range-ends"><span>€0</span><span>€150</span></div>
+          <p class="eyebrow ctl-group">Robot</p>
           <label for="pbkHa">Hectares weeded per year <output id="pbkHaV">30 ha</output></label>
-          <input type="range" id="pbkHa" min="5" max="200" step="5" value="30">
-          <div class="range-ends"><span>5 ha</span><span>200 ha</span></div>
-          <label for="pbkReplace">Weeding still done with herbicide or by hand <output id="pbkReplaceV">0%</output></label>
-          <input type="range" id="pbkReplace" min="0" max="50" step="5" value="0">
-          <div class="range-ends"><span>0%</span><span>50%</span></div>
+          <input type="range" id="pbkHa" min="5" max="500" step="5" value="30">
+          <div class="range-ends"><span>5 ha</span><span>500 ha</span></div>
           <label for="pbkPrice">Machine price <output id="pbkPriceV">€115k</output></label>
           <input type="range" id="pbkPrice" min="60000" max="1500000" step="5000" value="115000">
           <div class="range-ends"><span>€60k</span><span>€1.5m</span></div>
           <label for="pbkService">Annual service, maintenance and data <output id="pbkServiceV">€11k</output></label>
-          <input type="range" id="pbkService" min="0" max="25000" step="1000" value="11000">
-          <div class="range-ends"><span>€0</span><span>€25k</span></div>
+          <input type="range" id="pbkService" min="0" max="100000" step="1000" value="11000">
+          <div class="range-ends"><span>€0</span><span>€100k</span></div>
+          <label for="pbkCap">Capacity per machine per season <output id="pbkCapV">225 ha</output></label>
+          <input type="range" id="pbkCap" min="50" max="1000" step="25" value="225">
+          <div class="range-ends"><span>50 ha</span><span>1,000 ha</span></div>
         </div>
         <div>
           <p class="result-head" id="pbkHead">…</p>
+          <div class="cost-row" data-k="before">
+            <div><span>Weeding cost today, per hectare per year</span><strong>0</strong></div>
+            <div class="bar"><i></i></div>
+          </div>
+          <div class="cost-row accent" data-k="after">
+            <div><span>Weeding cost with the robot, per hectare per year, before the machine</span><strong>0</strong></div>
+            <div class="bar"><i></i></div>
+          </div>
           <div class="kpis explorer-kpis">
-            <div class="kpi"><div class="v" id="pbkSaving">0</div><div class="k">current weeding cost replaced per year</div></div>
-            <div class="kpi"><div class="v" id="pbkNet">0</div><div class="k">saving after service cost per year</div></div>
-            <div class="kpi"><div class="v" id="pbkYears">0</div><div class="k">years to recover the machine price</div></div>
-            <div class="kpi"><div class="v" id="pbkCap">0</div><div class="k">machines needed at 225 ha per machine per season</div></div>
+            <div class="kpi"><div class="v" id="pbkSavingHa">0</div><div class="k">Saving per hectare per year</div></div>
+            <div class="kpi"><div class="v" id="pbkNet">0</div><div class="k">Saving per year after service</div></div>
+            <div class="kpi"><div class="v" id="pbkYears">0</div><div class="k">Years to recover the machine price</div></div>
+            <div class="kpi"><div class="v" id="pbkMachines">0</div><div class="k">Machines needed</div></div>
           </div>
           <p class="fineprint" id="pbkNote"></p>
           <div class="deep">
