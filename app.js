@@ -238,7 +238,7 @@
       const v = Object.fromEntries(ins.map(i => [i.id, +i.value]));
       ins.forEach(i => { const o = $('#' + i.id + 'V'); if (o) o.textContent = fmt[i.id](v[i.id]); });
       $$('#pbkPreset button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.cost === v.pbkCost)));
-      const saving = v.pbkCost * v.pbkHa * v.pbkReplace / 100;
+      const saving = v.pbkCost * v.pbkHa * (100 - v.pbkReplace) / 100;
       const net = saving - v.pbkService;
       const years = net > 0 ? v.pbkPrice / net : null;
       const machines = Math.max(1, Math.ceil(v.pbkHa / 225));
@@ -252,7 +252,7 @@
         : years > 10
           ? `Payback in ${years >= 100 ? 'more than 100' : years.toFixed(1)} years. At this weeding cost the machine does not pay for itself within its likely life.`
           : `Payback in ${years.toFixed(1)} years on ${v.pbkHa} hectares at €${v.pbkCost.toLocaleString('en-GB')} per hectare.`;
-      $('#pbkNote').textContent = `${eur(v.pbkPrice)} price ÷ (${eur(saving)} replaced cost − ${eur(v.pbkService)} service). Assumes the robot replaces ${v.pbkReplace}% of current weeding cost with no extra labour, energy, downtime or yield change, and no financing cost. Price, service and capacity are one supplier's figures, converted to euros and rounded. Presets are that supplier's cost estimates, not measured Dutch farm costs.`;
+      $('#pbkNote').textContent = `${eur(v.pbkPrice)} price ÷ (${eur(saving)} replaced cost − ${eur(v.pbkService)} service). Assumes ${v.pbkReplace}% of today's weeding is still done with herbicide or by hand and the robot adds no extra labour, energy, downtime or yield change, and no financing cost. Price, service and capacity are one supplier's figures, converted to euros and rounded. Presets are that supplier's cost estimates, not measured Dutch farm costs.`;
     }
     ins.forEach(i => i.addEventListener('input', render));
     $$('#pbkPreset button').forEach(b => b.addEventListener('click', () => { $('#pbkCost').value = b.dataset.cost; render(); }));
