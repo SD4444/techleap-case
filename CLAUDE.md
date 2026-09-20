@@ -7,10 +7,15 @@ case is the content. Built 2026-09-16 from the Tarnoc funding site framework.
 
 ## Status
 
-Skeleton with placeholder copy (everything in [brackets]). Simon is drafting the
-actual case material and will supply it; sections will be rewritten around it.
-The section set (problem / evidence / solution / scenarios / market / plan /
-recommendation) is a starting shape, not a commitment.
+Content pass in progress with Simon, section by section (2026-09-20).
+
+Done to Simon's text: hero (title, subtitle, triangle diagram, pillar/vertical),
+the challenge (#conflict), evidence of demand (#signals), technology
+landscape (#routes), water deep dives, who-pays deep dive, grower pop-out
+(#bigsheet). Removed: the water section, the grower section, the hero stats.
+
+Not yet reviewed: #gap, #mechanism, #explorer, #gates, #ask, #close. Resume
+there. The deck (deck.html) still has old copy; Simon: re-adapt it at the end.
 
 ## Hosting
 
