@@ -16,7 +16,7 @@
 
 <div class="deck-bar">
   <a href="index.html" class="deck-home">Clean weeding, bankable demand</a>
-  <span id="deck-count">01 / 13</span>
+  <span id="deck-count">01 / 15</span>
   <div>
     <button id="deck-prev" aria-label="Previous slide">←</button>
     <button id="deck-next" aria-label="Next slide">→</button>
@@ -30,31 +30,54 @@
   <div class="slide-in">
     <h1>Cleaning the water table through the removal of herbicides</h1>
     <p class="subtitle">A demand-side intervention to stimulate the uptake of herbicide alternatives in farming.</p>
-    <p class="lede">A water board as anchor payer. Growers signing conditional orders. Techleap structuring the commitment so investors can underwrite it.</p>
+    <dl class="hero-meta deck-meta">
+      <div><dt>Pillar</dt><dd>Deep Tech scaling</dd></div>
+      <div><dt>Vertical</dt><dd>Climate Tech</dd></div>
+    </dl>
+    <div class="deep"><span class="deep-label">Deep dive</span><button data-dd="intervention">The intervention ↗</button></div>
   </div>
 </article>
 
 <article class="slide" id="s2">
   <div class="slide-in">
-    <p class="eyebrow">The challenge</p>
+    <p class="eyebrow">The challenge · the water authority's view</p>
     <h2>Herbicides pollute the water. Removing them costs growers yield.</h2>
     <div class="cols two">
       <div>
-        <h3>Water authority</h3>
-        <p>Has a legal duty to protect surface-water quality. A few named herbicides keep monitoring sites above their standard. The decline in exceedances is too slow for the 2027 objectives.</p>
+        <h3>Herbicides reach surface water through spray drift and runoff from treated fields.</h3>
+        <p>Water authorities are responsible for regional water quality, but they do not decide how weeds are controlled on farms. They can monitor, advise and co-fund cleaner practices; the purchasing decision still sits with the grower. The authority carries the water-quality obligation without controlling the switch.</p>
+        <div class="deep"><span class="deep-label">Deep dives</span><button data-dd="water-data">National data and its limits ↗</button><button data-dd="bill">The downstream cost ↗</button></div>
       </div>
-      <div>
-        <h3>Grower</h3>
-        <p>Pays for a weed-free field, on time, at a margin. Herbicides treat a whole field cheaply. An alternative that misses weeds costs yield this season and adds weed seed for later seasons.</p>
+      <div class="figs">
+        <div><b>80%</b><span>Share of national monitoring sites with at least one crop-protection chemical above an ecological standard in 2024.</span><small class="source">Source: <a href="https://www.clo.nl/indicatoren/nl054712-gewasbeschermingsmiddelen-in-oppervlaktewater-2013-2024" target="_blank" rel="noopener">CLO, national monitoring 2013 to 2024 ↗</a></small></div>
+        <div><b>2027</b><span>Despite years of monitoring and farmer support, exceedances are not falling quickly enough. Rijnland says the current trajectory will not reach zero by the Water Framework Directive deadline.</span><small class="source">Source: <a href="https://www.rijnland.net/actueel/nieuwsoverzicht/correctie-op-nieuwsbericht-24-maart-2026/" target="_blank" rel="noopener">Rijnland, corrected 2025 monitoring ↗</a></small></div>
+        <div><b>50% by 2030</b><span>The EU aims to halve the use and risk of chemical pesticides, including herbicides, by 2030. Not legally binding, but sustained policy pressure for alternatives.</span><small class="source">Source: <a href="https://food.ec.europa.eu/plants/pesticides/sustainable-use-pesticides/pesticide-reduction-targets-progress_en" target="_blank" rel="noopener">European Commission, pesticide-reduction targets ↗</a></small></div>
       </div>
     </div>
-    <div class="band"><b>Two linked market failures.</b> The grower pays for weed control and society pays for the water pollution. The robot maker needs production capital to serve buyers who will not commit until the technology is proven at scale.</div>
   </div>
 </article>
 
-<article class="slide" id="s5">
+<article class="slide" id="s3">
   <div class="slide-in">
-    <p class="eyebrow">Angle two · the farm <i class="lab lab-obs">Observed · one system trial</i></p>
+    <p class="eyebrow">The challenge · the grower's view</p>
+    <h2>Herbicides pollute the water. Removing them costs growers yield.</h2>
+    <div class="cols two">
+      <div>
+        <h3>Weed control has to work within narrow operating windows and meet the crop's economic profile.</h3>
+        <p>For a grower, promising technology is not enough. It must clear weeds on time, avoid crop damage and make economic sense. Until that performance is proven at commercial scale, herbicides remain the lower-risk choice. A failed treatment can cost yield today and increase weed pressure tomorrow.</p>
+      </div>
+      <div class="figs">
+        <div><b>8 critical weeks</b><span>For inulin chicory, weed control during the first eight weeks determines whether the crop remains commercially viable. Growers report that inadequate control reduces both yield and quality enough to make the crop uneconomic.</span><small class="source">Source: <a href="https://open.overheid.nl/documenten/a5f9310a-06b8-40a9-a6c6-94095bde1c88/file" target="_blank" rel="noopener">Dutch government's 2025 crop-protection bottleneck annex, pp. 1 to 2 ↗</a></small></div>
+        <div><b>No viable alternative</b><span>For many crops such as brassica, herbs and witlof, hand-weeding is too expensive and labour is too scarce. Mechanical treatment often cannot begin until 10 to 14 days after planting, leaving growers exposed when early weed control matters most.</span><small class="source">Source: <a href="https://open.overheid.nl/documenten/a5f9310a-06b8-40a9-a6c6-94095bde1c88/file" target="_blank" rel="noopener">Dutch government's 2025 crop-protection bottleneck annex, pp. 1 to 2 ↗</a></small></div>
+        <div><b>Only hours to act</b><span>Mechanical weeding depends on soil moisture, weather and crop stage. The workable window can shrink to only a few hours: too wet and the soil smears; too dry and weeds survive or young crops are damaged.</span><small class="source">Source: <a href="https://www.landbouwportaalrijnland.nl/nieuws/tip-van-een-coach-mechanische-onkruidbestrijding/" target="_blank" rel="noopener">Landbouwportaal Rijnland, mechanical weeding coach ↗</a></small></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="slide" id="s4">
+  <div class="slide-in">
+    <p class="eyebrow">The grower's decision <i class="lab lab-obs">Observed · one system trial</i></p>
     <h2>Growers risk yield and labour on an unproven alternative.</h2>
     <div class="cols two">
       <div class="bars">
@@ -66,13 +89,13 @@
       <div>
         <p>Wageningen's four-year trial at Vredepeel compared a conventional system with a lower-input system. Weighted across the rotation, the lower-input system's contribution margin after hand-weeding was <b>16% lower</b>.</p>
         <p class="slide-note">Whole-system result. Not the effect of any robot, of every herbicide-free method, or of all Dutch farms.</p>
+        <div class="deep"><span class="deep-label">Deep dive</span><button data-dd="wur">The Vredepeel trial in detail ↗</button></div>
       </div>
     </div>
-    <div class="deep"><span class="deep-label">Deep dive</span><button data-dd="wur">The Vredepeel trial in detail ↗</button></div>
   </div>
 </article>
 
-<article class="slide" id="s6">
+<article class="slide" id="s5">
   <div class="slide-in">
     <p class="eyebrow">Grower payback <i class="lab lab-claim">Based on one supplier's model</i></p>
     <h2>A light-weeding robot pays back against hand-weeding costs, not herbicide costs.</h2>
@@ -82,35 +105,64 @@
       <tr><td>Organic, transplanted</td><td>€400</td><td>115 years</td><td>4 years</td></tr>
       <tr class="hl"><td>Organic, fine-seeded</td><td>€1,700</td><td>2.9 years</td><td>0.7 years</td></tr>
     </table>
-    <p class="slide-note">Machine about €115,000, service about €11,000 per year, 225 ha per machine per season. Payback = price ÷ (replaced cost − service). Assumes no extra labour, energy, downtime or yield change. Supplier figures, converted to euros and rounded. A grower who sprays has no financial reason to buy. The water benefit is not in the grower's payback.</p>
+    <p class="slide-note">Machine about €115,000, service about €11,000 per year, 225 ha per machine per season. Payback = price ÷ (replaced cost − service). Assumes no extra labour, energy, downtime or yield change. Supplier figures, converted to euros and rounded. A grower who sprays has no financial reason to buy. The water benefit is not in the grower's payback. Interactive calculator on the website.</p>
     <div class="deep"><span class="deep-label">Deep dive</span><button data-dd="payback">What the calculator assumes ↗</button></div>
   </div>
 </article>
 
-<article class="slide" id="s7">
+<article class="slide" id="s6">
   <div class="slide-in">
     <p class="eyebrow">Evidence of demand</p>
-    <h2>Authorities already pay to reduce pollution. Growers already test alternatives.</h2>
+    <h2>Water institutions already fund prevention. Growers already participate.</h2>
     <div class="cols three">
-      <div><span class="tag">National policy</span><h3>2030 vision, 2027 deadline</h3><p>Future Vision for Crop Protection 2030: avoid products where possible, near-zero emissions. Water Framework Directive objectives due 2027.</p></div>
-      <div><span class="tag">Water board</span><h3>Funds farm measures, within limits</h3><p>Rijnland: more than 30 listed measures at 40%. Mechanical weeding equipment capped at €10,000 per applicant. One application at a time, not an order book.</p></div>
-      <div><span class="tag">Growers</span><h3>Reported need, trials under way</h3><p>Sectors report that losing benfluralin made early weed control in inulin chicory uneconomic; herbs and witlof lack approved products and labour. Public trials compare electric, mechanical and spot-spray machines.</p></div>
+      <div><span class="tag">Water-authority funding</span><h3>€2.15m allocated through 2026</h3><p>Rijnland has authorised €2.15 million for agricultural measures that improve soil and water quality. Eligible categories include reducing emissions from crop-protection products and mechanical weed control.</p><p class="slide-note"><i class="lab lab-obs">Official decision</i>Not reserved for a particular technology.</p><small class="source">Source: <a href="https://lokaleregelgeving.overheid.nl/CVDR707423" target="_blank" rel="noopener">Rijnland, subsidy decision 2026 ↗</a></small></div>
+      <div><span class="tag">Drinking-water cost</span><h3>€14.2m a year in additional treatment</h3><p>At the groundwater abstraction sites studied, drinking-water companies have already invested an estimated €142.2 million in additional treatment associated with pesticides and their metabolites. Operating that treatment costs an estimated €14.2 million each year.</p><p class="slide-note"><i class="lab lab-obs">Estimated, ±40%</i>Pesticides broadly at selected groundwater sites.</p><small class="source">Source: <a href="https://open.overheid.nl/details/ead8f98d-73ca-465b-8e5c-7c85527b4e23" target="_blank" rel="noopener">Haskoning for the Ministry, 2026 ↗</a></small></div>
+      <div><span class="tag">Agricultural participation</span><h3>40,000 hectares already engaged</h3><p>Schoon Water voor Brabant has brought together the province, water boards, Brabant Water and agricultural organisations for more than twenty years. Approximately 500 farmers and contractors participate across 40,000 hectares, including 110 receiving individual technical guidance.</p><p class="slide-note"><i class="lab lab-obs">Observed programme activity</i>Participation, not demand for a particular machine.</p><small class="source">Source: <a href="https://schoon-water.nl/het-programma/" target="_blank" rel="noopener">Schoon Water voor Brabant ↗</a></small></div>
     </div>
-    <div class="deep"><span class="deep-label">Deep dive</span><button data-dd="subsidy">Rijnland's programme, what it proves ↗</button></div>
+    <div class="deep"><span class="deep-label">Deep dive</span><button data-dd="subsidy">Who pays today ↗</button></div>
+  </div>
+</article>
+
+<article class="slide dark" id="s7">
+  <div class="slide-in">
+    <p class="eyebrow">Technology landscape</p>
+    <h2>Two robotic approaches can reduce reliance on herbicides.</h2>
+    <p>Robotic weeders use cameras and machine vision to distinguish crops from weeds, then treat individual plants. The main technical difference is how they kill the weed: physical removal or targeted optical energy.</p>
+    <div class="cols two methods">
+      <div>
+        <span class="tag">01 · Robotic mechanical weeding</span>
+        <p>Camera- or GPS-guided hoes, blades and robotic arms cut, uproot or bury weeds. Machines may be autonomous or tractor-mounted and can work between crop rows or around individual plants.</p>
+        <div class="pros-cons">
+          <div><dt>Principal advantages</dt><ul><li>No herbicide at the point of treatment</li><li>Immediate and observable weed removal</li><li>Based on established mechanical principles</li></ul></div>
+          <div><dt>Principal constraints</dt><ul><li>Performance varies with soil and moisture conditions</li><li>Tools can disturb soil or damage crop roots</li><li>Wear, maintenance and repeated passes affect cost</li></ul></div>
+        </div>
+      </div>
+      <div>
+        <span class="tag">02 · Robotic light or laser weeding</span>
+        <p>Machine vision identifies the weed and locates its growing point. Concentrated light or laser energy is directed at the plant to damage the meristem without physical contact.</p>
+        <div class="pros-cons">
+          <div><dt>Principal advantages</dt><ul><li>No herbicide at the point of treatment</li><li>Can target weeds close to the crop</li><li>Does not disturb soil or crop roots</li></ul></div>
+          <div><dt>Principal constraints</dt><ul><li>Requires reliable identification and precise targeting</li><li>Treatment speed and energy use determine field capacity</li><li>Dust, rain, plant cover and weed size can affect performance</li></ul></div>
+        </div>
+      </div>
+    </div>
   </div>
 </article>
 
 <article class="slide dark" id="s8">
   <div class="slide-in">
-    <p class="eyebrow">Three methods</p>
-    <h2>Three methods reduce herbicide use.</h2>
-    <table class="tbl">
-      <tr><th>Method</th><th>Dutch example</th><th>What it might solve</th><th>What remains hard</th></tr>
-      <tr><td>Light or laser weeding</td><td>Cropr</td><td>Removes some herbicide applications; reaches weeds near the crop plant.</td><td>Recognition, speed, passes, price, uptime. Diesel generator. Under €100 per driven hectare is a supplier claim.</td></tr>
-      <tr><td>Robotic mechanical removal</td><td>Odd.Bot</td><td>Chemical-free; fewer hand-weeding hours where it works.</td><td>Soil, crop damage, speed, rescue treatments still needed.</td></tr>
-      <tr><td>Precision spot spraying</td><td>Rometron WEED-IT</td><td>Lower input cost and chemical use with an established method.</td><td>Still applies herbicide. Effect depends on chemical and crop.</td></tr>
-    </table>
-    <div class="band"><b>Case selection.</b> This case follows the light robot because it raises the clearest financing question. The mechanism stays open to every method.</div>
+    <p class="eyebrow">From technical capability to commercial alternative</p>
+    <h2>The ability to identify and kill a weed is only the starting point.</h2>
+    <div class="cols two">
+      <div><p>To become a credible alternative to herbicide-based weed control, a robotic system must demonstrate all five. Performance against these measures determines whether growers can order with confidence, manufacturers can plan production and investors can finance commercial scale-up.</p></div>
+      <ol class="criteria-list">
+        <li>Consistent efficacy in the target crop and against the relevant weeds</li>
+        <li>No material increase in crop damage or yield loss</li>
+        <li>Sufficient field capacity within the available operating window</li>
+        <li>A competitive total cost per hectare, including repeat passes</li>
+        <li>Reliable operation, maintenance and technical support throughout the season</li>
+      </ol>
+    </div>
   </div>
 </article>
 

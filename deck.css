@@ -108,3 +108,37 @@ html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
 
 .slide .subtitle{font-size:clamp(20px,2vw,30px);color:#c9ced3;max-width:36ch;line-height:1.3;margin:16px 0 0}
 .slide .subtitle+.lede{margin-top:20px}
+
+/* Re-adapted slides */
+.deck-meta{display:flex;gap:48px;margin:36px 0 0;padding:0}
+.deck-meta div{display:grid;gap:6px}
+.deck-meta dt{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#8fe3ad;font-weight:600}
+.deck-meta dd{margin:0;font-size:15px;color:#e6e9ec}
+.slide .figs>div{border-top:1px solid var(--line);padding-top:12px}
+.slide .figs>div:first-child{border-top:0;padding-top:0}
+.slide .figs span{max-width:none}
+.slide .source{margin-top:8px}
+.slide .cols.three .source{margin-top:6px}
+.cols.methods>div{padding-top:20px}
+.cols.methods>div>p{font-size:14.5px;margin-bottom:18px}
+.cols.methods .pros-cons{gap:20px}
+.cols.methods .pros-cons li{font-size:13.5px}
+.cols.methods .pros-cons dt{margin-bottom:10px}
+.slide .criteria-list{border-top:0;padding-top:0}
+.slide .criteria-list li{padding:14px 0;font-size:15.5px}
+.slide h3+p{margin-top:0}
+.slide .cols>div>h3{margin-bottom:14px}
+.slide .slide-note .lab{margin-right:8px}
+.slide .deep{margin-top:22px;padding-top:14px}
+.slide:not(.dark) .figs b,.slide:not(.dark) .big b{color:#1e7a45}
+.slide .figs b{font-size:clamp(24px,2.2vw,32px)}
+/* Column rows align across the row */
+.slide .cols.three>div{display:grid;grid-template-rows:subgrid;grid-row:span 5;align-items:start;row-gap:0}
+.slide .cols.three>div>*{margin-top:0}
+.slide .cols.three>div>h3{margin-bottom:12px}
+.slide .cols.three>div>p{margin-bottom:12px}
+.slide .cols.three>div>.slide-note{margin-top:0;margin-bottom:8px}
+.slide h2+p{margin-bottom:32px}
+.slide .cols.methods>div{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:start}
+.slide .cols.methods>div>p{margin-bottom:0}
+.slide .cols.methods .pros-cons{margin-top:0}
