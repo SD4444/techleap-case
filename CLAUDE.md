@@ -73,7 +73,9 @@ done, what was not done, and what needs a decision. Lead with the result. No
 summaries of the process, no closing offers.
 Wrong: "the page follows the draft's beats". Right: "the page has one section
 per chapter of the draft". Wrong: "the €10k cap could not carry it". Right:
-"the €10k cap is smaller than the proposed payment".
+"the €10k cap is smaller than the proposed payment". Wrong: "growers cannot
+afford to stop the cause". Right: "without herbicides, grower margins fell 16%".
+A heading is a measured fact with its number, not a summary of one.
 
 ### Content on the site
 
