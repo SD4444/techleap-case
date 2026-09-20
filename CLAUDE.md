@@ -75,7 +75,7 @@ Wrong: "the page follows the draft's beats". Right: "the page has one section
 per chapter of the draft". Wrong: "the €10k cap could not carry it". Right:
 "the €10k cap is smaller than the proposed payment". Wrong: "growers cannot
 afford to stop the cause". Right: "without herbicides, grower margins fell 16%".
-A heading is a measured fact with its number, not a summary of one.
+A heading states the problem in plain words; the numbers sit beside it.
 
 ### Content on the site
 
