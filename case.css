@@ -346,8 +346,8 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 .gap-chart .dem-dot{fill:var(--orange);filter:drop-shadow(0 0 6px #3ec26f)}
 .gap-label{position:absolute;font-size:12px;font-weight:600;letter-spacing:.02em;padding:4px 8px;border-radius:4px;background:#fff}
 .cap-label{right:24px;top:6%;color:var(--ink)}
-.dem-label{right:24px;top:24%;color:#1e7a45}
-.gap-name{left:50%;top:50%;transform:translate(-50%,-50%);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#1e7a45;background:transparent}
+.dem-label{left:60%;top:57%;color:#1e7a45}
+.gap-name{left:58%;top:40%;transform:translate(-50%,-50%);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#1e7a45;background:transparent}
 .gap-axis{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin:0 -20px}
 .gap-axis button{font:inherit;text-align:left;background:transparent;border:0;border-right:1px solid var(--line);padding:16px 20px 18px;color:var(--muted);cursor:pointer;display:grid;gap:6px;align-content:start;transition:background .2s,color .2s;font-size:14px;font-weight:500;line-height:1.3}
 .gap-axis button:last-child{border-right:0}
