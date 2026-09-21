@@ -326,3 +326,5 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #payback-panel .controls .source{margin-top:8px}
 #bigsheet .source{color:#9aa2a9}
 #bigsheet .source a:hover{color:#8fe3ad}
+
+#signals .channels article .source{margin-top:14px}

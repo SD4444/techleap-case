@@ -133,7 +133,7 @@ html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
 .slide:not(.dark) .figs b,.slide:not(.dark) .big b{color:#1e7a45}
 .slide .figs b{font-size:clamp(24px,2.2vw,32px)}
 /* Column rows align across the row */
-.slide .cols.three>div{display:grid;grid-template-rows:subgrid;grid-row:span 5;align-items:start;row-gap:0}
+.slide .cols.three>div{display:grid;grid-template-rows:subgrid;grid-row:span 4;align-items:start;row-gap:0}
 .slide .cols.three>div>*{margin-top:0}
 .slide .cols.three>div>h3{margin-bottom:12px}
 .slide .cols.three>div>p{margin-bottom:12px}
