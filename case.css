@@ -362,13 +362,13 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 .verdict-line{display:block;margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:#1e7a45;line-height:1.5}
 .gap-panel .source{margin-top:12px}
 .loop-row{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center;margin-top:80px;padding-top:48px;border-top:1px solid var(--line)}
-.loop{position:relative;width:min(100%,420px);aspect-ratio:400/360;margin:0 auto}
+.loop{position:relative;width:min(100%,440px);aspect-ratio:400/360;margin:0 auto;padding:0 0 10px}
 .loop svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .loop-line{fill:none;stroke:#8fe3ad;stroke-width:1.5;stroke-dasharray:6 6;animation:tri-dash 1.6s linear infinite}
 .loop .tri-dot{fill:var(--orange)}
 .loop-node,.loop-edge,.loop-core{position:absolute;left:var(--x,50%);top:var(--y,50%);transform:translate(-50%,-50%);white-space:nowrap}
-.loop-node{font-size:clamp(14px,1.2vw,17px);font-weight:500;color:var(--ink);padding:8px 14px;border-radius:30px;background:#fff;border:1px solid var(--line)}
-.loop-edge{font-size:11.5px;color:var(--muted);background:var(--paper);padding:2px 6px}
+.loop-node{font-size:clamp(14px,1.2vw,17px);font-weight:500;color:var(--ink);padding:10px 16px;border-radius:12px;background:#fff;border:1px solid var(--line);text-align:center;line-height:1.2}
+.loop-node small{display:block;font-size:11.5px;font-weight:400;color:var(--muted);margin-top:4px;white-space:nowrap}
 .loop-core{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#1e7a45;font-weight:600;top:58%}
 .loop-copy h3{font-size:clamp(24px,2.4vw,34px);line-height:1.15;margin-bottom:18px}
 .loop-copy p{font-size:16px;line-height:1.6;color:var(--muted);max-width:56ch;margin-bottom:12px}

@@ -55,8 +55,8 @@
             <path id="tri-b" class="tri-line" d="M340 290 L200 200"/>
             <path id="tri-c" class="tri-line" d="M60 290 L200 200"/>
             <circle class="tri-dot" r="3.5"><animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#tri-a"/></animateMotion></circle>
-            <circle class="tri-dot" r="3.5" cx="340" cy="290"><animateMotion dur="3.2s" begin="1.05s" repeatCount="indefinite"><mpath href="#tri-b"/></animateMotion></circle>
-            <circle class="tri-dot" r="3.5" cx="60" cy="290"><animateMotion dur="3.2s" begin="2.1s" repeatCount="indefinite"><mpath href="#tri-c"/></animateMotion></circle>
+            <circle class="tri-dot" r="3.5"><animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#tri-b"/></animateMotion></circle>
+            <circle class="tri-dot" r="3.5"><animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#tri-c"/></animateMotion></circle>
             <circle class="tri-ring" cx="200" cy="200" r="62"/>
           </svg>
           <span class="tri-node n1" style="--x:50%;--y:13%">Farmers</span>
@@ -272,15 +272,12 @@
           <path id="lp2" class="loop-line" d="M338 292 L62 292"/>
           <path id="lp3" class="loop-line" d="M62 292 L200 62"/>
           <circle class="tri-dot" r="4"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#lp1"/></animateMotion></circle>
-          <circle class="tri-dot" r="4" cx="338" cy="292"><animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite"><mpath href="#lp2"/></animateMotion></circle>
-          <circle class="tri-dot" r="4" cx="62" cy="292"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite"><mpath href="#lp3"/></animateMotion></circle>
+          <circle class="tri-dot" r="4"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#lp2"/></animateMotion></circle>
+          <circle class="tri-dot" r="4"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#lp3"/></animateMotion></circle>
         </svg>
-        <span class="loop-node" style="--x:50%;--y:17%">Growers</span>
-        <span class="loop-node" style="--x:84.5%;--y:81%">Investors</span>
-        <span class="loop-node" style="--x:15.5%;--y:81%">Manufacturers</span>
-        <span class="loop-edge" style="--x:74%;--y:44%">wait for binding orders</span>
-        <span class="loop-edge" style="--x:50%;--y:90%">wait for production capital</span>
-        <span class="loop-edge" style="--x:24%;--y:44%">wait for proven performance</span>
+        <span class="loop-node" style="--x:50%;--y:17%">Growers<small>wait for proven performance</small></span>
+        <span class="loop-node" style="--x:84.5%;--y:81%">Investors<small>wait for binding orders</small></span>
+        <span class="loop-node" style="--x:15.5%;--y:81%">Manufacturers<small>wait for production capital</small></span>
         <span class="loop-core">Coordination failure</span>
       </div>
       <div class="loop-copy">
