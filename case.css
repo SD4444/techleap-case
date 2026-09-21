@@ -384,3 +384,6 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 .missing h3{font-size:clamp(20px,1.9vw,28px);line-height:1.3;color:var(--muted);max-width:44ch;font-weight:400;letter-spacing:-.02em}
 @media(prefers-reduced-motion:reduce){.loop-line{animation:none}.loop .tri-dot,.gap-chart .cap-dot,.gap-chart .dem-dot{display:none}}
 @media(max-width:1000px){.gapviz{grid-template-columns:1fr;gap:28px}.loop-row{grid-template-columns:1fr;gap:28px}.context-grid{grid-template-columns:1fr;gap:24px}.gap-axis button{font-size:13px;padding:12px}}
+
+.loop-copy .footnote{margin-top:20px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;max-width:56ch}
+.loop-copy .footnote b{color:var(--ink);font-weight:600}
