@@ -7,15 +7,21 @@ case is the content. Built 2026-09-16 from the Tarnoc funding site framework.
 
 ## Status
 
-Content pass in progress with Simon, section by section (2026-09-20).
+Content pass in progress with Simon, section by section (updated 2026-09-21).
 
-Done to Simon's text: hero (title, subtitle, triangle diagram, pillar/vertical),
-the challenge (#conflict), evidence of demand (#signals), technology
-landscape (#routes), water deep dives, who-pays deep dive, grower pop-out
-(#bigsheet). Removed: the water section, the grower section, the hero stats.
+Done to Simon's text: hero, the challenge (#conflict) with the grower pop-out
+(#bigsheet, rebuilt payback calculator), evidence of demand (#signals),
+technology landscape (#routes), the commercialisation gap (#gap: chart with
+stage selector, coordination triangle), the intervention (#mechanism: Clean
+Weeding Advance Market Commitment, four steps, formula, structure, four deep
+dives: funding, cost, precedents, investor).
 
-Not yet reviewed: #gap, #mechanism, #explorer, #gates, #ask, #close. Resume
-there. The deck (deck.html) still has old copy; Simon: re-adapt it at the end.
+Not yet reviewed: #explorer, #gates, #ask, #close. Resume at #explorer.
+The deck (deck.html) matches the site up to technology; gap and intervention
+slides are old. Simon: re-adapt it at the end.
+
+Deep-dive markdown is converted with the scratch script pattern in
+memory (tables, links, lists, `---` rules, uppercase `###` as kickers).
 
 ## Hosting
 
