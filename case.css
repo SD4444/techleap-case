@@ -415,3 +415,23 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #sheetB h5{font-size:14px;font-weight:600;color:#fff;margin:22px 0 8px}
 #sheetB ol.num{margin:0 0 15px;padding-left:22px;display:grid;gap:8px}
 #sheetB ol.num li{font-size:15.5px;line-height:1.65;color:#c1c7cc;padding-left:4px}
+
+/* Intervention: formula and structure */
+.formula{margin-top:72px;padding:32px 36px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.formula-main{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;margin-bottom:22px}
+.formula-main span{font-size:clamp(17px,1.5vw,22px);font-weight:500;letter-spacing:-.02em;padding:12px 18px;border-radius:10px;background:#eef1f3;border:1px solid var(--line)}
+.formula-main span.hi{background:#eef9f2;border-color:var(--orange);color:#1e7a45}
+.formula-main i{font-style:normal;font-size:24px;color:var(--muted)}
+.formula p{font-size:15.5px;line-height:1.6;color:var(--muted);max-width:80ch;margin-bottom:8px}
+.formula p b{color:var(--ink);font-weight:600}
+.structure{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:72px;padding-top:40px;border-top:1px solid var(--line);align-items:start}
+.structure .eyebrow{margin-bottom:18px}
+.roles{margin:0;display:grid;gap:0}
+.roles div{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.roles div:first-child{padding-top:0}
+.roles div:last-child{border-bottom:0}
+.roles dt{color:var(--muted)}
+.roles dd{margin:0;font-weight:500}
+.structure p:not(.eyebrow){font-size:15.5px;line-height:1.6;color:var(--muted)}
+.structure .source{margin-top:14px}
+@media(max-width:1000px){.structure{grid-template-columns:1fr;gap:28px}.formula{padding:22px}}
