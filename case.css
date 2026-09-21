@@ -409,3 +409,9 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 .precedent-grid p{font-size:15.5px;line-height:1.6;color:var(--muted)}
 .precedent-grid .source{margin-top:12px}
 @media(max-width:1000px){.amc{grid-template-columns:1fr;gap:28px}.amc-panel>div{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:24px}.precedent-grid{grid-template-columns:1fr;gap:24px}}
+
+/* Deep-dive typography additions */
+#sheetB h4.big-h{font-size:clamp(22px,2vw,28px);letter-spacing:-.03em;color:#fff;border-top:1px solid #ffffff18;padding-top:28px;margin:36px 0 16px}
+#sheetB h5{font-size:14px;font-weight:600;color:#fff;margin:22px 0 8px}
+#sheetB ol.num{margin:0 0 15px;padding-left:22px;display:grid;gap:8px}
+#sheetB ol.num li{font-size:15.5px;line-height:1.65;color:#c1c7cc;padding-left:4px}
