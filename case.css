@@ -328,3 +328,39 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #bigsheet .source a:hover{color:#8fe3ad}
 
 #signals .channels article .source{margin-top:14px}
+
+/* ── Commercialisation gap ───────────────────────────────────────────── */
+.stages{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.stages li{display:grid;grid-template-rows:subgrid;grid-row:span 5;border:1px solid var(--line);border-radius:12px;padding:28px 28px 24px;background:#fff}
+.stage-body p{font-size:15px;line-height:1.55;color:var(--muted);margin-bottom:12px}
+.stage-body p:last-child{margin-bottom:22px}
+.stages li.hi{border-color:var(--orange);box-shadow:0 0 0 1px #3ec26f33;background:#eef9f2}
+.stages .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#1e7a45;font-weight:600;margin-bottom:14px}
+.stages h3{font-size:clamp(20px,1.8vw,26px);line-height:1.2;margin-bottom:16px}
+.stages li>p{font-size:15px;line-height:1.55;color:var(--muted);margin-bottom:12px}
+.stages li>p+p{margin-top:0}
+.stages li>p:last-of-type{margin-bottom:22px}
+.stages .verdict-line{display:block;align-self:start;padding-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--ink);line-height:1.5}
+.stages li.hi .verdict-line{border-color:#3ec26f55;color:#1e7a45}
+.stages .source{margin-top:12px}
+.waits{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:72px;padding-top:40px;border-top:1px solid var(--line);align-items:start}
+.waits h3{font-size:clamp(24px,2.4vw,34px);line-height:1.15;margin-bottom:18px}
+.waits p{font-size:16px;line-height:1.6;color:var(--muted);max-width:52ch}
+.waits p b{color:var(--ink);font-weight:600}
+.actors-list{margin:0;padding:0;list-style:none;display:grid;gap:0}
+.actors-list li{padding:16px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.5;color:var(--muted)}
+.actors-list li:first-child{padding-top:0}
+.actors-list li:last-child{border-bottom:0}
+.actors-list b{color:var(--ink);font-weight:600}
+.actors-list b::after{content:' '}
+.context{margin-top:72px;padding-top:40px;border-top:1px solid var(--line)}
+.context-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.context-grid>div{display:grid;grid-template-rows:auto 1fr auto auto;border-top:1px solid var(--line);padding-top:18px}
+.context-grid b{display:block;font-size:clamp(30px,2.8vw,42px);font-weight:400;letter-spacing:-.04em;line-height:1.1;color:#1e7a45;margin-bottom:10px;font-variant-numeric:tabular-nums}
+.context-grid p{font-size:15px;line-height:1.55;color:var(--muted)}
+.context-grid .source{margin-top:10px}
+.context-grid .source+.source{margin-top:4px}
+.missing{margin-top:72px;padding:40px 0 0;border-top:1px solid var(--line)}
+.missing h2{max-width:22ch;margin-bottom:18px}
+.missing h3{font-size:clamp(20px,1.9vw,28px);line-height:1.3;color:var(--muted);max-width:44ch;font-weight:400;letter-spacing:-.02em}
+@media(max-width:1000px){.stages{grid-template-columns:1fr}.waits{grid-template-columns:1fr;gap:28px}.context-grid{grid-template-columns:1fr;gap:24px}}
