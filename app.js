@@ -186,6 +186,7 @@
     const name = group.dataset.switch, buttons = [...group.querySelectorAll('button[data-val]')];
     const apply = val => {
       buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.val === val)));
+      group.dataset.active = val;
       $$(`[data-panel="${name}"]`).forEach(p => { const show = p.dataset.val === val; if (show && p.hidden) pulse(p); p.hidden = !show; });
     };
     buttons.forEach(b => b.addEventListener('click', () => apply(b.dataset.val)));

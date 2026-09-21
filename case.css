@@ -329,38 +329,58 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 
 #signals .channels article .source{margin-top:14px}
 
-/* ── Commercialisation gap ───────────────────────────────────────────── */
-.stages{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
-.stages li{display:grid;grid-template-rows:subgrid;grid-row:span 5;border:1px solid var(--line);border-radius:12px;padding:28px 28px 24px;background:#fff}
-.stage-body p{font-size:15px;line-height:1.55;color:var(--muted);margin-bottom:12px}
-.stage-body p:last-child{margin-bottom:22px}
-.stages li.hi{border-color:var(--orange);box-shadow:0 0 0 1px #3ec26f33;background:#eef9f2}
-.stages .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#1e7a45;font-weight:600;margin-bottom:14px}
-.stages h3{font-size:clamp(20px,1.8vw,26px);line-height:1.2;margin-bottom:16px}
-.stages li>p{font-size:15px;line-height:1.55;color:var(--muted);margin-bottom:12px}
-.stages li>p+p{margin-top:0}
-.stages li>p:last-of-type{margin-bottom:22px}
-.stages .verdict-line{display:block;align-self:start;padding-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--ink);line-height:1.5}
-.stages li.hi .verdict-line{border-color:#3ec26f55;color:#1e7a45}
-.stages .source{margin-top:12px}
-.waits{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:72px;padding-top:40px;border-top:1px solid var(--line);align-items:start}
-.waits h3{font-size:clamp(24px,2.4vw,34px);line-height:1.15;margin-bottom:18px}
-.waits p{font-size:16px;line-height:1.6;color:var(--muted);max-width:52ch}
-.waits p b{color:var(--ink);font-weight:600}
-.actors-list{margin:0;padding:0;list-style:none;display:grid;gap:0}
-.actors-list li{padding:16px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.5;color:var(--muted)}
-.actors-list li:first-child{padding-top:0}
-.actors-list li:last-child{border-bottom:0}
-.actors-list b{color:var(--ink);font-weight:600}
-.actors-list b::after{content:' '}
-.context{margin-top:72px;padding-top:40px;border-top:1px solid var(--line)}
+
+/* ── Commercialisation gap: chart, loop, context ─────────────────────── */
+.gapviz{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:start}
+.gap-chart{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 20px 0}
+.gap-chart svg{display:block;width:100%;height:auto;overflow:visible}
+.gap-chart .band{fill:transparent;transition:fill .3s}
+.gapviz[data-active="s1"] .b1,.gapviz[data-active="s2"] .b2,.gapviz[data-active="s3"] .b3{fill:#3ec26f0f}
+.gap-chart .axis{stroke:#c4ccd2;stroke-width:1}
+.gap-chart .divider{stroke:#dce0e3;stroke-width:1;stroke-dasharray:4 6}
+.gap-chart .gap-area{fill:url(#gapFill)}
+.gap-chart .line{fill:none;stroke-width:2.5;stroke-linecap:round}
+.gap-chart .line.cap{stroke:var(--ink)}
+.gap-chart .line.dem{stroke:var(--orange);stroke-dasharray:8 6}
+.gap-chart .cap-dot{fill:var(--ink)}
+.gap-chart .dem-dot{fill:var(--orange);filter:drop-shadow(0 0 6px #3ec26f)}
+.gap-label{position:absolute;font-size:12px;font-weight:600;letter-spacing:.02em;padding:4px 8px;border-radius:4px;background:#fff}
+.cap-label{right:24px;top:6%;color:var(--ink)}
+.dem-label{right:24px;top:24%;color:#1e7a45}
+.gap-name{left:50%;top:50%;transform:translate(-50%,-50%);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#1e7a45;background:transparent}
+.gap-axis{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin:0 -20px}
+.gap-axis button{font:inherit;text-align:left;background:transparent;border:0;border-right:1px solid var(--line);padding:16px 20px 18px;color:var(--muted);cursor:pointer;display:grid;gap:4px;transition:background .2s,color .2s;font-size:14px;font-weight:500;line-height:1.3}
+.gap-axis button:last-child{border-right:0}
+.gap-axis button span{font-size:11px;letter-spacing:.1em;color:#1e7a45;font-weight:600}
+.gap-axis button small{font-size:12px;color:var(--muted);font-weight:400}
+.gap-axis button[aria-pressed=true]{background:#eef9f2;color:var(--ink)}
+.gap-axis button:hover{color:var(--ink)}
+.gap-panel>div{border-top:1px solid var(--line);padding-top:20px;animation:appear .35s var(--ease)}
+.gap-panel .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#1e7a45;font-weight:600;margin-bottom:14px}
+.gap-panel h3{font-size:clamp(22px,2vw,28px);line-height:1.2;margin-bottom:16px}
+.gap-panel p{font-size:15.5px;line-height:1.6;color:var(--muted)}
+.verdict-line{display:block;margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:#1e7a45;line-height:1.5}
+.gap-panel .source{margin-top:12px}
+.loop-row{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center;margin-top:80px;padding-top:48px;border-top:1px solid var(--line)}
+.loop{position:relative;width:min(100%,420px);aspect-ratio:400/360;margin:0 auto}
+.loop svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.loop-line{fill:none;stroke:#8fe3ad;stroke-width:1.5;stroke-dasharray:6 6;animation:tri-dash 1.6s linear infinite}
+.loop .tri-dot{fill:var(--orange)}
+.loop-node,.loop-edge,.loop-core{position:absolute;left:var(--x,50%);top:var(--y,50%);transform:translate(-50%,-50%);white-space:nowrap}
+.loop-node{font-size:clamp(14px,1.2vw,17px);font-weight:500;color:var(--ink);padding:8px 14px;border-radius:30px;background:#fff;border:1px solid var(--line)}
+.loop-edge{font-size:11.5px;color:var(--muted);background:var(--paper);padding:2px 6px}
+.loop-core{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#1e7a45;font-weight:600;top:58%}
+.loop-copy h3{font-size:clamp(24px,2.4vw,34px);line-height:1.15;margin-bottom:18px}
+.loop-copy p{font-size:16px;line-height:1.6;color:var(--muted);max-width:56ch;margin-bottom:12px}
+.context{margin-top:80px;padding-top:40px;border-top:1px solid var(--line)}
 .context-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
 .context-grid>div{display:grid;grid-template-rows:auto 1fr auto auto;border-top:1px solid var(--line);padding-top:18px}
 .context-grid b{display:block;font-size:clamp(30px,2.8vw,42px);font-weight:400;letter-spacing:-.04em;line-height:1.1;color:#1e7a45;margin-bottom:10px;font-variant-numeric:tabular-nums}
 .context-grid p{font-size:15px;line-height:1.55;color:var(--muted)}
 .context-grid .source{margin-top:10px}
 .context-grid .source+.source{margin-top:4px}
-.missing{margin-top:72px;padding:40px 0 0;border-top:1px solid var(--line)}
+.missing{margin-top:80px;padding:40px 0 0;border-top:1px solid var(--line)}
 .missing h2{max-width:22ch;margin-bottom:18px}
 .missing h3{font-size:clamp(20px,1.9vw,28px);line-height:1.3;color:var(--muted);max-width:44ch;font-weight:400;letter-spacing:-.02em}
-@media(max-width:1000px){.stages{grid-template-columns:1fr}.waits{grid-template-columns:1fr;gap:28px}.context-grid{grid-template-columns:1fr;gap:24px}}
+@media(prefers-reduced-motion:reduce){.loop-line{animation:none}.loop .tri-dot,.gap-chart .cap-dot,.gap-chart .dem-dot{display:none}}
+@media(max-width:1000px){.gapviz{grid-template-columns:1fr;gap:28px}.loop-row{grid-template-columns:1fr;gap:28px}.context-grid{grid-template-columns:1fr;gap:24px}.gap-axis button{font-size:13px;padding:12px}}

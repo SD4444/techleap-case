@@ -55,8 +55,8 @@
             <path id="tri-b" class="tri-line" d="M340 290 L200 200"/>
             <path id="tri-c" class="tri-line" d="M60 290 L200 200"/>
             <circle class="tri-dot" r="3.5"><animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#tri-a"/></animateMotion></circle>
-            <circle class="tri-dot" r="3.5"><animateMotion dur="3.2s" begin="1.05s" repeatCount="indefinite"><mpath href="#tri-b"/></animateMotion></circle>
-            <circle class="tri-dot" r="3.5"><animateMotion dur="3.2s" begin="2.1s" repeatCount="indefinite"><mpath href="#tri-c"/></animateMotion></circle>
+            <circle class="tri-dot" r="3.5" cx="340" cy="290"><animateMotion dur="3.2s" begin="1.05s" repeatCount="indefinite"><mpath href="#tri-b"/></animateMotion></circle>
+            <circle class="tri-dot" r="3.5" cx="60" cy="290"><animateMotion dur="3.2s" begin="2.1s" repeatCount="indefinite"><mpath href="#tri-c"/></animateMotion></circle>
             <circle class="tri-ring" cx="200" cy="200" r="62"/>
           </svg>
           <span class="tri-node n1" style="--x:50%;--y:13%">Farmers</span>
@@ -212,59 +212,91 @@
         <p class="eyebrow reveal">The commercialisation gap</p>
         <h2 class="reveal">The machine can work before the business is financeable.</h2>
       </div>
-      <p class="intro reveal">Public funding and early equity can carry deep-tech hardware from research into field demonstration. The gap appears when capital requirements increase before commercial demand is firm enough to support the next investment round.</p>
+      <p class="intro reveal">Capital requirements rise before commercial demand is firm enough to support the next investment round.</p>
     </div>
-    <ol class="stages reveal">
-      <li>
-        <span class="tag">01 · Research and validation</span>
-        <h3>Technical risk is reduced</h3>
-        <div class="stage-body">
-          <p>Universities, research institutes, grants, public investors, angels and specialist seed funds support scientific validation, prototypes and early field trials.</p>
-          <p>The EIC Transition programme, for example, provides grants of up to €2.5 million to move technologies from approximately TRL 3 to 4 towards TRL 5 to 6.</p>
-        </div>
-        <b class="verdict-line">The capital de-risks the technology</b>
-        <small class="source">Source: <a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-transition_en" target="_blank" rel="noopener">European Innovation Council, EIC Transition ↗</a></small>
-      </li>
-      <li class="hi">
-        <span class="tag">02 · Commercialisation gap</span>
-        <h3>Capital requirements rise before demand is proven</h3>
-        <div class="stage-body">
-          <p>Moving from a functioning field machine to a commercial product requires production engineering, suppliers, inventory, an initial fleet, servicing capacity and evidence across crops and seasons.</p>
-          <p>These are multi-million-euro requirements. Many early investors cannot finance them alone, while new investors still see unresolved manufacturing, operating and demand risk.</p>
-          <p>The EIC Accelerator explicitly targets TRL 6 to 8 companies whose risks remain too high for private investors alone. It offers grants below €2.5 million and equity investment of €1 to 10 million.</p>
-        </div>
-        <b class="verdict-line">The technology works. The market is not yet underwritable.</b>
-        <small class="source">Source: <a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en" target="_blank" rel="noopener">European Innovation Council, EIC Accelerator ↗</a></small>
-      </li>
-      <li>
-        <span class="tag">03 · Scalable deployment</span>
-        <h3>Commercial evidence unlocks scale capital</h3>
-        <div class="stage-body">
-          <p>Once customers commit to defined volumes, prices and performance conditions, and the manufacturer demonstrates reliable field economics, growth equity, strategic capital and asset finance become easier to underwrite.</p>
-        </div>
-        <b class="verdict-line">The capital scales a proven business</b>
-        <small class="source" aria-hidden="true">&nbsp;</small>
-      </li>
-    </ol>
 
-    <div class="waits reveal">
-      <div>
-        <h3>Each actor waits for evidence that another must finance.</h3>
-        <p>This is a <b>coordination failure</b>, reinforced by information asymmetry: the evidence required to unlock demand and capital can only be produced through deployments that neither side will finance independently.</p>
+    <div class="gapviz reveal" data-switch="stage">
+      <div class="gap-chart" id="gapChart">
+        <svg viewBox="0 0 900 340" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="gapFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#3ec26f" stop-opacity=".35"/><stop offset="1" stop-color="#3ec26f" stop-opacity=".04"/></linearGradient>
+          </defs>
+          <rect class="band b1" x="0" y="0" width="300" height="300"/>
+          <rect class="band b2" x="300" y="0" width="300" height="300"/>
+          <rect class="band b3" x="600" y="0" width="300" height="300"/>
+          <line class="axis" x1="0" y1="300" x2="900" y2="300"/>
+          <line class="divider" x1="300" y1="0" x2="300" y2="300"/>
+          <line class="divider" x1="600" y1="0" x2="600" y2="300"/>
+          <path class="gap-area" d="M300 250 C 400 235, 470 130, 600 80 L600 205 C 520 245, 420 268, 300 272 Z"/>
+          <path id="capLine" class="line cap" d="M0 285 C 150 280, 240 262, 300 250 C 400 235, 470 130, 600 80 C 700 45, 800 40, 900 38"/>
+          <path id="demLine" class="line dem" d="M0 292 C 150 290, 240 282, 300 272 C 420 268, 520 245, 600 205 C 700 150, 800 70, 900 45"/>
+          <circle class="cap-dot" r="5"><animateMotion dur="7s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#capLine"/></animateMotion></circle>
+          <circle class="dem-dot" r="5"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#demLine"/></animateMotion></circle>
+        </svg>
+        <span class="gap-label cap-label">Capital required</span>
+        <span class="gap-label dem-label">Underwritable demand</span>
+        <span class="gap-label gap-name">The gap</span>
+        <div class="gap-axis">
+          <button data-val="s1" aria-pressed="false"><span>01</span>Research and validation<small>TRL 3 to 6</small></button>
+          <button data-val="s2" aria-pressed="true"><span>02</span>Commercialisation gap<small>TRL 6 to 8</small></button>
+          <button data-val="s3" aria-pressed="false"><span>03</span>Scalable deployment<small>TRL 8 to 9</small></button>
+        </div>
       </div>
-      <ul class="actors-list">
-        <li><b>Growers</b>will not commit at scale until field performance and economics are proven.</li>
-        <li><b>Manufacturers</b>cannot fully prove those economics without financing and building commercial machines.</li>
-        <li><b>Investors</b>hesitate to finance production while customer demand remains non-binding.</li>
-      </ul>
+      <div class="gap-panel">
+        <div data-panel="stage" data-val="s1" hidden>
+          <span class="tag">01 · Research and validation</span>
+          <h3>Technical risk is reduced</h3>
+          <p>Grants, public investors, angels and seed funds carry the technology through prototypes and first field trials. EIC Transition, for example: grants up to €2.5 million, TRL 3 to 6.</p>
+          <b class="verdict-line">The capital de-risks the technology</b>
+          <small class="source">Source: <a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-transition_en" target="_blank" rel="noopener">European Innovation Council, EIC Transition ↗</a></small>
+        </div>
+        <div data-panel="stage" data-val="s2">
+          <span class="tag">02 · Commercialisation gap</span>
+          <h3>Capital requirements rise before demand is proven</h3>
+          <p>Production engineering, suppliers, inventory, a first fleet, servicing and multi-season evidence cost millions. Early investors cannot carry it alone; new investors still see manufacturing, operating and demand risk. EIC Accelerator targets exactly this stage: TRL 6 to 8, grants below €2.5 million, equity €1 to 10 million.</p>
+          <b class="verdict-line">The technology works. The market is not yet underwritable.</b>
+          <small class="source">Source: <a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en" target="_blank" rel="noopener">European Innovation Council, EIC Accelerator ↗</a></small>
+        </div>
+        <div data-panel="stage" data-val="s3" hidden>
+          <span class="tag">03 · Scalable deployment</span>
+          <h3>Commercial evidence unlocks scale capital</h3>
+          <p>Committed volumes, prices and performance conditions, plus proven field economics, make growth equity, strategic capital and asset finance underwritable.</p>
+          <b class="verdict-line">The capital scales a proven business</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="loop-row reveal">
+      <div class="loop" aria-label="Growers, manufacturers and investors each wait for another">
+        <svg viewBox="0 0 400 360" aria-hidden="true" focusable="false">
+          <path id="lp1" class="loop-line" d="M200 62 L338 292"/>
+          <path id="lp2" class="loop-line" d="M338 292 L62 292"/>
+          <path id="lp3" class="loop-line" d="M62 292 L200 62"/>
+          <circle class="tri-dot" r="4"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#lp1"/></animateMotion></circle>
+          <circle class="tri-dot" r="4" cx="338" cy="292"><animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite"><mpath href="#lp2"/></animateMotion></circle>
+          <circle class="tri-dot" r="4" cx="62" cy="292"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite"><mpath href="#lp3"/></animateMotion></circle>
+        </svg>
+        <span class="loop-node" style="--x:50%;--y:17%">Growers</span>
+        <span class="loop-node" style="--x:84.5%;--y:81%">Investors</span>
+        <span class="loop-node" style="--x:15.5%;--y:81%">Manufacturers</span>
+        <span class="loop-edge" style="--x:74%;--y:44%">wait for binding orders</span>
+        <span class="loop-edge" style="--x:50%;--y:90%">wait for production capital</span>
+        <span class="loop-edge" style="--x:24%;--y:44%">wait for proven performance</span>
+        <span class="loop-core">Coordination failure</span>
+      </div>
+      <div class="loop-copy">
+        <h3>Each actor waits for evidence that another must finance.</h3>
+        <p>Growers will not commit at scale until field performance and economics are proven. Manufacturers cannot prove them without financing and building commercial machines. Investors hesitate while customer demand remains non-binding.</p>
+        <p>The evidence that would unlock demand and capital can only be produced through deployments that neither side will finance independently.</p>
+      </div>
     </div>
 
     <div class="context reveal">
       <p class="eyebrow">The Dutch capital context</p>
       <div class="context-grid">
-        <div><b>71%</b><p>Share of the first €500,000 entering Dutch deep-tech companies that comes from public grants or government investment.</p><small class="source">Source: <a href="https://framerusercontent.com/assets/ljE28nwjqlL4Nz6KOqCpQehuN4U.pdf" target="_blank" rel="noopener">Techleap, deep-tech capital report 2026 ↗</a></small></div>
+        <div><b data-count="71" data-suffix="%">0</b><p>Share of the first €500,000 entering Dutch deep-tech companies that comes from public grants or government investment.</p><small class="source">Source: <a href="https://framerusercontent.com/assets/ljE28nwjqlL4Nz6KOqCpQehuN4U.pdf" target="_blank" rel="noopener">Techleap, deep-tech capital report 2026 ↗</a></small></div>
         <div><b>€1.5m vs €6.4m</b><p>Median round size for rounds financed exclusively by European investors, compared with exclusively US investors.</p><small class="source">Source: <a href="https://framerusercontent.com/assets/ljE28nwjqlL4Nz6KOqCpQehuN4U.pdf" target="_blank" rel="noopener">Techleap, deep-tech capital report 2026 ↗</a></small></div>
-        <div><b>27% and +55%</b><p>Investor attention is concentrating: AI represented 27% of European venture investment in 2025, while European defence-tech funding increased by 55%.</p><small class="source">Source: <a href="https://www.investeurope.eu/news/newsroom/state-of-european-tech-2025-a-roadmap-to-unlock-further-tech-growth/" target="_blank" rel="noopener">Atomico, State of European Tech 2025 ↗</a></small><small class="source">Source: <a href="https://www.nif.fund/news/dealroom-and-nato-innovation-fund-european-defence-security-resilience-startups-smash-record-with-8-7b-raised-in-2025/" target="_blank" rel="noopener">Dealroom and NATO Innovation Fund, 2025 ↗</a></small></div>
+        <div><b><span data-count="27" data-suffix="%">0</span> and +<span data-count="55" data-suffix="%">0</span></b><p>Investor attention is concentrating: AI represented 27% of European venture investment in 2025, while European defence-tech funding increased by 55%.</p><small class="source">Source: <a href="https://www.investeurope.eu/news/newsroom/state-of-european-tech-2025-a-roadmap-to-unlock-further-tech-growth/" target="_blank" rel="noopener">Atomico, State of European Tech 2025 ↗</a></small><small class="source">Source: <a href="https://www.nif.fund/news/dealroom-and-nato-innovation-fund-european-defence-security-resilience-startups-smash-record-with-8-7b-raised-in-2025/" target="_blank" rel="noopener">Dealroom and NATO Innovation Fund, 2025 ↗</a></small></div>
       </div>
     </div>
 
