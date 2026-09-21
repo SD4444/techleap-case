@@ -387,3 +387,25 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 
 .loop-copy .footnote{margin-top:20px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;max-width:56ch}
 .loop-copy .footnote b{color:var(--ink);font-weight:600}
+
+/* ── The intervention: five-step selector, precedents ────────────────── */
+.amc{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.amc-steps{display:grid;gap:6px}
+.amc-steps button{font:inherit;text-align:left;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:center;padding:16px 16px;border:1px solid transparent;border-radius:10px;background:transparent;color:var(--muted);font-size:16px;font-weight:500;line-height:1.3;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.amc-steps button span{font-size:12px;letter-spacing:.1em;color:#1e7a45;font-weight:600;font-variant-numeric:tabular-nums}
+.amc-steps button:hover{color:var(--ink)}
+.amc-steps button[aria-pressed=true]{background:#fff;border-color:var(--line);color:var(--ink);box-shadow:0 1px 2px #0000000d}
+.amc-panel>div{border-left:1px solid var(--line);padding-left:48px;animation:appear .35s var(--ease)}
+.amc-panel .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#1e7a45;font-weight:600;margin-bottom:14px}
+.amc-panel h3{font-size:clamp(24px,2.4vw,34px);line-height:1.15;margin-bottom:20px;max-width:26ch}
+.amc-panel p{font-size:16px;line-height:1.6;color:var(--muted);max-width:56ch;margin-bottom:14px}
+.spec-list{margin:0 0 18px;padding:0;list-style:none;display:grid;gap:10px}
+.spec-list li{position:relative;padding-left:22px;font-size:16px;line-height:1.45}
+.spec-list li::before{content:'';position:absolute;left:0;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--orange)}
+.precedents{margin-top:80px;padding-top:40px;border-top:1px solid var(--line)}
+.precedent-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.precedent-grid>div{display:grid;grid-template-rows:auto 1fr auto;border-top:1px solid var(--line);padding-top:18px}
+.precedent-grid h3{font-size:clamp(20px,1.8vw,26px);margin-bottom:12px}
+.precedent-grid p{font-size:15.5px;line-height:1.6;color:var(--muted)}
+.precedent-grid .source{margin-top:12px}
+@media(max-width:1000px){.amc{grid-template-columns:1fr;gap:28px}.amc-panel>div{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:24px}.precedent-grid{grid-template-columns:1fr;gap:24px}}
