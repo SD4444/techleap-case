@@ -435,3 +435,7 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 .structure p:not(.eyebrow){font-size:15.5px;line-height:1.6;color:var(--muted)}
 .structure .source{margin-top:14px}
 @media(max-width:1000px){.structure{grid-template-columns:1fr;gap:28px}.formula{padding:22px}}
+
+#sheetB hr{border:0;border-top:1px solid #ffffff18;margin:28px 0}
+#sheetB .dd-kicker{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8fe3ad;font-weight:600;margin:0 0 8px}
+#sheetB .dd-kicker+h4{margin-top:0;border-top:0;padding-top:0}
