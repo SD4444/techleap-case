@@ -521,3 +521,19 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #costmech .cost-bars{gap:14px}
 #costmech .cost-note{font-size:13.5px}
 #costmech .cost-example>.footnote{margin-top:16px;padding-top:12px}
+
+/* ── The purchase mechanism ─────────────────────────────────────────── */
+.conditions{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.cond{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 28px;display:grid;gap:10px}
+.cond .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#1e7a45;font-weight:600}
+.cond b{font-size:clamp(20px,1.9vw,28px);font-weight:500;letter-spacing:-.02em;line-height:1.2}
+.cond-note{grid-column:1/-1;font-size:14px;color:var(--muted);margin-top:-6px}
+.commit{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start;margin-top:56px;padding-top:40px;border-top:1px solid #c4ccd2}
+.commit h3{font-size:clamp(24px,2.4vw,32px);line-height:1.15;margin-bottom:16px;max-width:22ch}
+.commit p:not(.cost-note){font-size:15.5px;line-height:1.6;color:var(--muted)}
+.commit .deep{margin-top:24px}
+.commit .paybar-bar .seg{min-height:92px}
+.commit .cost-total{margin:12px 0 16px}
+.commit .cost-note{font-size:14.5px;line-height:1.6;color:var(--muted);margin-bottom:10px}
+#costmech .section-head{margin-bottom:40px}
+@media(max-width:1000px){.conditions{grid-template-columns:1fr}.commit{grid-template-columns:1fr;gap:28px}}

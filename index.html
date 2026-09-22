@@ -23,7 +23,7 @@
     <a href="#routes">Technology</a>
     <a href="#gap">Gap</a>
     <a href="#mechanism">Intervention</a>
-    <a href="#costmech">Cost</a>
+    <a href="#costmech">Purchase</a>
     <a href="#gates">Gates</a>
     <a href="#ask">Ask</a>
     <a href="deck.html" class="nav-deck">Deck</a>
@@ -361,44 +361,41 @@
   </div>
 </section>
 
-<!-- 09 · The cost mechanism -->
-<section id="costmech" class="market-section" data-title="The cost mechanism">
+<!-- 09 · The purchase mechanism -->
+<section id="costmech" class="market-section" data-title="The purchase mechanism">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <p class="eyebrow reveal">The cost mechanism</p>
-        <h2 class="reveal">The fund covers the additional cost, not the full machine price.</h2>
+        <p class="eyebrow reveal">The purchase mechanism</p>
+        <h2 class="reveal">A purchase activates only when the farmer is better off.</h2>
       </div>
-      <div class="reveal">
-        <p class="intro">The robot is paid for in full when it is delivered. To calculate the public contribution, compare the total cost of buying and operating the robot with the cost of current weed control over the same period.</p>
-        <div class="eq-line rule"><span>Total robotic cost</span><i>−</i><span>Total current cost</span><i>=</i><span class="green">Public contribution</span></div>
-      </div>
+      <p class="intro reveal">Independent field validation must show that the robot maintains or improves crop performance while reducing the farmer's total cost of weed control.</p>
     </div>
 
-    <div class="cost-example reveal">
-      <div class="cost-cols">
-        <div>
-          <p class="cost-sub">Simplified ten-year example</p>
-          <div class="cost-bars">
-            <div class="cost-bar">
-              <div class="cost-bar-lab"><b>Current weed control</b><span>€50,000 per year</span></div>
-              <div class="cost-track"><div class="seg ref" style="flex:0 0 83.3%"><b>€500,000</b><span>Total</span></div></div>
-            </div>
-            <div class="cost-bar">
-              <div class="cost-bar-lab"><b>Robotic weed control</b><span>€200,000 machine + €400,000 operating costs</span></div>
-              <div class="cost-track"><div class="seg buy" style="flex:0 0 33.3%"><b>€200,000</b><span>Machine</span></div><div class="seg op" style="flex:0 0 50%"><b>€400,000</b><span>Operating</span></div><div class="seg extra"><b>€100,000</b><span>Covered by the fund</span></div></div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <p class="cost-sub">When the machine is delivered</p>
-          <div class="cost-track delivery"><div class="seg buyer" style="flex:0 0 50%"><b>€100,000</b><span>Buyer contribution</span></div><div class="seg public"><b>€100,000</b><span>Public contribution</span></div></div>
-          <p class="cost-total">= €200,000 machine price</p>
-          <p class="cost-note">The manufacturer receives the full purchase price at delivery. The buyer then pays the robot's operating costs. Across the ten-year period, the buyer's total expenditure remains €500,000, the same as continuing with the current method.</p>
+    <div class="conditions reveal">
+      <div class="cond"><span class="tag">Validation condition 1</span><b>Yield and crop margin ≥ current method</b></div>
+      <div class="cond"><span class="tag">Validation condition 2</span><b>Total farmer cost &lt; current method</b></div>
+      <p class="cond-note">Unverified yield improvements are valued at zero.</p>
+    </div>
+
+    <div class="commit reveal">
+      <div>
+        <h3>A reasonable farmer contribution completes the commitment.</h3>
+        <p>The farmer signs a conditional order stating the amount they can reasonably invest upfront. That contribution is limited by both the verified economic value the machine creates for the farm, and the cash the farmer can invest without borrowing or weakening farm operations.</p>
+        <div class="deep">
+          <span class="deep-label">Deep dive</span>
+          <button data-dd="contribution">How the farmer contribution is established ↗</button>
         </div>
       </div>
-      <p class="footnote">Simplified, undiscounted illustration. The actual calculation would use verified operating costs, an agreed comparison period, residual value and present values.</p>
-      <small class="source">Sources: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10075499/" target="_blank" rel="noopener">Economics of agricultural field robots, peer-reviewed review, 2023 ↗</a>; <a href="https://fiftrustee.worldbank.org/en/about/unit/dfi/fiftrustee/fund-detail/amc" target="_blank" rel="noopener">World Bank, Advance Market Commitment fund ↗</a></small>
+      <div>
+        <div class="paybar-bar" role="img" aria-label="Farmer contribution plus public contribution equals qualifying machine price">
+          <div class="seg grower" style="flex:0 0 50%"><b>Farmer contribution</b><span>Set by verified farm economics and affordability</span></div>
+          <div class="seg public"><b>Public contribution</b><span>Remaining approved amount, subject to a programme cap</span></div>
+        </div>
+        <p class="cost-total">= Qualifying machine price</p>
+        <p class="cost-note">If the combined commitment does not cover the qualifying price, the purchase does not proceed. Once the machine passes the agreed tests, the manufacturer receives the full purchase price at delivery.</p>
+        <p class="cost-note">A production financier can fund manufacturing against the signed conditional purchase commitments and is repaid when the machines are delivered.</p>
+      </div>
     </div>
   </div>
 </section>
