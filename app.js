@@ -192,43 +192,6 @@
     buttons.forEach(b => b.addEventListener('click', () => apply(b.dataset.val)));
   });
 
-  /* Scenario explorer: conditional order book */
-  const panel = $('#scenario-panel');
-  if (panel) {
-    const inputs = $$('#scenario-panel input[type=range]');
-    const eur = n => '€' + (n >= 1e6 ? (n / 1e6).toFixed(n >= 1e7 ? 1 : 2) + 'm' : n >= 1e3 ? Math.round(n / 1e3).toLocaleString('en-GB') + 'k' : Math.round(n).toLocaleString('en-GB'));
-    const num = n => Math.round(n).toLocaleString('en-GB');
-    const fmt = { haRes: v => num(v), signRate: v => v + '%', passes: v => v, price: v => '€' + v, pubShare: v => v + '%', seasons: v => v, valHa: v => num(v) + ' ha' };
-    function render() {
-      const v = Object.fromEntries(inputs.map(i => [i.id, +i.value]));
-      inputs.forEach(i => { const out = $('#' + i.id + 'V'); if (out) out.textContent = (fmt[i.id] || String)(v[i.id]); });
-      const signed = v.haRes * v.signRate / 100;
-      const driven = signed * v.passes;
-      const season = driven * v.price;
-      const total = season * v.seasons;
-      const pub = total * v.pubShare / 100, grower = total - pub;
-      const val = v.valHa * v.passes * v.price;
-      const rows = { grower, public: pub, total };
-      Object.entries(rows).forEach(([k, val]) => {
-        const row = panel.querySelector(`.cost-row[data-k="${k}"]`); if (!row) return;
-        row.querySelector('.bar i').style.width = (total ? val / total * 100 : 0) + '%';
-        row.querySelector('strong').textContent = eur(val);
-      });
-      $('#kSigned').textContent = num(signed) + ' ha';
-      $('#kDriven').textContent = num(driven) + ' ha';
-      $('#kSeason').textContent = eur(season);
-      $('#kVal').textContent = eur(val);
-      const head = $('#scenario-head');
-      if (head) head.textContent = v.pubShare
-        ? `A ${eur(total)} conditional order book over ${v.seasons} season${v.seasons > 1 ? 's' : ''}, of which ${eur(pub)} would be a proposed public contribution.`
-        : `A ${eur(total)} conditional order book over ${v.seasons} season${v.seasons > 1 ? 's' : ''}, paid by growers alone. It must work on private economics.`;
-      const note = $('#scenario-note');
-      if (note) note.textContent = `Hypothetical. ${num(v.haRes)} ha reserved × ${v.signRate}% signing = ${num(signed)} ha under conditional order; × ${v.passes} pass${v.passes > 1 ? 'es' : ''} × €${v.price} per driven hectare = ${eur(season)} per season. The €${v.price} is based on a supplier's under-€100 claim, not a measured farm cost. The ${v.pubShare}% equals the rate Rijnland pays on listed measures today. Its current scheme is capped at €10,000 per applicant under the crop-protection theme, so a multi-season payment would need a new, approved instrument. The validation slot is what the winning supplier is paid before the larger purchase activates.`;
-    }
-    inputs.forEach(i => i.addEventListener('input', render));
-    render();
-  }
-
   /* Grower payback calculator: costs split by method */
   const pbk = $('#payback-panel');
   if (pbk) {

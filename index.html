@@ -23,7 +23,6 @@
     <a href="#routes">Technology</a>
     <a href="#gap">Gap</a>
     <a href="#mechanism">Intervention</a>
-    <a href="#explorer">Explorer</a>
     <a href="#gates">Gates</a>
     <a href="#ask">Ask</a>
     <a href="deck.html" class="nav-deck">Deck</a>
@@ -355,73 +354,8 @@
     <div class="deep reveal">
       <span class="deep-label">Deep dives</span>
       <button data-dd="funding">Funding: who pays for what ↗</button>
-      <button data-dd="cost">The cost trajectory ↗</button>
       <button data-dd="precedents">Precedents: Gavi and the UK scheme ↗</button>
       <button data-dd="investor">Investor evidence ↗</button>
-    </div>
-  </div>
-</section>
-
-<!-- 09 · Scenario explorer -->
-<section id="explorer" class="market-section" data-title="Scenario explorer">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <p class="eyebrow reveal">Scenario explorer <i class="lab lab-prop">Hypothetical</i></p>
-        <h2 class="reveal">The size of a conditional order book.</h2>
-      </div>
-      <p class="intro reveal">An illustration of the arithmetic, not a forecast. The defaults are the draft's example: a group of growers reserves 300 hectares of one crop and suppliers compete for a paid 30-hectare validation slot. Change the assumptions to see the order value an investor would be shown.</p>
-    </div>
-    <div class="economics-grid reveal" id="scenario-panel">
-      <div class="controls">
-        <label for="haRes">Hectares under conditional reservation <output id="haResV">300</output></label>
-        <input type="range" id="haRes" min="30" max="1500" step="10" value="300">
-        <div class="range-ends"><span>30 ha</span><span>1,500 ha</span></div>
-        <label for="signRate">Share converting to signed conditional orders <output id="signRateV">60%</output></label>
-        <input type="range" id="signRate" min="10" max="100" step="5" value="60">
-        <div class="range-ends"><span>10%</span><span>100%</span></div>
-        <label for="passes">Treatments per season <output id="passesV">2</output></label>
-        <input type="range" id="passes" min="1" max="4" step="1" value="2">
-        <div class="range-ends"><span>1 pass</span><span>4 passes</span></div>
-        <label for="price">Price per driven hectare <output id="priceV">€100</output></label>
-        <input type="range" id="price" min="40" max="250" step="5" value="100">
-        <div class="range-ends"><span>€40</span><span>€250</span></div>
-        <label for="pubShare">Public contribution to that price <output id="pubShareV">40%</output></label>
-        <input type="range" id="pubShare" min="0" max="60" step="5" value="40">
-        <div class="range-ends"><span>0%</span><span>60%</span></div>
-        <label for="seasons">Seasons committed <output id="seasonsV">3</output></label>
-        <input type="range" id="seasons" min="1" max="5" step="1" value="3">
-        <div class="range-ends"><span>1</span><span>5</span></div>
-        <label for="valHa">Paid validation slot <output id="valHaV">30 ha</output></label>
-        <input type="range" id="valHa" min="5" max="100" step="5" value="30">
-        <div class="range-ends"><span>5 ha</span><span>100 ha</span></div>
-      </div>
-      <div>
-        <p class="result-head" id="scenario-head">…</p>
-        <div class="cost-row" data-k="grower">
-          <div><span>Growers' share of the order book</span><strong>0</strong></div>
-          <div class="bar"><i></i></div>
-        </div>
-        <div class="cost-row" data-k="public">
-          <div><span>Proposed public contribution</span><strong>0</strong></div>
-          <div class="bar"><i></i></div>
-        </div>
-        <div class="cost-row accent" data-k="total">
-          <div><span>Total conditional order value, all seasons</span><strong>0</strong></div>
-          <div class="bar"><i></i></div>
-        </div>
-        <div class="kpis explorer-kpis">
-          <div class="kpi"><div class="v" id="kSigned">0</div><div class="k">hectares under signed conditional order</div></div>
-          <div class="kpi"><div class="v" id="kDriven">0</div><div class="k">driven hectares per season</div></div>
-          <div class="kpi"><div class="v" id="kSeason">0</div><div class="k">order value per season</div></div>
-          <div class="kpi"><div class="v" id="kVal">0</div><div class="k">paid validation work, one season</div></div>
-        </div>
-        <p class="fineprint" id="scenario-note"></p>
-        <div class="deep">
-          <span class="deep-label">Deep dive</span>
-          <button data-dd="model">Model assumptions and what is missing ↗</button>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -498,7 +432,7 @@
 </footer>
 
 <div class="deck-controls" aria-label="Presentation controls" hidden>
-  <span id="slide-count">01 / 10</span>
+  <span id="slide-count">01 / 09</span>
   <div class="slide-navigation">
     <button id="prev-slide" aria-label="Previous section">←</button>
     <span id="slide-title">The thesis</span>
