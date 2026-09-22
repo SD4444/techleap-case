@@ -559,3 +559,6 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #sheetB .dd-lower span{font-size:13px;color:#c1c7cc;line-height:1.45}
 #sheetB .dd-lower i{font-style:normal;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8fe3ad;font-weight:600}
 @media(max-width:800px){#sheetB .dd-steps{grid-template-columns:1fr}#sheetB .dd-lower{grid-template-columns:1fr}}
+
+.gates li:nth-child(5){grid-column:1/-1}
+@media(min-width:901px){.gates li:nth-child(5){grid-template-columns:44px 1fr;max-width:calc(50% - 28px)}}
