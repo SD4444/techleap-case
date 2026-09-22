@@ -23,6 +23,7 @@
     <a href="#routes">Technology</a>
     <a href="#gap">Gap</a>
     <a href="#mechanism">Intervention</a>
+    <a href="#costmech">Cost</a>
     <a href="#gates">Gates</a>
     <a href="#ask">Ask</a>
     <a href="deck.html" class="nav-deck">Deck</a>
@@ -360,6 +361,60 @@
   </div>
 </section>
 
+<!-- 09 · The cost mechanism -->
+<section id="costmech" class="market-section" data-title="The cost mechanism">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">The cost mechanism</p>
+        <h2 class="reveal">Robotic weeding costs more before it reaches commercial scale.</h2>
+      </div>
+      <p class="intro reveal">Robotic systems require substantial upfront investment. To compare them fairly with current weed control, the machine's capital and operating costs must be converted into a cost per hectare.</p>
+    </div>
+
+    <div class="eq eq1 reveal">
+      <div class="eq-visual">
+        <div class="frac">
+          <div class="num"><span>Annualised machine cost</span><i>+</i><span>Annual operating costs</span></div>
+          <div class="den"><span>Verified hectares treated each year</span></div>
+        </div>
+        <i class="eq-sign">=</i>
+        <div class="eq-result"><b>Robotic cost per hectare</b></div>
+      </div>
+      <div class="eq-example">
+        <p class="eyebrow">Illustrative example <i class="lab lab-prop">Illustrative, not observed prices</i></p>
+        <p>A €200,000 machine financed over seven years at 8% represents approximately €38,000 in annual capital cost. That is €192 per hectare at 200 hectares per year, or €77 per hectare at 500 hectares, before labour, energy, maintenance and support.</p>
+        <label for="cmHa">Hectares treated each year <output id="cmHaV">200 ha</output></label>
+        <input type="range" id="cmHa" min="100" max="1000" step="50" value="200">
+        <div class="range-ends"><span>100 ha</span><span>1,000 ha</span></div>
+        <div class="cm-out"><b id="cmOut">€192</b><span>capital cost per hectare, before labour, energy, maintenance and support</span></div>
+        <small class="source">Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10075499/" target="_blank" rel="noopener">Economics of agricultural field robots, peer-reviewed review, 2023 ↗</a></small>
+      </div>
+    </div>
+
+    <div class="eq eq2 reveal">
+      <h3>The programme temporarily closes this cost gap.</h3>
+      <div class="eq-visual">
+        <div class="eq-term grey"><b>What the grower currently pays</b></div>
+        <i class="eq-sign">+</i>
+        <div class="eq-term green"><b>Temporary public contribution</b></div>
+        <i class="eq-sign">=</i>
+        <div class="eq-result"><b>Qualifying robotic cost</b></div>
+      </div>
+      <p class="paybar-title">Illustrative example <i class="lab lab-prop">Illustrative, not observed prices</i></p>
+      <div class="paybar-row">
+        <div class="paybar-bar numbers" role="img" aria-label="€220 grower contribution plus €280 public contribution equals €500 robotic cost per hectare">
+          <div class="seg grower" style="flex:0 0 44%"><b>€220/ha</b><span>Grower contribution</span></div>
+          <div class="seg public"><b>€280/ha</b><span>Public contribution</span></div>
+        </div>
+        <div class="paybar-total"><i>=</i><b>€500/ha</b><span>Robotic cost</span></div>
+      </div>
+      <p class="paybar-note">The grower continues to pay the verified cost of the weed-control method being replaced. Public funding covers the remaining verified difference, up to an agreed maximum.</p>
+      <p class="paybar-note">The public contribution declines as the technology treats more hectares, operates more reliably and requires fewer interventions. It ends when robotic weed control reaches the cost of the method it replaces.</p>
+    </div>
+  </div>
+</section>
+
 <!-- 10 · Gates -->
 <section id="gates" data-title="Gates before it is executable">
   <div class="wrap">
@@ -432,7 +487,7 @@
 </footer>
 
 <div class="deck-controls" aria-label="Presentation controls" hidden>
-  <span id="slide-count">01 / 09</span>
+  <span id="slide-count">01 / 10</span>
   <div class="slide-navigation">
     <button id="prev-slide" aria-label="Previous section">←</button>
     <span id="slide-title">The thesis</span>
