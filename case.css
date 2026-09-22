@@ -566,3 +566,22 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 @media(min-width:901px){.gates{grid-auto-flow:column;grid-template-rows:repeat(3,auto)}.gates li:nth-child(4){grid-column:2;grid-row:1}.gates li:nth-child(5){grid-column:2;grid-row:2}}
 
 #sheetB .dd-lower{margin-bottom:14px}
+
+/* ── Techleap's role ─────────────────────────────────────────────────── */
+.role-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.role-grid>div{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:start;border-top:1px solid #ffffff22;padding-top:20px}
+.role-grid .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8fe3ad;font-weight:600;margin-bottom:14px}
+.role-grid p{font-size:15.5px;line-height:1.6;color:#b7bec4;margin-bottom:22px}
+.role-out{border-left:2px solid var(--orange);padding-left:16px}
+.role-out span{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9aa2a9;font-weight:600;margin-bottom:6px}
+.role-out b{font-size:15px;font-weight:500;line-height:1.5;color:#fff}
+.chain{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:64px;padding:24px 28px;border:1px solid #ffffff1c;border-radius:12px;background:#1a2326}
+.chain span{font-size:clamp(14px,1.2vw,17px);font-weight:500;padding:10px 16px;border-radius:30px;border:1px solid #ffffff2a;color:#fff}
+.chain span.hi{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.chain i{flex:1;min-width:24px;height:1px;background:#8fe3ad;position:relative;opacity:.7}
+.chain i::after{content:'';position:absolute;right:-1px;top:-4px;width:8px;height:8px;border-top:1px solid #8fe3ad;border-right:1px solid #8fe3ad;transform:rotate(45deg)}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-top:64px;padding-top:40px;border-top:1px solid #ffffff22}
+.next .eyebrow{color:#8fe3ad}
+.next h3{font-size:clamp(24px,2.4vw,34px);line-height:1.15;max-width:22ch}
+.next p{font-size:16px;line-height:1.6;color:#b7bec4;max-width:56ch}
+@media(max-width:1000px){.role-grid{grid-template-columns:1fr;gap:24px}.next{grid-template-columns:1fr;gap:20px}.chain{flex-direction:column;align-items:stretch}.chain i{display:none}.chain span{text-align:center}}
