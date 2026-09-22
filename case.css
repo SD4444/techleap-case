@@ -564,3 +564,5 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 
 /* Gates: 1 to 3 down the left, 4 and 5 down the right */
 @media(min-width:901px){.gates{grid-auto-flow:column;grid-template-rows:repeat(3,auto)}.gates li:nth-child(4){grid-column:2;grid-row:1}.gates li:nth-child(5){grid-column:2;grid-row:2}}
+
+#sheetB .dd-lower{margin-bottom:14px}
