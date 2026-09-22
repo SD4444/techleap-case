@@ -538,5 +538,24 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #costmech .section-head{margin-bottom:40px}
 @media(max-width:1000px){.conditions{grid-template-columns:1fr}.commit{grid-template-columns:1fr;gap:28px}}
 
-.roles-list{margin:14px 0 0;padding:14px 0 0;border-top:1px solid var(--line);list-style:none;display:grid;gap:8px;font-size:14.5px;color:var(--muted)}
-.roles-list b{color:var(--ink);font-weight:600}
+
+/* Deep dive: four-step grid */
+#sheetB .dd-steps{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0}
+#sheetB .dd-step{position:relative;border:1px solid #ffffff1c;border-radius:12px;padding:22px 24px 22px 64px;background:#1a2326}
+#sheetB .dd-n{position:absolute;left:22px;top:22px;width:28px;height:28px;border-radius:50%;background:var(--orange);color:var(--ink);font-weight:600;font-size:13px;display:grid;place-items:center}
+#sheetB .dd-step h5{margin:2px 0 8px;font-size:16px}
+#sheetB .dd-lead{font-size:14px;margin-bottom:10px}
+#sheetB .dd-step ul{margin:0}
+#sheetB .dd-step li{font-size:14px;margin-bottom:6px}
+#sheetB .dd-eq{display:grid;gap:8px;margin:8px 0 14px}
+#sheetB .dd-eq>div{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:center}
+#sheetB .dd-eq>div:first-child span{grid-column:2}
+#sheetB .dd-eq i{font-style:normal;color:#9aa2a9;font-size:16px;text-align:center}
+#sheetB .dd-eq span{display:block;font-size:14px;padding:8px 12px;border-radius:8px;background:#0f1517;border:1px solid #ffffff18;color:#e6e9ec}
+#sheetB .dd-eq .res span{background:#3ec26f26;border-color:#3ec26f66;color:#fff;font-weight:600}
+#sheetB .dd-lower{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin-top:8px}
+#sheetB .dd-lower>div{padding:12px 14px;border-radius:8px;background:#0f1517;border:1px solid #ffffff18}
+#sheetB .dd-lower b{display:block;font-size:14px;color:#fff;margin-bottom:4px}
+#sheetB .dd-lower span{font-size:13px;color:#c1c7cc;line-height:1.45}
+#sheetB .dd-lower i{font-style:normal;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8fe3ad;font-weight:600}
+@media(max-width:800px){#sheetB .dd-steps{grid-template-columns:1fr}#sheetB .dd-lower{grid-template-columns:1fr}}

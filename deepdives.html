@@ -252,37 +252,54 @@
 
 <template id="dd-contribution" data-k="" data-h="Set the contribution from verified farm economics, not an arbitrary subsidy rate.">
   <div class="detail-body">
-    <p>The farmer contribution is determined separately for each target crop and weed-control operation.</p>
-    <h5>1. Establish the reference case</h5>
-    <p>Independently verify:</p>
-    <ul>
-    <li>current weed-control cost per hectare;</li>
-    <li>current yield and crop margin;</li>
-    <li>labour requirements; and</li>
-    <li>the number and timing of treatments.</li>
-    </ul>
-    <h5>2. Establish the robotic case</h5>
-    <p>Field trials verify:</p>
-    <ul>
-    <li>weed-control efficacy;</li>
-    <li>crop damage and yield;</li>
-    <li>hectares treated within the operating window;</li>
-    <li>operating, maintenance and labour costs; and</li>
-    <li>expected useful life and residual value.</li>
-    </ul>
-    <h5>3. Calculate the economic ceiling</h5>
-    <div class="warn"><b>Avoided weed-control costs + verified additional crop margin − robot operating and transition costs = maximum economic value to the farmer</b></div>
-    <p>Use present values over an agreed period. Unverified yield improvements are assigned no value.</p>
-    <h5>4. Apply the affordability ceiling</h5>
-    <p>The farmer states the maximum amount they can invest upfront without borrowing or weakening working capital.</p>
-    <p>The farmer contribution is the lower of:</p>
-    <ul>
-    <li>the machine's verified economic value to the farm; and</li>
-    <li>the farmer's binding upfront offer.</li>
-    </ul>
-    <p>The amount is recorded in a conditional purchase agreement. The public fund covers the remaining approved purchase price, subject to its maximum contribution.</p>
-    <p>This approach ensures that the farmer shares in the machine's economic value without requiring an unaffordable upfront investment.</p>
-    <p>Shang et al. (2023), How much can farmers pay for weeding robots? A Monte Carlo simulation study. The paper defines the maximum acquisition value as the machine price at which farm profitability equals that of the current method.</p>
-    <p class="src"><b>Sources:</b> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10075499/" target="_blank" rel="noopener">Shang et al. 2023, How much can farmers pay for weeding robots?</a>; <a href="https://www.gov.uk/guidance/advanced-market-commitments-amc" target="_blank" rel="noopener">UK government, Advance Market Commitments guidance</a>.</p>
+    <p>The farmer contribution is determined separately for each target crop and weed-control operation. Four steps.</p>
+    <div class="dd-steps">
+      <div class="dd-step">
+        <span class="dd-n">1</span>
+        <h5>Establish the reference case</h5>
+        <p class="dd-lead">Independently verify the current method:</p>
+        <ul>
+          <li>Weed-control cost per hectare</li>
+          <li>Yield and crop margin</li>
+          <li>Labour requirements</li>
+          <li>Number and timing of treatments</li>
+        </ul>
+      </div>
+      <div class="dd-step">
+        <span class="dd-n">2</span>
+        <h5>Establish the robotic case</h5>
+        <p class="dd-lead">Field trials verify the robot:</p>
+        <ul>
+          <li>Weed-control efficacy</li>
+          <li>Crop damage and yield</li>
+          <li>Hectares treated within the operating window</li>
+          <li>Operating, maintenance and labour costs</li>
+          <li>Expected useful life and residual value</li>
+        </ul>
+      </div>
+      <div class="dd-step">
+        <span class="dd-n">3</span>
+        <h5>Calculate the economic ceiling</h5>
+        <div class="dd-eq">
+          <div><span>Avoided weed-control costs</span></div>
+          <div><i>+</i><span>Verified additional crop margin</span></div>
+          <div><i>−</i><span>Robot operating and transition costs</span></div>
+          <div class="res"><i>=</i><span>Maximum economic value to the farmer</span></div>
+        </div>
+        <p class="dd-lead">Present values over an agreed period. Unverified yield improvements count as zero.</p>
+      </div>
+      <div class="dd-step">
+        <span class="dd-n">4</span>
+        <h5>Apply the affordability ceiling</h5>
+        <p class="dd-lead">The farmer states the maximum amount they can invest upfront without borrowing or weakening working capital. The contribution is the lower of:</p>
+        <div class="dd-lower">
+          <div><b>Economic ceiling</b><span>The machine's verified economic value to the farm</span></div>
+          <i>or</i>
+          <div><b>Affordability ceiling</b><span>The farmer's binding upfront offer</span></div>
+        </div>
+      </div>
+    </div>
+    <p>The amount is recorded in a conditional purchase agreement. The public fund covers the remaining purchase price, subject to its maximum contribution. The farmer shares in the machine's economic value without an unaffordable upfront investment.</p>
+    <p class="src"><b>Sources:</b> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10075499/" target="_blank" rel="noopener">Shang et al. 2023, How much can farmers pay for weeding robots?</a> (defines the maximum acquisition value as the machine price at which farm profitability equals that of the current method); <a href="https://www.gov.uk/guidance/advanced-market-commitments-amc" target="_blank" rel="noopener">UK government, Advance Market Commitments guidance</a>.</p>
   </div>
 </template>
