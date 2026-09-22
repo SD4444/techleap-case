@@ -7,21 +7,22 @@ case is the content. Built 2026-09-16 from the Tarnoc funding site framework.
 
 ## Status
 
-Content pass in progress with Simon, section by section (updated 2026-09-21).
+Content pass with Simon, section by section (updated 2026-09-22).
 
-Done to Simon's text: hero, the challenge (#conflict) with the grower pop-out
-(#bigsheet, rebuilt payback calculator), evidence of demand (#signals),
-technology landscape (#routes), the commercialisation gap (#gap: chart with
-stage selector, coordination triangle), the intervention (#mechanism: Clean
-Weeding Advance Market Commitment, four steps, formula, structure, four deep
-dives: funding, cost, precedents, investor).
+Reviewed and done to Simon's text: hero, challenge (#conflict, grower
+pop-out #bigsheet with payback calculator), evidence of demand (#signals),
+technology landscape (#routes), commercialisation gap (#gap), the intervention
+(#mechanism, deep dives funding / precedents / investor), the purchase
+mechanism (#costmech, deep dive contribution), gates (#gates, five), Techleap's
+role (#ask).
 
-Not yet reviewed: #explorer, #gates, #ask, #close. Resume at #explorer.
-The deck (deck.html) matches the site up to technology; gap and intervention
-slides are old. Simon: re-adapt it at the end.
+Not yet reviewed: the closing (#close). Resume there, then re-adapt the deck
+(deck.html): slides 1 to 8 match the site; later slides are old.
 
-Deep-dive markdown is converted with the scratch script pattern in
-memory (tables, links, lists, `---` rules, uppercase `###` as kickers).
+Parked: "Novelty" and "Scope fit" texts from the old gates; Simon wants them in
+market-mapping and Why Techleap sections that do not exist yet.
+
+Deep-dive drafts in markdown are converted with `tools/md2dd.py`.
 
 ## Hosting
 
