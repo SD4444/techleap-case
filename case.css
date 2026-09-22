@@ -439,3 +439,18 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #sheetB hr{border:0;border-top:1px solid #ffffff18;margin:28px 0}
 #sheetB .dd-kicker{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8fe3ad;font-weight:600;margin:0 0 8px}
 #sheetB .dd-kicker+h4{margin-top:0;border-top:0;padding-top:0}
+
+/* Intervention: one stacked payment bar */
+.paybar{margin-top:72px;padding-top:40px;border-top:1px solid var(--line)}
+.paybar h3{font-size:clamp(24px,2.4vw,34px);line-height:1.15;max-width:30ch;margin-bottom:32px}
+.paybar-title{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:10px}
+.paybar-bar{display:flex;width:100%;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.paybar-bar .seg{padding:18px 20px;min-height:84px;display:flex;flex-direction:column;justify-content:center;gap:4px}
+.paybar-bar .seg b{font-size:15px;font-weight:600;letter-spacing:-.01em}
+.paybar-bar .seg span{font-size:13px;line-height:1.4}
+.paybar-bar .grower{flex:0 0 68%;background:#e4e8ea;color:var(--ink)}
+.paybar-bar .grower span{color:var(--muted)}
+.paybar-bar .public{flex:1;background:var(--orange);color:var(--ink)}
+.paybar-bar .public span{color:#13191bcc}
+.paybar-note{margin-top:16px;font-size:15px;line-height:1.6;color:var(--muted);max-width:70ch}
+@media(max-width:800px){.paybar-bar{flex-direction:column}.paybar-bar .grower{flex:none}}
