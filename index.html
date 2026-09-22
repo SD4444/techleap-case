@@ -375,7 +375,7 @@
     <div class="eq eq1 reveal">
       <div class="eq-visual">
         <div class="frac">
-          <div class="num"><span>Annualised machine cost</span><i>+</i><span>Annual operating costs</span></div>
+          <div class="num"><span class="inner"><em>Machine purchase price</em><i>÷</i><em>expected useful life</em></span><i>+</i><span>Annual operating costs</span></div>
           <div class="den"><span>Verified hectares treated each year</span></div>
         </div>
         <i class="eq-sign">=</i>
@@ -383,11 +383,13 @@
       </div>
       <div class="eq-example">
         <p class="eyebrow">Illustrative example <i class="lab lab-prop">Illustrative, not observed prices</i></p>
-        <p>A €200,000 machine financed over seven years at 8% represents approximately €38,000 in annual capital cost. That is €192 per hectare at 200 hectares per year, or €77 per hectare at 500 hectares, before labour, energy, maintenance and support.</p>
-        <label for="cmHa">Hectares treated each year <output id="cmHaV">200 ha</output></label>
-        <input type="range" id="cmHa" min="100" max="1000" step="50" value="200">
-        <div class="range-ends"><span>100 ha</span><span>1,000 ha</span></div>
-        <div class="cm-out"><b id="cmOut">€192</b><span>capital cost per hectare, before labour, energy, maintenance and support</span></div>
+        <p>If a €200,000 machine has a ten-year useful life, €20,000 of its purchase cost is allocated to each year.</p>
+        <div class="cm-pair">
+          <div><b>€100/ha</b><span>At 200 hectares per year</span></div>
+          <div><b>€40/ha</b><span>At 500 hectares per year</span></div>
+        </div>
+        <p>These figures show capital cost only. Labour, energy, maintenance, transport and technical support must still be added.</p>
+        <p class="footnote">The actual qualifying cost will be based on verified supplier bids or service prices. This example only demonstrates why greater field capacity reduces cost per hectare.</p>
         <small class="source">Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10075499/" target="_blank" rel="noopener">Economics of agricultural field robots, peer-reviewed review, 2023 ↗</a></small>
       </div>
     </div>

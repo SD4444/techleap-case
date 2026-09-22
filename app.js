@@ -238,12 +238,4 @@
     dlg.querySelector('.sheet-x')?.addEventListener('click', () => dlg.close());
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
   });
-
-  /* Cost mechanism: capital cost per hectare */
-  const cm = $('#cmHa');
-  if (cm) {
-    const annual = 200000 * 0.08 / (1 - Math.pow(1.08, -7)); // seven-year annuity at 8%
-    const render = () => { $('#cmHaV').textContent = (+cm.value).toLocaleString('en-GB') + ' ha'; $('#cmOut').textContent = '€' + Math.round(annual / +cm.value).toLocaleString('en-GB'); };
-    cm.addEventListener('input', render); render();
-  }
 })();
