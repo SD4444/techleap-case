@@ -553,11 +553,12 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #sheetB .dd-eq i{font-style:normal;color:#9aa2a9;font-size:16px;text-align:center}
 #sheetB .dd-eq span{display:block;font-size:14px;padding:8px 12px;border-radius:8px;background:#0f1517;border:1px solid #ffffff18;color:#e6e9ec}
 #sheetB .dd-eq .res span{background:#3ec26f26;border-color:#3ec26f66;color:#fff;font-weight:600}
-#sheetB .dd-lower{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin-top:8px}
-#sheetB .dd-lower>div{padding:12px 14px;border-radius:8px;background:#0f1517;border:1px solid #ffffff18}
+#sheetB .dd-lower{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch;margin-top:8px}
+#sheetB .dd-lower>div{padding:12px 14px;border-radius:8px;background:#0f1517;border:1px solid #ffffff18;display:grid;align-content:start}
 #sheetB .dd-lower b{display:block;font-size:14px;color:#fff;margin-bottom:4px}
 #sheetB .dd-lower span{font-size:13px;color:#c1c7cc;line-height:1.45}
-#sheetB .dd-lower i{font-style:normal;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8fe3ad;font-weight:600}
+#sheetB .dd-lower i{grid-column:1/-1;grid-row:1;font-style:normal;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8fe3ad;font-weight:600;margin-bottom:2px}
+#sheetB .dd-lower>div{grid-row:2}
 @media(max-width:800px){#sheetB .dd-steps{grid-template-columns:1fr}#sheetB .dd-lower{grid-template-columns:1fr}}
 
 
