@@ -569,7 +569,7 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 
 /* ── Techleap's role ─────────────────────────────────────────────────── */
 .role-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.role-grid>div{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-items:start;border-top:1px solid #ffffff22;padding-top:20px}
+.role-grid>div{display:grid;grid-template-rows:subgrid;grid-row:span 4;align-items:start;border-top:1px solid #ffffff22;padding-top:20px}
 .role-grid .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8fe3ad;font-weight:600;margin-bottom:14px}
 .role-grid p{font-size:15.5px;line-height:1.6;color:#b7bec4;margin-bottom:22px}
 .role-out{border-left:2px solid var(--orange);padding-left:16px}
@@ -592,3 +592,6 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #signals .channel-proof{margin-top:18px;padding-top:14px}
 #signals .channel-proof .lab{display:block;width:max-content;margin:0 0 8px}
 #signals .channels article{grid-row:span 5}
+
+.role-grid h3{font-size:clamp(19px,1.6vw,23px);line-height:1.25;margin-bottom:12px}
+#investors{background:#0f1517}
