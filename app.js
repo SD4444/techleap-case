@@ -136,7 +136,7 @@
     const t = document.getElementById('dd-' + id); if (!t || !sheet) return;
     sheetOpener = src || null;
     K.textContent = t.dataset.k || ''; H.textContent = t.dataset.h || '';
-    B.replaceChildren(t.content.cloneNode(true));
+    B.replaceChildren(t.content.cloneNode(true)); if (window.noOrphans) window.noOrphans(B);
     B.querySelectorAll('table').forEach(table => { const sc = document.createElement('div'); sc.className = 'table-scroll'; sc.tabIndex = 0; sc.setAttribute('role', 'region'); sc.setAttribute('aria-label', H.textContent + ', scrollable table'); table.before(sc); sc.append(table); });
     sheet.showModal();
     const sin = $('.sheet-in'); sin.scrollTop = 0; sheet.scrollTop = 0; sin.focus({ preventScroll: true });
@@ -203,4 +203,20 @@
     dlg.querySelector('.sheet-x')?.addEventListener('click', () => dlg.close());
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
   });
+
+  /* No orphans: join the last two words of every text block with a non-breaking space. */
+  const NO_ORPHAN = 'h1,h2,h3,h4,h5,p,li,dd,dt,small,blockquote,.tag,.cond b,.tl-marks span,.role-out b,.paybar-bar .seg span,.seg b,.kpi .k,.bar-lab span,.chain span,.actor small,.tri-node,label';
+  function noOrphans(root) {
+    root.querySelectorAll(NO_ORPHAN).forEach(el => {
+      if (el.children.length && !el.textContent.trim()) return;
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, { acceptNode: n => n.data.trim() && !n.parentElement.closest('button.tl-bar,.eq-line,.frac,.dd-eq,.paybar-total') ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT });
+      let last = null; while (walker.nextNode()) last = walker.currentNode;
+      if (!last) return;
+      const words = el.textContent.trim().split(/\s+/); if (words.length < 3) return;
+      let s = last.data.trimEnd(); let i = s.lastIndexOf(' ');
+      if (i > 0) { s = s.slice(0, i) + '\u00a0' + s.slice(i + 1); const j = s.lastIndexOf(' ', i - 1); if (j > 0 && s.slice(i + 1).replace('\u00a0', '').length <= 3) s = s.slice(0, j) + '\u00a0' + s.slice(j + 1); last.data = s + last.data.slice(last.data.trimEnd().length); }
+    });
+  }
+  window.noOrphans = noOrphans;
+  noOrphans(document.body);
 })();
