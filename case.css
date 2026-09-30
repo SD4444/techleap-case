@@ -595,3 +595,8 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 
 .role-grid h3{font-size:clamp(19px,1.6vw,23px);line-height:1.25;margin-bottom:12px}
 #investors{background:#0f1517}
+
+#ask .role-grid>div{grid-row:span 3}
+.chain-note{margin-top:16px;font-size:14.5px;line-height:1.6;color:#b7bec4;max-width:80ch}
+#ask .chain span{font-size:clamp(13px,1.05vw,16px);padding:9px 14px}
+#ask .chain i{min-width:16px}
