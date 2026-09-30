@@ -662,3 +662,8 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 .paybar-total span{font-size:13px;color:var(--muted);line-height:1.4}
 #mechanism .paybar-note{margin-top:18px}
 @media(max-width:800px){.paybar-row{grid-template-columns:1fr}}
+
+.sequence{margin-top:56px;padding-top:40px;border-top:1px solid #c4ccd2}
+.criteria-list.light li{border-color:#c4ccd2;color:var(--ink)}
+.criteria-list.light li::before{color:#1e7a45}
+#ask .role-grid{margin-bottom:0}
