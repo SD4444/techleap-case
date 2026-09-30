@@ -668,3 +668,8 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 .criteria-list.light li{border-color:#c4ccd2;color:var(--ink)}
 .criteria-list.light li::before{color:#1e7a45}
 #ask .role-grid{margin-bottom:0}
+/* Technology head: same columns as the selector grid below */
+#routes .section-head{grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+#routes .section-head>.intro{margin:0;padding-left:49px;max-width:56ch}
+#routes h2{max-width:none}
+@media(max-width:1000px){#routes .section-head{grid-template-columns:1fr}#routes .section-head>.intro{padding-left:0}}
