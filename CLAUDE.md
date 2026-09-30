@@ -7,20 +7,24 @@ case is the content. Built 2026-09-16 from the Tarnoc funding site framework.
 
 ## Status
 
-Content pass with Simon, section by section (updated 2026-09-22).
+Content pass with Simon, section by section (updated 2026-09-30).
 
-Reviewed and done to Simon's text: hero, challenge (#conflict, grower
-pop-out #bigsheet with payback calculator), evidence of demand (#signals),
-technology landscape (#routes), commercialisation gap (#gap), the intervention
-(#mechanism, deep dives funding / precedents / investor), the purchase
-mechanism (#costmech, deep dive contribution), gates (#gates, five), Techleap's
-role (#ask).
+Final mechanism: technology company sets the price; growers or contractors
+sign conditional purchase commitments with a max upfront contribution; the
+public fund reserves a capped contribution; purchases activate after
+independent validation; investors finance build and validation; buyer and
+public payments are made when the buyer completes the purchase of a validated
+machine. Machine purchases only; no leasing, service or cooperatives on the
+main page. Say "crop and technology combinations" and "cases". No "catchment"
+on the main site.
 
-Not yet reviewed: the closing (#close). Resume there, then re-adapt the deck
-(deck.html): slides 1 to 8 match the site; later slides are old.
+Sections (all reviewed except the closing): hero, challenge, evidence, technology,
+gap, intervention, purchase mechanism, Techleap's role, investor relations,
+first six months, closing. Removed: gates, scenario explorer, footer, payback
+calculator.
 
-Parked: "Novelty" and "Scope fit" texts from the old gates; Simon wants them in
-market-mapping and Why Techleap sections that do not exist yet.
+Not yet reviewed: the closing (#close). Then re-adapt the deck (deck.html):
+only slides 1 to 8 partly match the site.
 
 Deep-dive drafts in markdown are converted with `tools/md2dd.py`.
 
