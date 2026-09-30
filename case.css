@@ -634,7 +634,7 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 .srs{margin:0;display:grid;gap:10px}
 .srs div{font-size:15px;line-height:1.55;color:var(--muted)}
 .srs dt{display:inline;font-weight:600;color:var(--ink)}
-.srs dt::after{content:' '}
+.srs dt::after{content:': '}
 .srs dd{display:inline;margin:0}
 .chain.light{margin-top:56px;background:#fff;border-color:var(--line)}
 .chain.light span{color:var(--ink);border-color:var(--line);font-size:clamp(12.5px,1vw,15px);padding:9px 13px}
