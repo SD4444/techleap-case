@@ -118,6 +118,9 @@ dashes.
 - Colour: one colour per heading. Accent green is for numbers, controls,
   active states and badges, not for part of a sentence.
 - Length: headings at most 12 words. Trim text before adding space.
+- Line breaks: no single word alone on the last line of a heading, label or
+  short caption. Fix with a forced break or a non-breaking space, and check
+  at 1280px and 1440px.
 - No overflow, no overlap, no clipped text at any width from 400px up.
 - Sources: one style everywhere. A `<small class="source">` line under the
   item: "Source: " plus a short linked label (organisation, year) and ↗.
