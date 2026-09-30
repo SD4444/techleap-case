@@ -644,3 +644,4 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 .chain.light span{font-size:clamp(12px,.92vw,14px);padding:8px 11px;white-space:nowrap}
 .chain.light{gap:10px;padding:20px 22px}
 .chain.light i{min-width:10px}
+#conflict h2{max-width:none;font-size:clamp(34px,4.2vw,60px)}
