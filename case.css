@@ -651,5 +651,5 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #gap .section-head .intro{margin-top:22px;max-width:60ch}
 /* Intervention head: same columns as the selector below it */
 #mechanism .section-head{grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
-#mechanism .section-head>.intro{margin:0;padding-left:97px;max-width:52ch}
+#mechanism .section-head>.intro{margin:0;padding-left:49px;max-width:56ch}
 @media(max-width:1000px){#mechanism .section-head{grid-template-columns:1fr}#mechanism .section-head>.intro{padding-left:0}}
