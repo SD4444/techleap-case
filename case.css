@@ -678,5 +678,3 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 
 .source{text-wrap:pretty}
-.source a{white-space:nowrap}
-@media(max-width:900px){.source a{white-space:normal}}
