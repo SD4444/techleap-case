@@ -588,7 +588,7 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 
 .hero h1 br{display:inline}
 
-.paybar-total b{font-size:clamp(18px,1.6vw,22px)}
+.paybar-total b{font-size:15px;font-weight:600;letter-spacing:-.01em}
 #signals .channel-proof{margin-top:18px;padding-top:14px}
 #signals .channel-proof .lab{display:block;width:max-content;margin:0 0 8px}
 #signals .channels article{grid-row:span 5}
@@ -653,3 +653,12 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #mechanism .section-head{grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
 #mechanism .section-head>.intro{margin:0;padding-left:49px;max-width:56ch}
 @media(max-width:1000px){#mechanism .section-head{grid-template-columns:1fr}#mechanism .section-head>.intro{padding-left:0}}
+/* Payment bar with a result box beside it */
+.paybar-row{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:stretch}
+.paybar-total{display:flex;align-items:center;gap:16px;padding:16px 20px;border:1px solid var(--line);border-radius:10px;background:#fff;min-width:240px}
+.paybar-total i{font-style:normal;font-size:28px;color:var(--muted)}
+.paybar-total>div{display:grid;gap:4px}
+.paybar-total b{font-size:15px;font-weight:600;letter-spacing:-.01em}
+.paybar-total span{font-size:13px;color:var(--muted);line-height:1.4}
+#mechanism .paybar-note{margin-top:18px}
+@media(max-width:800px){.paybar-row{grid-template-columns:1fr}}
