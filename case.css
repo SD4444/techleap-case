@@ -678,3 +678,8 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 
 .source{text-wrap:pretty}
+
+#sheetB .src a{display:block;margin:6px 0 0;text-underline-offset:3px}
+#sheetB .src a:first-of-type{display:inline;margin:0}
+#sheetB .src b{display:inline}
+#sheetB .src .src-note{display:block;margin-top:6px}

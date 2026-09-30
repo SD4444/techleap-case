@@ -64,7 +64,7 @@
 
   /* No orphans: join the last two words of every text block with a non-breaking space. */
   const NO_ORPHAN = 'h1,h2,h3,h4,h5,p,li,dd,dt,small,blockquote,.tag,.cond b,.tl-marks span,.role-out b,.paybar-bar .seg span,.seg b,.kpi .k,.bar-lab span,.chain span,.actor small,.tri-node,label';
-  function noOrphans(root) {
+  let noOrphans = function (root) {
     root.querySelectorAll(NO_ORPHAN).forEach(el => {
       if (el.children.length && !el.textContent.trim()) return;
       const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, { acceptNode: n => n.data.trim() && !n.parentElement.closest('button.tl-bar,.eq-line,.frac,.dd-eq,.paybar-total') ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT });
@@ -74,7 +74,10 @@
       let s = last.data.trimEnd(); let i = s.lastIndexOf(' ');
       if (i > 0) { s = s.slice(0, i) + '\u00a0' + s.slice(i + 1); const j = s.lastIndexOf(' ', i - 1); if (j > 0 && s.slice(i + 1).replace('\u00a0', '').length <= 3) s = s.slice(0, j) + '\u00a0' + s.slice(j + 1); last.data = s + last.data.slice(last.data.trimEnd().length); }
     });
-  }
+  };
+  const NO_ORPHAN_LINKS = '.src a, .source a';
+  const noOrphansBase = noOrphans;
+  noOrphans = function (root) { noOrphansBase(root); root.querySelectorAll(NO_ORPHAN_LINKS).forEach(a => { const t = a.lastChild; if (!t || t.nodeType !== 3) return; let s = t.data.trimEnd(); const i = s.lastIndexOf(' '); if (i > 0) t.data = s.slice(0, i) + '\u00a0' + s.slice(i + 1) + t.data.slice(s.length); }); };
   window.noOrphans = noOrphans;
   noOrphans(document.body);
 })();
