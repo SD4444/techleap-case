@@ -200,7 +200,7 @@ footer .wrap{line-height:1.8}
 header nav .nav-deck{opacity:.7}
 
 /* Hero subtitle under the title */
-.subtitle{font-size:clamp(20px,1.9vw,28px);line-height:1.3;letter-spacing:-.02em;color:#c9ced3;margin:18px 0 0;max-width:34ch;font-weight:400}
+.subtitle{font-size:clamp(20px,1.9vw,28px);line-height:1.3;letter-spacing:-.02em;color:#c9ced3;margin:18px 0 0;max-width:40ch;font-weight:400}
 .hero .lede{margin-top:22px}
 
 /* Hero fills the first screen: title left, four actors right, both centred. */
@@ -585,3 +585,5 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 .next h3{font-size:clamp(24px,2.4vw,34px);line-height:1.15;max-width:22ch}
 .next p{font-size:16px;line-height:1.6;color:#b7bec4;max-width:56ch}
 @media(max-width:1000px){.role-grid{grid-template-columns:1fr;gap:24px}.next{grid-template-columns:1fr;gap:20px}.chain{flex-direction:column;align-items:stretch}.chain i{display:none}.chain span{text-align:center}}
+
+.hero h1 br{display:inline}
