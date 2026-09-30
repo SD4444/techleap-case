@@ -587,3 +587,8 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 @media(max-width:1000px){.role-grid{grid-template-columns:1fr;gap:24px}.next{grid-template-columns:1fr;gap:20px}.chain{flex-direction:column;align-items:stretch}.chain i{display:none}.chain span{text-align:center}}
 
 .hero h1 br{display:inline}
+
+.paybar-total b{font-size:clamp(18px,1.6vw,22px)}
+#signals .channel-proof{margin-top:18px;padding-top:14px}
+#signals .channel-proof .lab{display:block;width:max-content;margin:0 0 8px}
+#signals .channels article{grid-row:span 5}

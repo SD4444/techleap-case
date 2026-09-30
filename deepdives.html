@@ -69,25 +69,6 @@
   </div>
 </template>
 
-<template id="dd-payback" data-k="" data-h="What the payback calculator assumes">
-  <div class="detail-body">
-    <p><b>What it is.</b> A payback calculation for a light-weeding robot bought by one grower. Weeding cost today, per hectare per year, is herbicide passes × cost per pass plus hand-weeding hours × hourly wage. Weeding cost with the robot is the herbicide passes and hand-weeding hours still needed, at the same rates. The difference is the saving per hectare. The robot is assumed to be solar-powered, so no charging cost is included. Operator time is not included either: no public figure exists for it. Machines with a diesel generator would add fuel cost.</p>
-    <p>Payback in years = machine price × machines needed ÷ (saving per hectare × hectares − annual service × machines needed). Machines needed = hectares ÷ capacity per machine per season, rounded up.</p>
-    <h4>Where the numbers come from</h4>
-    <p>Machine price about €115,000, service about €11,000 per year and capacity 225 hectares per machine per season are one supplier's customer model, converted from pounds at 1.14 and rounded. The three presets reproduce that model's cost estimates: a herbicide programme at about €200 per hectare (3 passes × €70), transplanted organic brassica or lettuce at about €400 (20 hours × €20), and fine-seeded organic crops such as salad onion, baby leaf and carrot at about €1,700 (85 hours × €20). The default of €70 per herbicide pass is an assumption: a Dutch contractor's 2026 price list charges €27 to €37.50 per hectare per spraying pass depending on area, and the product itself comes on top; there is no single public figure for product cost per pass, which varies by crop and substance. Three passes at €70 gives €210 per hectare per year, inside the supplier model's €57 to €342 range for a herbicide programme. Wageningen's Vredepeel trial measured 57.8 extra hand-weeding hours per hectare for carrots and 29.2 for seed onions in its lower-input system, which is why hours, not a lump sum, are the input.</p>
-    <table class="spec-table">
-      <tr><th>Current practice, defaults</th><th>Cost per ha</th><th>Payback, 30 ha, robot does all weeding</th><th>Payback, 100 ha</th></tr>
-      <tr><td>Herbicide programme</td><td>€210</td><td>No payback: €6,300 saving is below €11,000 service</td><td>11 years</td></tr>
-      <tr><td>Organic, transplanted</td><td>€400</td><td>115 years</td><td>4 years</td></tr>
-      <tr class="hl"><td>Organic, fine-seeded</td><td>€1,700</td><td>2.9 years</td><td>0.7 years</td></tr>
-    </table>
-    <p><b>What it shows.</b> A grower who controls weeds with herbicide has no financial reason to buy the machine. A grower who pays for hand-weeding often does. The water-quality benefit does not appear in the grower's payback. That is the gap the conditional order and the public contribution are designed to close.</p>
-    <div class="warn">Assumptions that make the result optimistic: yield is unchanged; no financing cost; no residual value; no downtime; a solar-powered robot with no charging cost; no operator cost; the leftover herbicide passes and hand-weeding hours are the only remaining costs. The supplier's own sheet assumed the robot replaces all weeding cost, added one year of service to the price and then ignored service in later years. This calculator charges service every year and lets you keep some herbicide passes and hand-weeding hours.</div>
-    <p><b>When it makes sense to use.</b> As a screen for which growers have private demand today (organic, fine-seeded crops) and which need a price difference paid by someone else (herbicide users in a target catchment). Not as a forecast for any named machine or farm. Gate 2 replaces the presets with grower invoices; gate 3 replaces the capacity and price with supplier field records.</p>
-    <p class="src"><b>Sources:</b> <a href="https://loonbedrijftamminga.nl/prijzen-meststoffen-2026/" target="_blank" rel="noopener">Loonbedrijf Tamminga, 2026 tariffs: spraying €27 to €37.50 per hectare per pass</a>; <a href="https://www.bo-akkerbouw.nl/files/Pdfs-Kennis-en-Innovatie/Integrale-aanpak-voor-de-akkerbouw-op-zand-Rapportage-2020-2023.pdf" target="_blank" rel="noopener">Wageningen Research, Vredepeel report, section 8.1.5</a>. Machine price, service, capacity and cost presets: one supplier's customer model, not published.</p>
-  </div>
-</template>
-
 <template id="dd-subsidy" data-k="" data-h="The costs already exist. They sit in different budgets.">
   <div class="detail-body">
     <p>The farmer pays to control weeds and carries the production risk. The water authority funds measures to protect surface water. Drinking-water companies monitor and treat affected sources. These are distinct costs borne by different actors.</p>
@@ -135,7 +116,7 @@
   </div>
 </template>
 
-<template id="dd-grower" data-k="" data-h="The grower's decision: trial trade-off and payback">
+<template id="dd-grower" data-k="" data-h="The grower's decision: trial trade-off and buying criteria">
   <div class="detail-body">
     <h4>Cost of the lower-input system · one system trial</h4>
     <p>Wageningen's four-year trial at Vredepeel compared a conventional system with a lower-input system using fewer crop-protection products. Weighted across the rotation, the lower-input system's per-hectare contribution margin after hand-weeding was 16% lower than the reference.</p>
@@ -146,15 +127,6 @@
       <tr><td>Contribution margin per hectare, hand-weeding charged to the crop</td><td>−27%</td><td>−39%</td></tr>
     </table>
     <div class="warn">The trial tested a whole farming system. These numbers are not the impact of laser robots, of every herbicide-free method, or of all Dutch farms. They establish why growers need credible efficacy and economics before changing practice.</div>
-    <h4>Payback of a light-weeding robot · based on one supplier's model</h4>
-    <p>Machine about €115,000, service about €11,000 per year, 225 hectares per machine per season. Payback in years = price ÷ (current weeding cost replaced per year − annual service). Assumes no extra labour, energy, downtime or yield change. Supplier figures, converted to euros and rounded.</p>
-    <table class="spec-table">
-      <tr><th>Current practice</th><th>Cost per ha per year</th><th>Payback, 30 ha</th><th>Payback, 100 ha</th></tr>
-      <tr><td>Herbicide programme</td><td>€210</td><td>None: €6,300 saving is below €11,000 service</td><td>11 years</td></tr>
-      <tr><td>Organic, transplanted</td><td>€400</td><td>115 years</td><td>4 years</td></tr>
-      <tr class="hl"><td>Organic, fine-seeded</td><td>€1,700</td><td>2.9 years</td><td>0.7 years</td></tr>
-    </table>
-    <p>A grower who controls weeds with herbicide has no financial reason to buy the machine. A grower who pays for hand-weeding often does. The water-quality benefit does not appear in the grower's payback. The interactive calculator is on the website.</p>
     <h4>The grower's buying criteria</h4>
     <ul>
       <li>Weeds controlled at the required stage</li>
@@ -163,92 +135,10 @@
       <li>Predictable cost per treated hectare</li>
       <li>Clear responsibility for breakdowns, missed treatments and rescue spraying</li>
     </ul>
-    <p class="src"><b>Sources:</b> <a href="https://www.bo-akkerbouw.nl/files/Pdfs-Kennis-en-Innovatie/Integrale-aanpak-voor-de-akkerbouw-op-zand-Rapportage-2020-2023.pdf" target="_blank" rel="noopener">Wageningen Research, Vredepeel report 2020 to 2023, section 8.1.5 and Table 19</a>; <a href="https://loonbedrijftamminga.nl/prijzen-meststoffen-2026/" target="_blank" rel="noopener">Loonbedrijf Tamminga, 2026 tariffs, veldspuit per hectare</a>. Payback figures: one supplier's customer model, not published.</p>
+    <p class="src"><b>Sources:</b> <a href="https://www.bo-akkerbouw.nl/files/Pdfs-Kennis-en-Innovatie/Integrale-aanpak-voor-de-akkerbouw-op-zand-Rapportage-2020-2023.pdf" target="_blank" rel="noopener">Wageningen Research, Vredepeel report 2020 to 2023, section 8.1.5 and Table 19</a>; <a href="https://loonbedrijftamminga.nl/prijzen-meststoffen-2026/" target="_blank" rel="noopener">Loonbedrijf Tamminga, 2026 tariffs, veldspuit per hectare</a>.</p>
   </div>
 </template>
 
-
-<template id="dd-funding" data-k="" data-h="Private buyers purchase the solution. Public institutions pay for the environmental benefit.">
-  <div class="detail-body">
-    <p>The mechanism separates the commercial value received by the grower from the wider water-quality benefit.</p>
-    <p>The grower remains responsible for the cost of weed control. The public contribution addresses the additional early cost of using a qualifying alternative that reduces the specified herbicide application.</p>
-    <h4>Financial responsibilities</h4>
-    <table class="spec-table"><tr><th>Participant</th><th>Commitment</th><th>Payment or receipt</th></tr><tr><td>Grower purchasing or leasing a machine</td><td>Defined machine, crop, hectares and delivery period</td><td>Pays the agreed private contribution</td></tr><tr><td>Grower purchasing a service</td><td>Defined hectares, crop and treatment period</td><td>Pays the reference cost per hectare</td></tr><tr><td>Agricultural contractor</td><td>Commits hectares across participating farms and purchases or leases equipment</td><td>Receives service payments from growers</td></tr><tr><td>Water board</td><td>Reserves funding for the verified local water-quality benefit</td><td>Pays the qualifying public premium</td></tr><tr><td>Province</td><td>May match the water board's commitment</td><td>Contributes to the same capped premium</td></tr><tr><td>Supplier</td><td>Accepts the performance standard and maximum price trajectory</td><td>Receives payment after satisfying the relevant conditions</td></tr></table>
-    <h4>The payment process</h4>
-    <h5>1. Public budget decision</h5>
-    <p>The water board and province approve a maximum programme budget before supplier selection. The decision specifies the eligible crops, catchment, environmental objective and maximum payment per hectare.</p>
-    <h5>2. Conditional private commitments</h5>
-    <p>Growers and contractors sign conditional purchase, lease or service agreements. These commitments specify price, volume, delivery timing and the conditions that must be satisfied before purchase becomes obligatory.</p>
-    <h5>3. Independent validation</h5>
-    <p>An independent party measures weed-control efficacy, crop damage, hectares treated, machine uptime and displacement of the targeted herbicide application.</p>
-    <h5>4. Contract activation</h5>
-    <p>Successful validation activates the relevant private contracts. The buyer pays its agreed contribution. The public programme pays the qualifying premium directly to the supplier or service provider.</p>
-    <h5>5. Verification and payment</h5>
-    <p>The programme pays only for accepted machines or verified hectares. A machine purchase does not qualify solely because the equipment appears on an approved list.</p>
-    <h4>Ownership does not change the calculation</h4>
-    <p>A grower may purchase or lease a machine for its own fields. Another grower may buy robotic weed control from a contractor.</p>
-    <p>Both routes use the same all-in cost per hectare. This includes equipment or lease costs, labour, energy, maintenance, technical support and any required repeat treatment.</p>
-    <p>Public support should therefore follow verified deployment rather than a particular ownership model.</p>
-    <h4>Existing Dutch basis</h4>
-    <p>Rijnland's current regulation already permits subsidies for agricultural measures that improve water and soil quality. Productive measures can receive up to 40% of eligible costs. Funding under the crop-protection theme is currently capped at €10,000 per applicant.</p>
-    <p>The current scheme uses individual applications and a first-come allocation process. A market commitment would require a separate or amended instrument that reserves funding against published performance and price conditions.</p>
-    <p class="src"><b>Sources:</b> <a href="https://lokaleregelgeving.overheid.nl/CVDR698620" target="_blank" rel="noopener">Rijnland regulation CVDR698620</a>; <a href="https://lokaleregelgeving.overheid.nl/CVDR707423" target="_blank" rel="noopener">Rijnland decision CVDR707423</a>; <a href="https://unievanwaterschappen.nl/waterkwaliteit/" target="_blank" rel="noopener">Unie van Waterschappen, water quality</a>.</p>
-  </div>
-</template>
-
-<template id="dd-precedents" data-k="" data-h="The proposal combines an established AMC structure with an existing agricultural payment model">
-  <div class="detail-body">
-    <p>No existing programme reproduces the proposed Dutch intervention in full.</p>
-    <p>The Gavi Pneumococcal AMC demonstrates how committed funding and conditional supply agreements can support additional production. The UK Sustainable Farming Incentive demonstrates how public support can pay for robotic weed control on a verified per-hectare basis.</p>
-    <hr>
-    <p class="dd-kicker">Gavi pneumococcal amc</p>
-    <h4>Donors committed funding before manufacturers expanded supply</h4>
-    <p>Donors provided a US$1.5 billion financial backstop for future vaccine demand. Manufacturers could access the committed market after meeting defined product requirements and entering long-term supply agreements.</p>
-    <p>The commitment supported additional research and manufacturing capacity while allowing more than one supplier to qualify.</p>
-    <p>In 2020, UNICEF contracted a new manufacturer to supply ten million doses annually for ten years at US$2 per dose. This was 43% below the US$3.50 Gavi price at the beginning of the AMC.</p>
-    <h5>Use in the Dutch programme</h5>
-    <p>The water board and province would reserve funding before selecting robotic-weeding suppliers.</p>
-    <p>The programme would publish the required field performance and maximum price. Competing suppliers could qualify. Funding would become payable only after a supplier satisfied the stated conditions.</p>
-    <h5>Difference from the Dutch market</h5>
-    <p>Gavi and UNICEF purchased vaccines through a centralised procurement system.</p>
-    <p>Dutch growers and agricultural contractors would make the commercial purchases. The public institutions would contribute toward the environmental benefit rather than purchase the machines for their own use.</p>
-    <hr>
-    <p class="dd-kicker">Uk sustainable farming incentive</p>
-    <h4>The UK already pays for robotic weed control per hectare</h4>
-    <p>The UK Sustainable Farming Incentive pays £150 per hectare per year for three years when qualifying mechanical robotic equipment controls weeds on eligible crops.</p>
-    <p>Participants must retain evidence of the work performed. This may include machine-operation records or an agricultural contractor's invoice.</p>
-    <h5>Use in the Dutch programme</h5>
-    <p>The hectare provides a common payment unit across different ownership models.</p>
-    <p>A grower may use purchased or leased equipment. Another grower may purchase the same weed-control service from a contractor. Both can report hectares treated and retain evidence of delivery.</p>
-    <h5>Difference from the proposed commitment</h5>
-    <p>The UK scheme pays a fixed amount for an eligible farming practice.</p>
-    <p>It does not aggregate future purchases, require suppliers to compete against one commercial standard or reduce the public payment as the technology becomes more competitive.</p>
-    <hr>
-    <h4>Combined design</h4>
-    <p>The Dutch proposal adopts Gavi's advance funding and supplier qualification structure.</p>
-    <p>It uses the verified hectare as the payment unit, following the UK agricultural model. It adds a private buyer contribution anchored to the cost of current weed control and a public premium that declines across successive deployment stages.</p>
-    <p class="src"><b>Sources:</b> <a href="https://www.gavi.org/news/media-room/pneumonia-vaccine-price-drops-dramatically-lower-income-countries-thanks-gavi" target="_blank" rel="noopener">Gavi, pneumonia vaccine price drop announcement</a>; <a href="https://www.gavi.org/investing-gavi/innovative-financing/pneumococcal-amc" target="_blank" rel="noopener">Gavi, Pneumococcal AMC</a>; <a href="https://www.gov.uk/find-funding-for-land-or-farms/prf4-mechanical-robotic-weeding" target="_blank" rel="noopener">Defra, Sustainable Farming Incentive PRF4 mechanical robotic weeding</a>.</p>
-  </div>
-</template>
-
-<template id="dd-investor" data-k="" data-h="The commitment replaces expressions of interest with specified commercial obligations">
-  <div class="detail-body">
-    <p>The mechanism does not remove manufacturing or execution risk. It changes the evidence available for assessing customer demand.</p>
-    <h4>Evidence before the programme</h4>
-    <table class="spec-table"><tr><th>Available evidence</th><th>Remaining uncertainty</th></tr><tr><td>Growers express interest in the technology</td><td>No obligation to purchase</td></tr><tr><td>Field demonstrations show that weeds can be treated</td><td>No accepted commercial performance standard</td></tr><tr><td>Suppliers estimate a future cost per hectare</td><td>No independently verified cost trajectory</td></tr><tr><td>Public institutions support cleaner water</td><td>No budget attached to a qualifying purchase</td></tr><tr><td>Manufacturers propose a production plan</td><td>No contracted volume against which to size production</td></tr></table>
-    <h4>Evidence after qualification</h4>
-    <table class="spec-table"><tr><th>Contractual evidence</th><th>Investor can assess</th></tr><tr><td>Signed conditional purchase, lease or service agreements</td><td>Customer identity, volume and timing</td></tr><tr><td>Defined reference cost and buyer contribution</td><td>Demonstrated willingness to pay</td></tr><tr><td>Adopted public budget and payment rules</td><td>Availability and limits of the public contribution</td></tr><tr><td>Independent field-validation results</td><td>Efficacy, crop safety, capacity and reliability</td></tr><tr><td>Maximum price for each deployment stage</td><td>Required technical and cost improvement</td></tr><tr><td>Manufacturing plan linked to activated contracts</td><td>Capital requirement and expected utilisation</td></tr></table>
-    <h4>Conditions required for credible demand</h4>
-    <p>A conditional contract should identify the buyer, crop, hectares or number of machines, price, delivery period and acceptance procedure.</p>
-    <p>It should also define the consequences of passing or failing validation. A buyer should not retain an unrestricted right to withdraw after the supplier satisfies the agreed conditions.</p>
-    <p>The public contribution requires the same level of certainty. Investors need an approved budget, defined eligibility rules and a payment obligation that activates when the stated conditions are met.</p>
-    <h4>Financing consequence</h4>
-    <p>The investment round still finances manufacturing, working capital and commercial execution.</p>
-    <p>The difference is that the production plan can be evaluated against specified customer contracts and an approved public contribution rather than non-binding customer interest.</p>
-    <p>This does not guarantee investment. It gives investors stronger evidence with which to assess the scale and timing of demand.</p>
-    <p class="src"><b>Sources:</b> <a href="https://techleap.nl/reports/capital-in-deeptech-from-diagnosis-to-action" target="_blank" rel="noopener">Techleap, Capital in deep tech: from diagnosis to action</a>; <a href="https://frontierclimate.com/" target="_blank" rel="noopener">Frontier</a>; <a href="https://www.gavi.org/investing-gavi/innovative-financing/pneumococcal-amc" target="_blank" rel="noopener">Gavi, Pneumococcal AMC</a>.</p>
-  </div>
-</template>
 
 <template id="dd-contribution" data-k="" data-h="Set the contribution from verified farm economics, not an arbitrary subsidy rate.">
   <div class="detail-body">
@@ -304,5 +194,70 @@
     </div>
     <p><b>The farmer makes an affordable upfront contribution and retains a defined share of the verified economic benefit created by the machine.</b></p>
     <p class="src"><b>Sources:</b> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10075499/" target="_blank" rel="noopener">Shang et al. 2023, How much can farmers pay for weeding robots?</a> (defines the maximum acquisition value as the machine price at which farm profitability equals that of the current method); <a href="https://www.gov.uk/guidance/advanced-market-commitments-amc" target="_blank" rel="noopener">UK government, Advance Market Commitments guidance</a>.</p>
+  </div>
+</template>
+
+<template id="dd-funding" data-k="" data-h="Buyers purchase the machine. Public institutions pay part of the price for the environmental benefit.">
+  <div class="detail-body">
+    <p>The mechanism separates the commercial value received by the buyer from the wider water-quality benefit. The buyer pays what the machine is worth to the farm and can afford upfront. The public contribution covers the remaining purchase price, up to a fixed programme cap, because reduced herbicide use benefits water quality beyond the farm.</p>
+    <h4>Financial responsibilities</h4>
+    <table class="spec-table"><tr><th>Participant</th><th>Commitment</th><th>Payment or receipt</th></tr><tr><td>Grower</td><td>Conditional commitment for a defined number of machines, target crop and delivery period, with a maximum upfront contribution</td><td>Pays the agreed contribution when a machine passes validation</td></tr><tr><td>Agricultural contractor</td><td>Conditional commitment for machines used to provide robotic weed control across several farms</td><td>Pays the agreed contribution; receives service payments from growers</td></tr><tr><td>Water board</td><td>Reserves a capped contribution toward each qualifying purchase</td><td>Pays the public contribution to the supplier at delivery</td></tr><tr><td>Province</td><td>May add matching funding to the same cap</td><td>Contributes to the same capped public contribution</td></tr><tr><td>Technology company</td><td>Sets the machine price and accepts the performance standard, delivery and support obligations</td><td>Receives the full purchase price at delivery</td></tr></table>
+    <h4>The payment process</h4>
+    <h5>1. Public budget decision</h5>
+    <p>The water board, and the province if it participates, approve a maximum programme budget and a maximum contribution per machine before supplier selection. The decision names the eligible crop, catchment and environmental objective.</p>
+    <h5>2. Conditional buyer commitments</h5>
+    <p>Growers and agricultural contractors sign conditional purchase commitments stating machines, crop, delivery period and maximum upfront contribution.</p>
+    <h5>3. Independent validation</h5>
+    <p>An independent party tests each machine against the published performance standard: weed-control efficacy, crop damage, hectares treated within the operating window, seasonal reliability, maintenance support and displacement of the targeted herbicide application.</p>
+    <h5>4. Activation</h5>
+    <p>If a machine passes, the buyer's contribution and the reserved public contribution activate the purchase. If together they do not cover the supplier's price, the purchase does not proceed.</p>
+    <h5>5. Payment at delivery</h5>
+    <p>The buyer pays its contribution and the public programme pays its contribution directly to the technology company when the machine is delivered. The buyer then owns the machine and pays its operating costs. The buyer does not repay the public contribution. No supplier is guaranteed a sale.</p>
+    <h4>Existing Dutch basis</h4>
+    <p>Rijnland's current regulation already permits subsidies for agricultural measures that improve water and soil quality. Productive measures can receive up to 40% of eligible costs. Funding under the crop-protection theme is currently capped at €10,000 per applicant.</p>
+    <p>The current scheme uses individual applications and a first-come allocation process. A market commitment would require a separate or amended instrument that reserves funding against published performance conditions before suppliers are selected.</p>
+    <p class="src"><b>Sources:</b> <a href="https://lokaleregelgeving.overheid.nl/CVDR698620" target="_blank" rel="noopener">Rijnland regulation CVDR698620</a>; <a href="https://lokaleregelgeving.overheid.nl/CVDR707423" target="_blank" rel="noopener">Rijnland decision CVDR707423</a>; <a href="https://unievanwaterschappen.nl/waterkwaliteit/" target="_blank" rel="noopener">Unie van Waterschappen, water quality</a>.</p>
+  </div>
+</template>
+
+<template id="dd-precedents" data-k="" data-h="Gavi shows the structure. The UK scheme shows that public money can reward verified robotic weeding.">
+  <div class="detail-body">
+    <p>No existing programme reproduces the proposed Dutch intervention in full. The advance market commitment structure comes from Gavi. The UK Sustainable Farming Incentive shows only that a public body can pay for verified robotic weed-control activity; it is not a model for financing machine purchases.</p>
+    <h4>Gavi Pneumococcal AMC: the primary precedent</h4>
+    <p>Donors provided a US$1.5 billion financial backstop for future vaccine demand before manufacturers expanded supply. Manufacturers could access the committed market after meeting defined product requirements and entering long-term supply agreements. More than one supplier qualified.</p>
+    <p>In 2020, UNICEF contracted a new manufacturer to supply ten million doses annually for ten years at US$2 per dose, 43% below the US$3.50 Gavi price at the beginning of the AMC.</p>
+    <h5>What transfers</h5>
+    <ul>
+    <li>Funding is reserved before a supplier is selected.</li>
+    <li>The required performance is published in advance.</li>
+    <li>Any supplier that meets the standard can qualify. No supplier is guaranteed a sale.</li>
+    <li>Funding becomes payable only after the supplier satisfies the stated conditions.</li>
+    </ul>
+    <h5>What differs</h5>
+    <p>Gavi and UNICEF purchased vaccines through a centralised procurement system. In the Dutch programme, growers and agricultural contractors make the purchases and own the machines. The public institutions contribute part of the purchase price for the environmental benefit. The technology company sets the price; the programme does not.</p>
+    <h4>UK Sustainable Farming Incentive: evidence of payment for verified activity</h4>
+    <p>The scheme pays £150 per hectare per year for three years when qualifying mechanical robotic equipment controls weeds on eligible crops. Participants must retain evidence of the work performed, such as machine-operation records or a contractor's invoice.</p>
+    <p>This shows that a public body can define robotic weed control as an eligible activity, verify it and pay for it. It does not aggregate future purchases, set a performance standard for suppliers, or contribute to a machine's purchase price. It is not a model for the Dutch purchase mechanism.</p>
+    <h4>Combined design</h4>
+    <p>The Dutch proposal adopts Gavi's advance funding and supplier qualification structure and applies it to machine purchases by growers and agricultural contractors. It adds a buyer contribution set by verified farm economics and affordability, and a capped public contribution toward the remaining purchase price.</p>
+    <p class="src"><b>Sources:</b> <a href="https://www.gavi.org/news/media-room/pneumonia-vaccine-price-drops-dramatically-lower-income-countries-thanks-gavi" target="_blank" rel="noopener">Gavi, pneumonia vaccine price drop announcement</a>; <a href="https://www.gavi.org/investing-gavi/innovative-financing/pneumococcal-amc" target="_blank" rel="noopener">Gavi, Pneumococcal AMC</a>; <a href="https://www.gov.uk/find-funding-for-land-or-farms/prf4-mechanical-robotic-weeding" target="_blank" rel="noopener">Defra, Sustainable Farming Incentive PRF4 mechanical robotic weeding</a>.</p>
+  </div>
+</template>
+
+<template id="dd-investor" data-k="" data-h="The commitment replaces expressions of interest with specified purchase obligations">
+  <div class="detail-body">
+    <p>The mechanism does not remove manufacturing or execution risk. It changes the evidence available for assessing customer demand.</p>
+    <h4>Evidence before the programme</h4>
+    <table class="spec-table"><tr><th>Available evidence</th><th>Remaining uncertainty</th></tr><tr><td>Growers express interest in the technology</td><td>No obligation to purchase</td></tr><tr><td>Field demonstrations show that weeds can be treated</td><td>No accepted performance standard</td></tr><tr><td>Public institutions support cleaner water</td><td>No budget attached to a qualifying purchase</td></tr><tr><td>The technology company proposes a production plan</td><td>No contracted volume against which to size production</td></tr></table>
+    <h4>Evidence after qualification</h4>
+    <table class="spec-table"><tr><th>Contractual evidence</th><th>Investor can assess</th></tr><tr><td>Signed conditional purchase commitments</td><td>Buyer identity, number of machines, target crop and delivery period</td></tr><tr><td>Stated maximum buyer contribution per machine</td><td>Demonstrated willingness and ability to pay</td></tr><tr><td>Adopted public budget and maximum contribution per machine</td><td>Availability and limits of the public contribution</td></tr><tr><td>Published performance standard and independent validation results</td><td>Efficacy, crop safety, capacity, reliability and support</td></tr><tr><td>Supplier's own price against the combined contributions</td><td>Whether purchases activate at that price</td></tr><tr><td>Production plan linked to activated purchases</td><td>Capital requirement and expected utilisation</td></tr></table>
+    <h4>Conditions required for credible demand</h4>
+    <p>A conditional commitment should identify the buyer, target crop, number of machines, maximum upfront contribution, delivery period and acceptance procedure. It does not state a supplier price: the price is set by each supplier when it competes.</p>
+    <p>It should also define the consequences of passing or failing validation. A buyer should not retain an unrestricted right to withdraw after a machine satisfies the agreed conditions and the combined contributions cover the supplier's price.</p>
+    <p>The public contribution requires the same level of certainty: an approved budget, a defined maximum per machine, and a payment obligation that activates when the stated conditions are met.</p>
+    <h4>Financing consequence</h4>
+    <p>The investment round still finances manufacturing, working capital and commercial execution.</p>
+    <p>The difference is that the production plan can be evaluated against signed purchase commitments and an approved public contribution rather than non-binding customer interest. This does not guarantee investment. It gives investors stronger evidence with which to assess the scale and timing of demand.</p>
+    <p class="src"><b>Sources:</b> <a href="https://techleap.nl/reports/capital-in-deeptech-from-diagnosis-to-action" target="_blank" rel="noopener">Techleap, Capital in deep tech: from diagnosis to action</a>; <a href="https://www.gavi.org/investing-gavi/innovative-financing/pneumococcal-amc" target="_blank" rel="noopener">Gavi, Pneumococcal AMC</a>.</p>
   </div>
 </template>

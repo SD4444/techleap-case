@@ -192,41 +192,6 @@
     buttons.forEach(b => b.addEventListener('click', () => apply(b.dataset.val)));
   });
 
-  /* Grower payback calculator: costs split by method */
-  const pbk = $('#payback-panel');
-  if (pbk) {
-    const ins = $$('#payback-panel input[type=range]');
-    const eur = n => '€' + (Math.abs(n) >= 1e6 ? (n / 1e6).toFixed(2) + 'm' : Math.abs(n) >= 1e4 ? Math.round(n / 1e3).toLocaleString('en-GB') + 'k' : Math.round(n).toLocaleString('en-GB'));
-    const fmt = { pbkPasses: v => v, pbkPassCost: v => '€' + v, pbkHours: v => v + ' h', pbkWage: v => '€' + v, pbkPassesAfter: v => v, pbkHoursAfter: v => v + ' h', pbkHa: v => v + ' ha', pbkPrice: v => eur(v), pbkService: v => eur(v), pbkCap: v => v.toLocaleString('en-GB') + ' ha' };
-    function render() {
-      const v = Object.fromEntries(ins.map(i => [i.id, +i.value]));
-      ins.forEach(i => { const o = $('#' + i.id + 'V'); if (o) o.textContent = fmt[i.id](v[i.id]); });
-      $$('#pbkPreset button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.passes === v.pbkPasses && +b.dataset.hours === v.pbkHours)));
-      const before = v.pbkPasses * v.pbkPassCost + v.pbkHours * v.pbkWage;
-      const after = v.pbkPassesAfter * v.pbkPassCost + v.pbkHoursAfter * v.pbkWage;
-      const savingHa = before - after;
-      const machines = Math.max(1, Math.ceil(v.pbkHa / v.pbkCap));
-      const net = savingHa * v.pbkHa - v.pbkService * machines;
-      const capex = v.pbkPrice * machines;
-      const years = net > 0 ? capex / net : null;
-      const peak = Math.max(before, after, 1);
-      const rows = { before, after };
-      Object.entries(rows).forEach(([key, val]) => { const row = pbk.querySelector(`.cost-row[data-k="${key}"]`); row.querySelector('.bar i').style.width = (val / peak * 100) + '%'; row.querySelector('strong').textContent = eur(val); });
-      $('#pbkSavingHa').textContent = (savingHa < 0 ? '−' : '') + eur(Math.abs(savingHa));
-      $('#pbkNet').textContent = (net < 0 ? '−' : '') + eur(Math.abs(net));
-      $('#pbkYears').textContent = years === null ? 'None' : years >= 100 ? '>100' : years.toFixed(1);
-      $('#pbkMachines').textContent = String(machines);
-      $('#pbkHead').textContent = years === null
-        ? `No payback at any machine price. The robot saves ${eur(savingHa)} per hectare, ${eur(savingHa * v.pbkHa)} a year on ${v.pbkHa} hectares, which is below the ${eur(v.pbkService * machines)} annual service cost. Raise the hectares or lower the service cost.`
-        : years > 10
-          ? `Payback in ${years >= 100 ? 'more than 100' : years.toFixed(1)} years. At this saving the machine does not pay for itself within its likely life.`
-          : `Payback in ${years.toFixed(1)} years. The robot saves ${eur(savingHa)} per hectare, ${eur(net)} a year on ${v.pbkHa} hectares after service.`;
-      $('#pbkNote').textContent = `Today: ${v.pbkPasses} pass${v.pbkPasses === 1 ? '' : 'es'} × €${v.pbkPassCost} + ${v.pbkHours} h × €${v.pbkWage} = ${eur(before)} per hectare. With the robot: ${v.pbkPassesAfter} pass${v.pbkPassesAfter === 1 ? '' : 'es'} × €${v.pbkPassCost} + ${v.pbkHoursAfter} h × €${v.pbkWage} = ${eur(after)} per hectare. ${machines} machine${machines > 1 ? 's' : ''} at ${v.pbkCap} ha each: ${eur(capex)} price, ${eur(v.pbkService * machines)} service a year. Payback = price ÷ (yearly saving − service). Assumes unchanged yield, a solar-powered robot with no charging cost, no operator cost, no financing cost, no residual value. Price, service and capacity defaults are one supplier's figures, converted to euros and rounded. Presets are that supplier's cost estimates, not measured Dutch farm costs. €70 per pass is an assumption: contractors charge €27 to €37.50 per hectare to spray, product on top.`;
-    }
-    ins.forEach(i => i.addEventListener('input', render));
-    $$('#pbkPreset button').forEach(b => b.addEventListener('click', () => { $('#pbkPasses').value = b.dataset.passes; $('#pbkHours').value = b.dataset.hours; render(); }));
-    render();
-  }
   /* Big pop-out: [data-big="id"] opens <dialog id> nearly full screen */
   $$('[data-big]').forEach(b => b.addEventListener('click', () => {
     const dlg = document.getElementById(b.dataset.big); if (!dlg) return;
