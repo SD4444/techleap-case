@@ -741,3 +741,20 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #calcsheet .pbk{margin-top:0;padding-top:0;border-top:0}
 #calcsheet .section-head{margin-bottom:36px}
 #calcsheet .eyebrow .lab{display:block;width:max-content;margin:10px 0 0}
+
+/* Vredepeel trial pop-out */
+#bigsheet .trial{background:#1a2326;border:1px solid #ffffff1c;border-radius:12px;padding:28px 32px}
+#bigsheet .trial-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+#bigsheet .trial-head .eyebrow{margin:0}
+#bigsheet .trial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+#bigsheet .trial-pair{border-top:1px solid #ffffff22;padding-top:16px}
+#bigsheet .trial-title{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:#9aa2a9;margin-bottom:14px;min-height:30px}
+#bigsheet .trial-pair .bar-row{grid-template-columns:96px 1fr;gap:12px;margin-bottom:10px}
+#bigsheet .trial-pair .bar-lab b{font-size:13.5px;color:#fff}
+#bigsheet .trial-pair .bar-track{height:34px}
+#bigsheet .trial-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px;padding-top:32px;border-top:1px solid #ffffff22}
+#bigsheet .trial-notes .eyebrow{margin-bottom:12px}
+#bigsheet .trial-notes p:not(.eyebrow){font-size:15px;line-height:1.6;color:#b7bec4}
+#bigsheet .trial-notes .source{margin-top:14px;color:#9aa2a9}
+#bigsheet .trial-notes .source a{color:inherit}
+@media(max-width:1000px){#bigsheet .trial-grid,#bigsheet .trial-notes{grid-template-columns:1fr;gap:24px}}
