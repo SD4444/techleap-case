@@ -783,3 +783,9 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .figs-dd>div{border-left:2px solid var(--orange);padding-left:14px}
 #sheetB .figs-dd b{display:block;font-size:clamp(20px,1.8vw,26px);font-weight:400;letter-spacing:-.03em;color:#8fe3ad;line-height:1.1;margin-bottom:4px}
 #sheetB .figs-dd span{display:block;font-size:13px;line-height:1.45;color:#c1c7cc}
+/* Deep-dive tables: cells flush with the text margin, two-column tables share one column split */
+#sheetB table{table-layout:fixed}
+#sheetB th:first-child,#sheetB td:first-child{padding-left:0}
+#sheetB th:last-child,#sheetB td:last-child{padding-right:0}
+#sheetB .spec-table th,#sheetB .spec-table td{width:auto}
+#sheetB .spec-table.two th:first-child,#sheetB .spec-table.two td:first-child{width:50%}
