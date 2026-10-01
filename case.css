@@ -758,3 +758,19 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #bigsheet .trial-notes .source{margin-top:14px;color:#9aa2a9}
 #bigsheet .trial-notes .source a{color:inherit}
 @media(max-width:1000px){#bigsheet .trial-grid,#bigsheet .trial-notes{grid-template-columns:1fr;gap:24px}}
+
+/* Compact deep dive */
+#sheetB .compact p,#sheetB .compact li{font-size:14px;line-height:1.55}
+#sheetB .compact h4{margin:22px 0 10px;padding-top:14px}
+#sheetB .compact h4 .lab{display:inline-block;width:auto;margin:0 0 0 10px;vertical-align:middle}
+#sheetB .calc-rows{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+#sheetB .calc-rows>div{background:#1a2326;border:1px solid #ffffff1c;border-radius:10px;padding:14px 16px}
+#sheetB .calc-rows b{display:block;color:#fff;font-size:14px;margin-bottom:4px}
+#sheetB .calc-rows span{font-size:13px;color:#c1c7cc;line-height:1.45}
+#sheetB .two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+#sheetB .two-col h4:first-child{margin-top:22px}
+#sheetB .compact table{font-size:13px;margin:4px 0 12px}
+#sheetB .compact ul{margin-bottom:10px}
+#sheetB .compact li{margin-bottom:5px}
+@media(max-width:900px){#sheetB .calc-rows,#sheetB .two-col{grid-template-columns:1fr}}
+#sheetB .compact .spec-table td:first-child{white-space:nowrap}
