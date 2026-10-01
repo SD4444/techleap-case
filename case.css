@@ -252,7 +252,7 @@ body:not(.presenting) .hero-grid{grid-template-rows:1fr auto;row-gap:40px}
 @media(max-width:1000px){.challenge{grid-template-columns:1fr;gap:36px}.challenge-right{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:28px}.facts{gap:0}.facts li{padding:20px 0}}
 
 /* ── Big pop-out (the grower's decision) ─────────────────────────────── */
-#bigsheet{width:min(1440px,94vw);max-width:none;height:92vh;max-height:none;margin:auto;border:0;border-radius:14px;padding:0;background:var(--ink);color:#fff;overflow:hidden}
+#bigsheet,#calcsheet{width:min(1440px,94vw);max-width:none;height:92vh;max-height:none;margin:auto;border:0;border-radius:14px;padding:0;background:var(--ink);color:#fff;overflow:hidden}
 #bigsheet::backdrop{background:#0008;backdrop-filter:blur(4px)}
 #bigsheet .big-in{height:100%;overflow-y:auto;overscroll-behavior:contain;padding:56px 0 64px;outline:none}
 #bigsheet .sheet-x{position:absolute;top:18px;right:18px;z-index:2}
@@ -713,3 +713,31 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .statements{margin-top:56px;padding-top:32px;border-top:1px solid #ffffff22}
 .statements li{border-color:#ffffff22;color:#fff;font-size:clamp(17px,1.4vw,21px);padding:18px 0}
 .statements li::before{color:#8fe3ad}
+
+/* Calculator pop-out shares the bigsheet styling */
+#calcsheet,#calcsheet{width:min(1440px,94vw);max-width:none;height:92vh;max-height:none;margin:auto;border:0;border-radius:14px;padding:0;background:var(--ink);color:#fff;overflow:hidden}
+#calcsheet::backdrop{background:#0008;backdrop-filter:blur(4px)}
+#calcsheet .big-in{height:100%;overflow-y:auto;overscroll-behavior:contain;padding:56px 0 64px;outline:none}
+#calcsheet .sheet-x{position:absolute;top:18px;right:18px;z-index:2}
+#calcsheet .wrap{width:min(1280px,calc(100% - 104px))}
+#calcsheet .reveal{opacity:1;transform:none}
+#calcsheet .intro,#calcsheet .fineprint,#calcsheet .footnote,#calcsheet .range-ends,#calcsheet .bar-lab>span,#calcsheet .choice-panel p,#calcsheet .kpi .k,#calcsheet .pbk-intro{color:#b7bec4}
+#calcsheet .economics-grid{background:#1a2326;border:1px solid #ffffff1c;border-radius:12px;padding:32px}
+#calcsheet .verdict{border-color:#ffffff22;color:#c9ced3}
+#calcsheet .verdict b,#calcsheet .bar-lab b,#calcsheet .criteria li,#calcsheet .controls label{color:#fff}
+#calcsheet .bar-track{background:#ffffff14}
+#calcsheet .bar-fill span{background:#13191bd9;color:#fff}
+#calcsheet .segmented{background:#ffffff14}
+#calcsheet .segmented button{color:#c9ced3}
+#calcsheet .segmented button[aria-pressed=true]{color:var(--ink)}
+#calcsheet .criteria,#calcsheet .pbk,#calcsheet .explorer-kpis,#calcsheet .deep{border-color:#ffffff22}
+#calcsheet .deep button{border-color:#ffffff30;color:#fff}
+#calcsheet .kpi .v{color:var(--orange)}
+#calcsheet .eyebrow{color:#8fe3ad}
+#calcsheet .cost-row .bar{background:#ffffff14}
+#calcsheet #payback-panel .controls .eyebrow.ctl-group{border-color:#ffffff22}
+#calcsheet .source{color:#9aa2a9}
+#calcsheet .source a:hover{color:#8fe3ad}
+#calcsheet .pbk{margin-top:0;padding-top:0;border-top:0}
+#calcsheet .section-head{margin-bottom:36px}
+#calcsheet .eyebrow .lab{display:block;width:max-content;margin:10px 0 0}
