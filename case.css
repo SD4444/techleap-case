@@ -821,3 +821,5 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .feature .src{margin-top:28px}
 #sheetH:empty{display:none}
 @media(max-width:1000px){#sheetB .feature .dd-head,#sheetB .feature .dd-figs,#sheetB .feature .dd-notes{grid-template-columns:1fr;gap:24px}}
+
+.amc-note{font-size:15px;line-height:1.6;color:var(--muted);max-width:70ch;margin:-8px 0 28px}
