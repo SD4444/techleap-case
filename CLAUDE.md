@@ -24,7 +24,7 @@ six months, conclusion (#close: dark, heading left, paragraph right, "What
 Techleap should test" band). Removed: gates, scenario explorer, footer, deck.
 The payback calculator is a pop-out in the technology section (#calcsheet).
 
-Not yet reviewed: the closing (#close). The deck was removed on 2026-10-02.
+Precedents deep dive (dd-precedents) covers Gavi, Frontier and the UK scheme.
 
 Deep-dive drafts in markdown are converted with `tools/md2dd.py`.
 
