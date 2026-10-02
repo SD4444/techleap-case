@@ -23,8 +23,7 @@ gap, intervention, purchase mechanism, Techleap's role, investor relations,
 first six months, closing. Removed: gates, scenario explorer, footer, payback
 calculator.
 
-Not yet reviewed: the closing (#close). Then re-adapt the deck (deck.html):
-only slides 1 to 8 partly match the site.
+Not yet reviewed: the closing (#close). The deck was removed on 2026-10-02.
 
 Deep-dive drafts in markdown are converted with `tools/md2dd.py`.
 
@@ -40,8 +39,7 @@ Deep-dive drafts in markdown are converted with `tools/md2dd.py`.
 
 No build step, no dependencies. Static files only:
 
-- `deck.html` + `deck.css` + `deck.js` — slide-deck version of the case, one slide per screen, arrow-key navigation. Static figures; links back to the interactive site.
-- `deepdives.html` — all `<template id="dd-…">` deep-dive sheets, fetched at load by both app.js and deck.js (needs http, not file://).
+- `deepdives.html` — all `<template id="dd-…">` deep-dive sheets, fetched at load by app.js (needs http, not file://).
 - `index.html` — the whole page. Sections are `<main>>section[data-title]`; the
   header nav, progress bar, present mode and deep-dive sheet all key off that.
 - `styles.css` — the design system, copied VERBATIM from tarnoc-funding.com
