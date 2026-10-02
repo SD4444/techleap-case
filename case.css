@@ -798,3 +798,26 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .compact .spec-table.two.narrow th:first-child,#sheetB .compact .spec-table.two.narrow td:first-child{width:32%}
 
 .persp-text em{font-style:italic;color:inherit}
+
+/* Feature-style deep dive (matches the Vredepeel pop-out) */
+#sheetB .feature{max-width:none}
+#sheetB .feature .dd-head{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start;margin-bottom:40px}
+#sheetB .feature .eyebrow{font-size:12px;color:#8fe3ad !important;margin-bottom:18px}
+#sheetB .feature .dd-head{grid-template-columns:1fr 1fr}
+#sheetB .feature .dd-title{font-size:clamp(30px,3.2vw,48px);line-height:1.06;letter-spacing:-.045em;font-weight:500;color:#fff;margin:0}
+#sheetB .feature .dd-head p,#sheetB .feature .dd-head li{font-size:17px;line-height:1.6;color:#b7bec4}
+#sheetB .feature .dd-head ul{margin-top:10px}
+#sheetB .feature .dd-card{background:#1a2326;border:1px solid #ffffff1c;border-radius:12px;padding:28px 32px}
+#sheetB .feature .dd-card-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+#sheetB .feature .dd-card-head .eyebrow{margin:0}
+#sheetB .feature .dd-figs{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+#sheetB .feature .dd-figs>div{border-top:1px solid #ffffff22;padding-top:16px}
+#sheetB .feature .dd-figs b{display:block;font-size:clamp(40px,4vw,60px);font-weight:400;letter-spacing:-.05em;line-height:1;color:#8fe3ad;margin-bottom:10px;font-variant-numeric:tabular-nums}
+#sheetB .feature .dd-figs span{display:block;font-size:14px;line-height:1.5;color:#c1c7cc}
+#sheetB .feature .dd-card-note{margin:22px 0 0;padding-top:16px;border-top:1px solid #ffffff22;font-size:15px;color:#c1c7cc}
+#sheetB .feature .dd-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:40px;padding-top:32px;border-top:1px solid #ffffff22}
+#sheetB .feature .dd-notes .eyebrow{margin-bottom:12px}
+#sheetB .feature .dd-notes p:not(.eyebrow){font-size:15px;line-height:1.6;color:#b7bec4;margin:0}
+#sheetB .feature .src{margin-top:28px}
+#sheetH:empty{display:none}
+@media(max-width:1000px){#sheetB .feature .dd-head,#sheetB .feature .dd-figs,#sheetB .feature .dd-notes{grid-template-columns:1fr;gap:24px}}
