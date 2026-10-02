@@ -797,4 +797,4 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .compact .spec-table.two td:first-child{color:#e6e9ec;font-size:13.5px}
 #sheetB .compact .spec-table.two.narrow th:first-child,#sheetB .compact .spec-table.two.narrow td:first-child{width:32%}
 
-.persp-text em{font-style:italic}
+.persp-text em{font-style:italic;color:inherit}
