@@ -836,3 +836,7 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .pay-strip .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#8fe3ad;padding-top:3px;white-space:nowrap}
 #sheetB .pay-strip p{margin:0;font-size:14px;line-height:1.55;color:#c1c7cc}
 @media(max-width:900px){#sheetB .benefit-cards,#sheetB .pay-strip{grid-template-columns:1fr}}
+
+#close .section-head{margin-bottom:48px}
+#close h2{font-size:clamp(32px,3.6vw,52px)}
+#close .pivot{margin-top:0}

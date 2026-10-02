@@ -7,7 +7,7 @@ case is the content. Built 2026-09-16 from the Tarnoc funding site framework.
 
 ## Status
 
-Content pass with Simon, section by section (updated 2026-09-30).
+Content pass with Simon complete for all sections (updated 2026-10-02). Deck removed 2026-10-02.
 
 Final mechanism: technology company sets the price; growers or contractors
 sign conditional purchase commitments with a max upfront contribution; the
@@ -18,10 +18,11 @@ machine. Machine purchases only; no leasing, service or cooperatives on the
 main page. Say "crop and technology combinations" and "cases". No "catchment"
 on the main site.
 
-Sections (all reviewed except the closing): hero, challenge, evidence, technology,
-gap, intervention, purchase mechanism, Techleap's role, investor relations,
-first six months, closing. Removed: gates, scenario explorer, footer, payback
-calculator.
+Sections (all reviewed): hero, challenge, evidence, technology, gap,
+intervention, purchase mechanism, Techleap's role, investor relations, first
+six months, conclusion (#close: dark, heading left, paragraph right, "What
+Techleap should test" band). Removed: gates, scenario explorer, footer, deck.
+The payback calculator is a pop-out in the technology section (#calcsheet).
 
 Not yet reviewed: the closing (#close). The deck was removed on 2026-10-02.
 
