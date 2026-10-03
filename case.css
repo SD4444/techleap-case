@@ -855,3 +855,4 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .src-group li>span a{color:inherit;text-underline-offset:3px}
 .src-group li>span a:hover{color:#1e7a45}
 @media(max-width:800px){.src-group{grid-template-columns:1fr;gap:16px}.sources-page #sources{padding-top:110px}}
+.sources-page .section-head{grid-template-columns:1fr;margin-bottom:40px}
