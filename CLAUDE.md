@@ -7,7 +7,7 @@ case is the content. Built 2026-09-16 from the Tarnoc funding site framework.
 
 ## Status
 
-Version 0.99 (2026-10-02, tag v0.99). Content pass with Simon complete for
+Version 1.0 (2026-10-03, tag v1.0). Content pass with Simon complete for
 all sections. Deck removed 2026-10-02. Header brand: "Financing Clean Weeding".
 
 Final mechanism: technology company sets the price; growers or contractors
