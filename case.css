@@ -900,3 +900,4 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .fc-strip p{margin:0;font-size:15px;line-height:1.6;color:#c1c7cc}
 #sheetB .fc-final{font-size:16px;color:#fff;font-weight:500;margin:0 0 8px}
 @media(max-width:800px){#sheetB .fc-cards{grid-template-columns:1fr}#sheetB .fc-card{grid-row:auto;grid-template-rows:none}#sheetB .fc-card .fc-result,#sheetB .fc-card .fc-note{grid-row:auto}}
+#sheetB .fc .spec-table{margin:0 0 20px}
