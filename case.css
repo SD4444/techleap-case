@@ -901,3 +901,8 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .fc-final{font-size:16px;color:#fff;font-weight:500;margin:0 0 8px}
 @media(max-width:800px){#sheetB .fc-cards{grid-template-columns:1fr}#sheetB .fc-card{grid-row:auto;grid-template-rows:none}#sheetB .fc-card .fc-result,#sheetB .fc-card .fc-note{grid-row:auto}}
 #sheetB .fc .spec-table{margin:0 0 20px}
+#sheetB .risk-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 20px}
+#sheetB .risk-card{background:#1a2326;border:1px solid #ffffff1c;border-left:3px solid var(--orange);border-radius:12px;padding:24px 26px}
+#sheetB .risk-card .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#8fe3ad;margin-bottom:14px}
+#sheetB .risk-card p{margin:0;font-size:16px;line-height:1.5;color:#fff}
+@media(max-width:800px){#sheetB .risk-cards{grid-template-columns:1fr}}
