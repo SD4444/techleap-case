@@ -880,3 +880,23 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .prec-card li{font-size:14px;line-height:1.5}
 #sheetB .prec .dd-summary{margin-top:0}
 @media(max-width:1000px){#sheetB .prec-cards{grid-template-columns:1fr}}
+/* Farmer contribution deep dive */
+#sheetB .fc{max-width:none}
+#sheetB .fc .fc-intro{font-size:17px;line-height:1.6;color:#b7bec4;max-width:72ch;margin:0 0 28px}
+#sheetB .fc-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 20px}
+#sheetB .fc-card{background:#1a2326;border:1px solid #ffffff1c;border-radius:12px;padding:24px 26px;display:grid;grid-row:span 4;grid-template-rows:subgrid;gap:0}
+#sheetB .fc-card .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#8fe3ad;margin-bottom:14px}
+#sheetB .fc-body p{font-size:15px;line-height:1.6;color:#b7bec4;margin:0 0 12px}
+#sheetB .fc-card ul{margin:0 0 12px;padding:0}
+#sheetB .fc-card li{font-size:14px;line-height:1.5}
+#sheetB .fc-card .fc-result{grid-row:3;margin:6px 0 0;padding-top:14px;border-top:1px solid #ffffff22;color:#fff;font-size:15px;align-self:end}
+#sheetB .fc-card .fc-result b{color:#8fe3ad;font-weight:600}
+#sheetB .fc-card .fc-note{grid-row:4;margin:12px 0 0;font-size:13px;color:#9aa2a9}
+#sheetB .fc-calc{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;padding:26px 28px;border-radius:12px;background:#3ec26f1a;border:1px solid #3ec26f66;margin:0 0 16px}
+#sheetB .fc-calc .fc-term{font-size:clamp(18px,1.6vw,22px);letter-spacing:-.02em;color:#fff;font-weight:500}
+#sheetB .fc-calc i{font-style:normal;font-size:22px;color:#8fe3ad}
+#sheetB .fc-calc .fc-box{font-size:clamp(18px,1.6vw,22px);letter-spacing:-.02em;color:#fff;font-weight:500;padding:8px 14px;border-radius:8px;background:#0f1517;border:1px solid #ffffff22}
+#sheetB .fc-strip{padding:18px 24px;border-radius:12px;background:#1a2326;border:1px solid #ffffff1c;margin:0 0 20px}
+#sheetB .fc-strip p{margin:0;font-size:15px;line-height:1.6;color:#c1c7cc}
+#sheetB .fc-final{font-size:16px;color:#fff;font-weight:500;margin:0 0 8px}
+@media(max-width:800px){#sheetB .fc-cards{grid-template-columns:1fr}#sheetB .fc-card{grid-row:auto;grid-template-rows:none}#sheetB .fc-card .fc-result,#sheetB .fc-card .fc-note{grid-row:auto}}
