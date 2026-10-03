@@ -96,9 +96,10 @@
     const y = scrollY, range = Math.max(1, document.documentElement.scrollHeight - innerHeight), p = Math.min(1, y / range);
     const readout = $('.temperature'); if (readout) readout.textContent = Math.round(p * 100) + '%';
     const bar = $('.progress'); if (bar) bar.style.transform = `scaleX(${p})`;
+    if (!sections.length) return;
     sections.forEach((s, i) => { if (s.getBoundingClientRect().top <= innerHeight * .4) current = i; });
     updateControls();
-    $$('header nav a').forEach(a => a.classList.toggle('active', a.hash === '#' + sections[current].id));
+    $$('header nav a').forEach(a => a.classList.toggle('active', a.hash === '#' + sections[current].id || a.getAttribute('aria-current') === 'page'));
   }
   addEventListener('scroll', () => { if (!frame) frame = requestAnimationFrame(updateScroll); }, { passive: true });
   addEventListener('resize', () => { if (presenting) queueFit(); else updateScroll(); });
