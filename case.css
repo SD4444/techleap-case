@@ -856,3 +856,7 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .src-group li>span a:hover{color:#1e7a45}
 @media(max-width:800px){.src-group{grid-template-columns:1fr;gap:16px}.sources-page #sources{padding-top:110px}}
 .sources-page .section-head{grid-template-columns:1fr;margin-bottom:40px}
+#sheetB .dd-summary{background:#e4e8ea;color:var(--ink);border-radius:12px;padding:26px 28px;margin:36px 0 8px}
+#sheetB .dd-summary h4{color:var(--ink);margin:0 0 14px;border:0;padding:0}
+#sheetB .dd-summary p{color:#13191bcc;margin:0 0 12px}
+#sheetB .dd-summary p:last-child{margin-bottom:0}
