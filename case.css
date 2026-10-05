@@ -1065,3 +1065,6 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .tri-node.n3{transform:translate(-100%,-50%)}
 #investors .role-grid .role-body p{margin-bottom:12px}
 #investors .role-grid .role-body p:last-child{margin-bottom:0}
+.cond p{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
+.cond b{max-width:none}
+.cond{align-content:start}
