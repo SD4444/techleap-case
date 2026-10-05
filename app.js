@@ -49,9 +49,18 @@
       return;
     }
     if (innerWidth <= 800 || innerHeight <= 500) return;
-    const height = slide.offsetHeight;
-    const contentWidth = Math.max(...[...slide.children].filter(el => el.classList.contains('wrap')).map(el => el.offsetWidth), 1);
-    const scale = Math.min(stage.clientWidth / (contentWidth + 64), stage.clientHeight / height);
+    /* Never enlarge. When a slide is too tall, widen it by the same factor it is shrunk,
+       so the scaled slide still fills the stage and keeps the same margins as the others. */
+    let scale = 1, height = slide.offsetHeight;
+    for (let i = 0; i < 6; i++) {
+      const next = Math.min(1, stage.clientHeight / height);
+      if (Math.abs(next - scale) < 0.005) break;
+      scale = next;
+      slide.style.width = (stage.clientWidth / scale) + 'px';
+      height = slide.offsetHeight;
+    }
+    /* Guarantee the fit whatever the loop settled on. */
+    scale = Math.min(1, stage.clientHeight / height, stage.clientWidth / slide.offsetWidth);
     slide.style.transform = `scale(${scale})`;
     slide.style.setProperty('--slide-offset', Math.max(0, (stage.clientHeight - height * scale) / 2) + 'px');
   }

@@ -988,3 +988,19 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #calcsheet .pbk-method .src a{color:inherit;text-underline-offset:3px;display:block;margin:6px 0 0}
 #calcsheet .pbk-method .src a:first-of-type{display:inline;margin:0}
 #calcsheet .pbk-method .src a:hover{color:#8fe3ad}
+/* Gap closing question: its own section so it is a separate slide in present mode */
+#gap{padding-bottom:0}
+#gap-q{padding-top:0}
+#gap-q .missing{margin-top:80px;padding-bottom:0}
+.presenting #gap-q .missing{margin-top:0;border-top:0;padding-top:0}
+.presenting #gap-q .wrap{min-height:60vh;display:grid;align-content:center}
+/* Present mode: both challenge perspectives occupy the same space so the slide keeps one scale */
+.presenting .persp-text,.presenting .challenge-right{display:grid}
+.presenting .persp-text>[data-panel],.presenting .challenge-right>[data-panel]{grid-area:1/1}
+.presenting .persp-text>[data-panel][hidden]{display:block;visibility:hidden}
+.presenting .challenge-right>[data-panel][hidden]{display:flex;visibility:hidden}
+/* Present mode: slides keep the page margins; wide (shrunk) slides fill the stage */
+.presenting main>section.is-slide{transform-origin:top left}
+.presenting main>section.is-slide .wrap{width:calc(100% - 160px);max-width:none}
+.presenting .gap-chart svg{max-height:38vh}
+.presenting .gap-chart{display:grid}
