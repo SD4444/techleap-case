@@ -642,10 +642,10 @@
       <div class="section-head">
         <div>
           <p class="eyebrow">Grower payback calculator</p>
-          <h2 id="calcsheetH">Test when an outright robot purchase can pay for itself.</h2>
+          <h2 id="calcsheetH">Can annual savings recover the upfront machine price?</h2>
         </div>
         <div>
-          <p class="intro">Choose the current weed-control method, then change the farm and machine assumptions. The calculator compares current annual costs with recurring costs after adoption and estimates whether the resulting saving would recover the machine purchase price.</p>
+          <p class="intro">The calculator first estimates how the robot changes annual weed-control costs. If it produces an annual saving, it then calculates how many years of those savings are needed to recover the full upfront machine purchase price.</p>
           <p class="intro-note"><b>Cost-only estimate. Public funding and changes in crop margin are not included.</b></p>
         </div>
       </div>
@@ -697,6 +697,10 @@
           <div class="range-ends"><span>50 ha</span><span>1,000 ha</span></div>
         </div>
         <div class="pbk-results">
+          <div class="pbk-formula">
+            <p><b>Payback period = total upfront machine price ÷ annual operating saving</b></p>
+            <p>Payback is calculated only when the annual operating saving is positive.</p>
+          </div>
           <div class="pbk-card" id="pbkCard">
             <h3 id="pbkHead"></h3>
             <p id="pbkBody"></p>
@@ -710,12 +714,12 @@
               <div><span>Recurring annual cost after adoption<small>Remaining herbicide and hand weeding, plus annual service.</small></span><strong>0</strong></div>
               <div class="bar"><i></i></div>
             </div>
-            <div class="pbk-gain"><span>Annual gain or loss</span><b id="pbkGain">0</b></div>
+            <div class="pbk-gain"><span>Annual operating saving or loss</span><b id="pbkGain">0</b></div>
           </div>
           <div class="pbk-figs">
             <div><b id="pbkMachines">0</b><span>Machines required</span></div>
-            <div><b id="pbkTotal">0</b><span>Total machine price</span></div>
-            <div><b id="pbkYears">0</b><span>Estimated payback</span></div>
+            <div><b id="pbkTotal">0</b><span>Upfront machine purchase price</span></div>
+            <div><b id="pbkYears">0</b><span>Years to recover purchase price</span></div>
           </div>
           <div class="pbk-meaning">
             <h5>What this means</h5>
@@ -725,7 +729,8 @@
       </div>
       <div class="pbk-method">
         <h3>Methodology and assumptions</h3>
-        <p class="pbk-method-intro">This is a screening calculation for an outright machine purchase. It tests the private cost case before any public contribution. It does not determine the farmer or public contribution under the proposed programme.</p>
+        <p class="pbk-method-intro">This calculator separates recurring farm economics from upfront investment. It first calculates the annual operating saving or loss, then tests whether any saving would recover the full machine purchase price.</p>
+        <p class="pbk-method-intro">The full machine price is used deliberately. The calculator shows the stand-alone purchase case before any public contribution.</p>
         <div class="pbk-method-cols">
           <div>
             <p class="eyebrow">Calculation</p>

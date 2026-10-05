@@ -233,17 +233,17 @@
       const card = $('#pbkCard'); card.classList.toggle('pos', net > 0);
       if (savingHa <= 0) {
         $('#pbkHead').textContent = 'The robot does not reduce weed-control costs.';
-        $('#pbkBody').textContent = 'Remaining herbicide and hand-weeding costs are equal to or higher than current costs, before service or the machine purchase price.';
+        $('#pbkBody').textContent = 'Remaining herbicide and hand-weeding costs are equal to or higher than current costs, before service or the upfront machine purchase price.';
       } else if (net <= 0) {
         $('#pbkHead').textContent = 'Annual savings do not cover service costs.';
-        $('#pbkBody').textContent = `The robot avoids ${eur(grossYear)} of weed-control cost each year, but annual service costs are ${eur(serviceYear)}. Recurring costs therefore increase by ${eur(-net)}, before recovering the machine price.`;
+        $('#pbkBody').textContent = `The robot avoids ${eur(grossYear)} of weed-control cost each year, but annual service costs are ${eur(serviceYear)}. Annual operating costs therefore increase by ${eur(-net)}. Because there is no annual saving, the ${eur(capex)} purchase price is not recovered.`;
       } else {
-        $('#pbkHead').textContent = `Estimated payback: ${years.toFixed(1)} years`;
-        $('#pbkBody').textContent = `After remaining weed-control and service costs, the farm saves ${eur(net)} per year. At a total machine price of ${eur(capex)}, that saving recovers the purchase price in ${years.toFixed(1)} years.`;
+        $('#pbkHead').textContent = `Upfront purchase price recovered in ${years.toFixed(1)} years.`;
+        $('#pbkBody').textContent = `After remaining weed-control and service costs, the robot saves ${eur(net)} per year. Those savings recover the ${eur(capex)} purchase price in ${years.toFixed(1)} years.`;
       }
       $('#pbkMeaning').textContent = net > 0
-        ? 'The robot creates annual farm value under these assumptions. The farmer contribution is determined separately using verified economics and a signed offer.'
-        : 'A one-time public contribution would not solve a recurring cost gap. Costs must fall or a verified crop-margin benefit must be demonstrated.';
+        ? 'Under these assumptions, the robot generates annual savings that can recover its upfront purchase price. The farmer\'s actual contribution is determined separately using verified farm economics and a signed offer.'
+        : 'Under these assumptions, the robot increases annual operating costs. Reducing the upfront price would not fix that. Recurring costs must fall or a verified crop-margin benefit must offset the difference.';
     }
     ins.forEach(i => i.addEventListener('input', render));
     $$('#pbkPreset button').forEach(b => b.addEventListener('click', () => { pbk.dataset.herb = b.dataset.herb; $('#pbkPasses').value = b.dataset.passes; $('#pbkHours').value = b.dataset.hours; if (b.dataset.herb === '0') $('#pbkPassesAfter').value = 0; render(); }));
