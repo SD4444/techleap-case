@@ -1209,3 +1209,9 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
   .tri-node.n2{left:auto;right:0;transform:translate(0,-50%)}
   .tri-node.n3{left:0;transform:translate(0,-50%)}
 }
+@media(max-width:380px){
+  header .brand b{font-size:15px}
+  header .temperature{display:none}
+  header .menu-toggle{padding:8px 12px}
+  header{gap:10px}
+}
