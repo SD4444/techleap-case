@@ -1009,3 +1009,6 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #calcsheet .pbk-formula p:first-child{font-size:16px;color:#fff;margin-bottom:6px}
 #calcsheet .pbk-formula b{font-weight:600}
 #calcsheet .pbk-method-intro+.pbk-method-intro{margin-top:-20px}
+#calcsheet .pbk-preset-note{font-size:14px;line-height:1.55;color:#b7bec4;margin:-6px 0 14px}
+#calcsheet .segmented.three{max-width:none}
+#calcsheet .pbk-scenario-note{font-size:13px;line-height:1.6;color:#9aa2a9;margin:20px 0 0;max-width:80ch}

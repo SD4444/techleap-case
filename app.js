@@ -206,7 +206,7 @@
   const pbk = $('#payback-panel');
   if (pbk) {
     const ins = $$('#payback-panel input[type=range]');
-    const eur = n => '€' + (Math.abs(n) >= 1e6 ? (n / 1e6).toFixed(2) + 'm' : Math.abs(n) >= 1e4 ? Math.round(n / 1e3).toLocaleString('en-GB') + 'k' : Math.round(n).toLocaleString('en-GB'));
+    const eur = n => '€' + (Math.abs(n) >= 1e6 ? (n / 1e6).toFixed(2) + 'm' : Math.round(n).toLocaleString('en-GB'));
     const fmt = { pbkPasses: v => v, pbkPassCost: v => '€' + v, pbkHours: v => v + ' h', pbkWage: v => '€' + v, pbkPassesAfter: v => v, pbkHoursAfter: v => v + ' h', pbkHa: v => v + ' ha', pbkPrice: v => eur(v), pbkService: v => eur(v), pbkCap: v => v.toLocaleString('en-GB') + ' ha' };
     function render() {
       const v = Object.fromEntries(ins.map(i => [i.id, +i.value]));
@@ -233,13 +233,13 @@
       const card = $('#pbkCard'); card.classList.toggle('pos', net > 0);
       if (savingHa <= 0) {
         $('#pbkHead').textContent = 'The robot does not reduce weed-control costs.';
-        $('#pbkBody').textContent = 'Remaining herbicide and hand-weeding costs are equal to or higher than current costs, before service or the upfront machine purchase price.';
+        $('#pbkBody').textContent = 'The machine does not recover its purchase price under these assumptions.';
       } else if (net <= 0) {
         $('#pbkHead').textContent = 'Annual savings do not cover service costs.';
-        $('#pbkBody').textContent = `The robot avoids ${eur(grossYear)} of weed-control cost each year, but annual service costs are ${eur(serviceYear)}. Annual operating costs therefore increase by ${eur(-net)}. Because there is no annual saving, the ${eur(capex)} purchase price is not recovered.`;
+        $('#pbkBody').textContent = 'The machine does not recover its purchase price under these assumptions.';
       } else {
         $('#pbkHead').textContent = `Upfront purchase price recovered in ${years.toFixed(1)} years.`;
-        $('#pbkBody').textContent = `After remaining weed-control and service costs, the robot saves ${eur(net)} per year. Those savings recover the ${eur(capex)} purchase price in ${years.toFixed(1)} years.`;
+        $('#pbkBody').textContent = `The ${eur(capex)} purchase price is recovered in ${years.toFixed(1)} years through annual operating savings of ${eur(net)}.`;
       }
       $('#pbkMeaning').textContent = net > 0
         ? 'Under these assumptions, the robot generates annual savings that can recover its upfront purchase price. The farmer\'s actual contribution is determined separately using verified farm economics and a signed offer.'

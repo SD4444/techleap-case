@@ -652,9 +652,11 @@
       <div class="economics-grid" id="payback-panel">
         <div class="controls">
           <p class="eyebrow">Current practice</p>
-          <div class="segmented" id="pbkPreset" role="group" aria-label="Choose current weeding practice">
-            <button data-passes="3" data-hours="0" data-herb="1" aria-pressed="true">Herbicide programme</button>
-            <button data-passes="0" data-hours="85" data-herb="0" aria-pressed="false">Organic, fine-seeded</button>
+          <p class="pbk-preset-note">All three scenarios use herbicides. They differ in the amount of hand weeding still required after spraying.</p>
+          <div class="segmented three" id="pbkPreset" role="group" aria-label="Choose current weeding practice">
+            <button data-passes="3" data-hours="10" data-herb="1" aria-pressed="false">10 h/ha hand weeding</button>
+            <button data-passes="3" data-hours="20" data-herb="1" aria-pressed="true">20 h/ha hand weeding</button>
+            <button data-passes="3" data-hours="40" data-herb="1" aria-pressed="false">40 h/ha hand weeding</button>
           </div>
           <p class="eyebrow ctl-group">Today, per hectare per year</p>
           <div class="pbk-herb">
@@ -666,8 +668,8 @@
           <div class="range-ends"><span>€20</span><span>€150</span></div>
           <small class="source">Assumption: about €30 application plus about €40 product. Source: <a href="https://loonbedrijftamminga.nl/prijzen-meststoffen-2026/" target="_blank" rel="noopener">Loonbedrijf Tamminga, 2026 tariffs ↗</a></small>
           </div>
-          <label for="pbkHours">Hand-weeding hours <output id="pbkHoursV">0 h</output></label>
-          <input type="range" id="pbkHours" min="0" max="150" step="5" value="0">
+          <label for="pbkHours">Hand-weeding hours <output id="pbkHoursV">20 h</output></label>
+          <input type="range" id="pbkHours" min="0" max="150" step="5" value="20">
           <div class="range-ends"><span>0 h</span><span>150 h</span></div>
           <label for="pbkWage">Hourly wage <output id="pbkWageV">€20</output></label>
           <input type="range" id="pbkWage" min="12" max="35" step="1" value="20">
@@ -682,13 +684,13 @@
           <input type="range" id="pbkHoursAfter" min="0" max="40" step="1" value="0">
           <div class="range-ends"><span>0 h</span><span>40 h</span></div>
           <p class="eyebrow ctl-group">Robot</p>
-          <label for="pbkHa">Hectares weeded per year <output id="pbkHaV">30 ha</output></label>
-          <input type="range" id="pbkHa" min="5" max="500" step="5" value="30">
+          <label for="pbkHa">Hectares weeded per year <output id="pbkHaV">60 ha</output></label>
+          <input type="range" id="pbkHa" min="5" max="500" step="5" value="60">
           <div class="range-ends"><span>5 ha</span><span>500 ha</span></div>
-          <label for="pbkPrice">Machine price <output id="pbkPriceV">€115k</output></label>
+          <label for="pbkPrice">Machine price <output id="pbkPriceV">€115,000</output></label>
           <input type="range" id="pbkPrice" min="60000" max="1500000" step="5000" value="115000">
           <div class="range-ends"><span>€60k</span><span>€1.5m</span></div>
-          <label for="pbkService">Annual service, maintenance and data <output id="pbkServiceV">€11k</output></label>
+          <label for="pbkService">Annual service, maintenance and data <output id="pbkServiceV">€11,000</output></label>
           <input type="range" id="pbkService" min="0" max="100000" step="1000" value="11000">
           <div class="range-ends"><span>€0</span><span>€100k</span></div>
           <label for="pbkCap">Capacity per machine per season <output id="pbkCapV">225 ha</output></label>
@@ -726,6 +728,7 @@
           </div>
         </div>
       </div>
+      <p class="pbk-scenario-note">These are illustrative cost scenarios, not crop benchmarks. The calculator shows how residual hand-weeding requirements affect the economics of replacing an herbicide programme.</p>
       <div class="pbk-method">
         <h3>Methodology and assumptions</h3>
         <p class="pbk-method-intro">This calculator separates recurring farm economics from upfront investment. It first calculates the annual operating saving or loss, then tests whether any saving would recover the full machine purchase price.</p>
