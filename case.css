@@ -1056,3 +1056,6 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .presenting #plan .section-head>div:nth-child(2){padding-top:calc(13px + 22px)}
 #signals .channels h3{min-height:2.25em}
 .presenting .part-eyebrow:has(~ .part-first > .eyebrow:first-child){display:none}
+#signals .channels{grid-template-columns:repeat(2,1fr);gap:0 48px}
+#signals .channels article p+p{margin-top:12px}
+#signals .channels h3{min-height:0}
