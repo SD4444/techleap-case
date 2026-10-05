@@ -921,3 +921,4 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .dd-def b{display:block;font-size:13px;color:#e6e9ec;font-weight:600;margin-bottom:4px}
 #sheetB .dd-def span{display:block;font-size:13px;line-height:1.5;color:#9aa2a9}
 #sheetB .dd-foot{font-size:12.5px;line-height:1.5;color:#7a8087;margin:16px 0 0}
+#calcsheet .pbk-foot{margin-top:6px}
