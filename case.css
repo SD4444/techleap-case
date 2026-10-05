@@ -1036,9 +1036,10 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .presenting #plan .section-head{margin-bottom:20px}
 .presenting #conflict h2{font-size:clamp(32px,3.6vw,50px)}
 .presenting #conflict .facts{gap:0}
-.presenting #ask .hub{width:min(100%,1040px);margin-bottom:0}
-.presenting #ask .hub-node{font-size:19px;padding:16px 22px}
-.presenting #ask .hub-node small{font-size:13.5px;margin-top:6px}
-.presenting #ask .hub-core{font-size:23px;padding:20px 28px}
-.presenting #ask .hub-core small{font-size:14px;max-width:32ch}
-.presenting #ask .section-head{margin-bottom:28px}
+.presenting #ask .hub{width:min(100%,920px);margin-bottom:0}
+.presenting #ask .hub-node{font-size:17px;padding:14px 20px}
+.presenting #ask .hub-node small{font-size:12.5px;margin-top:5px}
+.presenting #ask .hub-core{font-size:20px;padding:18px 24px}
+.presenting #ask .hub-core small{font-size:13px;max-width:30ch}
+.presenting #ask .section-head{margin-bottom:32px}
+.presenting #ask h2{font-size:clamp(32px,3.6vw,50px)}
