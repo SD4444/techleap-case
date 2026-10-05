@@ -1123,3 +1123,7 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .chain.light.follow-chain{margin-top:0}
 .presenting #plan .timeline{padding:16px 24px}
 .presenting #plan .tl-rows{grid-auto-rows:40px;gap:6px 0}
+#sheetB .co-who b a{display:inline;margin:0;color:inherit;text-decoration:none;border-bottom:1px solid #ffffff33}
+#sheetB .co-who b a:hover{color:#8fe3ad;border-color:#8fe3ad}
+#sheetB .co-region-block:first-of-type{margin-top:0}
+#sheetB .fc .dd-foot{margin:28px 0 0}
