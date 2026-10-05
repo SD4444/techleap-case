@@ -922,3 +922,10 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .dd-def span{display:block;font-size:13px;line-height:1.5;color:#9aa2a9}
 #sheetB .dd-foot{font-size:12.5px;line-height:1.5;color:#7a8087;margin:16px 0 0}
 #calcsheet .pbk-foot{margin-top:6px}
+#sheetB .bill-cards .fc-card{grid-row:span 4}
+#sheetB .bill-cards .fc-card>p:not(.dd-def){font-size:15px;line-height:1.6;color:#b7bec4;margin:0 0 16px}
+#sheetB .bill-cards .figs-dd{gap:14px}
+#sheetB .bill-cards .bill-def{grid-row:4;margin-top:18px}
+#sheetB .fc .dd-foot{margin:0 0 28px}
+#sheetB .fc h4{margin-top:0}
+@media(max-width:800px){#sheetB .bill-cards .fc-card{grid-row:auto}#sheetB .bill-cards .bill-def{grid-row:auto}}
