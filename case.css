@@ -884,7 +884,7 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .fc{max-width:none}
 #sheetB .fc .fc-intro{font-size:17px;line-height:1.6;color:#b7bec4;max-width:72ch;margin:0 0 28px}
 #sheetB .fc-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 20px}
-#sheetB .fc-card{background:#1a2326;border:1px solid #ffffff1c;border-radius:12px;padding:24px 26px;display:grid;grid-row:span 4;grid-template-rows:subgrid;gap:0}
+#sheetB .fc-card{background:#1a2326;border:1px solid #ffffff1c;border-radius:12px;padding:24px 26px;display:grid;grid-row:span 3;grid-template-rows:subgrid;gap:0}
 #sheetB .fc-card .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#8fe3ad;margin-bottom:14px}
 #sheetB .fc-body p{font-size:15px;line-height:1.6;color:#b7bec4;margin:0 0 12px}
 #sheetB .fc-card ul{margin:0 0 12px;padding:0}

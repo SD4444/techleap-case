@@ -141,44 +141,35 @@
   </div>
 </template>
 
-<template id="dd-contribution" data-k="" data-h="How the farmer's contribution is set.">
+<template id="dd-contribution" data-k="" data-h="How much does the farmer pay?">
   <div class="detail-body compact fc">
-    <p class="fc-intro">For each crop and weed-control operation, the farmer's contribution is agreed before validation using two limits.</p>
+    <p class="fc-intro">For each crop and weed-control task, the farmer's contribution is set before validation using two limits.</p>
     <div class="fc-cards">
       <article class="fc-card">
-        <span class="tag">Economic ceiling</span>
+        <span class="tag">What is financially justified?</span>
         <div class="fc-body">
-        <p>Estimate the value created by switching over an agreed period:</p>
-        <ul>
-          <li>Avoided current weed-control costs</li>
-          <li>Plus evidence-supported crop-margin improvement</li>
-          <li>Minus robot operating and transition costs</li>
-          <li>Minus the minimum benefit retained by the farmer</li>
-        </ul>
+        <p>Calculate the maximum upfront contribution that still leaves the farm better off after switching.</p>
+        <p>Use expected weed-control savings, verified crop-margin benefits and the robot's operating costs.</p>
         </div>
-        <p class="fc-result"><b>Result:</b> Maximum economically justified contribution</p>
-        <p class="fc-note">Use conservative, evidence-supported assumptions until validation provides actual results.</p>
+        <p class="fc-result"><b>Result:</b> Maximum justified contribution</p>
       </article>
       <article class="fc-card">
-        <span class="tag">Signed farmer offer</span>
+        <span class="tag">What will the farmer commit?</span>
         <div class="fc-body">
-        <p>Structured interviews establish a realistic contribution range. The farmer then signs a conditional offer stating what they will pay at delivery if the machine passes validation.</p>
+        <p>Interviews establish what farmers can realistically pay upfront. The farmer records the final amount in a signed conditional offer.</p>
         </div>
-        <p class="fc-result"><b>Result:</b> Maximum amount the farmer will commit</p>
+        <p class="fc-result"><b>Result:</b> Signed farmer offer</p>
       </article>
     </div>
     <div class="fc-calc">
       <span class="fc-term">Farmer contribution</span>
       <i>=</i>
-      <span class="fc-term">the lower of</span>
-      <span class="fc-box">the economic ceiling</span>
-      <span class="fc-term">and</span>
-      <span class="fc-box">the signed offer</span>
+      <span class="fc-term">the lower of these two amounts</span>
     </div>
     <div class="fc-strip">
-      <p>The public fund covers the remaining machine price, up to its programme cap. If the combined contributions do not cover the price, the purchase does not proceed.</p>
+      <p>The public fund covers the remaining machine price, up to its limit. If the two contributions do not cover the price, the purchase does not proceed.</p>
     </div>
-    <p class="fc-final">The contribution is agreed before validation and paid only after the machine passes and is delivered.</p>
+    <p class="fc-final">Agreed before validation. Paid only after the machine passes and is delivered.</p>
     <p class="src"><b>Sources:</b>&nbsp;<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10075499/" target="_blank" rel="noopener">Shang et al. 2023, How much can farmers pay for weeding robots?</a> (defines the maximum acquisition value as the machine price at which farm profitability equals that of the current method); <a href="https://www.gov.uk/guidance/advanced-market-commitments-amc" target="_blank" rel="noopener">UK government, Advance Market Commitments guidance</a></p>
   </div>
 </template>
