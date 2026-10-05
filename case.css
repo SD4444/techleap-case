@@ -1060,3 +1060,6 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #signals .channels{grid-template-columns:repeat(2,1fr);gap:0 48px}
 #signals .channels article p+p{margin-top:12px}
 #signals .channels h3{min-height:0}
+/* Side nodes anchor on their inner edge so both dashed lines show the same length */
+.tri-node.n2{transform:translate(0,-50%)}
+.tri-node.n3{transform:translate(-100%,-50%)}
