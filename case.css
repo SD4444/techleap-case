@@ -670,9 +670,10 @@ dialog#sheet .sheet-x{position:absolute;top:18px;right:18px;float:none}
 #ask .role-grid{margin-bottom:0}
 /* Technology head: same columns as the selector grid below */
 #routes .section-head{grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
-#routes .section-head>.intro{margin:0;padding-left:49px;max-width:56ch}
+#routes .section-head>.head-right{padding-left:49px}
+#routes .section-head .intro{margin:0;max-width:56ch}
 #routes h2{max-width:none}
-@media(max-width:1000px){#routes .section-head{grid-template-columns:1fr}#routes .section-head>.intro{padding-left:0}}
+@media(max-width:1000px){#routes .section-head{grid-template-columns:1fr}#routes .section-head>.head-right{padding-left:0}}
 
 /* Orphan control */
 h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
@@ -705,7 +706,7 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .section-head{align-items:start}
 .section-head>.intro{margin-top:0;padding-top:calc(13px + 28px + 6px)}
 #gap .section-head .intro{padding-top:0}
-#mechanism .section-head>.intro,#routes .section-head>.intro{padding-top:calc(13px + 28px + 6px)}
+#mechanism .section-head>.intro,#routes .section-head>.head-right{padding-top:calc(13px + 28px + 6px)}
 #plan .section-head>div:nth-child(2){padding-top:calc(13px + 28px + 6px)}
 #plan .section-head>div:nth-child(2) .intro{padding-top:0;margin-top:0}
 
@@ -1068,3 +1069,20 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .cond p{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
 .cond b{max-width:none}
 .cond{align-content:start}
+
+/* Technology: aerial field animations */
+.field-anim{margin-top:28px}
+.field-svg{display:block;width:100%;max-width:520px;height:auto;border-radius:12px;border:1px solid #ffffff1c;background:#2b2420}
+.field-svg .scroll{animation:field-scroll var(--p,5s) linear infinite}
+.field-svg .weed{fill:#a7b35a}
+.field-svg .rotor{transform-box:fill-box;transform-origin:center;animation:rotor-spin 1.2s linear infinite}
+.field-svg .rotor.rev{animation-direction:reverse}
+.field-svg .zap{opacity:0;animation:zap var(--p,6s) linear infinite}
+.field-cap{font-size:12.5px;line-height:1.5;color:#9aa2a9;margin:10px 0 0;max-width:520px}
+@keyframes field-scroll{from{transform:translateY(0)}to{transform:translateY(260px)}}
+@keyframes rotor-spin{to{transform:rotate(360deg)}}
+@keyframes zap{0%,96.5%{opacity:0}97%,100%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.field-svg .scroll,.field-svg .rotor,.field-svg .zap{animation:none}.field-svg .zap{opacity:0}}
+.presenting #routes h2{font-size:clamp(32px,3.6vw,50px)}
+.presenting #routes .field-anim{margin-top:20px}
+.presenting #routes .field-svg{max-width:400px}
