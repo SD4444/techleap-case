@@ -212,20 +212,29 @@
       const net = savingHa * v.pbkHa - v.pbkService * machines;
       const capex = v.pbkPrice * machines;
       const years = net > 0 ? capex / net : null;
-      const peak = Math.max(before, after, 1);
-      const rows = { before, after };
+      const grossYear = savingHa * v.pbkHa, serviceYear = v.pbkService * machines;
+      const beforeYear = before * v.pbkHa, afterYear = after * v.pbkHa + serviceYear;
+      const peak = Math.max(beforeYear, afterYear, 1);
+      const rows = { before: beforeYear, after: afterYear };
       Object.entries(rows).forEach(([key, val]) => { const row = pbk.querySelector(`.cost-row[data-k="${key}"]`); row.querySelector('.bar i').style.width = (val / peak * 100) + '%'; row.querySelector('strong').textContent = eur(val); });
-      $('#pbkSavingHa').textContent = (savingHa < 0 ? '−' : '') + eur(Math.abs(savingHa));
-      $('#pbkNet').textContent = (net < 0 ? '−' : '') + eur(Math.abs(net));
-      $('#pbkYears').textContent = years === null ? 'None' : years >= 100 ? '>100' : years.toFixed(1);
+      const gain = $('#pbkGain'); gain.textContent = (net < 0 ? '−' : '') + eur(Math.abs(net)); gain.classList.toggle('pos', net > 0); gain.classList.toggle('neg', net < 0);
       $('#pbkMachines').textContent = String(machines);
-      $('#pbkHead').textContent = years === null
-        ? `No payback at any machine price. The robot saves ${eur(savingHa)} per hectare, ${eur(savingHa * v.pbkHa)} a year on ${v.pbkHa} hectares, which is below the ${eur(v.pbkService * machines)} annual service cost. Raise the hectares or lower the service cost.`
-        : years > 10
-          ? `Payback in ${years >= 100 ? 'more than 100' : years.toFixed(1)} years. At this saving the machine does not pay for itself within its likely life.`
-          : `Payback in ${years.toFixed(1)} years. The robot saves ${eur(savingHa)} per hectare, ${eur(net)} a year on ${v.pbkHa} hectares after service.`;
-      const passTerm = (n) => herb ? `${n} pass${n === 1 ? '' : 'es'} × €${v.pbkPassCost} + ` : '';
-      $('#pbkNote').textContent = `Today: ${passTerm(v.pbkPasses)}${v.pbkHours} h × €${v.pbkWage} = ${eur(before)} per hectare. With the robot: ${passTerm(v.pbkPassesAfter)}${v.pbkHoursAfter} h × €${v.pbkWage} = ${eur(after)} per hectare. ${machines} machine${machines > 1 ? 's' : ''} at ${v.pbkCap} ha each: ${eur(capex)} price, ${eur(v.pbkService * machines)} service a year. Payback = price ÷ (yearly saving − service). Assumes unchanged yield, a solar-powered robot with no charging cost, no operator cost, no financing cost, no residual value. Price, service and capacity defaults are one supplier's figures, converted to euros and rounded. Presets are that supplier's cost estimates, not measured Dutch farm costs.${herb ? ' €70 per pass is an assumption: contractors charge €27 to €37.50 per hectare to spray, product on top.' : ''}`;
+      $('#pbkTotal').textContent = eur(capex);
+      $('#pbkYears').textContent = years === null ? 'Not reached' : years.toFixed(1) + ' years';
+      const card = $('#pbkCard'); card.classList.toggle('pos', net > 0);
+      if (savingHa <= 0) {
+        $('#pbkHead').textContent = 'The robot does not reduce weed-control costs.';
+        $('#pbkBody').textContent = 'Remaining herbicide and hand-weeding costs are equal to or higher than current costs, before service or the machine purchase price.';
+      } else if (net <= 0) {
+        $('#pbkHead').textContent = 'Annual savings do not cover service costs.';
+        $('#pbkBody').textContent = `The robot avoids ${eur(grossYear)} of weed-control cost each year, but annual service costs are ${eur(serviceYear)}. Recurring costs therefore increase by ${eur(-net)}, before recovering the machine price.`;
+      } else {
+        $('#pbkHead').textContent = `Estimated payback: ${years.toFixed(1)} years`;
+        $('#pbkBody').textContent = `After remaining weed-control and service costs, the farm saves ${eur(net)} per year. At a total machine price of ${eur(capex)}, that saving recovers the purchase price in ${years.toFixed(1)} years.`;
+      }
+      $('#pbkMeaning').textContent = net > 0
+        ? 'The robot creates annual farm value under these assumptions. The farmer contribution is determined separately using verified economics and a signed offer.'
+        : 'A one-time public contribution would not solve a recurring cost gap. Costs must fall or a verified crop-margin benefit must be demonstrated.';
     }
     ins.forEach(i => i.addEventListener('input', render));
     $$('#pbkPreset button').forEach(b => b.addEventListener('click', () => { pbk.dataset.herb = b.dataset.herb; $('#pbkPasses').value = b.dataset.passes; $('#pbkHours').value = b.dataset.hours; if (b.dataset.herb === '0') $('#pbkPassesAfter').value = 0; render(); }));

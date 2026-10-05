@@ -942,3 +942,49 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .dd-summary p.dd-summary-small{font-size:13px;color:#13191b99;margin:16px 0 0}
 @media(max-width:1000px){#sheetB .mech-cards{grid-template-columns:1fr}#sheetB .mech-card{grid-row:auto;grid-template-rows:none}}
 #sheetB .mech-cards.two{grid-template-columns:1fr 1fr}
+/* Payback calculator: results and methodology */
+#calcsheet .intro-note{margin:14px 0 0;font-size:14px;color:#e6e9ec}
+#calcsheet .intro-note b{font-weight:600}
+#calcsheet .pbk-results{display:grid;gap:28px;align-content:start;padding-top:4px}
+#calcsheet .pbk-card{background:#1a2326;border:1px solid #ffffff1c;border-radius:12px;padding:28px 30px}
+#calcsheet .pbk-card.pos{border-color:#3ec26f66;background:#3ec26f14}
+#calcsheet .pbk-card h3{font-size:clamp(22px,2vw,28px);line-height:1.2;letter-spacing:-.03em;color:#fff;margin:0 0 12px}
+#calcsheet .pbk-card p{margin:0;font-size:15px;line-height:1.6;color:#c1c7cc}
+#calcsheet .pbk-compare{border-top:1px solid #ffffff18;padding-top:8px}
+#calcsheet .pbk-compare .cost-row>div:first-child span{display:block}
+#calcsheet .pbk-compare .cost-row small{display:block;font-size:12px;color:#8a9298;margin-top:3px}
+#calcsheet .pbk-gain{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid #ffffff18;padding-top:18px;margin-top:6px}
+#calcsheet .pbk-gain span{font-size:14px;color:#c1c7cc}
+#calcsheet .pbk-gain b{font-size:clamp(34px,3.4vw,48px);font-weight:400;letter-spacing:-.05em;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+#calcsheet .pbk-gain b.pos{color:#8fe3ad}
+#calcsheet .pbk-gain b.neg{color:#e6e9ec}
+#calcsheet .pbk-figs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid #ffffff18;padding-top:22px}
+#calcsheet .pbk-figs b{display:block;font-size:26px;font-weight:400;letter-spacing:-.04em;line-height:1.1;color:#fff;margin-bottom:6px;font-variant-numeric:tabular-nums}
+#calcsheet .pbk-figs span{display:block;font-size:13px;color:#c1c7cc}
+#calcsheet .pbk-meaning{border-top:1px solid #ffffff18;padding-top:20px}
+#calcsheet .pbk-meaning h5{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8fe3ad;margin:0 0 8px}
+#calcsheet .pbk-meaning p{margin:0;font-size:14px;line-height:1.6;color:#c1c7cc}
+#calcsheet .pbk-method{border-top:1px solid #ffffff24;margin-top:56px;padding-top:48px}
+#calcsheet .pbk-method h3{font-size:clamp(24px,2.4vw,32px);letter-spacing:-.03em;line-height:1.15;color:#fff;margin:0 0 16px}
+#calcsheet .pbk-method-intro{font-size:16px;line-height:1.6;color:#b7bec4;max-width:72ch;margin:0 0 36px}
+#calcsheet .pbk-method-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+#calcsheet .pbk-method-cols .eyebrow{margin-bottom:14px}
+#calcsheet .pbk-method-cols p,#calcsheet .pbk-method-cols dd,#calcsheet .pbk-method-cols li{font-size:14px;line-height:1.6;color:#b7bec4}
+#calcsheet .pbk-method-cols p{margin:0 0 12px}
+#calcsheet .pbk-method-cols dl{margin:0}
+#calcsheet .pbk-method-cols dt{font-size:14px;font-weight:600;color:#e6e9ec;margin:0 0 4px}
+#calcsheet .pbk-method-cols dd{margin:0 0 14px}
+#calcsheet .pbk-method-cols ul{margin:0 0 14px;padding-left:18px}
+#calcsheet .pbk-method-cols li{margin-bottom:4px}
+#calcsheet .pbk-method-note{border-top:1px solid #ffffff18;margin-top:28px;padding-top:24px;max-width:80ch}
+#calcsheet .pbk-method-note h5{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8fe3ad;margin:0 0 8px}
+#calcsheet .pbk-method-note p{margin:0;font-size:14px;line-height:1.6;color:#b7bec4}
+#calcsheet .pbk-method .src{margin-top:28px}
+#calcsheet .pbk-method .src .src-note{display:block;font-size:12.5px;color:#7a8087;margin-top:6px}
+@media(max-width:900px){#calcsheet .pbk-method-cols{grid-template-columns:1fr;gap:24px}#calcsheet .pbk-figs{grid-template-columns:1fr 1fr}}
+#calcsheet .pbk-compare .accent strong{color:#fff}
+#calcsheet .pbk-method .src{font-size:13px;color:#9aa2a9;border-top:1px solid #ffffff18;padding-top:18px}
+#calcsheet .pbk-method .src b{color:#e6e9ec;display:inline}
+#calcsheet .pbk-method .src a{color:inherit;text-underline-offset:3px;display:block;margin:6px 0 0}
+#calcsheet .pbk-method .src a:first-of-type{display:inline;margin:0}
+#calcsheet .pbk-method .src a:hover{color:#8fe3ad}

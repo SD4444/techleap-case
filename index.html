@@ -637,9 +637,12 @@
       <div class="section-head">
         <div>
           <p class="eyebrow">Grower payback calculator</p>
-          <h2 id="calcsheetH">A light-weeding robot pays back against hand-weeding costs, not herbicide costs.</h2>
+          <h2 id="calcsheetH">Test when an outright robot purchase can pay for itself.</h2>
         </div>
-        <p class="intro">The calculator compares the weeding cost per hectare today with the cost after a robot, and shows how many years the saving takes to cover the machine price. Three starting points: a herbicide programme (three spray passes, no hand weeding), organic transplanted crops (no herbicides, about 20 hours of hand weeding per hectare) and organic fine-seeded crops (no herbicides, about 85 hours per hectare). Move the sliders to change the assumptions.</p>
+        <div>
+          <p class="intro">Choose the current weed-control method, then change the farm and machine assumptions. The calculator compares current annual costs with recurring costs after adoption and estimates whether the resulting saving would recover the machine purchase price.</p>
+          <p class="intro-note"><b>Cost-only estimate. Public funding and changes in crop margin are not included.</b></p>
+        </div>
       </div>
       <div class="economics-grid" id="payback-panel">
         <div class="controls">
@@ -688,30 +691,71 @@
           <input type="range" id="pbkCap" min="50" max="1000" step="25" value="225">
           <div class="range-ends"><span>50 ha</span><span>1,000 ha</span></div>
         </div>
-        <div>
-          <p class="result-head" id="pbkHead">…</p>
-          <div class="cost-row" data-k="before">
-            <div><span>Weeding cost today, per hectare per year</span><strong>0</strong></div>
-            <div class="bar"><i></i></div>
+        <div class="pbk-results">
+          <div class="pbk-card" id="pbkCard">
+            <h3 id="pbkHead"></h3>
+            <p id="pbkBody"></p>
           </div>
-          <div class="cost-row accent" data-k="after">
-            <div><span>Weeding cost with the robot, per hectare per year, before the machine</span><strong>0</strong></div>
-            <div class="bar"><i></i></div>
+          <div class="pbk-compare">
+            <div class="cost-row" data-k="before">
+              <div><span>Current annual weed-control cost</span><strong>0</strong></div>
+              <div class="bar"><i></i></div>
+            </div>
+            <div class="cost-row accent" data-k="after">
+              <div><span>Recurring annual cost after adoption<small>Remaining herbicide and hand weeding, plus annual service.</small></span><strong>0</strong></div>
+              <div class="bar"><i></i></div>
+            </div>
+            <div class="pbk-gain"><span>Annual gain or loss</span><b id="pbkGain">0</b></div>
           </div>
-          <div class="kpis explorer-kpis">
-            <div class="kpi"><div class="v" id="pbkSavingHa">0</div><div class="k">Saving per hectare per year</div></div>
-            <div class="kpi"><div class="v" id="pbkNet">0</div><div class="k">Saving per year after service</div></div>
-            <div class="kpi"><div class="v" id="pbkYears">0</div><div class="k">Years to recover the machine price</div></div>
-            <div class="kpi"><div class="v" id="pbkMachines">0</div><div class="k">Machines needed</div></div>
+          <div class="pbk-figs">
+            <div><b id="pbkMachines">0</b><span>Machines required</span></div>
+            <div><b id="pbkTotal">0</b><span>Total machine price</span></div>
+            <div><b id="pbkYears">0</b><span>Estimated payback</span></div>
           </div>
-          <p class="fineprint" id="pbkNote"></p>
-          <p class="fineprint pbk-foot">Based on one supplier's model.</p>
-          <p class="fineprint pbk-foot">Why fine-seeded crops need far more hand-weeding than transplanted crops: transplants go into the field 3 to 4 weeks old and soon shade out weeds, while fine seeds emerge together with the weeds and grow slowly at first. A transplant has a thick stem, so hoes and mechanical weeders can work close to it; carrot or onion seedlings are fragile and must be finger-weeded. Fine seeds are over-sown and thinned by hand at the same time, which roughly doubles the hours. Young fine-seeded crops are also hard to tell apart from weeds, which slows the work further.</p>
-          <div class="deep">
-            <span class="deep-label">Deep dive</span>
-            <button data-dd="payback">Method and assumptions ↗</button>
+          <div class="pbk-meaning">
+            <h5>What this means</h5>
+            <p id="pbkMeaning"></p>
           </div>
         </div>
+      </div>
+      <div class="pbk-method">
+        <h3>Methodology and assumptions</h3>
+        <p class="pbk-method-intro">This is a screening calculation for an outright machine purchase. It tests the private cost case before any public contribution. It does not determine the farmer or public contribution under the proposed programme.</p>
+        <div class="pbk-method-cols">
+          <div>
+            <p class="eyebrow">Calculation</p>
+            <dl>
+              <dt>Machines required</dt><dd>Hectares treated ÷ seasonal capacity per machine, rounded up.</dd>
+              <dt>Current annual cost</dt><dd>Hectares × current weed-control cost per hectare.</dd>
+              <dt>Recurring annual cost after adoption</dt><dd>Hectares × remaining weed-control cost per hectare, plus annual service costs for all required machines.</dd>
+              <dt>Payback period</dt><dd>Total machine price ÷ annual gain, where the annual gain is positive.</dd>
+            </dl>
+          </div>
+          <div>
+            <p class="eyebrow">Default inputs</p>
+            <p>Machine price, annual service cost and seasonal capacity come from one supplier's customer model. The figures were converted to euros and rounded.</p>
+            <p>The €70 herbicide-pass assumption combines approximately €30 for application and €40 for the product.</p>
+            <p>The hand-weeding presets illustrate differences between production systems. They are not measured averages for Dutch farms.</p>
+            <p>All inputs can be changed using the sliders.</p>
+          </div>
+          <div>
+            <p class="eyebrow">What is not included</p>
+            <ul>
+              <li>Crop-yield or crop-margin changes</li>
+              <li>Operator time</li>
+              <li>Downtime</li>
+              <li>Financing costs</li>
+              <li>Residual value</li>
+              <li>Charging or other energy costs</li>
+            </ul>
+            <p>Supplier price, service and capacity figures have not been independently verified.</p>
+          </div>
+        </div>
+        <div class="pbk-method-note">
+          <h5>How to use the calculator</h5>
+          <p>Use it to test which assumptions drive the private business case. It is not a forecast or a validation result. Replace the defaults with grower invoices and independently verified machine performance before using the results in purchase or funding decisions.</p>
+        </div>
+        <p class="src"><b>Sources:</b>&nbsp;<a href="https://loonbedrijftamminga.nl/prijzen-meststoffen-2026/" target="_blank" rel="noopener">Loonbedrijf Tamminga, 2026 tariffs</a><a href="https://www.bo-akkerbouw.nl/files/Pdfs-Kennis-en-Innovatie/Integrale-aanpak-voor-de-akkerbouw-op-zand-Rapportage-2020-2023.pdf" target="_blank" rel="noopener">Wageningen Research, Vredepeel report</a><span class="src-note">Machine price, service, capacity and presets: one supplier's unpublished customer model.</span></p>
       </div>
     </div>
   </div>
