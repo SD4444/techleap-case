@@ -929,3 +929,15 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .fc .dd-foot{margin:0 0 28px}
 #sheetB .fc h4{margin-top:0}
 @media(max-width:800px){#sheetB .bill-cards .fc-card{grid-row:auto}#sheetB .bill-cards .bill-def{grid-row:auto}}
+/* Funding mechanisms deep dive */
+#sheetB .mech-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 20px}
+#sheetB .mech-card{background:#1a2326;border:1px solid #ffffff1c;border-radius:12px;padding:24px 26px;display:grid;grid-row:span 5;grid-template-rows:subgrid;gap:0}
+#sheetB .mech-card .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#8fe3ad;margin-bottom:10px}
+#sheetB .mech-card .mech-kind{font-size:18px;line-height:1.3;letter-spacing:-.02em;color:#fff;font-weight:500;margin:0 0 14px}
+#sheetB .mech-card .mech-body{font-size:14px;line-height:1.6;color:#b7bec4;margin:0 0 18px}
+#sheetB .mech-block{border-top:1px solid #ffffff22;padding-top:14px;margin-bottom:14px}
+#sheetB .mech-block:last-child{margin-bottom:0}
+#sheetB .mech-block h5{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#c1c7cc;margin:0 0 8px}
+#sheetB .mech-block p{font-size:14px;line-height:1.55;color:#b7bec4;margin:0}
+#sheetB .dd-summary p.dd-summary-small{font-size:13px;color:#13191b99;margin:16px 0 0}
+@media(max-width:1000px){#sheetB .mech-cards{grid-template-columns:1fr}#sheetB .mech-card{grid-row:auto;grid-template-rows:none}}
