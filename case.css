@@ -941,3 +941,4 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .mech-block p{font-size:14px;line-height:1.55;color:#b7bec4;margin:0}
 #sheetB .dd-summary p.dd-summary-small{font-size:13px;color:#13191b99;margin:16px 0 0}
 @media(max-width:1000px){#sheetB .mech-cards{grid-template-columns:1fr}#sheetB .mech-card{grid-row:auto;grid-template-rows:none}}
+#sheetB .mech-cards.two{grid-template-columns:1fr 1fr}
