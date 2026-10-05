@@ -201,6 +201,8 @@
     const fmt = { pbkPasses: v => v, pbkPassCost: v => '€' + v, pbkHours: v => v + ' h', pbkWage: v => '€' + v, pbkPassesAfter: v => v, pbkHoursAfter: v => v + ' h', pbkHa: v => v + ' ha', pbkPrice: v => eur(v), pbkService: v => eur(v), pbkCap: v => v.toLocaleString('en-GB') + ' ha' };
     function render() {
       const v = Object.fromEntries(ins.map(i => [i.id, +i.value]));
+      const herb = pbk.dataset.herb !== '0';
+      $$('.pbk-herb', pbk).forEach(el => { el.hidden = !herb; });
       ins.forEach(i => { const o = $('#' + i.id + 'V'); if (o) o.textContent = fmt[i.id](v[i.id]); });
       $$('#pbkPreset button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.passes === v.pbkPasses && +b.dataset.hours === v.pbkHours)));
       const before = v.pbkPasses * v.pbkPassCost + v.pbkHours * v.pbkWage;
@@ -222,10 +224,11 @@
         : years > 10
           ? `Payback in ${years >= 100 ? 'more than 100' : years.toFixed(1)} years. At this saving the machine does not pay for itself within its likely life.`
           : `Payback in ${years.toFixed(1)} years. The robot saves ${eur(savingHa)} per hectare, ${eur(net)} a year on ${v.pbkHa} hectares after service.`;
-      $('#pbkNote').textContent = `Today: ${v.pbkPasses} pass${v.pbkPasses === 1 ? '' : 'es'} × €${v.pbkPassCost} + ${v.pbkHours} h × €${v.pbkWage} = ${eur(before)} per hectare. With the robot: ${v.pbkPassesAfter} pass${v.pbkPassesAfter === 1 ? '' : 'es'} × €${v.pbkPassCost} + ${v.pbkHoursAfter} h × €${v.pbkWage} = ${eur(after)} per hectare. ${machines} machine${machines > 1 ? 's' : ''} at ${v.pbkCap} ha each: ${eur(capex)} price, ${eur(v.pbkService * machines)} service a year. Payback = price ÷ (yearly saving − service). Assumes unchanged yield, a solar-powered robot with no charging cost, no operator cost, no financing cost, no residual value. Price, service and capacity defaults are one supplier's figures, converted to euros and rounded. Presets are that supplier's cost estimates, not measured Dutch farm costs. €70 per pass is an assumption: contractors charge €27 to €37.50 per hectare to spray, product on top.`;
+      const passTerm = (n) => herb ? `${n} pass${n === 1 ? '' : 'es'} × €${v.pbkPassCost} + ` : '';
+      $('#pbkNote').textContent = `Today: ${passTerm(v.pbkPasses)}${v.pbkHours} h × €${v.pbkWage} = ${eur(before)} per hectare. With the robot: ${passTerm(v.pbkPassesAfter)}${v.pbkHoursAfter} h × €${v.pbkWage} = ${eur(after)} per hectare. ${machines} machine${machines > 1 ? 's' : ''} at ${v.pbkCap} ha each: ${eur(capex)} price, ${eur(v.pbkService * machines)} service a year. Payback = price ÷ (yearly saving − service). Assumes unchanged yield, a solar-powered robot with no charging cost, no operator cost, no financing cost, no residual value. Price, service and capacity defaults are one supplier's figures, converted to euros and rounded. Presets are that supplier's cost estimates, not measured Dutch farm costs.${herb ? ' €70 per pass is an assumption: contractors charge €27 to €37.50 per hectare to spray, product on top.' : ''}`;
     }
     ins.forEach(i => i.addEventListener('input', render));
-    $$('#pbkPreset button').forEach(b => b.addEventListener('click', () => { $('#pbkPasses').value = b.dataset.passes; $('#pbkHours').value = b.dataset.hours; render(); }));
+    $$('#pbkPreset button').forEach(b => b.addEventListener('click', () => { pbk.dataset.herb = b.dataset.herb; $('#pbkPasses').value = b.dataset.passes; $('#pbkHours').value = b.dataset.hours; if (b.dataset.herb === '0') $('#pbkPassesAfter').value = 0; render(); }));
     render();
   }
   /* Big pop-out: [data-big="id"] opens <dialog id> nearly full screen */
