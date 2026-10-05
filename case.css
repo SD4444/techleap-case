@@ -1072,17 +1072,19 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 
 /* Technology: aerial field animations */
 .field-anim{margin-top:28px}
-.field-svg{display:block;width:100%;max-width:520px;height:auto;border-radius:12px;border:1px solid #ffffff1c;background:#2b2420}
+.field-svg{display:block;width:100%;height:auto;border-radius:12px;border:1px solid #ffffff1c;background:#2b2420}
 .field-svg .scroll{animation:field-scroll var(--p,5s) linear infinite}
 .field-svg .weed{fill:#a7b35a}
 .field-svg .rotor{transform-box:fill-box;transform-origin:center;animation:rotor-spin 1.2s linear infinite}
 .field-svg .rotor.rev{animation-direction:reverse}
 .field-svg .zap{opacity:0;animation:zap var(--p,6s) linear infinite}
-.field-cap{font-size:12.5px;line-height:1.5;color:#9aa2a9;margin:10px 0 0;max-width:520px}
-@keyframes field-scroll{from{transform:translateY(0)}to{transform:translateY(260px)}}
+.field-cap{font-size:12.5px;line-height:1.5;color:#9aa2a9;margin:10px 0 0}
+@keyframes field-scroll{from{transform:translateY(0)}to{transform:translateY(190px)}}
 @keyframes rotor-spin{to{transform:rotate(360deg)}}
 @keyframes zap{0%,96.5%{opacity:0}97%,100%{opacity:1}}
 @media(prefers-reduced-motion:reduce){.field-svg .scroll,.field-svg .rotor,.field-svg .zap{animation:none}.field-svg .zap{opacity:0}}
 .presenting #routes h2{font-size:clamp(32px,3.6vw,50px)}
 .presenting #routes .field-anim{margin-top:20px}
-.presenting #routes .field-svg{max-width:400px}
+.presenting #routes .field-svg{max-width:470px}
+
+#routes .section-head{margin-bottom:56px}
