@@ -65,10 +65,10 @@
     const height = slide.offsetHeight;
     const scale = Math.min(1, stage.clientHeight / height);
     slide.style.transform = `scale(${scale})`;
-    /* Content slides share one top edge so labels and headings do not jump between slides.
-       Statement slides (the hero and the single question) stay vertically centred. */
+    /* Lead slides share one top edge so labels and headings do not jump between slides.
+       Continuation slides (second half of a section), the hero and the single question are vertically centred. */
     const spare = Math.max(0, stage.clientHeight - height * scale);
-    const centred = slide.id === 'thesis' || slide.id === 'gap-q';
+    const centred = slides[current].part === 2 || slide.id === 'thesis' || slide.id === 'gap-q';
     slide.style.setProperty('--slide-offset', (centred ? spare / 2 : Math.min(48, spare)) + 'px');
   }
   function queueFit() { if (!fitFrame) fitFrame = requestAnimationFrame(fitSlide); }
