@@ -999,9 +999,11 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .presenting .persp-text>[data-panel],.presenting .challenge-right>[data-panel]{grid-area:1/1}
 .presenting .persp-text>[data-panel][hidden]{display:block;visibility:hidden}
 .presenting .challenge-right>[data-panel][hidden]{display:flex;visibility:hidden}
-/* Present mode: slides keep the page margins; wide (shrunk) slides fill the stage */
-.presenting main>section.is-slide{transform-origin:top left}
-.presenting main>section.is-slide .wrap{width:calc(100% - 160px);max-width:none}
+/* Present mode: parts of a split section; slides never enlarge */
+.presenting .part-hidden{display:none!important}
+.presenting #close>.wrap{position:static;transform:none;margin:0 auto}
+.presenting #close.is-slide{min-height:0!important;display:block}
+.presenting #gap{padding-bottom:32px!important}
 .presenting .gap-chart svg{max-height:38vh}
 .presenting .gap-chart{display:grid}
 #calcsheet .pbk-formula{border-bottom:1px solid #ffffff18;padding-bottom:18px}
@@ -1021,3 +1023,14 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .dd-evidence .source a{color:inherit}
 #sheetB .dd-evidence .source a:hover{color:#8fe3ad}
 @media(max-width:900px){#sheetB .dd-evidence-cols{grid-template-columns:1fr;gap:20px}}
+.presenting .part-eyebrow{margin-bottom:28px}
+.part-eyebrow{display:none}
+.presenting .part-eyebrow:not(.part-hidden){display:block}
+.presenting .part-first{margin-top:0!important;border-top:0!important;padding-top:0!important}
+.presenting main>section#close.is-slide{top:var(--slide-offset,0px);height:auto;padding:32px 0!important}
+.presenting #plan .tl-panel>div:not([hidden]){display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.presenting #plan .tl-panel .tag{grid-column:1/-1}
+.presenting #plan .tl-panel .spec-list{grid-row:span 2;margin-top:0}
+.presenting #plan .section-head{margin-bottom:20px}
+.presenting #conflict h2{font-size:clamp(32px,3.6vw,50px)}
+.presenting #conflict .facts{gap:0}

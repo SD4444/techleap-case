@@ -28,48 +28,53 @@
 
   /* ── Present mode: an isolated viewport, not a scroll position ── */
   const sections = $$('main>section'), stage = $('main'), controls = $('.deck-controls');
+  /* A section with [data-part="2"] blocks becomes two slides: the blocks without a part, then the part-2 blocks. */
+  const slides = sections.flatMap(s => s.querySelector('[data-part="2"]') ? [{ s, part: 1 }, { s, part: 2 }] : [{ s, part: 0 }]);
   let current = 0, presenting = false, frame = 0, fitFrame = 0, returnY = 0, ownedFullscreen = false;
   const fullscreenElement = () => document.fullscreenElement || document.webkitFullscreenElement;
+  const cur = () => slides[current].s;
   sections.forEach(s => { s.setAttribute('tabindex', '-1'); s.setAttribute('aria-label', s.dataset.title || s.id); });
   if (controls) { controls.setAttribute('role', 'group'); controls.setAttribute('aria-label', 'Presentation navigation'); $('#slide-count')?.setAttribute('aria-live', 'polite'); }
   function updateControls() {
     if (!controls) return;
-    $('#slide-count').textContent = String(current + 1).padStart(2, '0') + ' / ' + String(sections.length).padStart(2, '0');
-    $('#slide-title').textContent = sections[current].dataset.title || '';
-    $('#prev-slide').disabled = current === 0; $('#next-slide').disabled = current === sections.length - 1;
+    $('#slide-count').textContent = String(current + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
+    $('#slide-title').textContent = cur().dataset.title || '';
+    $('#prev-slide').disabled = current === 0; $('#next-slide').disabled = current === slides.length - 1;
+  }
+  function applyPart() {
+    const { s, part } = slides[current];
+    const wrap = s.querySelector('.wrap');
+    let label = wrap.querySelector('.part-eyebrow');
+    if (part === 2 && !label) { label = document.createElement('p'); label.className = 'eyebrow part-eyebrow'; label.textContent = s.dataset.title || ''; wrap.prepend(label); }
+    let first = true;
+    wrap.querySelectorAll(':scope > *').forEach(el => {
+      const p = el.classList.contains('part-eyebrow') ? 2 : el.dataset.part === '2' ? 2 : 1;
+      const hide = part !== 0 && p !== part;
+      el.classList.toggle('part-hidden', hide);
+      el.classList.toggle('part-first', !hide && first && part === 2 && !el.classList.contains('part-eyebrow'));
+      if (!hide && !el.classList.contains('part-eyebrow')) first = false;
+    });
   }
   function fitSlide() {
     fitFrame = 0; if (!presenting) return;
-    const slide = sections[current];
+    const slide = cur();
     stage.style.setProperty('--controls-height', Math.ceil(controls.getBoundingClientRect().height) + 'px');
-    slide.style.transform = ''; slide.style.width = ''; slide.style.removeProperty('--slide-offset');
-    if (slide.id === 'close') {
-      const content = slide.querySelector('.wrap');
-      slide.style.setProperty('--closing-scale', Math.min(stage.clientWidth / (content.offsetWidth + 40), Math.max(1, stage.clientHeight - 88) / content.offsetHeight));
-      return;
-    }
+    slide.style.transform = ''; slide.style.removeProperty('--slide-offset');
     if (innerWidth <= 800 || innerHeight <= 500) return;
-    /* Never enlarge. When a slide is too tall, widen it by the same factor it is shrunk,
-       so the scaled slide still fills the stage and keeps the same margins as the others. */
-    let scale = 1, height = slide.offsetHeight;
-    for (let i = 0; i < 6; i++) {
-      const next = Math.min(1, stage.clientHeight / height);
-      if (Math.abs(next - scale) < 0.005) break;
-      scale = next;
-      slide.style.width = (stage.clientWidth / scale) + 'px';
-      height = slide.offsetHeight;
-    }
-    /* Guarantee the fit whatever the loop settled on. */
-    scale = Math.min(1, stage.clientHeight / height, stage.clientWidth / slide.offsetWidth);
+    /* Never enlarge; shrink only when the slide is taller than the stage. */
+    const height = slide.offsetHeight;
+    const scale = Math.min(1, stage.clientHeight / height);
     slide.style.transform = `scale(${scale})`;
     slide.style.setProperty('--slide-offset', Math.max(0, (stage.clientHeight - height * scale) / 2) + 'px');
   }
   function queueFit() { if (!fitFrame) fitFrame = requestAnimationFrame(fitSlide); }
   function showSlide() {
-    sections.forEach((s, i) => { s.classList.toggle('is-slide', i === current); s.inert = i !== current; });
-    stage.style.background = getComputedStyle(sections[current]).backgroundColor;
-    sections[current].scrollTop = 0;
-    sections[current].querySelectorAll('img[loading="lazy"]').forEach(img => img.loading = 'eager');
+    const active = cur();
+    sections.forEach(s => { s.classList.toggle('is-slide', s === active); s.inert = s !== active; });
+    applyPart();
+    stage.style.background = getComputedStyle(active).backgroundColor;
+    active.scrollTop = 0;
+    active.querySelectorAll('img[loading="lazy"]').forEach(img => img.loading = 'eager');
     updateControls(); fitSlide();
   }
   function setPresent(on) {
@@ -79,13 +84,13 @@
     $('header').inert = on; const skip = $('.skip'); if (skip) skip.inert = on;
     $('#present')?.setAttribute('aria-pressed', String(on));
     if (on) {
-      showSlide(); sections[current].focus({ preventScroll: true });
+      showSlide(); cur().focus({ preventScroll: true });
       const request = document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen;
       if (request && !fullscreenElement()) {
         try { const r = request.call(document.documentElement); Promise.resolve(r).then(() => { ownedFullscreen = !!fullscreenElement(); if (!presenting && ownedFullscreen) leaveFullscreen(); queueFit(); }).catch(() => {}); } catch {}
       }
     } else {
-      sections.forEach(s => { s.inert = false; s.classList.remove('is-slide'); s.style.transform = ''; s.style.removeProperty('--slide-offset'); });
+      sections.forEach(s => { s.inert = false; s.classList.remove('is-slide'); s.style.transform = ''; s.style.removeProperty('--slide-offset'); s.querySelectorAll('.part-hidden,.part-first').forEach(el => el.classList.remove('part-hidden', 'part-first')); s.querySelectorAll('.part-eyebrow').forEach(el => el.remove()); });
       stage.style.background = ''; stage.style.removeProperty('--controls-height');
       if (ownedFullscreen) leaveFullscreen();
       window.dispatchEvent(new Event('presentationchange'));
@@ -106,9 +111,10 @@
     const readout = $('.temperature'); if (readout) readout.textContent = Math.round(p * 100) + '%';
     const bar = $('.progress'); if (bar) bar.style.transform = `scaleX(${p})`;
     if (!sections.length) return;
-    sections.forEach((s, i) => { if (s.getBoundingClientRect().top <= innerHeight * .4) current = i; });
+    let sec = 0; sections.forEach((s, i) => { if (s.getBoundingClientRect().top <= innerHeight * .4) sec = i; });
+    current = slides.findIndex(sl => sl.s === sections[sec]);
     updateControls();
-    $$('header nav a').forEach(a => a.classList.toggle('active', a.hash === '#' + sections[current].id || a.getAttribute('aria-current') === 'page'));
+    $$('header nav a').forEach(a => a.classList.toggle('active', a.hash === '#' + sections[sec].id || a.getAttribute('aria-current') === 'page'));
   }
   addEventListener('scroll', () => { if (!frame) frame = requestAnimationFrame(updateScroll); }, { passive: true });
   addEventListener('resize', () => { if (presenting) queueFit(); else updateScroll(); });
@@ -117,18 +123,18 @@
   document.fonts.ready.then(queueFit);
   if (stage) { stage.addEventListener('load', queueFit, true); stage.addEventListener('toggle', queueFit, true); }
   updateScroll();
-  const go = d => { current = Math.max(0, Math.min(sections.length - 1, current + d)); showSlide(); sections[current].focus({ preventScroll: true }); };
+  const go = d => { current = Math.max(0, Math.min(slides.length - 1, current + d)); showSlide(); cur().focus({ preventScroll: true }); };
   $('#present')?.addEventListener('click', () => setPresent(!presenting));
   $('#exit-present')?.addEventListener('click', () => setPresent(false));
   $('#prev-slide')?.addEventListener('click', () => go(-1));
   $('#next-slide')?.addEventListener('click', () => go(1));
-  stage?.addEventListener('click', e => { if (!presenting) return; const link = e.target.closest('a[href^="#"]'); if (!link) return; const i = sections.findIndex(s => '#' + s.id === link.hash); if (i >= 0) { e.preventDefault(); go(i - current); } });
+  stage?.addEventListener('click', e => { if (!presenting) return; const link = e.target.closest('a[href^="#"]'); if (!link) return; const i = slides.findIndex(sl => '#' + sl.s.id === link.hash); if (i >= 0) { e.preventDefault(); go(i - current); } });
   addEventListener('keydown', e => {
     if (!presenting || document.querySelector('dialog[open]')) return;
     if (e.key === 'Escape') { e.preventDefault(); setPresent(false); return; }
     if (e.target.closest('input,select,textarea,summary,[contenteditable=true]')) return;
     if (['ArrowRight', 'PageDown', 'ArrowLeft', 'PageUp', 'Home', 'End'].includes(e.key)) {
-      e.preventDefault(); go(e.key === 'Home' ? -current : e.key === 'End' ? sections.length - 1 - current : ['ArrowRight', 'PageDown'].includes(e.key) ? 1 : -1);
+      e.preventDefault(); go(e.key === 'Home' ? -current : e.key === 'End' ? slides.length - 1 - current : ['ArrowRight', 'PageDown'].includes(e.key) ? 1 : -1);
     }
   });
 
