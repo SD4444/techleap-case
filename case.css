@@ -1102,3 +1102,24 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 @media(max-width:900px){#sheetB .co-row{grid-template-columns:1fr;gap:8px}#sheetB .co-hdr{display:none}}
 #sheetB .co-event a{display:inline;margin:0}
 #sheetB .co-region-block:first-of-type{margin-top:8px}
+/* Six months: bar month labels, single target marker, what-follows strip */
+.tl-bar small{font-size:11.5px;color:var(--muted);font-weight:400;margin-left:auto;padding-left:12px;white-space:nowrap}
+.follows{margin-top:64px;padding-top:40px;border-top:1px solid #c4ccd2}
+.follows .eyebrow{margin-bottom:18px}
+.follow-chain{margin-top:0;background:#fff;border-color:var(--line)}
+.follow-chain span{color:var(--ink);border-color:var(--line)}
+.follow-chain span.hi{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.follow-chain i{background:#1e7a45;opacity:.6}
+.follow-chain i::after{border-color:#1e7a45}
+.follow-note{margin:18px 0 0;font-size:15px;line-height:1.6;color:var(--muted)}
+#plan .section-head>div:nth-child(2) .intro+.intro{margin-top:12px;padding-top:0}
+.presenting #plan .section-head .intro{font-size:14.5px;line-height:1.5}
+.presenting #plan .section-head>div:nth-child(2) .intro+.intro{margin-top:8px}
+.presenting #plan .section-head{margin-bottom:16px}
+.presenting #plan .tl-marks{height:48px}
+.presenting #plan .tl-panel p{font-size:14px;margin-bottom:6px}
+.presenting #plan .tl-panel .spec-list li{font-size:13.5px}
+.presenting #plan .tl-panel{margin-top:12px;padding-top:12px}
+.chain.light.follow-chain{margin-top:0}
+.presenting #plan .timeline{padding:16px 24px}
+.presenting #plan .tl-rows{grid-auto-rows:40px;gap:6px 0}
