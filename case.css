@@ -1199,3 +1199,13 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
   .tri-node.n2{transform:translate(-25%,-50%)}
   .tri-node.n3{transform:translate(-75%,-50%)}
 }
+@media(max-width:380px){
+  .tri-node{font-size:11.5px;padding:5px 8px}
+  .tri-node.n2{transform:translate(-18%,-50%)}
+  .tri-node.n3{transform:translate(-82%,-50%)}
+  .tri-core{font-size:10px}
+}
+@media(max-width:380px){
+  .tri-node.n2{left:auto;right:0;transform:translate(0,-50%)}
+  .tri-node.n3{left:0;transform:translate(0,-50%)}
+}
