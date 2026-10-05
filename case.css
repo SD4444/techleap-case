@@ -1054,3 +1054,4 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .presenting #plan .tl-panel .spec-list li{font-size:14px}
 .presenting #plan .section-head .intro{font-size:15px;line-height:1.5}
 .presenting #plan .section-head>div:nth-child(2){padding-top:calc(13px + 22px)}
+#signals .channels h3{min-height:2.25em}
