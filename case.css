@@ -1088,20 +1088,17 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #plan .section-head>div:nth-child(2) .intro+.intro{margin-top:12px;padding-top:0}
 @media(max-width:1100px){.tl-bar{white-space:normal;line-height:1.2;font-size:13px;padding:0 12px;text-overflow:clip}}
 /* Companies deep dive */
-#sheetB .co-group{margin-top:28px}
-#sheetB .co-group h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#8fe3ad;font-weight:600;margin:0 0 14px;padding-top:0;border:0}
-#sheetB .co-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-#sheetB .co-card{background:#1a2326;border:1px solid #ffffff1c;border-radius:12px;padding:20px 22px;display:grid;grid-row:span 5;grid-template-rows:subgrid;gap:0;align-content:start}
-#sheetB .co-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:8px}
-#sheetB .co-head b{font-size:16px;color:#fff;font-weight:600;line-height:1.3}
-#sheetB .co-head span{font-size:12px;color:#9aa2a9;text-align:right;max-width:46%;line-height:1.35}
-#sheetB .co-card p{margin:0;font-size:13.5px;line-height:1.5;color:#c1c7cc}
-#sheetB .co-tech{color:#e6e9ec !important;margin-bottom:12px !important}
-#sheetB .co-card .tag{display:block;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#8fe3ad;font-weight:600;margin-bottom:4px}
-#sheetB .co-mat{margin-bottom:12px !important}
-#sheetB .co-card .source{margin-top:12px;color:#7a8087;align-self:end}
-#sheetB .co-card .source a{color:inherit}
-#sheetB .co-card .source a:hover{color:#8fe3ad}
-@media(max-width:1000px){#sheetB .co-grid{grid-template-columns:1fr}#sheetB .co-card{grid-row:auto;grid-template-rows:none}}
-#sheetB .co-region{font-size:clamp(22px,2vw,28px);letter-spacing:-.03em;color:#fff;margin:40px 0 0;padding-top:28px;border-top:1px solid #ffffff18}
-#sheetB .co-region:first-of-type{margin-top:8px;padding-top:0;border-top:0}
+#sheetB .co-region-block{margin-top:36px}
+#sheetB .co-region{font-size:clamp(22px,2vw,28px);letter-spacing:-.03em;color:#fff;margin:0 0 14px}
+#sheetB .co-table{border-top:1px solid #ffffff22}
+#sheetB .co-row{display:grid;grid-template-columns:1.1fr .8fr 1.6fr;gap:28px;padding:18px 0;border-bottom:1px solid #ffffff18;align-items:start}
+#sheetB .co-hdr{padding:10px 0;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#8fe3ad;font-weight:600}
+#sheetB .co-who b{display:block;font-size:16px;color:#fff;font-weight:600;line-height:1.3}
+#sheetB .co-who span{display:block;font-size:12.5px;color:#9aa2a9;margin-top:2px}
+#sheetB .co-who i{display:block;font-style:normal;font-size:13px;color:#c1c7cc;margin-top:8px;line-height:1.45}
+#sheetB .co-stage,#sheetB .co-event{font-size:14px;line-height:1.55;color:#c1c7cc}
+#sheetB .co-event a{color:#9aa2a9;text-underline-offset:3px;white-space:nowrap}
+#sheetB .co-event a:hover{color:#8fe3ad}
+@media(max-width:900px){#sheetB .co-row{grid-template-columns:1fr;gap:8px}#sheetB .co-hdr{display:none}}
+#sheetB .co-event a{display:inline;margin:0}
+#sheetB .co-region-block:first-of-type{margin-top:8px}
