@@ -1012,3 +1012,12 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #calcsheet .pbk-preset-note{font-size:14px;line-height:1.55;color:#b7bec4;margin:-6px 0 14px}
 #calcsheet .segmented.three{max-width:none}
 #calcsheet .pbk-scenario-note{font-size:13px;line-height:1.6;color:#9aa2a9;margin:20px 0 0;max-width:80ch}
+#sheetB .dd-evidence{margin-top:36px;padding-top:28px;border-top:1px solid #ffffff18}
+#sheetB .dd-evidence .eyebrow{margin-bottom:16px}
+#sheetB .dd-evidence-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+#sheetB .dd-evidence h5{font-size:14px;font-weight:600;color:#e6e9ec;margin:0 0 8px}
+#sheetB .dd-evidence p{font-size:14px;line-height:1.6;color:#b7bec4;margin:0}
+#sheetB .dd-evidence .source{margin-top:10px;color:#7a8087}
+#sheetB .dd-evidence .source a{color:inherit}
+#sheetB .dd-evidence .source a:hover{color:#8fe3ad}
+@media(max-width:900px){#sheetB .dd-evidence-cols{grid-template-columns:1fr;gap:20px}}
