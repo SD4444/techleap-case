@@ -907,7 +907,8 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .risk-card p{margin:0;font-size:16px;line-height:1.5;color:#fff}
 @media(max-width:800px){#sheetB .risk-cards{grid-template-columns:1fr}}
 /* Why pesticides in water matter */
-#sheetB .why-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 16px}
+#sheetB .why-cards{display:grid;grid-template-columns:1fr 1fr 32px 1fr;gap:16px;align-items:stretch;margin:0 0 16px}
+#sheetB .why-arrow{display:grid;place-items:center;font-size:26px;color:#8fe3ad;line-height:1}
 #sheetB .why-card{background:#1a2326;border:1px solid #ffffff1c;border-radius:12px;padding:24px 26px}
 #sheetB .why-card .tag{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#8fe3ad;margin-bottom:14px}
 #sheetB .why-card p{margin:0;font-size:15px;line-height:1.6;color:#c1c7cc}
@@ -916,7 +917,7 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 #sheetB .why-stat p{margin:0;font-size:clamp(17px,1.6vw,21px);line-height:1.4;color:#fff;max-width:34ch;align-self:end}
 #sheetB .why-stat small{display:block;font-size:13px;color:#9aa2a9;align-self:start}
 #sheetB .feature .dd-notes.two{grid-template-columns:1fr 1fr;margin-top:32px}
-@media(max-width:1000px){#sheetB .why-cards{grid-template-columns:1fr}#sheetB .why-stat{grid-template-columns:1fr;gap:12px}#sheetB .why-stat b{grid-row:auto}#sheetB .feature .dd-notes.two{grid-template-columns:1fr}}
+@media(max-width:1000px){#sheetB .why-cards{grid-template-columns:1fr}#sheetB .why-arrow{transform:rotate(90deg);padding:4px 0}#sheetB .why-stat{grid-template-columns:1fr;gap:12px}#sheetB .why-stat b{grid-row:auto}#sheetB .feature .dd-notes.two{grid-template-columns:1fr}}
 #sheetB .dd-def{margin:18px 0 0;padding-top:14px;border-top:1px solid #ffffff18}
 #sheetB .dd-def b{display:block;font-size:13px;color:#e6e9ec;font-weight:600;margin-bottom:4px}
 #sheetB .dd-def span{display:block;font-size:13px;line-height:1.5;color:#9aa2a9}
