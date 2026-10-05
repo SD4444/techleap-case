@@ -246,7 +246,8 @@
         : 'Under these assumptions, the robot increases annual operating costs. Reducing the upfront price would not fix that. Recurring costs must fall or a verified crop-margin benefit must offset the difference.';
     }
     ins.forEach(i => i.addEventListener('input', render));
-    $$('#pbkPreset button').forEach(b => b.addEventListener('click', () => { pbk.dataset.herb = b.dataset.herb; $('#pbkPasses').value = b.dataset.passes; $('#pbkHours').value = b.dataset.hours; if (b.dataset.herb === '0') $('#pbkPassesAfter').value = 0; render(); }));
+    /* A preset resets every slider to its default, then sets the scenario's own values. */
+    $$('#pbkPreset button').forEach(b => b.addEventListener('click', () => { pbk.dataset.herb = b.dataset.herb; ins.forEach(i => { i.value = i.defaultValue; }); $('#pbkPasses').value = b.dataset.passes; $('#pbkHours').value = b.dataset.hours; if (b.dataset.herb === '0') $('#pbkPassesAfter').value = 0; render(); }));
     render();
   }
   /* Big pop-out: [data-big="id"] opens <dialog id> nearly full screen */
