@@ -1043,3 +1043,14 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .presenting #ask .hub-core small{font-size:13px;max-width:30ch}
 .presenting #ask .section-head{margin-bottom:32px}
 .presenting #ask h2{font-size:clamp(32px,3.6vw,50px)}
+.presenting #plan h2{font-size:clamp(32px,3.6vw,50px)}
+.presenting #plan .section-head>.intro{font-size:15px;line-height:1.55}
+.presenting #plan .timeline{padding:20px 26px}
+.presenting #plan .tl-rows{grid-auto-rows:42px;gap:8px 0;margin:10px 0 4px}
+.presenting #plan .tl-marks{height:54px}
+.presenting #plan .tl-panel{margin-top:16px;padding-top:16px}
+.presenting #plan .tl-panel .tag{margin-bottom:10px}
+.presenting #plan .tl-panel p{font-size:14.5px;margin-bottom:8px}
+.presenting #plan .tl-panel .spec-list li{font-size:14px}
+.presenting #plan .section-head .intro{font-size:15px;line-height:1.5}
+.presenting #plan .section-head>div:nth-child(2){padding-top:calc(13px + 22px)}
