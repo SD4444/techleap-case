@@ -1028,7 +1028,9 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .presenting .part-eyebrow:not(.part-hidden){display:block}
 .presenting .part-first{margin-top:0!important;border-top:0!important;padding-top:0!important}
 .presenting main>section#close.is-slide{top:var(--slide-offset,0px);height:auto;padding:32px 0!important}
-.presenting #plan .tl-panel>div:not([hidden]){display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.presenting #plan .tl-panel{display:grid}
+.presenting #plan .tl-panel>div{grid-area:1/1;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.presenting #plan .tl-panel>div[hidden]{visibility:hidden;animation:none}
 .presenting #plan .tl-panel .tag{grid-column:1/-1}
 .presenting #plan .tl-panel .spec-list{grid-row:span 2;margin-top:0}
 .presenting #plan .section-head{margin-bottom:20px}
