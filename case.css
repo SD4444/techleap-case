@@ -1085,3 +1085,5 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
 .presenting #routes .field-svg{max-width:none}
 
 #routes .route-detail{align-self:start}
+#plan .section-head>div:nth-child(2) .intro+.intro{margin-top:12px;padding-top:0}
+@media(max-width:1100px){.tl-bar{white-space:normal;line-height:1.2;font-size:13px;padding:0 12px;text-overflow:clip}}
