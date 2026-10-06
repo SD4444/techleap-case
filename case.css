@@ -1215,3 +1215,28 @@ h1,h2,h3,h4,h5,p,li,dd,small,.tag{text-wrap:pretty}
   header .menu-toggle{padding:8px 12px}
   header{gap:10px}
 }
+/* Trend charts in the water deep dive */
+#sheetB .trend-charts{margin-top:32px;padding-top:28px;border-top:1px solid #ffffff18}
+#sheetB .trend-charts .eyebrow{margin-bottom:16px}
+#sheetB .tr-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+#sheetB .tr-chart{margin:0;background:#1a2326;border:1px solid #ffffff1c;border-radius:12px;padding:18px 18px 8px}
+#sheetB .tr-chart figcaption{font-size:14px;font-weight:600;color:#e6e9ec;margin-bottom:8px}
+#sheetB .tr-chart svg{display:block;width:100%;height:auto;overflow:visible}
+#sheetB .tr-chart .g{stroke:#ffffff14;stroke-width:1}
+#sheetB .tr-chart .yl{fill:#7a8087;font-size:10px;text-anchor:end}
+#sheetB .tr-chart .xl{fill:#7a8087;font-size:10px;text-anchor:middle}
+#sheetB .tr-chart .bd{fill:#3ec26f;fill-opacity:.14}
+#sheetB .tr-chart .ln{fill:none;stroke:#8fe3ad;stroke-width:2;stroke-linejoin:round}
+#sheetB .tr-chart .dt{fill:#8fe3ad}
+#sheetB .tr-chart .tg{fill:#13191b;stroke:#e6e9ec;stroke-width:1.5}
+#sheetB .tr-legend{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;margin:14px 0 0;padding:0}
+#sheetB .tr-legend li{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#c1c7cc;margin:0;padding:0}
+#sheetB .tr-legend li::before{display:none}
+#sheetB .tr-legend i{display:inline-block;flex:none}
+#sheetB .k-dt{width:7px;height:7px;border-radius:50%;background:#8fe3ad}
+#sheetB .k-ln{width:16px;height:2px;background:#8fe3ad}
+#sheetB .k-bd{width:14px;height:10px;background:#3ec26f;opacity:.3;border-radius:2px}
+#sheetB .k-tg{width:8px;height:8px;border:1.5px solid #e6e9ec}
+#sheetB .trend-charts .source{margin-top:12px;color:#7a8087}
+#sheetB .trend-charts .source a{color:inherit;display:inline;margin:0}
+@media(max-width:760px){#sheetB .tr-grid{grid-template-columns:1fr}}
