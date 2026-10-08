@@ -195,3 +195,10 @@ body.tl[data-view="idea3"] .progress{background:#d0cdf1}
   .tl #main-nav a,.tl #main-nav .nav-ph{white-space:normal;border:0;padding:12px 0;border-radius:0;border-bottom:1px solid #ffffff14}
   .tl .mobile-nav-actions{display:none}
 }
+/* Boundary strip without label */
+.tl .tl-boundary{grid-template-columns:1fr}
+/* List dashes: a text dash so every row renders at the same weight */
+.tl .tl-list li::before{content:'–';background:none;width:auto;height:auto;top:10px;left:0;color:#6b7280;font-size:15px;line-height:1.45}
+.tl .tl-list li:first-child::before{top:2px}
+/* Space between step intro and the Investors / Startups lists */
+.tl .wg-sub{margin-top:18px}
