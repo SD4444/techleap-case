@@ -1,12 +1,12 @@
-/* Techleap deep-tech palette (techleap.nl): navy #1e1a44, panel #29235a, purple #512986, orange #fd5924. Fonts: Bebas Neue (headings), Fira Sans (text). */
-.tl{--ink:#1e1a44;--orange:#fd5924;font-family:"Fira Sans",system-ui,sans-serif;background:#1e1a44}
+/* Techleap deep-tech palette (techleap.nl): navy #1e1a44, panel #29235a, purple #512986; orange used only as a light accent. Font: Geist from styles.css. */
+.tl{--ink:#1e1a44;--orange:#fd5924;background:#1e1a44}
 .tl .dark{background:#1e1a44;color:#fff}
-.tl h1,.tl h2{font-family:"Bebas Neue",sans-serif;font-weight:400;letter-spacing:.005em;text-transform:uppercase;line-height:.95}
-.tl h1{font-size:clamp(44px,5.4vw,80px);max-width:22ch}
-.tl h2{font-size:clamp(44px,5.4vw,80px)}
-.tl .eyebrow{color:#fd5924!important;font-family:"Fira Sans",sans-serif;font-weight:600}
-.tl .tag{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#fd5924;font-weight:600;margin-bottom:14px}
-.tl p{color:#cfcbe6}
+.tl h1,.tl h2{font-weight:500;letter-spacing:-.035em;line-height:1.08}
+.tl h1{font-size:clamp(36px,4.4vw,60px);max-width:20ch}
+.tl h2{font-size:clamp(32px,3.6vw,48px)}
+.tl .eyebrow{color:#ff9b75!important}
+.tl .tag{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#ff9b75;font-weight:600;margin-bottom:14px}
+.tl p{color:#c7c3dd}
 .tl header{background:#1e1a44f2}
 .tl .brand b{font-weight:600}
 .tl #main-nav{align-items:center}
@@ -17,14 +17,14 @@
 /* Hero */
 .tl .tl-hero{position:relative;padding:130px 0 100px;overflow:hidden}
 .tl .tl-hero .wrap{position:relative;z-index:1}
-.tl .tl-bars{position:absolute;right:0;bottom:0;width:55%;height:72%;background:repeating-linear-gradient(90deg,#512986 0 14px,transparent 14px 54px);-webkit-mask:linear-gradient(to top left,#000 10%,transparent 75%);mask:linear-gradient(to top left,#000 10%,transparent 75%);opacity:.75;pointer-events:none}
+.tl .tl-bars{position:absolute;right:0;bottom:0;width:55%;height:72%;background:repeating-linear-gradient(90deg,#512986 0 14px,transparent 14px 54px);-webkit-mask:linear-gradient(to top left,#000 10%,transparent 75%);mask:linear-gradient(to top left,#000 10%,transparent 75%);opacity:.28;pointer-events:none}
 .tl .tl-intro{margin-top:28px;font-size:clamp(18px,1.6vw,22px);line-height:1.55;max-width:52ch}
 .tl .tl-ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:56px}
 .tl .tl-idea{display:grid;align-content:start;gap:10px;min-height:120px;padding:22px 24px;border-radius:12px;border:1px solid #ffffff22;background:#29235a;text-decoration:none;color:#fff;transition:border-color .2s,background .2s}
-.tl .tl-idea span{font-family:"Bebas Neue",sans-serif;font-size:30px;line-height:1;color:#fd5924}
-.tl .tl-idea b{font-size:18px;font-weight:500}
-.tl .tl-idea.active{background:#fd5924;border-color:#fd5924;color:#1e1a44}
-.tl .tl-idea.active span{color:#1e1a44}
+.tl .tl-idea span{font-size:13px;font-weight:600;letter-spacing:.1em;line-height:1;color:#ff9b75}
+.tl .tl-idea b{font-size:17px;font-weight:500}
+.tl .tl-idea.active{background:#29235a;border-color:#ff9b7599;color:#fff}
+.tl .tl-idea.active span{color:#ff9b75}
 .tl .tl-idea.ph{background:transparent;border-style:dashed;border-color:#ffffff30;color:#8a84b3}
 .tl .tl-idea.ph span{color:#8a84b3}
 
@@ -36,28 +36,28 @@
 .tl .tl-lead{font-size:clamp(17px,1.4vw,19px);line-height:1.6;max-width:68ch}
 .tl .tl-chain{margin-top:0;background:#29235a;border-color:#ffffff1c}
 .tl .tl-chain span{border-color:#ffffff33}
-.tl .tl-chain span.hi{background:#fd5924;border-color:#fd5924;color:#1e1a44}
-.tl .tl-chain i{background:#fd5924}
-.tl .tl-chain i::after{border-color:#fd5924}
+.tl .tl-chain span.hi{background:transparent;border-color:#ff9b7599;color:#fff}
+.tl .tl-chain i{background:#ff9b7580}
+.tl .tl-chain i::after{border-color:#ff9b7580}
 .tl .tl-more{margin-top:16px;border:0}
 .tl .tl-more summary{display:inline-flex;gap:10px;align-items:center;padding:8px 0;font-size:15px;font-weight:500;color:#fff;cursor:pointer;list-style:none}
-.tl .tl-more summary span{color:#fd5924;font-size:20px;line-height:1;transition:transform .3s}
+.tl .tl-more summary span{color:#ff9b75;font-size:20px;line-height:1;transition:transform .3s}
 .tl .tl-more[open] summary span{transform:rotate(45deg)}
 .tl .tl-steps{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .tl .tl-steps li{background:#29235a;border:1px solid #ffffff1c;border-radius:12px;padding:20px 22px}
-.tl .tl-steps b{display:block;font-size:15px;color:#fd5924;font-weight:600;margin-bottom:8px}
+.tl .tl-steps b{display:block;font-size:15px;color:#fff;font-weight:600;margin-bottom:8px}
 .tl .tl-steps p{font-size:14.5px;line-height:1.55}
-.tl .tl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding-top:28px;border-top:1px solid #ffffff1c}
+.tl .tl-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-top:28px;border-top:1px solid #ffffff1c}
 .tl .tl-card{background:#29235a;border:1px solid #ffffff1c;border-radius:12px;padding:24px 24px 26px}
 .tl .tl-card p{font-size:15.5px;line-height:1.6}
 .tl .tl-list{list-style:none;margin:0;padding:0}
 .tl .tl-list li{position:relative;padding:9px 0 9px 20px;border-top:1px solid #ffffff14;font-size:15.5px;line-height:1.45;color:#fff}
 .tl .tl-list li:first-child{border-top:0;padding-top:0}
-.tl .tl-list li::before{content:'';position:absolute;left:0;top:17px;width:8px;height:2px;background:#fd5924}
+.tl .tl-list li::before{content:'';position:absolute;left:0;top:17px;width:8px;height:1.5px;background:#ff9b75}
 .tl .tl-list li:first-child::before{top:8px}
-.tl .tl-boundary{margin-top:14px;display:grid;grid-template-columns:auto 1fr;gap:12px 28px;align-items:baseline;padding:20px 24px;border-radius:12px;border:1px solid #fd592466;background:#fd592414}
+.tl .tl-boundary{margin-top:14px;display:grid;grid-template-columns:auto 1fr;gap:12px 28px;align-items:baseline;padding:20px 24px;border-radius:12px;border:1px solid #ffffff22;background:transparent}
 .tl .tl-boundary .tag{margin:0}
-.tl .tl-boundary p{color:#fff;font-size:16px}
+.tl .tl-boundary p{color:#e4e1f2;font-size:16px}
 
 @media(max-width:1000px){
   .tl .tl-steps{grid-template-columns:1fr 1fr}
@@ -68,7 +68,7 @@
   .tl .tl-bars{width:90%;height:40%;opacity:.45}
   .tl .tl-ideas{grid-template-columns:1fr;gap:10px;margin-top:40px}
   .tl .tl-idea{min-height:0;grid-template-columns:auto 1fr;align-items:center;gap:14px;padding:16px 18px}
-  .tl .tl-idea span{font-size:26px}
+  .tl .tl-idea span{font-size:13px}
   .tl .tl-idea-sec{padding:72px 0}
   .tl .tl-steps{grid-template-columns:1fr}
   .tl .tl-boundary{grid-template-columns:1fr}
