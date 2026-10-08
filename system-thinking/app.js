@@ -305,3 +305,22 @@
   }
   addEventListener('hashchange', show); show();
 })();
+
+/* Visit counter: counts once per browser session for the site and for each idea page.
+   Nothing is shown on the page. Open the site once with ?notrack to stop counting this browser (?track to undo). */
+(() => {
+  const NS = 'https://abacus.jasoncameron.dev/hit/sd-394d8735dc/';
+  const q = new URLSearchParams(location.search);
+  try {
+    if (q.has('notrack')) localStorage.setItem('st-notrack', '1');
+    if (q.has('track')) localStorage.removeItem('st-notrack');
+    if (localStorage.getItem('st-notrack')) return;
+  } catch (e) {}
+  const once = key => {
+    try { if (sessionStorage.getItem('st-' + key)) return; sessionStorage.setItem('st-' + key, '1'); } catch (e) {}
+    fetch(NS + key, { mode: 'cors', keepalive: true }).catch(() => {});
+  };
+  once('visits');
+  const page = () => { const h = location.hash.slice(1); if (h === 'idea1' || h === 'idea2') once(h); };
+  addEventListener('hashchange', page); page();
+})();
