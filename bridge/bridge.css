@@ -188,3 +188,10 @@ body.tl[data-view="idea3"] .progress{background:#d0cdf1}
 .tl .deck-controls button{border-radius:40px}
 .tl .c0{--c:#fbfaf8}
 .tl .tl-hero h1{margin-top:0}
+.tl header .header-tools{margin-left:auto}
+.tl header{display:flex;align-items:center;justify-content:space-between}
+@media(max-width:1200px){
+  .tl header nav.is-open{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;background:var(--navy)}
+  .tl #main-nav a,.tl #main-nav .nav-ph{white-space:normal;border:0;padding:12px 0;border-radius:0;border-bottom:1px solid #ffffff14}
+  .tl .mobile-nav-actions{display:none}
+}
