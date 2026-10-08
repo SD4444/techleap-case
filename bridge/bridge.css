@@ -202,3 +202,11 @@ body.tl[data-view="idea3"] .progress{background:#d0cdf1}
 .tl .tl-list li:first-child::before{top:2px}
 /* Space between step intro and the Investors / Startups lists */
 .tl .wg-sub{margin-top:18px}
+
+/* Hero glow takes the colour of the idea row under the pointer */
+@property --glow{syntax:'<color>';inherits:true;initial-value:#5f7a5d55}
+.tl .tl-hero{--glow:#5f7a5d55;transition:--glow .6s ease}
+.tl .tl-hero::before{background:radial-gradient(closest-side,var(--glow),transparent 70%)}
+.tl .tl-hero:has(.tl-idea.c1:hover){--glow:#dceaae4d}
+.tl .tl-hero:has(.tl-idea.c2:hover){--glow:#a2d3ee4d}
+.tl .tl-hero:has(.tl-idea.c3:hover){--glow:#d0cdf14d}
