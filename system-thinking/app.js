@@ -306,21 +306,60 @@
   addEventListener('hashchange', show); show();
 })();
 
-/* Visit counter: counts once per browser session for the site and for each idea page.
-   Nothing is shown on the page. Open the site once with ?notrack to stop counting this browser (?track to undo). */
+/* Visit analytics (invisible). Each event adds 1 to a named counter at abacus.jasoncameron.dev.
+   Counted once per browser session: visit, day, device, source, new/returning, each page view, scroll depth.
+   Counted per page view: time on page in bands (active time only, while the tab is visible).
+   Open the site once with ?notrack to stop counting this browser (?track to undo). */
 (() => {
-  const NS = 'https://abacus.jasoncameron.dev/hit/sd-394d8735dc/';
+  const NS = 'https://abacus.jasoncameron.dev/hit/sd-5bfd512d29/';
   const q = new URLSearchParams(location.search);
   try {
     if (q.has('notrack')) localStorage.setItem('st-notrack', '1');
     if (q.has('track')) localStorage.removeItem('st-notrack');
     if (localStorage.getItem('st-notrack')) return;
   } catch (e) {}
-  const once = key => {
-    try { if (sessionStorage.getItem('st-' + key)) return; sessionStorage.setItem('st-' + key, '1'); } catch (e) {}
-    fetch(NS + key, { mode: 'cors', keepalive: true }).catch(() => {});
-  };
+  const hit = key => { try { fetch(NS + key, { mode: 'cors', keepalive: true }).catch(() => {}); } catch (e) {} };
+  const once = key => { try { if (sessionStorage.getItem('st-' + key)) return; sessionStorage.setItem('st-' + key, '1'); } catch (e) {} hit(key); };
+
+  // Session-level facts
   once('visits');
-  const page = () => { const h = location.hash.slice(1); if (h === 'idea1' || h === 'idea2') once(h); };
-  addEventListener('hashchange', page); page();
+  once('day-' + new Date().toISOString().slice(0, 10));
+  once(matchMedia('(max-width: 760px)').matches ? 'dev-mobile' : 'dev-desktop');
+  let ret = 'new'; try { ret = localStorage.getItem('st-seen') ? 'returning' : 'new'; localStorage.setItem('st-seen', '1'); } catch (e) {}
+  once('ret-' + ret);
+  const ref = (() => { try { return document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) { return ''; } })();
+  const src = !ref || ref === location.hostname ? 'direct'
+    : /linkedin|lnkd/.test(ref) ? 'linkedin'
+    : /mail|outlook|proton/.test(ref) ? 'email'
+    : /google|bing|duckduckgo|ecosia|yahoo/.test(ref) ? 'search' : 'other';
+  once('src-' + src);
+
+  // Page views, active time and scroll depth per page
+  const pageOf = () => { const h = location.hash.slice(1); return h === 'idea1' || h === 'idea2' ? h : 'home'; };
+  const band = s => s < 10 ? '0-10s' : s < 30 ? '10-30s' : s < 60 ? '30-60s' : s < 180 ? '1-3m' : s < 600 ? '3-10m' : '10m-plus';
+  let page = null, active = 0, since = null, maxScroll = 0;
+  const tick = () => { if (since !== null) { active += (Date.now() - since) / 1000; since = document.visibilityState === 'visible' ? Date.now() : null; } };
+  const close = () => {
+    if (!page) return; tick();
+    if (active >= 1) hit('time-' + page + '-' + band(active));
+    page = null;
+  };
+  const open = () => {
+    close(); page = pageOf(); active = 0; maxScroll = 0;
+    since = document.visibilityState === 'visible' ? Date.now() : null;
+    once(page === 'home' ? 'view-home' : page);
+  };
+  addEventListener('scroll', () => {
+    if (!page) return;
+    const h = document.documentElement.scrollHeight - innerHeight;
+    const pct = h <= 0 ? 100 : (scrollY / h) * 100;
+    if (pct > maxScroll) { maxScroll = pct; if (pct >= 50) once('scroll-' + page + '-50'); if (pct >= 90) once('scroll-' + page + '-90'); }
+  }, { passive: true });
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') { tick(); since = null; close(); }
+    else if (!page) open(); else since = Date.now();
+  });
+  addEventListener('pagehide', close);
+  addEventListener('hashchange', open);
+  open();
 })();
