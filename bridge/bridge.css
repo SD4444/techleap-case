@@ -186,3 +186,5 @@ body.tl[data-view="idea3"] .progress{background:#d0cdf1}
 .tl .wg-out{margin-top:14px;border-top:1px solid var(--rule)}
 .tl .tl-back{border-radius:40px}
 .tl .deck-controls button{border-radius:40px}
+.tl .c0{--c:#fbfaf8}
+.tl .tl-hero h1{margin-top:0}
