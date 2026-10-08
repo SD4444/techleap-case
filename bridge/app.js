@@ -28,8 +28,8 @@
 
   /* ── Present mode: an isolated viewport, not a scroll position ── */
   const sections = $$('main>section'), stage = $('main'), controls = $('.deck-controls');
-  /* A section with [data-part="2"] blocks becomes two slides: the blocks without a part, then the part-2 blocks. */
-  const slides = sections.flatMap(s => s.querySelector('[data-part="2"]') ? [{ s, part: 1 }, { s, part: 2 }] : [{ s, part: 0 }]);
+  /* A section with [data-part="N"] blocks becomes N slides: part 1 is every block without a data-part. */
+  const slides = sections.flatMap(s => { const n = Math.max(1, ...[...s.querySelectorAll('[data-part]')].map(e => +e.dataset.part)); return n > 1 ? Array.from({ length: n }, (_, i) => ({ s, part: i + 1 })) : [{ s, part: 0 }]; });
   let current = 0, presenting = false, frame = 0, fitFrame = 0, returnY = 0, ownedFullscreen = false;
   const fullscreenElement = () => document.fullscreenElement || document.webkitFullscreenElement;
   const cur = () => slides[current].s;
@@ -45,14 +45,15 @@
     const { s, part } = slides[current];
     const wrap = s.querySelector('.wrap');
     let label = wrap.querySelector('.part-eyebrow');
-    if (part === 2 && !label) { label = document.createElement('p'); label.className = 'eyebrow part-eyebrow'; label.textContent = s.dataset.title || ''; wrap.prepend(label); }
+    if (part > 1 && !label) { label = document.createElement('p'); label.className = 'eyebrow part-eyebrow'; label.textContent = s.dataset.title || ''; wrap.prepend(label); }
     let first = true;
     wrap.querySelectorAll(':scope > *').forEach(el => {
-      const p = el.classList.contains('part-eyebrow') ? 2 : el.dataset.part === '2' ? 2 : 1;
-      const hide = part !== 0 && p !== part;
+      const isLabel = el.classList.contains('part-eyebrow');
+      const p = isLabel ? part : +(el.dataset.part || 1);
+      const hide = part !== 0 && (isLabel ? part < 2 : p !== part);
       el.classList.toggle('part-hidden', hide);
-      el.classList.toggle('part-first', !hide && first && part === 2 && !el.classList.contains('part-eyebrow'));
-      if (!hide && !el.classList.contains('part-eyebrow')) first = false;
+      el.classList.toggle('part-first', !hide && first && part > 1 && !isLabel);
+      if (!hide && !isLabel) first = false;
     });
   }
   function fitSlide() {
@@ -68,7 +69,7 @@
     /* Lead slides share one top edge so labels and headings do not jump between slides.
        Continuation slides (second half of a section), the hero and the single question are vertically centred. */
     const spare = Math.max(0, stage.clientHeight - height * scale);
-    const centred = slides[current].part === 2 || slide.id === 'thesis' || slide.id === 'gap-q' || slide.id === 'close';
+    const centred = slides[current].part > 1 || slide.id === 'thesis' || slide.id === 'gap-q' || slide.id === 'close';
     slide.style.setProperty('--slide-offset', (centred ? spare / 2 : Math.min(48, spare)) + 'px');
   }
   function queueFit() { if (!fitFrame) fitFrame = requestAnimationFrame(fitSlide); }
