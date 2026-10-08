@@ -325,8 +325,12 @@
   once('visits');
   once('day-' + new Date().toISOString().slice(0, 10));
   once(matchMedia('(max-width: 760px)').matches ? 'dev-mobile' : 'dev-desktop');
-  let ret = 'new'; try { ret = localStorage.getItem('st-seen') ? 'returning' : 'new'; localStorage.setItem('st-seen', '1'); } catch (e) {}
-  once('ret-' + ret);
+  try {
+    if (!sessionStorage.getItem('st-ret')) {
+      const ret = localStorage.getItem('st-seen') ? 'returning' : 'new';
+      localStorage.setItem('st-seen', '1'); sessionStorage.setItem('st-ret', ret); hit('ret-' + ret);
+    }
+  } catch (e) {}
   const ref = (() => { try { return document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) { return ''; } })();
   const src = !ref || ref === location.hostname ? 'direct'
     : /linkedin|lnkd/.test(ref) ? 'linkedin'
