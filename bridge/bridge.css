@@ -140,3 +140,24 @@
 .presenting.tl .tl-idea-sec{border-top:0}
 .presenting.tl .deck-controls{background:var(--navy);border-color:#ffffff22}
 @media(max-width:380px){.tl h2{font-size:30px}}
+
+/* One view per idea (not in presentation mode) */
+body.tl:not(.presenting)[data-view] main>section{display:none}
+body.tl:not(.presenting)[data-view="thesis"] #thesis,
+body.tl:not(.presenting)[data-view="idea1"] #idea1,
+body.tl:not(.presenting)[data-view="idea2"] #idea2,
+body.tl:not(.presenting)[data-view="idea3"] #idea3{display:block}
+body.tl:not(.presenting)[data-view="thesis"] #thesis{min-height:calc(100vh - 64px)}
+.tl .tl-idea-sec{border-top:0;padding-top:72px}
+.tl #idea3{min-height:calc(100vh - 64px)}
+.tl .tl-back{display:inline-block;margin-bottom:48px;font-family:"Fragment Mono",monospace;text-transform:uppercase;letter-spacing:.14em;font-size:11.5px;color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-radius:40px;padding:9px 16px}
+.tl .tl-back:hover{color:var(--ink);border-color:#19243266}
+.presenting.tl .tl-back{display:none}
+/* Current item: nav pill and overview row */
+.tl #main-nav a.active{border-color:#ffffff33;color:#d2d3d6}
+.tl #main-nav a.current{border-color:#ffffffcc;color:#fff}
+.tl #main-nav a.nav-ph.current{border-style:dashed}
+.tl .tl-idea.active b{text-decoration:none;color:var(--paper)}
+.tl a.tl-idea b{transition:color .2s}
+.tl a.tl-idea:hover b{color:var(--lime);text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:2px;text-underline-offset:8px}
+.tl a.tl-idea.ph:hover b{color:#aab3bf;text-decoration:none}

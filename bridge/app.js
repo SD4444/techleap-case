@@ -27,7 +27,7 @@
   }
 
   /* ── Present mode: an isolated viewport, not a scroll position ── */
-  const sections = $$('main>section'), stage = $('main'), controls = $('.deck-controls');
+  const sections = $$('main>section:not([data-noslide])'), stage = $('main'), controls = $('.deck-controls');
   /* A section with [data-part="N"] blocks becomes N slides: part 1 is every block without a data-part. */
   const slides = sections.flatMap(s => { const n = Math.max(1, ...[...s.querySelectorAll('[data-part]')].map(e => +e.dataset.part)); return n > 1 ? Array.from({ length: n }, (_, i) => ({ s, part: i + 1 })) : [{ s, part: 0 }]; });
   let current = 0, presenting = false, frame = 0, fitFrame = 0, returnY = 0, ownedFullscreen = false;
@@ -291,4 +291,17 @@
   noOrphans = function (root) { noOrphansBase(root); root.querySelectorAll(NO_ORPHAN_LINKS).forEach(a => { const t = a.lastChild; if (!t || t.nodeType !== 3) return; let s = t.data.trimEnd(); const i = s.lastIndexOf(' '); if (i > 0) t.data = s.slice(0, i) + '\u00a0' + s.slice(i + 1) + t.data.slice(s.length); }); };
   window.noOrphans = noOrphans;
   noOrphans(document.body);
+})();
+
+/* Bridge site: one view per idea. #thesis is the overview; #idea1..#idea3 show only that idea. */
+(() => {
+  const views = ['thesis', 'idea1', 'idea2', 'idea3'];
+  function show() {
+    let id = location.hash.slice(1); if (!views.includes(id)) id = 'thesis';
+    document.body.dataset.view = id;
+    document.querySelectorAll('#main-nav a, .tl-ideas a').forEach(a => a.classList.toggle('current', a.hash === '#' + id));
+    document.querySelectorAll('#' + id + ' .reveal').forEach(e => e.classList.add('visible'));
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+  addEventListener('hashchange', show); show();
 })();
