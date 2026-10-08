@@ -3,175 +3,203 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Investor Evidence Standard · Techleap</title>
-<meta name="description" content="A shared evidence format that connects deep-tech startups and investors across industries.">
+<title>Investor Requirements · Techleap</title>
+<meta name="description" content="Make investor requirements visible before startups begin fundraising.">
+<meta name="theme-color" content="#13191b">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#242424">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=1">
+<link rel="stylesheet" href="case.css?v=1">
 <link rel="stylesheet" href="bridge.css?v=1">
-<script defer src="bridge.js?v=1"></script>
+<script defer src="app.js?v=1"></script>
 </head>
-<body>
+<body class="ir">
+<a class="skip" href="#thesis">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
 
-<header class="top">
-  <div class="wrap top-in">
-    <a class="brand" href="#hero">Investor Evidence Standard</a>
-    <nav id="nav" aria-label="Main navigation">
-      <a href="#problem">Problem</a>
-      <a href="#evidence">Evidence</a>
-      <a href="#model">How it works</a>
-      <a href="#sectors">Industries</a>
-      <a href="#role">Techleap</a>
-      <a href="#next">Next steps</a>
-    </nav>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+<header>
+  <a class="brand" href="#thesis"><b>Investor Requirements</b></a>
+  <nav id="main-nav" aria-label="Main navigation">
+    <a href="#problem">Problem</a>
+    <a href="#system">System</a>
+    <a href="#startup">Startup view</a>
+    <a href="#delivery">Delivery</a>
+    <a href="#scale">Scale</a>
+    <div class="mobile-nav-actions"></div>
+  </nav>
+  <div class="header-tools">
+    <button class="quiet menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span></button>
+    <span class="temperature" aria-label="Reading progress">0%</span>
+    <button class="quiet icon-action" id="present" aria-pressed="false" aria-label="Present" title="Present"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="4.5" width="17" height="12" rx="2"/><path d="M12 16.5v3m-3 0h6m-4.5-12 4 3-4 3z"/></svg></button>
   </div>
 </header>
 
 <main>
 
-<!-- 01 · Hero -->
-<section id="hero" class="hero dark">
+<!-- 1 · Hero -->
+<section id="thesis" class="dark ir-hero" data-title="Investor requirements">
   <div class="wrap">
-    <p class="eyebrow">Techleap · proposal</p>
-    <h1>[Headline: one line on connecting startups and investors]</h1>
-    <p class="lede">[Subtitle: what is centralised, for whom, and the result.]</p>
-    <div class="hero-flow" aria-hidden="true">
-      <span class="node">Startups</span>
-      <i></i>
-      <span class="node core">Shared evidence</span>
-      <i></i>
-      <span class="node">Investors</span>
+    <p class="eyebrow reveal">Proposed Techleap capability</p>
+    <h1 class="reveal">Make investor requirements visible before startups begin fundraising.</h1>
+    <div class="ir-lede reveal">
+      <p>Techleap can collect recurring investor requirements, structure them by company type and financing need, and turn them into practical guidance for startups.</p>
+      <p>This would help startups build the right evidence earlier and give investors better-prepared financing cases.</p>
+    </div>
+    <div class="chain ir-chain reveal">
+      <span>Investor requirements</span><i></i><span>Structured guidance</span><i></i><span>Better-prepared startups</span><i></i><span class="hi">Faster investment decisions</span>
     </div>
   </div>
 </section>
 
-<!-- 02 · Problem -->
-<section id="problem">
+<!-- 2 · Problem -->
+<section id="problem" class="dark" data-title="The information gap">
   <div class="wrap">
-    <div class="head">
-      <div>
-        <p class="eyebrow">The problem</p>
-        <h2>[Heading: the gap between startups and investors]</h2>
-      </div>
-      <p class="intro">[Intro: two or three sentences stating the problem and its scope.]</p>
+    <div class="ir-head">
+      <p class="eyebrow reveal">The information gap</p>
+      <h2 class="reveal">Startups often learn what investors require after fundraising has begun.</h2>
     </div>
-    <div class="cards three">
-      <article class="card"><span class="tag">Startups</span><h3>[What startups lack]</h3><p>[One or two sentences.]</p></article>
-      <article class="card"><span class="tag">Investors</span><h3>[What investors lack]</h3><p>[One or two sentences.]</p></article>
-      <article class="card"><span class="tag">Result</span><h3>[What this costs the ecosystem]</h3><p>[One or two sentences.]</p></article>
+    <div class="ir-cols three reveal">
+      <div><span class="tag">01 · Requirements remain tacit</span><p>Investor expectations are distributed across individual funds, partners and financing processes. Startups rarely have a clear view of the evidence required for the next investment decision.</p></div>
+      <div><span class="tag">02 · Advice is too generic</span><p>A pre-commercial hardware company, biotech business and software company face different technical, commercial and financing requirements. General fundraising advice does not capture these differences.</p></div>
+      <div><span class="tag">03 · Feedback is lost</span><p>Questions raised during diligence and reasons for declining investment are rarely captured systematically. Other startups therefore encounter the same problems again.</p></div>
     </div>
+    <p class="ir-statement reveal">The problem is not a lack of information. It is that the information remains fragmented, inconsistent and difficult to apply.</p>
   </div>
 </section>
 
-<!-- 03 · What to centralise -->
-<section id="evidence" class="tint">
+<!-- 3 · System -->
+<section id="system" class="dark" data-title="How it works">
   <div class="wrap">
-    <div class="head">
-      <div>
-        <p class="eyebrow">What to centralise</p>
-        <h2>[Heading: the evidence investors need]</h2>
-      </div>
-      <p class="intro">[Intro: the common format and what it separates.]</p>
+    <div class="ir-head">
+      <p class="eyebrow reveal">How it works</p>
+      <h2 class="reveal">Turn repeated investor questions into shared infrastructure.</h2>
     </div>
-    <ol class="numbered">
-      <li><b>[Evidence block 1]</b><span>[Short description]</span></li>
-      <li><b>[Evidence block 2]</b><span>[Short description]</span></li>
-      <li><b>[Evidence block 3]</b><span>[Short description]</span></li>
-      <li><b>[Evidence block 4]</b><span>[Short description]</span></li>
-      <li><b>[Evidence block 5]</b><span>[Short description]</span></li>
-    </ol>
-    <div class="legend-row">
-      <span class="chip verified">Verified evidence</span>
-      <span class="chip assumption">Assumption</span>
-      <span class="chip risk">Unresolved risk</span>
-    </div>
-  </div>
-</section>
-
-<!-- 04 · How it works -->
-<section id="model">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <p class="eyebrow">How it works</p>
-        <h2>[Heading: how information is gathered, centralised and shared]</h2>
-      </div>
-      <p class="intro">[Intro: the cycle in one or two sentences.]</p>
-    </div>
-    <div class="steps" data-switch="step" role="group" aria-label="Choose a step">
-      <button data-val="s1" aria-pressed="true"><span>01</span>Gather</button>
-      <button data-val="s2" aria-pressed="false"><span>02</span>Centralise</button>
-      <button data-val="s3" aria-pressed="false"><span>03</span>Share</button>
+    <div class="ir-stages reveal" data-switch="stage" role="group" aria-label="Choose a stage">
+      <button data-val="s1" aria-pressed="true"><span>01</span>Collect</button>
+      <button data-val="s2" aria-pressed="false"><span>02</span>Structure</button>
+      <button data-val="s3" aria-pressed="false"><span>03</span>Apply</button>
       <button data-val="s4" aria-pressed="false"><span>04</span>Learn</button>
     </div>
-    <div class="step-panel">
-      <div data-panel="step" data-val="s1"><h3>[Gather: who provides what]</h3><p>[Body text.]</p></div>
-      <div data-panel="step" data-val="s2" hidden><h3>[Centralise: where it is held and how it is checked]</h3><p>[Body text.]</p></div>
-      <div data-panel="step" data-val="s3" hidden><h3>[Share: who sees what, and when]</h3><p>[Body text.]</p></div>
-      <div data-panel="step" data-val="s4" hidden><h3>[Learn: how investor feedback improves the format]</h3><p>[Body text.]</p></div>
+    <div class="ir-stage-panel reveal">
+      <div data-panel="stage" data-val="s1"><span class="tag">01 · Collect</span><p>Conduct structured interviews with investors, production financiers and specialist lenders. Capture requirements from live diligence processes and declined investments.</p></div>
+      <div data-panel="stage" data-val="s2" hidden><span class="tag">02 · Structure</span><p>Classify each requirement by sector, company maturity, capital need, use of funds, business model and financing type.</p></div>
+      <div data-panel="stage" data-val="s3" hidden><span class="tag">03 · Apply</span><p>Translate the requirements into sector guides, evidence checklists and standard financing-case templates that startups can use before approaching investors.</p></div>
+      <div data-panel="stage" data-val="s4" hidden><span class="tag">04 · Learn</span><p>Track which companies enter diligence, what additional evidence investors request and why investment decisions are delayed or declined. Use these outcomes to update the guidance.</p></div>
+    </div>
+    <div class="chain ir-chain reveal">
+      <span>Collect</span><i></i><span>Structure</span><i></i><span>Apply</span><i></i><span>Learn</span><i></i><span class="hi">Update</span>
     </div>
   </div>
 </section>
 
-<!-- 05 · Across industries -->
-<section id="sectors" class="dark">
+<!-- 4 · What gets captured -->
+<section id="structure" class="dark" data-title="Common structure">
   <div class="wrap">
-    <div class="head">
-      <div>
-        <p class="eyebrow">Across industries</p>
-        <h2>[Heading: one core format, sector-specific modules]</h2>
+    <div class="ir-head">
+      <p class="eyebrow reveal">Common structure</p>
+      <h2 class="reveal">A common evidence framework, adapted by sector and financing stage.</h2>
+    </div>
+    <div class="ir-groups reveal">
+      <div class="ir-group">
+        <span class="tag">Context</span>
+        <ul><li>Sector</li><li>Company maturity</li><li>Capital required</li><li>Intended use of capital</li><li>Business model</li><li>Financing type</li></ul>
       </div>
-      <p class="intro">[Intro: what stays the same and what changes per industry.]</p>
+      <div class="ir-group">
+        <span class="tag">Investor evidence</span>
+        <ul><li>Customer demand</li><li>Technical performance</li><li>Regulation and certification</li><li>Unit economics and margins</li><li>Manufacturing and delivery</li><li>Team and governance</li></ul>
+      </div>
     </div>
-    <div class="sector-tabs" data-switch="sector" role="group" aria-label="Choose an industry">
-      <button data-val="a" aria-pressed="true">[Industry A]</button>
-      <button data-val="b" aria-pressed="false">[Industry B]</button>
-      <button data-val="c" aria-pressed="false">[Industry C]</button>
-      <button data-val="d" aria-pressed="false">[Industry D]</button>
+    <p class="ir-statement small reveal">The system should show where investors broadly agree, where requirements differ and when the information was last validated.</p>
+  </div>
+</section>
+
+<!-- 5 · Startup view -->
+<section id="startup" class="dark" data-title="Startup view">
+  <div class="wrap">
+    <div class="ir-head">
+      <p class="eyebrow reveal">Illustrative startup experience</p>
+      <h2 class="reveal">A startup receives guidance specific to the financing decision it faces.</h2>
     </div>
-    <div class="sector-panel">
-      <div data-panel="sector" data-val="a"><div class="split"><div><span class="tag">Core evidence</span><p>[Shared across all industries]</p></div><div><span class="tag">Sector module</span><p>[Specific to industry A]</p></div></div></div>
-      <div data-panel="sector" data-val="b" hidden><div class="split"><div><span class="tag">Core evidence</span><p>[Shared across all industries]</p></div><div><span class="tag">Sector module</span><p>[Specific to industry B]</p></div></div></div>
-      <div data-panel="sector" data-val="c" hidden><div class="split"><div><span class="tag">Core evidence</span><p>[Shared across all industries]</p></div><div><span class="tag">Sector module</span><p>[Specific to industry C]</p></div></div></div>
-      <div data-panel="sector" data-val="d" hidden><div class="split"><div><span class="tag">Core evidence</span><p>[Shared across all industries]</p></div><div><span class="tag">Sector module</span><p>[Specific to industry D]</p></div></div></div>
+    <div class="ir-demo reveal">
+      <div class="ir-selectors">
+        <div class="ir-select"><span class="tag">Sector</span><b>Agricultural robotics</b><i aria-hidden="true"></i></div>
+        <div class="ir-select"><span class="tag">Maturity</span><b>Pre-commercial</b><i aria-hidden="true"></i></div>
+        <div class="ir-select"><span class="tag">Capital required</span><b>€3 million to €10 million</b><i aria-hidden="true"></i></div>
+        <div class="ir-select"><span class="tag">Use of capital</span><b>Machine construction and field validation</b><i aria-hidden="true"></i></div>
+      </div>
+      <div class="ir-output">
+        <span class="ir-badge">Illustrative output</span>
+        <h3>What investors are likely to assess</h3>
+        <ul class="ir-check">
+          <li>Evidence of buyer demand and willingness to pay</li>
+          <li>A crop-specific validation plan with measurable performance requirements</li>
+          <li>Machine cost, unit economics and expected margins</li>
+          <li>Manufacturing partners, component lead times and working-capital requirements</li>
+          <li>Delivery, maintenance and service capacity</li>
+          <li>A clear separation between verified evidence, assumptions and unresolved risks</li>
+        </ul>
+        <p class="ir-note">Final requirements would be based on structured investor research, not assumed by Techleap.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 06 · Techleap's role -->
-<section id="role">
+<!-- 6 · Delivery -->
+<section id="delivery" class="dark" data-title="Delivery">
   <div class="wrap">
-    <div class="head">
-      <div>
-        <p class="eyebrow">Techleap's role</p>
-        <h2>[Heading: what Techleap does and does not do]</h2>
-      </div>
-      <p class="intro">[Intro.]</p>
+    <div class="ir-head">
+      <p class="eyebrow reveal">Delivery</p>
+      <h2 class="reveal">One evidence base, delivered through several formats.</h2>
     </div>
-    <div class="cards three">
-      <article class="card"><span class="tag">01</span><h3>[Responsibility 1]</h3><p>[One or two sentences.]</p></article>
-      <article class="card"><span class="tag">02</span><h3>[Responsibility 2]</h3><p>[One or two sentences.]</p></article>
-      <article class="card"><span class="tag">03</span><h3>[Responsibility 3]</h3><p>[One or two sentences.]</p></article>
+    <div class="ir-cards four reveal">
+      <article><span class="tag">01</span><h3>Public requirements library</h3><p>Searchable guidance organised by sector, maturity and financing need.</p></article>
+      <article><span class="tag">02</span><h3>Capital-readiness diagnostic</h3><p>A structured assessment that produces a tailored evidence checklist for each startup.</p></article>
+      <article><span class="tag">03</span><h3>Financing-case workspace</h3><p>A private format for organising verified evidence, assumptions, unresolved risks and supporting documents.</p></article>
+      <article><span class="tag">04</span><h3>Investor decision sessions</h3><p>Small, curated meetings around live financing cases, followed by structured feedback on the remaining investment conditions.</p></article>
+    </div>
+    <p class="ir-statement small reveal">Techleap does not select investments or promise capital. It makes investor requirements easier to understand and financing cases easier to assess.</p>
+  </div>
+</section>
+
+<!-- 7 · Pilot and scale -->
+<section id="scale" class="dark" data-title="How to start">
+  <div class="wrap">
+    <div class="ir-head">
+      <p class="eyebrow reveal">How to start</p>
+      <h2 class="reveal">Validate the information system before building the platform.</h2>
+    </div>
+    <div class="ir-cols three reveal">
+      <div><span class="tag">01 · Test two sectors</span><p>Begin with agricultural technology and climate hardware. Interview relevant investors, financiers and startups in each sector.</p></div>
+      <div><span class="tag">02 · Apply it to live cases</span><p>Use the initial framework with a small number of startups preparing real financing rounds. Record where the guidance is useful, incomplete or wrong.</p></div>
+      <div><span class="tag">03 · Publish and expand</span><p>Release the first sector guides and diagnostic. Add new sectors only when enough investor evidence and live cases exist to support useful guidance.</p></div>
+    </div>
+    <div class="chain ir-chain reveal">
+      <span>Common evidence structure</span><i></i><span>Sector-specific modules</span><i></i><span>Live financing feedback</span><i></i><span class="hi">Continuously updated guidance</span>
     </div>
   </div>
 </section>
 
-<!-- 07 · Next steps -->
-<section id="next" class="accent">
+<!-- 8 · Benefit -->
+<section id="close" class="dark round-section" data-title="The benefit">
   <div class="wrap">
-    <div class="head">
-      <div>
-        <p class="eyebrow">Next steps</p>
-        <h2>[Heading: the first test]</h2>
-      </div>
-      <p class="intro">[Paragraph: what would be piloted, with whom, and what decides whether it continues.]</p>
+    <div class="ir-head">
+      <p class="eyebrow reveal">The benefit</p>
+      <h2 class="reveal">Startups know what to prove. Investors receive stronger cases. Techleap sees where the market repeatedly breaks down.</h2>
     </div>
+    <p class="ir-body reveal">The same information that helps an individual startup prepare for investment can also reveal recurring financing barriers across sectors. Techleap can use that evidence to improve programmes, convene the right capital providers and identify where broader market intervention is needed.</p>
+    <p class="ir-final reveal">Make investor expectations explicit, practical and reusable.</p>
   </div>
 </section>
 
 </main>
+
+<div class="deck-controls" aria-label="Presentation controls" hidden>
+  <span id="slide-count">01 / 08</span>
+  <div class="slide-navigation">
+    <button id="prev-slide" aria-label="Previous section">←</button>
+    <span id="slide-title">Investor requirements</span>
+    <button id="next-slide" aria-label="Next section">→</button>
+  </div>
+  <button id="exit-present">Exit</button>
+</div>
 </body>
 </html>
