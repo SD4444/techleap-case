@@ -300,7 +300,7 @@
     let id = location.hash.slice(1); if (!views.includes(id)) id = 'thesis';
     document.body.dataset.view = id;
     document.querySelectorAll('#main-nav a, .tl-ideas a').forEach(a => a.classList.toggle('current', a.hash === '#' + id));
-    document.querySelectorAll('#' + id + ' .reveal').forEach(e => e.classList.add('visible'));
+    document.querySelectorAll('#' + id + ' .reveal' + (id === 'thesis' ? ', #system .reveal' : '')).forEach(e => e.classList.add('visible'));
     window.scrollTo({ top: 0, behavior: 'instant' });
   }
   addEventListener('hashchange', show); show();
