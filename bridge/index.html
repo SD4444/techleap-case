@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Investor Evidence Standard · Techleap</title>
+<meta name="description" content="A shared evidence format that connects deep-tech startups and investors across industries.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#242424">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="bridge.css?v=1">
+<script defer src="bridge.js?v=1"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#hero">Investor Evidence Standard</a>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="#problem">Problem</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#model">How it works</a>
+      <a href="#sectors">Industries</a>
+      <a href="#role">Techleap</a>
+      <a href="#next">Next steps</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+
+<main>
+
+<!-- 01 · Hero -->
+<section id="hero" class="hero dark">
+  <div class="wrap">
+    <p class="eyebrow">Techleap · proposal</p>
+    <h1>[Headline: one line on connecting startups and investors]</h1>
+    <p class="lede">[Subtitle: what is centralised, for whom, and the result.]</p>
+    <div class="hero-flow" aria-hidden="true">
+      <span class="node">Startups</span>
+      <i></i>
+      <span class="node core">Shared evidence</span>
+      <i></i>
+      <span class="node">Investors</span>
+    </div>
+  </div>
+</section>
+
+<!-- 02 · Problem -->
+<section id="problem">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">The problem</p>
+        <h2>[Heading: the gap between startups and investors]</h2>
+      </div>
+      <p class="intro">[Intro: two or three sentences stating the problem and its scope.]</p>
+    </div>
+    <div class="cards three">
+      <article class="card"><span class="tag">Startups</span><h3>[What startups lack]</h3><p>[One or two sentences.]</p></article>
+      <article class="card"><span class="tag">Investors</span><h3>[What investors lack]</h3><p>[One or two sentences.]</p></article>
+      <article class="card"><span class="tag">Result</span><h3>[What this costs the ecosystem]</h3><p>[One or two sentences.]</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · What to centralise -->
+<section id="evidence" class="tint">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">What to centralise</p>
+        <h2>[Heading: the evidence investors need]</h2>
+      </div>
+      <p class="intro">[Intro: the common format and what it separates.]</p>
+    </div>
+    <ol class="numbered">
+      <li><b>[Evidence block 1]</b><span>[Short description]</span></li>
+      <li><b>[Evidence block 2]</b><span>[Short description]</span></li>
+      <li><b>[Evidence block 3]</b><span>[Short description]</span></li>
+      <li><b>[Evidence block 4]</b><span>[Short description]</span></li>
+      <li><b>[Evidence block 5]</b><span>[Short description]</span></li>
+    </ol>
+    <div class="legend-row">
+      <span class="chip verified">Verified evidence</span>
+      <span class="chip assumption">Assumption</span>
+      <span class="chip risk">Unresolved risk</span>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · How it works -->
+<section id="model">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">How it works</p>
+        <h2>[Heading: how information is gathered, centralised and shared]</h2>
+      </div>
+      <p class="intro">[Intro: the cycle in one or two sentences.]</p>
+    </div>
+    <div class="steps" data-switch="step" role="group" aria-label="Choose a step">
+      <button data-val="s1" aria-pressed="true"><span>01</span>Gather</button>
+      <button data-val="s2" aria-pressed="false"><span>02</span>Centralise</button>
+      <button data-val="s3" aria-pressed="false"><span>03</span>Share</button>
+      <button data-val="s4" aria-pressed="false"><span>04</span>Learn</button>
+    </div>
+    <div class="step-panel">
+      <div data-panel="step" data-val="s1"><h3>[Gather: who provides what]</h3><p>[Body text.]</p></div>
+      <div data-panel="step" data-val="s2" hidden><h3>[Centralise: where it is held and how it is checked]</h3><p>[Body text.]</p></div>
+      <div data-panel="step" data-val="s3" hidden><h3>[Share: who sees what, and when]</h3><p>[Body text.]</p></div>
+      <div data-panel="step" data-val="s4" hidden><h3>[Learn: how investor feedback improves the format]</h3><p>[Body text.]</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 · Across industries -->
+<section id="sectors" class="dark">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Across industries</p>
+        <h2>[Heading: one core format, sector-specific modules]</h2>
+      </div>
+      <p class="intro">[Intro: what stays the same and what changes per industry.]</p>
+    </div>
+    <div class="sector-tabs" data-switch="sector" role="group" aria-label="Choose an industry">
+      <button data-val="a" aria-pressed="true">[Industry A]</button>
+      <button data-val="b" aria-pressed="false">[Industry B]</button>
+      <button data-val="c" aria-pressed="false">[Industry C]</button>
+      <button data-val="d" aria-pressed="false">[Industry D]</button>
+    </div>
+    <div class="sector-panel">
+      <div data-panel="sector" data-val="a"><div class="split"><div><span class="tag">Core evidence</span><p>[Shared across all industries]</p></div><div><span class="tag">Sector module</span><p>[Specific to industry A]</p></div></div></div>
+      <div data-panel="sector" data-val="b" hidden><div class="split"><div><span class="tag">Core evidence</span><p>[Shared across all industries]</p></div><div><span class="tag">Sector module</span><p>[Specific to industry B]</p></div></div></div>
+      <div data-panel="sector" data-val="c" hidden><div class="split"><div><span class="tag">Core evidence</span><p>[Shared across all industries]</p></div><div><span class="tag">Sector module</span><p>[Specific to industry C]</p></div></div></div>
+      <div data-panel="sector" data-val="d" hidden><div class="split"><div><span class="tag">Core evidence</span><p>[Shared across all industries]</p></div><div><span class="tag">Sector module</span><p>[Specific to industry D]</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 · Techleap's role -->
+<section id="role">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Techleap's role</p>
+        <h2>[Heading: what Techleap does and does not do]</h2>
+      </div>
+      <p class="intro">[Intro.]</p>
+    </div>
+    <div class="cards three">
+      <article class="card"><span class="tag">01</span><h3>[Responsibility 1]</h3><p>[One or two sentences.]</p></article>
+      <article class="card"><span class="tag">02</span><h3>[Responsibility 2]</h3><p>[One or two sentences.]</p></article>
+      <article class="card"><span class="tag">03</span><h3>[Responsibility 3]</h3><p>[One or two sentences.]</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 07 · Next steps -->
+<section id="next" class="accent">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Next steps</p>
+        <h2>[Heading: the first test]</h2>
+      </div>
+      <p class="intro">[Paragraph: what would be piloted, with whom, and what decides whether it continues.]</p>
+    </div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>
