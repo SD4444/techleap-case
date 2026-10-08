@@ -295,7 +295,7 @@
 
 /* Bridge site: one view per idea. #thesis is the overview; #idea1..#idea3 show only that idea. */
 (() => {
-  const views = ['thesis', 'idea1', 'idea2', 'idea3'];
+  const views = ['thesis', 'idea1', 'idea2'];
   function show() {
     let id = location.hash.slice(1); if (!views.includes(id)) id = 'thesis';
     document.body.dataset.view = id;
