@@ -293,7 +293,7 @@
   noOrphans(document.body);
 })();
 
-/* Bridge site: one view per idea. #thesis is the overview; #idea1..#idea3 show only that idea. */
+/* Bridge site: one view per idea. #thesis is the overview; #idea1 and #idea2 show only that idea. */
 (() => {
   const views = ['thesis', 'idea1', 'idea2'];
   function show() {
